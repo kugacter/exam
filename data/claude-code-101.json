@@ -1,173 +1,173 @@
 [
   {
     "id": 1,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Trong khóa học Claude Code 101, Claude Code được định nghĩa chính xác là gì?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "In the Claude Code 101 course, how is Claude Code accurately defined?",
     "options": [
-      "Một công cụ lập trình tự chủ (an agentic coding tool) có khả năng hiểu codebase của bạn, chỉnh sửa files, chạy lệnh terminal và tích hợp với các công cụ phát triển hiện có",
-      "Một trình biên dịch ngôn ngữ C++ chỉ chạy trên hệ điều hành Linux",
-      "Một tiện ích chỉ dùng để tự động điền từ khóa(autocomplete) từng ký tự trên trình duyệt web",
-      "Một dịch vụ lưu trữ đám mây thay thế cho GitHub và GitLab"
+      "An agentic coding tool that understands your codebase, edits files, runs terminal commands, and integrates with your existing developer tools",
+      "A C++ language compiler that only runs on Linux operating systems",
+      "A utility used solely to autocomplete keywords character by character in a web browser",
+      "A cloud storage service that replaces GitHub and GitLab"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 1.1: 'Claude Code is an agentic coding tool that understands your codebase, edits your files, runs commands, and integrates with your existing developer tools to help you get things done faster.'",
+    "explanation": "According to Lesson 1.1: 'Claude Code is an agentic coding tool that understands your codebase, edits your files, runs commands, and integrates with your existing developer tools to help you get things done faster.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-1"
   },
   {
     "id": 2,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Claude Code hiện khả dụng trên những môi trường và nền tảng nào?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "Which environments and platforms is Claude Code currently available on?",
     "options": [
-      "Trong Terminal, Visual Studio Code (VS Code), ứng dụng Claude Desktop, trên nền tảng Web, và trong các IDE của JetBrains",
-      "Chỉ duy nhất trong cửa sổ dòng lệnh Command Prompt của Windows 95",
-      "Chỉ khả dụng bên trong phần mềm chỉnh sửa ảnh Adobe Photoshop",
-      "Chỉ chạy được trên các máy chủ mainframe không có giao diện đồ họa"
+      "In the Terminal, Visual Studio Code (VS Code), the Claude Desktop app, on the web, and in JetBrains IDEs",
+      "Exclusively in the Windows 95 Command Prompt window",
+      "Only inside Adobe Photoshop image editing software",
+      "Only on mainframe servers without a graphical user interface"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 1.1: 'It's available in your terminal, Visual Studio Code, the Claude Desktop app, on the web, and in JetBrains IDEs.'",
+    "explanation": "According to Lesson 1.1: 'It's available in your terminal, Visual Studio Code, the Claude Desktop app, on the web, and in JetBrains IDEs.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-2"
   },
   {
     "id": 3,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Điểm khác biệt cốt lõi nhất (The key differentiator) tách biệt Claude Code với giao diện trò chuyện truyền thống trên `Claude.ai` là gì?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "What is the key differentiator that separates Claude Code from the traditional chat interface on `Claude.ai`?",
     "options": [
-      "Claude Code hoạt động như một AI Agent có quyền truy cập trực tiếp vào files, terminal và toàn bộ codebase của bạn để trực tiếp thực hiện công việc thay vì bắt bạn phải copy-paste code qua lại",
-      "`Claude.ai` có thể tự sửa file trên ổ cứng của bạn còn Claude Code thì không",
-      "Claude Code không sử dụng mô hình ngôn ngữ lớn (LLM) mà chỉ dùng biểu thức chính quy (Regex)",
-      "Claude Code chỉ trả lời bằng tiếng Pháp còn `Claude.ai` trả lời bằng tiếng Anh"
+      "Claude Code operates as an AI Agent with direct access to your files, terminal, and entire codebase to perform work directly instead of making you copy-paste code back and forth",
+      "`Claude.ai` can directly edit files on your hard drive, whereas Claude Code cannot",
+      "Claude Code does not use a large language model (LLM) and only uses regular expressions (Regex)",
+      "Claude Code only replies in French, while `Claude.ai` replies in English"
     ],
     "answer": 0,
-    "explanation": "Khác với `Claude.ai`, Claude Code có quyền truy cập trực tiếp vào hệ thống file, terminal và toàn bộ codebase của bạn — thay vì copy-paste code qua lại, nó trực tiếp đi vào dự án và thực hiện công việc vì nó hoạt động như một AI Agent.",
+    "explanation": "Unlike `Claude.ai`, Claude Code has direct access to your filesystem, terminal, and entire codebase — instead of copy-pasting code back and forth, it goes directly into your project and performs the work because it operates as an AI Agent.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-3"
   },
   {
     "id": 4,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Theo định nghĩa trong Bài 1.1, một `AI Agent` là gì và hoạt động ở tầng cốt lõi như thế nào?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "According to the definition in Lesson 1.1, what is an `AI Agent` and how does it work at its core?",
     "options": [
-      "Là phần mềm có khả năng tương tác với môi trường và thực hiện các hành động để hoàn thành một mục tiêu xác định, hoạt động bằng cách cho một mô hình ngôn ngữ lớn (LLM) vận hành trong một vòng lặp theo thời gian thực (operating in a loop in real time)",
-      "Là một đoạn script tĩnh chỉ chạy đúng 1 dòng lệnh rồi tự xóa chính nó",
-      "Là một bảng tính Excel chứa các công thức cộng trừ nhân chia cố định",
-      "Là một giao thức phần cứng dùng để kết nối bàn phím với màn hình"
+      "Software that can interact with its environment and perform actions to complete a defined goal, working by having a large language model (LLM) operating in a loop in real time",
+      "A static script that runs exactly 1 command line and then deletes itself",
+      "An Excel spreadsheet containing fixed arithmetic formulas",
+      "A hardware protocol used to connect a keyboard to a monitor"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 1.1 ('What is an Agent?'): 'An AI Agent is software that can interact with its environment and perform actions to complete a defined goal. At its core, this works by having a large language model operating in a loop in real time.'",
+    "explanation": "According to Lesson 1.1 ('What is an Agent?'): 'An AI Agent is software that can interact with its environment and perform actions to complete a defined goal. At its core, this works by having a large language model operating in a loop in real time.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-4"
   },
   {
     "id": 5,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Đâu là những công việc thực tế mà Claude Code có thể trực tiếp thực hiện trong dự án của bạn?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "Which practical tasks can Claude Code directly perform in your project?",
     "options": [
-      "Đọc và hiểu codebase (giải thích tính năng, truy vết bug), chỉnh sửa nhiều file xuyên suốt dự án (refactor hàm và cập nhật mọi nơi tham chiếu), chạy lệnh terminal (build, test), và tra cứu thông tin bên ngoài",
-      "Chỉ có thể đọc file văn bản `.txt` chứ không thể sửa file mã nguồn hay chạy lệnh terminal",
-      "Chỉ có thể chạy lệnh `git status` chứ không được phép chỉnh sửa nhiều hơn 1 file",
-      "Tự động nâng cấp dung lượng RAM vật lý và thay thế ổ cứng cho máy tính"
+      "Reading and understanding the codebase (explaining features, tracing bugs), editing multiple files across the project (refactoring functions and updating all references), running terminal commands (build, test), and looking up external information",
+      "It can only read `.txt` text files and cannot edit source files or run terminal commands",
+      "It can only run `git status` and is not allowed to edit more than 1 file",
+      "Automatically upgrading physical RAM capacity and replacing the computer's hard drive"
     ],
     "answer": 0,
-    "explanation": "Claude Code có thể đọc hiểu toàn bộ codebase, sửa đổi đồng bộ nhiều files (như khi refactor một hàm), chạy các câu lệnh terminal (build script, test suite) và tra cứu tài liệu cần thiết.",
+    "explanation": "Claude Code can read and understand the entire codebase, make synchronized edits across multiple files (such as when refactoring a function), run terminal commands (build scripts, test suites), and look up necessary documentation.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-5"
   },
   {
     "id": 6,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Trong mục `Using Claude Code Effectively` (Bài 1.1), 3 khái niệm cốt lõi nào bạn cần luôn ghi nhớ khi làm việc với Claude Code?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "In the `Using Claude Code Effectively` section (Lesson 1.1), what are the 3 core concepts you should always keep in mind when working with Claude Code?",
     "options": [
-      "1) The context window (bộ nhớ làm việc hữu hạn), 2) You control its permissions (bạn kiểm soát chế độ phân quyền), và 3) It can make mistakes (nó có thể mắc lỗi nên cần đồng hành giám sát — stay in the loop)",
-      "1) Luôn nạp 100% ổ cứng vào context, 2) Tắt mọi kiểm tra an toàn, và 3) Không bao giờ kiểm tra lại code của AI",
-      "1) Chỉ dùng một file duy nhất, 2) Không bao giờ dùng terminal, và 3) Không bao giờ commit code",
-      "1) Bắt buộc viết code bằng hợp ngữ, 2) Luôn tắt mạng Internet, và 3) Xóa file sau mỗi 5 phút"
+      "1) The context window (finite working memory), 2) You control its permissions, and 3) It can make mistakes (so stay in the loop)",
+      "1) Always load 100% of the hard drive into context, 2) Disable all safety checks, and 3) Never review AI-generated code",
+      "1) Only use a single file, 2) Never use the terminal, and 3) Never commit code",
+      "1) Always write code in assembly, 2) Always disconnect from the Internet, and 3) Delete files every 5 minutes"
     ],
     "answer": 0,
-    "explanation": "Ba nguyên lý cốt lõi để dùng Claude Code hiệu quả là: (1) The context window (working memory hữu hạn), (2) You control its permissions (chọn mức độ giám sát phù hợp), và (3) It can make mistakes (staying in the loop giúp phát hiện lỗi sớm).",
+    "explanation": "The three core principles for using Claude Code effectively are: (1) The context window (finite working memory), (2) You control its permissions (choosing the appropriate level of oversight), and (3) It can make mistakes (staying in the loop helps catch errors early).",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-6"
   },
   {
     "id": 7,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Tại sao tính chất 'agentic' lại giúp Claude Code làm việc hiệu quả với một codebase khổng lồ dù Context Window là hữu hạn?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "Why does the 'agentic' aspect help Claude Code work effectively with a massive codebase despite having a finite Context Window?",
     "options": [
-      "Vì Claude biết cách tìm kiếm có chiến lược để định vị đúng câu trả lời bên trong codebase của bạn mà không cần phải nạp toàn bộ mọi file của dự án vào Context Window cùng một lúc",
-      "Vì Claude Code tự động xóa bớt 90% các file mã nguồn trong dự án của bạn để vừa với Context Window",
-      "Vì Claude Code nén tất cả các file thành định dạng ảnh `.jpg` trước khi đọc",
-      "Vì Claude Code chỉ đọc duy nhất file đầu tiên theo thứ tự bảng chữ cái"
+      "Because Claude knows how to search strategically to locate the right answers within your codebase without having to load every file in the project into the Context Window at once",
+      "Because Claude Code automatically deletes 90% of the source files in your project to fit within the Context Window",
+      "Because Claude Code compresses all files into `.jpg` image format before reading them",
+      "Because Claude Code only reads the very first file in alphabetical order"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 1.1: 'This is where the \"agentic\" aspect comes in — Claude finds strategic ways to locate answers within your codebase without loading the entire thing into context.'",
+    "explanation": "According to Lesson 1.1: 'This is where the \"agentic\" aspect comes in — Claude finds strategic ways to locate answers within your codebase without loading the entire thing into context.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-7"
   },
   {
     "id": 8,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Trong Bài 1.2 (`How Claude Code Works`), vòng lặp `The Agentic Loop` diễn ra theo trình tự 4 bước chuẩn nào?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "In Lesson 1.2 (`How Claude Code Works`), what is the standard 4-step sequence of `The Agentic Loop`?",
     "options": [
-      "1) Bạn nhập prompt -> 2) Claude thu thập ngữ cảnh (gathers context) -> 3) Thực hiện hành động (takes action: sửa file / chạy lệnh) -> 4) Kiểm chứng kết quả (verifies the results) và lặp lại nếu cần",
-      "1) Tự động xóa code cũ -> 2) Viết code mới không cần đọc file -> 3) Force push lên nhánh main -> 4) Tắt terminal",
-      "1) Biên dịch mã máy -> 2) Nén ổ cứng -> 3) Gửi email -> 4) Khởi động lại hệ điều hành",
-      "1) Hỏi mật khẩu người dùng -> 2) Tải toàn bộ Internet -> 3) Xóa lịch sử Git -> 4) Hoàn tất"
+      "1) You enter a prompt -> 2) Claude gathers context -> 3) Takes action (edits files / runs commands) -> 4) Verifies the results and repeats if needed",
+      "1) Automatically delete old code -> 2) Write new code without reading files -> 3) Force push to the main branch -> 4) Close the terminal",
+      "1) Compile machine code -> 2) Compress the hard drive -> 3) Send an email -> 4) Restart the operating system",
+      "1) Ask for the user's password -> 2) Download the entire Internet -> 3) Delete Git history -> 4) Finish"
     ],
     "answer": 0,
-    "explanation": "4 bước của The Agentic Loop trong Bài 1.2 gồm: (1) You enter a prompt into Claude Code -> (2) Claude gathers the context it needs -> (3) It takes action (editing a file or running a command) -> (4) It verifies the results and determines whether they achieve what your prompt set out to do.",
+    "explanation": "The 4 steps of The Agentic Loop in Lesson 1.2 are: (1) You enter a prompt into Claude Code -> (2) Claude gathers the context it needs -> (3) It takes action (editing a file or running a command) -> (4) It verifies the results and determines whether they achieve what your prompt set out to do.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-8"
   },
   {
     "id": 9,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Trong khi Claude Code đang chạy bên trong vòng lặp `The Agentic Loop`, người dùng có thể can thiệp như thế nào?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "While Claude Code is running inside `The Agentic Loop`, how can the user intervene?",
     "options": [
-      "Xuyên suốt vòng lặp, bạn có thể bổ sung thêm ngữ cảnh (add context), ngắt giữa chừng (interrupt), hoặc lái mô hình (steer the model) để hướng nó tới đúng mục tiêu của bạn",
-      "Người dùng hoàn toàn bị khóa bàn phím và không thể làm gì cho đến khi máy tính tắt",
-      "Nếu người dùng chạm vào bàn phím thì toàn bộ mã nguồn dự án sẽ bị xóa sạch",
-      "Người dùng chỉ có thể can thiệp bằng cách rút dây nguồn của máy tính"
+      "Throughout the loop, you can add context, interrupt, or steer the model to guide it toward your goal",
+      "The user's keyboard is completely locked and they cannot do anything until the computer shuts down",
+      "If the user touches the keyboard, the entire project source code will be wiped",
+      "The user can only intervene by unplugging the computer's power cord"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 1.2: 'Throughout this loop, you can add context, interrupt, or steer the model to help guide it toward your goal.'",
+    "explanation": "According to Lesson 1.2: 'Throughout this loop, you can add context, interrupt, or steer the model to help guide it toward your goal.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-9"
   },
   {
     "id": 10,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Theo Bài 1.2, chuyện gì sẽ tự động xảy ra khi cuộc hội thoại và dữ liệu trong phiên làm việc của bạn chạm tới giới hạn của Context Window?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "According to Lesson 1.2, what automatically happens when your conversation and session data reach the Context Window limit?",
     "options": [
-      "Claude Code sẽ tự động nén cuộc hội thoại của bạn (compacts your conversation) — tự xác định những phần có thể lược bỏ hoặc tóm tắt để đưa Context Window trở về kích thước khả dụng",
-      "Claude Code sẽ văng lỗi màn hình xanh và xóa toàn bộ dự án",
-      "Claude Code sẽ yêu cầu bạn phải mua một chiếc máy tính mới có màn hình lớn hơn",
-      "Claude Code sẽ tự động gửi toàn bộ mã nguồn của bạn lên mạng xã hội"
+      "Claude Code automatically compacts your conversation — determining what it can remove or summarize to bring the Context Window back down to a usable size",
+      "Claude Code crashes with a blue screen and deletes the entire project",
+      "Claude Code requires you to buy a new computer with a larger monitor",
+      "Claude Code automatically posts all of your source code to social media"
     ],
     "answer": 0,
-    "explanation": "Theo mục 'Context' (Bài 1.2): 'Once you reach that limit, Claude Code compacts your conversation — automatically determining what it can remove or summarize to bring the context window back down to a usable size.'",
+    "explanation": "According to the 'Context' section (Lesson 1.2): 'Once you reach that limit, Claude Code compacts your conversation — automatically determining what it can remove or summarize to bring the context window back down to a usable size.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-10"
   },
   {
     "id": 11,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Thành phần nào được Bài 1.2 gọi là 'xương sống giúp các Agents hoạt động' (`the backbone of how agents work`), mang lại cho Claude Code khả năng thực sự tác động vào mã nguồn thay vì chỉ nhận chữ và trả chữ?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "Which component is described in Lesson 1.2 as `the backbone of how agents work`, giving Claude Code the ability to actually act on your code instead of just taking text in and returning text out?",
     "options": [
-      "Tools (Các công cụ như đọc/sửa file, tìm kiếm web, chạy lệnh shell...)",
-      "Phông chữ (Fonts) của cửa sổ Terminal",
-      "Card âm thanh (Sound card) của máy tính",
-      "Trình bảo vệ màn hình (Screensaver)"
+      "Tools (such as reading/editing files, web search, running shell commands, etc.)",
+      "The Terminal window's fonts",
+      "The computer's sound card",
+      "The screensaver"
     ],
     "answer": 0,
     "explanation": "'Tools are the backbone of how agents work. Most AI assistants simply take text in and return text out. Tools let Claude Code act on your code to get closer to completing a task.'",
@@ -177,93 +177,93 @@
   },
   {
     "id": 12,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Bốn chế độ phân quyền (`Permission Modes`) được giới thiệu trong Bài 1.2 của khóa học Claude Code 101 là gì?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "What are the four `Permission Modes` introduced in Lesson 1.2 of the Claude Code 101 course?",
     "options": [
-      "Manual mode, Auto-accept mode, Plan mode, và Auto mode",
-      "Root mode, Guest mode, Incognito mode, và Airplane mode",
-      "Read mode, Write mode, Execute mode, và Delete mode",
-      "Beginner mode, Intermediate mode, Expert mode, và God mode"
+      "Manual mode, Auto-accept mode, Plan mode, and Auto mode",
+      "Root mode, Guest mode, Incognito mode, and Airplane mode",
+      "Read mode, Write mode, Execute mode, and Delete mode",
+      "Beginner mode, Intermediate mode, Expert mode, and God mode"
     ],
     "answer": 0,
-    "explanation": "Bốn chế độ phân quyền chuẩn trong Claude Code 101 là: Manual, Auto-accept, Plan mode, và Auto mode.",
+    "explanation": "The four standard permission modes in Claude Code 101 are: Manual, Auto-accept, Plan mode, and Auto mode.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-12"
   },
   {
     "id": 13,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Trong chế độ `Manual mode`, Claude Code xử lý các thao tác chỉnh sửa file và chạy lệnh shell như thế nào?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "In `Manual mode`, how does Claude Code handle file editing and shell command execution?",
     "options": [
-      "Claude luôn hỏi xin phép tường minh từ bạn (asks for explicit permission) trước mỗi lần nó muốn chỉnh sửa một file hoặc chạy một câu lệnh shell",
-      "Claude tự động sửa mọi file và chạy mọi lệnh mà không bao giờ hỏi bạn",
-      "Claude hoàn toàn không thể đọc được bất kỳ file nào trong dự án",
-      "Claude bắt bạn phải tự gõ tay toàn bộ code còn nó chỉ ngồi chấm điểm"
+      "Claude always asks for explicit permission from you before editing a file or running a shell command",
+      "Claude automatically edits every file and runs every command without ever asking you",
+      "Claude is completely unable to read any file in the project",
+      "Claude forces you to type all the code by hand while it only grades your work"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 1.2: 'Manual: Claude asks for explicit permission before editing a file or running a shell command.'",
+    "explanation": "According to Lesson 1.2: 'Manual: Claude asks for explicit permission before editing a file or running a shell command.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-13"
   },
   {
     "id": 14,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Trong chế độ `Auto-accept mode`, những hành động nào được tự động chấp thuận không cần hỏi, và những hành động nào VẪN yêu cầu bạn phê duyệt?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "In `Auto-accept mode`, which actions are automatically approved without asking, and which actions STILL require your approval?",
     "options": [
-      "Việc chỉnh sửa file (File edits) và các lệnh hệ thống file thông thường như `mkdir`, `cp`, `mv` được thực hiện tự động không cần hỏi; nhưng các câu lệnh shell khác vẫn yêu cầu bạn phê duyệt",
-      "Mọi câu lệnh xóa hệ điều hành đều được tự động chạy, nhưng việc đọc file lại phải xin phép",
-      "Chỉ có lệnh `git push --force` là được tự động duyệt, còn sửa file thì bị cấm hoàn toàn",
-      "Không có bất kỳ hành động nào được tự động duyệt trong Auto-accept mode"
+      "File edits and common filesystem commands like `mkdir`, `cp`, and `mv` run without asking; other shell commands still require your approval",
+      "All OS deletion commands run automatically, while reading files requires permission",
+      "Only `git push --force` is auto-approved, while editing files is completely forbidden",
+      "No actions are auto-approved in Auto-accept mode"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 1.2: 'Auto-accept: Files are edited without asking, and common filesystem commands like mkdir, cp, and mv run without asking too. Other commands still require approval.'",
+    "explanation": "According to Lesson 1.2: 'Auto-accept: Files are edited without asking, and common filesystem commands like mkdir, cp, and mv run without asking too. Other commands still require approval.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-14"
   },
   {
     "id": 15,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Đặc điểm cốt lõi nhất của `Plan mode` là gì?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "What is the core characteristic of `Plan mode`?",
     "options": [
-      "Claude chỉ đọc files và chạy các câu lệnh shell phục vụ khám phá mà KHÔNG chỉnh sửa bất kỳ file mã nguồn nào của bạn, sau đó biên soạn một bản kế hoạch hành động trước khi bắt đầu công việc",
-      "Claude tự động sửa toàn bộ các file trong dự án rồi mới viết báo cáo tổng kết sau",
-      "Claude tắt toàn bộ quyền đọc file và chỉ nói chuyện phiếm với người dùng",
-      "Claude tự động commit và push code lên nhánh main sau mỗi 30 giây"
+      "Claude only reads files and runs shell commands to explore WITHOUT editing any of your source files, then compiles a plan of action before starting any work",
+      "Claude automatically edits all project files first and writes a summary report afterward",
+      "Claude disables all file-reading permissions and only engages in casual chat with the user",
+      "Claude automatically commits and pushes code to the main branch every 30 seconds"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 1.2: 'Plan mode: Claude reads files and runs shell commands to explore, without editing your source files, and compiles a plan of action before starting any work.'",
+    "explanation": "According to Lesson 1.2: 'Plan mode: Claude reads files and runs shell commands to explore, without editing your source files, and compiles a plan of action before starting any work.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-15"
   },
   {
     "id": 16,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Chế độ `Auto mode` trong Claude Code hoạt động như thế nào để vừa giúp Claude làm việc liền mạch không cần hỏi quyền từng bước, vừa đảm bảo an toàn?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "How does `Auto mode` in Claude Code work to let Claude work smoothly without routine permission prompts while still maintaining safety?",
     "options": [
-      "Claude làm việc không hiện hộp thoại hỏi quyền thường xuyên, trong khi một bộ phân loại chạy nền (a background classifier) kiểm tra hầu hết các hành động nhằm chặn các thao tác không thể đảo ngược, có tính phá hủy hoặc nhắm ra ngoài môi trường của bạn",
-      "Nó tắt hoàn toàn mọi cơ chế bảo mật và cho phép thực thi bất kỳ mã độc nào mà không kiểm tra",
-      "Nó chỉ cho phép Claude chạy các lệnh bắt đầu bằng chữ cái A",
-      "Nó buộc máy tính phải ngắt kết nối khỏi bàn phím và màn hình"
+      "Claude works without routine permission prompts while a background classifier checks most actions to block operations that are irreversible, destructive, or aimed outside your environment",
+      "It completely disables all security mechanisms and allows any malicious code to execute unchecked",
+      "It only allows Claude to run commands starting with the letter A",
+      "It forces the computer to disconnect from the keyboard and monitor"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 1.2: 'Auto mode: Claude works without routine permission prompts while a classifier checks most actions in the background, targeted at blocking actions that are irreversible, destructive, or aimed outside your environment.'",
+    "explanation": "According to Lesson 1.2: 'Auto mode: Claude works without routine permission prompts while a classifier checks most actions in the background, targeted at blocking actions that are irreversible, destructive, or aimed outside your environment.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-16"
   },
   {
     "id": 17,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Trong chế độ `Auto mode`, khi bộ kiểm tra an toàn chạy nền (background safety check) phát hiện và chặn một hành động có nguy cơ rủi ro, Claude thường phản ứng như thế nào?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "In `Auto mode`, when the background safety check detects and blocks a risky action, how does Claude usually respond?",
     "options": [
-      "Claude thường tự tìm một cách tiếp cận khác an toàn hơn (finds another approach) hoặc dừng lại hỏi xin ý kiến phê duyệt của bạn (asks you for the go-ahead)",
-      "Claude sẽ tự động xóa toàn bộ thư mục dự án để giải phóng bộ nhớ",
-      "Claude sẽ cố tình vượt qua bộ chặn bằng cách tắt hệ điều hành",
-      "Claude sẽ khóa tài khoản Anthropic của bạn vĩnh viễn"
+      "Claude usually finds another safer approach or stops and asks you for the go-ahead",
+      "Claude automatically deletes the entire project directory to free up memory",
+      "Claude intentionally bypasses the blocker by shutting down the operating system",
+      "Claude permanently locks your Anthropic account"
     ],
     "answer": 0,
     "explanation": "'When something is blocked, Claude usually finds another approach or asks you for the go-ahead.'",
@@ -273,29 +273,29 @@
   },
   {
     "id": 18,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Tất cả các thiết lập về Permission Modes có thể được cấu hình cố định ở đâu, và lời khuyên bảo mật quan trọng của khóa học khi bỏ qua các bước hỏi quyền là gì?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "Where can all Permission Modes settings be permanently configured, and what important security advice does the course give about skipping permission prompts?",
     "options": [
-      "Có thể cấu hình trong file `settings.json`, nhưng hãy luôn thận trọng khi bỏ qua bước hỏi quyền vì việc trao toàn quyền chạy lệnh tự do khiến một sai sót có thể khó bị bắt kịp trước khi nó xảy ra",
-      "Chỉ cấu hình được trong BIOS của bo mạch chủ và không bao giờ có bất kỳ rủi ro nào",
-      "Phải cấu hình trong file `index.html` của trình duyệt web",
-      "Không thể cấu hình được bằng bất kỳ file nào"
+      "They can be configured in the `settings.json` file, but be cautious when skipping permissions — giving Claude Code free rein to run commands means a mistake could be harder to catch before it happens",
+      "They can only be configured in the motherboard BIOS and carry zero risk",
+      "They must be configured in the web browser's `index.html` file",
+      "They cannot be configured in any file"
     ],
     "answer": 0,
-    "explanation": "Theo cuối Bài 1.2: 'All of this can be configured in your settings file. Be cautious when skipping permissions — giving Claude Code free rein to run commands means a mistake could be harder to catch before it happens.'",
+    "explanation": "According to the end of Lesson 1.2: 'All of this can be configured in your settings file. Be cautious when skipping permissions — giving Claude Code free rein to run commands means a mistake could be harder to catch before it happens.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-18"
   },
   {
     "id": 19,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Theo phần `Recap` cuối Bài 1.2, 4 khái niệm agentic nào kết hợp lại bên trong Terminal làm cho Claude Code khác biệt hoàn toàn về bản chất so với một cửa sổ chat thông thường?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "According to the `Recap` at the end of Lesson 1.2, what 4 agentic concepts combine inside the Terminal to make Claude Code fundamentally different from a regular chat window?",
     "options": [
-      "1) An agentic loop, 2) A managed context window, 3) Tools, và 4) Configurable permissions — giúp nó đọc được codebase, thực hiện hành động và tự kiểm chứng công việc của mình",
-      "1) Dark mode, 2) Custom fonts, 3) Emoji picker, và 4) Audio notifications",
-      "1) Cloud storage, 2) Email client, 3) Web browser, và 4) Video player",
-      "1) SQL database, 2) Compiler, 3) Virtual machine, và 4) VPN client"
+      "1) An agentic loop, 2) A managed context window, 3) Tools, and 4) Configurable permissions — enabling it to read your codebase, take action, and verify its own work",
+      "1) Dark mode, 2) Custom fonts, 3) Emoji picker, and 4) Audio notifications",
+      "1) Cloud storage, 2) Email client, 3) Web browser, and 4) Video player",
+      "1) SQL database, 2) Compiler, 3) Virtual machine, and 4) VPN client"
     ],
     "answer": 0,
     "explanation": "'Claude Code combines several agentic concepts: an agentic loop, a managed context window, tools, and configurable permissions — all inside your terminal. It can read your codebase, take action, and verify its own work. That's what makes it fundamentally different from a chat window.'",
@@ -305,40 +305,40 @@
   },
   {
     "id": 20,
-    "chapter": "Chương 1: What is Claude Code?",
-    "question": "Những loại lỗi nào mà Claude Code — giống như bất kỳ công cụ nào khác — vẫn có thể mắc phải nếu bạn không đồng hành giám sát (`staying in the loop`)?",
+    "chapter": "Chapter 1: What is Claude Code?",
+    "question": "What types of mistakes can Claude Code — just like any other tool — still make if you do not stay in the loop?",
     "options": [
-      "Nó có thể hiểu nhầm ý định của bạn (misunderstand your intent), vô tình tạo ra bug (introduce a bug), hoặc thiết kế giải pháp quá mức cần thiết (over-engineer a solution)",
-      "Nó không bao giờ có thể mắc bất kỳ lỗi nào vì AI luôn đúng 100%",
-      "Nó chỉ có thể mắc lỗi chính tả tiếng Việt chứ không bao giờ mắc lỗi logic lập trình",
-      "Nó chỉ làm hỏng phần cứng chuột và bàn phím"
+      "It might misunderstand your intent, introduce a bug, or over-engineer a solution",
+      "It can never make any mistakes because AI is always 100% right",
+      "It can only make Vietnamese spelling mistakes and never programming logic errors",
+      "It only damages mouse and keyboard hardware"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 1.1: 'It can make mistakes. Just like any tool, Claude Code isn't perfect. It might misunderstand your intent, introduce a bug, or over-engineer a solution. Staying in the loop helps you catch these early.'",
+    "explanation": "According to Lesson 1.1: 'It can make mistakes. Just like any tool, Claude Code isn't perfect. It might misunderstand your intent, introduce a bug, or over-engineer a solution. Staying in the loop helps you catch these early.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-20"
   },
   {
     "id": 21,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Để bắt đầu một phiên làm việc với Claude Code trên Terminal cho một dự án cụ thể, bạn cần mở thư mục nào và gõ câu lệnh gì?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "To start a Claude Code session in the Terminal for a specific project, which directory should you open and what command should you run?",
     "options": [
-      "Mở thư mục gốc của dự án (the root directory of your project) và chạy lệnh `claude`",
-      "Mở thư mục `C:\\Windows\\System32` và chạy lệnh `start-ai`",
-      "Đứng ở bất kỳ thư mục trống nào ngoài Desktop và chạy lệnh `npm test`",
-      "Phải mở thư mục `.git/objects` và chạy lệnh `python`"
+      "Open the root directory of your project and run `claude`",
+      "Open `C:\\Windows\\System32` and run `start-ai`",
+      "Stand in any empty folder on the Desktop and run `npm test`",
+      "Open the `.git/objects` directory and run `python`"
     ],
     "answer": 0,
-    "explanation": "Theo Chương 2: 'Open the root directory of your project and run `claude`.' Điều này giúp Claude Code có ngữ cảnh chính xác của toàn bộ cây thư mục dự án.",
+    "explanation": "According to Chapter 2: 'Open the root directory of your project and run `claude`.' This gives Claude Code the accurate context of your entire project directory tree.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-21"
   },
   {
     "id": 22,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Tổ hợp phím tắt nào trong Claude Code cho phép bạn chuyển đổi xoay vòng (cycle between modes) qua lại giữa các chế độ Permission Modes (`Manual`, `Auto-accept`, `Plan mode`...)?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "Which keyboard shortcut in Claude Code lets you cycle between Permission Modes (`Manual`, `Auto-accept`, `Plan mode`, etc.)?",
     "options": [
       "`Shift + Tab`",
       "`Ctrl + Alt + Delete`",
@@ -346,52 +346,52 @@
       "`Ctrl + Shift + Esc`"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 2.2 ('Choosing a Permission Mode'): 'Press `Shift + Tab` to cycle between modes.'",
+    "explanation": "According to Lesson 2.2 ('Choosing a Permission Mode'): 'Press `Shift + Tab` to cycle between modes.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-22"
   },
   {
     "id": 23,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Khi bạn nhấn `Shift + Tab` để bật chế độ Lập kế hoạch (`Plan Mode`), dấu hiệu nào trên giao diện Terminal cho biết bạn đã vào đúng chế độ này?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "When you press `Shift + Tab` to enable `Plan Mode`, what indicator in the Terminal UI confirms you are in this mode?",
     "options": [
-      "Thanh trạng thái (status bar) hiển thị dòng chữ `plan mode on` (ví dụ: `⏸ plan mode on (shift+tab to cycle)`)",
-      "Toàn bộ chữ trên màn hình Terminal biến mất hoàn toàn",
-      "Cửa sổ Terminal tự động thu nhỏ xuống thanh Taskbar",
-      "Màn hình nhấp nháy màu đỏ kèm tiếng còi báo động"
+      "The status bar displays `plan mode on` (e.g., `⏸ plan mode on (shift+tab to cycle)`)",
+      "All text in the Terminal window disappears completely",
+      "The Terminal window automatically minimizes to the Taskbar",
+      "The screen flashes red with an alarm sound"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 2.2: 'To enter plan mode, press `Shift + Tab` until the status bar shows `plan mode on`.'",
+    "explanation": "According to Lesson 2.2: 'To enter plan mode, press `Shift + Tab` until the status bar shows `plan mode on`.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-23"
   },
   {
     "id": 24,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Khi đang ở trong `Plan Mode`, Claude Code sẽ xử lý câu lệnh prompt của bạn như thế nào?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "When in `Plan Mode`, how does Claude Code process your prompt?",
     "options": [
-      "Nó đọc các files và chạy các câu lệnh shell để phân tích codebase và nghiên cứu phương án triển khai mà KHÔNG chỉnh sửa file mã nguồn, đồng thời đặt các câu hỏi làm rõ (clarifying questions) để xây dựng bản kế hoạch chi tiết",
-      "Nó lập tức xóa các file cũ và viết đè code mới vào dự án mà không hỏi bạn câu nào",
-      "Nó từ chối chạy bất kỳ lệnh đọc file nào và bắt bạn phải tự dán code vào khung chat",
-      "Nó chỉ kiểm tra lỗi chính tả trong câu hỏi của bạn rồi kết thúc phiên"
+      "It reads files and runs shell commands to analyze the codebase and research the implementation WITHOUT editing source files, while asking clarifying questions to construct a detailed plan",
+      "It immediately deletes old files and overwrites new code into the project without asking you anything",
+      "It refuses to run any file-reading commands and forces you to paste code into the chat box",
+      "It only checks your prompt for spelling errors and then ends the session"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 2.2 ('Plan Mode'): 'Plan mode takes your prompt, then reads files and runs shell commands to analyze your codebase and research your suggested implementation, without editing your source files. It will ask clarifying questions along the way to construct a detailed plan it can execute.'",
+    "explanation": "According to Lesson 2.2 ('Plan Mode'): 'Plan mode takes your prompt, then reads files and runs shell commands to analyze your codebase and research your suggested implementation, without editing your source files. It will ask clarifying questions along the way to construct a detailed plan it can execute.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-24"
   },
   {
     "id": 25,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Hai trường hợp sử dụng nào mà `Plan Mode` phát huy hiệu quả vượt trội nhất (`where Plan Mode excels`) theo Bài 2.2?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "According to Lesson 2.2, what are the two use cases where `Plan Mode` excels the most?",
     "options": [
-      "1) Lập kế hoạch cho các thay đổi phức tạp / triển khai tính năng nhiều bước (planning complex changes / multi-step implementations), và 2) Thực hiện rà soát mã nguồn an toàn (doing a safe code review)",
-      "1) Xóa nhanh các thư mục tạm, và 2) Đổi tên một biến cục bộ trong 1 dòng code",
-      "1) Tự động deploy ứng dụng lên máy chủ Production không cần giám sát, và 2) Format lại ổ cứng",
-      "1) Chơi trò chơi trên terminal, và 2) Tải nhạc từ Internet"
+      "1) Planning complex changes / multi-step feature implementations, and 2) Doing a safe code review",
+      "1) Quickly deleting temporary folders, and 2) Renaming a local variable on 1 line of code",
+      "1) Automatically deploying the app to Production without oversight, and 2) Formatting the hard drive",
+      "1) Playing terminal games, and 2) Downloading music from the Internet"
     ],
     "answer": 0,
     "explanation": "'Plan mode is great for planning complex changes or doing a safe code review. Many times you'll be asking Claude to handle multi-step implementations toward a feature, and this is exactly where Plan Mode excels.'",
@@ -401,29 +401,29 @@
   },
   {
     "id": 26,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Trong ví dụ thực tế `Example: Add a Dark Mode Toggle` (Bài 2.2), một câu lệnh prompt đầu tiên hiệu quả được viết như thế nào?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "In the practical `Example: Add a Dark Mode Toggle` (Lesson 2.2), how is an effective first prompt written?",
     "options": [
-      "Mô tả rõ mục tiêu tổng thể (cần dark mode trên toàn app), vị trí giao diện cụ thể (nút toggle switch ở header để chuyển qua lại light/dark mode) và yêu cầu thiết kế (tìm bảng màu phù hợp với màu thương hiệu hiện có)",
-      "Chỉ gõ đúng 2 từ cụt lủn: `\"dark mode\"` và không giải thích gì thêm",
-      "Gõ mã nhị phân `010101` vào cửa sổ terminal",
-      "Yêu cầu Claude xóa toàn bộ CSS hiện tại của ứng dụng"
+      "Clearly describing the overall goal (dark mode across the entire app), the specific UI location (a toggle switch in the header to switch between light and dark mode), and design requirements (finding a good color palette that works with existing brand colors)",
+      "Typing just 2 abrupt words: `\"dark mode\"` with no further explanation",
+      "Typing binary code `010101` into the terminal window",
+      "Asking Claude to delete all existing CSS in the application"
     ],
     "answer": 0,
-    "explanation": "Prompt mẫu trong Bài 2.2 rất rõ ràng và đầy đủ thông tin: 'My app needs a dark mode implemented across the entire app. Can you create a toggle switch in the header that allows a user to toggle between light mode and dark mode? It needs to find a good color palette that works well with our existing brand colors.'",
+    "explanation": "The sample prompt in Lesson 2.2 is very clear and informative: 'My app needs a dark mode implemented across the entire app. Can you create a toggle switch in the header that allows a user to toggle between light mode and dark mode? It needs to find a good color palette that works well with our existing brand colors.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-26"
   },
   {
     "id": 27,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Trong ví dụ `Add a Dark Mode Toggle`, sau khi Claude đã chạy trong Plan Mode và trình bày bản kế hoạch chi tiết ra màn hình, bước tiếp theo của bạn là gì?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "In the `Add a Dark Mode Toggle` example, after Claude has run in Plan Mode and presented the detailed plan on screen, what is your next step?",
     "options": [
-      "Đọc duyệt bản kế hoạch (review the plan); nếu thấy tốt thì chấp thuận nó (accept it) để Claude bắt đầu thực thi viết code từng bước theo chế độ phân quyền bạn chọn",
-      "Phải tự tay gõ lại toàn bộ code theo bản kế hoạch đó vì Claude không thể chuyển từ Plan Mode sang viết code",
-      "Tắt ngay Terminal và xóa dự án",
-      "Chép bản kế hoạch đó sang Microsoft Word rồi in ra giấy"
+      "Review the plan; if it looks good, accept it so Claude can start executing the code step by step according to your chosen permission mode",
+      "Manually type all the code yourself following that plan, because Claude cannot switch from Plan Mode to writing code",
+      "Immediately close the Terminal and delete the project",
+      "Copy the plan into Microsoft Word and print it out on paper"
     ],
     "answer": 0,
     "explanation": "'Let Claude plan it out. After reviewing the plan, if it looks good, accept it and let Claude work through it — depending on your permission mode, it may check in with you along the way.'",
@@ -433,136 +433,136 @@
   },
   {
     "id": 28,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Tại sao trong `Plan Mode`, việc Claude đặt các câu hỏi làm rõ yêu cầu (`clarifying questions`) lại hữu ích cho bạn?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "Why is it helpful when Claude asks `clarifying questions` during `Plan Mode`?",
     "options": [
-      "Vì nó giúp giải quyết các điểm mơ hồ về kiến trúc hoặc trải nghiệm người dùng ngay từ đầu, đảm bảo bản kế hoạch được xây dựng khớp chính xác với ý muốn của bạn trước khi sửa code",
-      "Vì nó giúp làm đầy Context Window nhanh hơn",
-      "Vì Claude muốn kiểm tra trình độ tiếng Anh của người lập trình",
-      "Vì đó là lỗi hệ thống khi Claude không đọc được ổ cứng"
+      "Because it resolves architectural or UX ambiguities upfront, ensuring the plan is built to match your exact intent before any code is modified",
+      "Because it helps fill up the Context Window faster",
+      "Because Claude wants to test the programmer's English proficiency",
+      "Because it is a system error when Claude cannot read the hard drive"
     ],
     "answer": 0,
-    "explanation": "Các câu hỏi làm rõ trong Plan Mode giúp chốt các quyết định thiết kế (như lưu theme ở đâu, dùng thư viện nào, xử lý edge case ra sao) trước khi viết bất kỳ dòng code nào.",
+    "explanation": "Clarifying questions in Plan Mode help lock in design decisions (such as where to store the theme, which library to use, and how to handle edge cases) before writing a single line of code.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-28"
   },
   {
     "id": 29,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Khi bạn muốn cài đặt nhanh Claude Code thông qua trình cài đặt gốc (native installer) trên macOS/Linux hoặc Windows PowerShell, hoặc qua npm, đâu là các câu lệnh chuẩn?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "When you want to quickly install Claude Code via the native installer on macOS/Linux or Windows PowerShell, or via npm, what are the standard commands?",
     "options": [
-      "macOS/Linux: `curl -fsSL https://claude.ai/install.sh | bash` • Windows PowerShell: `irm https://claude.ai/install.ps1 | iex` • Hoặc qua npm: `npm install -g @anthropic-ai/claude-code`",
-      "Chỉ có thể cài bằng cách tải file `.iso` nặng 50GB rồi ghi ra đĩa DVD",
-      "Chạy lệnh `pip install claude-101-gui-only` trên Python 2.7",
-      "Chạy lệnh `apt-get remove claude` trên mọi hệ điều hành"
+      "macOS/Linux: `curl -fsSL https://claude.ai/install.sh | bash` • Windows PowerShell: `irm https://claude.ai/install.ps1 | iex` • Or via npm: `npm install -g @anthropic-ai/claude-code`",
+      "It can only be installed by downloading a 50GB `.iso` file and burning it to a DVD",
+      "Run `pip install claude-101-gui-only` on Python 2.7",
+      "Run `apt-get remove claude` on every operating system"
     ],
     "answer": 0,
-    "explanation": "Anthropic cung cấp cả native installer (`install.sh` cho macOS/Linux, `install.ps1` cho Windows PowerShell) lẫn gói npm toàn cục `@anthropic-ai/claude-code`.",
+    "explanation": "Anthropic provides both the native installer (`install.sh` for macOS/Linux, `install.ps1` for Windows PowerShell) and the global npm package `@anthropic-ai/claude-code`.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-29"
   },
   {
     "id": 30,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Trong Bài 2.2, khi nói về việc chọn giữa `Manual mode`, `Auto-accept mode`, và `Auto mode`, khóa học đưa ra lời khuyên nào?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "In Lesson 2.2, when discussing choosing between `Manual mode`, `Auto-accept mode`, and `Auto mode`, what advice does the course give?",
     "options": [
-      "Không có câu trả lời nào là đúng hay sai tuyệt đối (`There's no right or wrong answer — it's whatever you're comfortable with`) — bạn toàn quyền chọn mức độ giám sát mà mình cảm thấy an tâm nhất cho từng tác vụ",
-      "Bắt buộc mọi lập trình viên trên thế giới chỉ được phép dùng `Auto mode` và cấm dùng `Manual mode`",
-      "Bắt buộc chỉ được dùng `Manual mode` và không bao giờ được nhấn `Shift + Tab`",
-      "Chỉ có `Plan mode` mới cho phép sửa file mã nguồn"
+      "There's no right or wrong answer — it's whatever you're comfortable with; you have full control to choose the level of oversight you feel confident with for each task",
+      "Every developer in the world is required to only use `Auto mode` and forbidden from using `Manual mode`",
+      "You must only use `Manual mode` and never press `Shift + Tab`",
+      "Only `Plan mode` allows editing source files"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 2.2: 'There's no right or wrong answer — it's whatever you're comfortable with.' Bạn có thể linh hoạt nhấn `Shift + Tab` đổi chế độ bất kỳ lúc nào tùy mức độ rủi ro của công việc.",
+    "explanation": "According to Lesson 2.2: 'There's no right or wrong answer — it's whatever you're comfortable with.' You can flexibly press `Shift + Tab` to switch modes at any time depending on the risk level of the task.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-30"
   },
   {
     "id": 31,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Tại sao bạn nên dùng `Plan Mode` khi muốn nhờ Claude thực hiện một cuộc kiểm tra mã nguồn an toàn (`doing a safe code review`)?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "Why should you use `Plan Mode` when you want Claude to perform a safe code review?",
     "options": [
-      "Vì `Plan Mode` đảm bảo 100% rằng Claude chỉ đọc files và chạy lệnh kiểm tra/phân tích chứ tuyệt đối không tự ý chỉnh sửa bất kỳ file mã nguồn nào của bạn",
-      "Vì `Plan Mode` tự động xóa hết các file có chứa bug",
-      "Vì `Plan Mode` không cho phép Claude đọc bất kỳ file nào trong dự án",
-      "Vì `Plan Mode` tự động đẩy code lên môi trường Production"
+      "Because `Plan Mode` guarantees 100% that Claude only reads files and runs inspection/analysis commands without ever modifying any of your source files",
+      "Because `Plan Mode` automatically deletes all files containing bugs",
+      "Because `Plan Mode` prevents Claude from reading any files in the project",
+      "Because `Plan Mode` automatically pushes code to Production"
     ],
     "answer": 0,
-    "explanation": "Khi review code, bạn muốn Claude phân tích và chỉ ra vấn đề chứ không muốn nó tự ý sửa đè lên code đang kiểm tra. Plan Mode khóa quyền sửa file mã nguồn nên cực kỳ an toàn cho mục đích này.",
+    "explanation": "When reviewing code, you want Claude to analyze and point out issues without autonomously overwriting the code under review. Plan Mode locks source-file editing, making it ideal and safe for this purpose.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-31"
   },
   {
     "id": 32,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Sau khi Claude hoàn tất việc thực thi bản kế hoạch (như ở cuối ví dụ `Add a Dark Mode Toggle`), Claude cung cấp thông tin gì cho bạn ở cuối lượt làm việc?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "After Claude finishes executing a plan (as at the end of the `Add a Dark Mode Toggle` example), what information does Claude provide to you at the end of the turn?",
     "options": [
-      "Bạn có thể nhìn thấy chính xác những gì Claude đã thực hiện và cách nó đi đến kết luận/giải pháp đó (`you can see exactly what Claude did and how it reached its conclusions`)",
-      "Claude tự động xóa sạch màn hình để giữ bí mật cách nó đã sửa code",
-      "Claude chỉ in ra một con số ngẫu nhiên từ 1 đến 100",
-      "Claude tự động đóng cửa sổ Terminal ngay lập tức"
+      "You can see exactly what Claude did and how it reached its conclusions",
+      "Claude automatically clears the screen to keep how it edited the code a secret",
+      "Claude only prints a random number from 1 to 100",
+      "Claude automatically closes the Terminal window immediately"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 2.2: 'At the end, you can see exactly what Claude did and how it reached its conclusions.'",
+    "explanation": "According to Lesson 2.2: 'At the end, you can see exactly what Claude did and how it reached its conclusions.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-32"
   },
   {
     "id": 33,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Theo phần `Recap` của Bài 2.2, hai thói quen quan trọng nhất khi viết câu lệnh prompt đầu tiên cho Claude Code là gì?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "According to the `Recap` of Lesson 2.2, what are the two most important habits when writing your first prompt for Claude Code?",
     "options": [
-      "1) Hãy mô tả yêu cầu càng rõ ràng, chi tiết càng tốt (`be as descriptive as possible with your prompt`), và 2) Sử dụng `Plan Mode` khi muốn nắm bắt và kiểm soát chi tiết từng bước trước khi thực thi bất kỳ dòng code nào",
-      "1) Viết prompt càng ngắn và càng mơ hồ càng tốt, và 2) Luôn tắt Plan Mode",
-      "1) Chỉ viết prompt bằng chữ IN HOA, và 2) Không bao giờ nói rõ vị trí giao diện cần sửa",
-      "1) Luôn copy toàn bộ mã nguồn vào prompt, và 2) Chạy lệnh ở ngoài thư mục dự án"
+      "1) Be as descriptive as possible with your prompt, and 2) Use `Plan Mode` when you want to stay in the loop on every step before executing any code",
+      "1) Write prompts as short and vague as possible, and 2) Always disable Plan Mode",
+      "1) Only write prompts in ALL CAPS, and 2) Never specify which UI location to edit",
+      "1) Always copy-paste the entire source code into the prompt, and 2) Run commands outside the project directory"
     ],
     "answer": 0,
-    "explanation": "Theo Recap Bài 2.2: 'When using Claude Code, try to be as descriptive as possible with your prompt. If you want to stay in the loop on every step, you can use Plan Mode to let Claude dig into the details of what you want to achieve before executing on any code.'",
+    "explanation": "According to the Lesson 2.2 Recap: 'When using Claude Code, try to be as descriptive as possible with your prompt. If you want to stay in the loop on every step, you can use Plan Mode to let Claude dig into the details of what you want to achieve before executing on any code.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-33"
   },
   {
     "id": 34,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Trong chế độ `Auto-accept mode`, nếu Claude muốn chạy lệnh `mkdir src/theme` để tạo thư mục mới và chỉnh sửa file `src/theme/index.ts`, Claude có dừng lại hỏi xin phép bạn không?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "In `Auto-accept mode`, if Claude wants to run `mkdir src/theme` to create a new folder and edit `src/theme/index.ts`, will Claude stop to ask you for permission?",
     "options": [
-      "KHÔNG — vì trong `Auto-accept mode`, cả thao tác chỉnh sửa file (`file edits`) lẫn các lệnh hệ thống file thông thường như `mkdir`, `cp`, `mv` đều được tự động phê duyệt!",
-      "CÓ — nó sẽ dừng lại hỏi xin phép tới 5 lần cho mỗi dòng code",
-      "Nó sẽ báo lỗi vì `Auto-accept mode` cấm tạo thư mục mới",
-      "Nó sẽ chỉ cho phép `mkdir` nhưng chặn việc sửa file `index.ts`"
+      "NO — because in `Auto-accept mode`, both file edits and common filesystem commands like `mkdir`, `cp`, and `mv` are automatically approved!",
+      "YES — it will stop and ask permission 5 times for each line of code",
+      "It will throw an error because `Auto-accept mode` forbids creating new folders",
+      "It will allow `mkdir` but block editing `index.ts`"
     ],
     "answer": 0,
-    "explanation": "`Auto-accept mode` được thiết kế để tăng tốc quá trình viết code thường ngày bằng cách tự động duyệt các thao tác sửa file và các lệnh hệ thống file cơ bản (`mkdir`, `cp`, `mv`...).",
+    "explanation": "`Auto-accept mode` is designed to speed up daily coding by automatically approving file edits and basic filesystem commands (`mkdir`, `cp`, `mv`, etc.).",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-34"
   },
   {
     "id": 35,
-    "chapter": "Chương 2: Your First Prompt",
-    "question": "Trong Lab 02 (`plan_mode_and_first_prompt.py`), khi chạy mô phỏng `run_plan_mode_dark_mode_example`, thuộc tính `files_modified` có giá trị bằng bao nhiêu?",
+    "chapter": "Chapter 2: Your First Prompt",
+    "question": "In Lab 02 (`plan_mode_and_first_prompt.py`), when running the `run_plan_mode_dark_mode_example` simulation, what is the value of the `files_modified` attribute?",
     "options": [
-      "`0` (vì trong giai đoạn `Plan Mode`, Claude chỉ đọc khám phá các file như `app/layout.tsx`, `components/Header.tsx`, đặt câu hỏi làm rõ và xuất bản kế hoạch chứ chưa sửa bất kỳ file nào)",
-      "`15` (vì nó tự động sửa toàn bộ dự án ngay trong Plan Mode)",
-      "`-1` (vì nó xóa bớt 1 file trong dự án)",
-      "`100` (vì nó tự động cài thêm 100 thư viện npm)"
+      "`0` (because during `Plan Mode`, Claude only reads and explores files like `app/layout.tsx` and `components/Header.tsx`, asks clarifying questions, and outputs a plan without modifying any files yet)",
+      "`15` (because it automatically edits the entire project right inside Plan Mode)",
+      "`-1` (because it deletes 1 file from the project)",
+      "`100` (because it automatically installs 100 npm packages)"
     ],
     "answer": 0,
-    "explanation": "Trong Plan Mode, số lượng file mã nguồn bị chỉnh sửa luôn bằng `0` (`without editing your source files`).",
+    "explanation": "In Plan Mode, the number of modified source files is always `0` (`without editing your source files`).",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-35"
   },
   {
     "id": 36,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Theo Bài 3.1, nếu bạn chỉ cần nhớ duy nhất MỘT thói quen từ toàn bộ khóa học Claude Code 101 để làm việc hiệu quả mỗi ngày, thói quen 4 bước đó là gì?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "According to Lesson 3.1, if you take away only ONE habit from the entire Claude Code 101 course to work effectively every day, what is that 4-step habit?",
     "options": [
       "Explore -> Plan -> Code -> Commit",
       "Code -> Push -> Pray -> Rollback",
@@ -570,100 +570,100 @@
       "Install -> Compile -> Zip -> Upload"
     ],
     "answer": 0,
-    "explanation": "Câu mở đầu Bài 3.1 nhấn mạnh: 'If you take one thing away from this course, let it be this habit: Explore, Plan, Code, and Commit.'",
+    "explanation": "The opening sentence of Lesson 3.1 emphasizes: 'If you take one thing away from this course, let it be this habit: Explore, Plan, Code, and Commit.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-36"
   },
   {
     "id": 37,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Chuyện gì thường xảy ra khi bạn bỏ qua bước lập kế hoạch (`Without a plan`) và nhảy bổ vào việc yêu cầu Claude viết code ngay lập tức?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "What usually happens when you skip the planning step (`Without a plan`) and jump straight into asking Claude to write code immediately?",
     "options": [
-      "Bạn rất dễ phải tốn hàng giờ đồng hồ sau đó để sửa đi sửa lại những hướng đi sai lầm (spend hours course-correcting later on)",
-      "Code sinh ra sẽ luôn hoàn hảo 100% ngay từ lần thử đầu tiên",
-      "Claude Code sẽ tự động từ chối chạy nếu bạn không gõ chữ PLAN bằng chữ in hoa",
-      "Thời gian biên dịch của dự án sẽ giảm đi 10 lần"
+      "You can easily end up spending hours course-correcting later on",
+      "The generated code will always be 100% perfect on the very first try",
+      "Claude Code will automatically refuse to run unless you type PLAN in uppercase",
+      "The project's compilation time will decrease by 10x"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.1: 'Without a plan, you might jump straight to asking Claude to write code — then spend hours course-correcting later on.'",
+    "explanation": "According to Lesson 3.1: 'Without a plan, you might jump straight to asking Claude to write code — then spend hours course-correcting later on.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-37"
   },
   {
     "id": 38,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Trong quy trình `Explore -> Plan -> Code -> Commit`, cách dễ nhất để thực hiện hai bước đầu tiên (`Explore and Plan`) trong Claude Code là gì?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "In the `Explore -> Plan -> Code -> Commit` workflow, what is the easiest way to handle the first two steps (`Explore and Plan`) in Claude Code?",
     "options": [
-      "Bật `Plan Mode` (nhấn `Shift + Tab` cho tới khi thanh trạng thái hiện `plan mode on`), sau đó mô tả ý tưởng của bạn để Claude tự khám phá codebase và lập kế hoạch",
-      "Mở từng file trong dự án bằng Notepad rồi tự chép tay toàn bộ vào khung chat",
-      "Chạy lệnh `/clear` liên tục 10 lần",
-      "Gõ lệnh `git commit --amend` trước khi đọc bất kỳ file nào"
+      "Enter `Plan Mode` (press `Shift + Tab` until the status bar shows `plan mode on`), then describe your idea so Claude can explore the codebase and create a plan",
+      "Open every file in the project with Notepad and manually paste all of them into the chat box",
+      "Run `/clear` 10 times in a row",
+      "Run `git commit --amend` before reading any files"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.1 ('Explore and Plan'): 'The easiest way to handle these first two steps is with Plan Mode... To enter plan mode, press Shift + Tab until the status bar shows plan mode on. Then describe your idea.'",
+    "explanation": "According to Lesson 3.1 ('Explore and Plan'): 'The easiest way to handle these first two steps is with Plan Mode... To enter plan mode, press Shift + Tab until the status bar shows plan mode on. Then describe your idea.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-38"
   },
   {
     "id": 39,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Tại sao giai đoạn sau khi Claude trình bày bản kế hoạch trong `Plan Mode` lại được gọi là 'thời điểm tốt nhất để điều chỉnh hướng đi' (`the best place to course-correct`)?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "Why is the stage right after Claude presents its plan in `Plan Mode` called `the best place to course-correct`?",
     "options": [
-      "Vì lúc này chưa có bất kỳ dòng code nào được viết ra (`because it's before any code is written`) — bạn có thể dễ dàng duyệt phương án, đổi hướng hoặc yêu cầu chỉnh sửa phần cụ thể với chi phí thấp nhất",
-      "Vì sau khi viết code xong thì bàn phím của bạn sẽ bị khóa không sửa được nữa",
-      "Vì trong Plan Mode thì bạn không tốn bất kỳ token nào",
-      "Vì Git không cho phép sửa file sau khi đã tạo file mới"
+      "Because it's before any code is written — you can easily review the approach, change direction, or request edits to specific parts at the lowest possible cost",
+      "Because once code is written, your keyboard is locked and cannot be edited anymore",
+      "Because in Plan Mode you consume zero tokens",
+      "Because Git does not allow editing files after creating a new file"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.1: 'This is the best place to course-correct, because it's before any code is written.' Sửa một dòng trong bản kế hoạch nhanh và rẻ hơn gấp nhiều lần so với việc để Claude sửa nhầm 20 files rồi mới gỡ rối.",
+    "explanation": "According to Lesson 3.1: 'This is the best place to course-correct, because it's before any code is written.' Fixing a line in a plan is many times faster and cheaper than having Claude mistakenly edit 20 files and then untangling them.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-39"
   },
   {
     "id": 40,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Ở bước `Code` (sau khi bản kế hoạch đã được duyệt), yếu tố quan trọng bậc nhất giúp nâng cao chất lượng đầu ra của Claude trước khi nó tuyên bố hoàn thành nhiệm vụ là gì?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "In the `Code` step (after the plan has been approved), what is the single most important factor for improving the quality of Claude's output before it considers the task finished?",
     "options": [
-      "Đảm bảo Claude có cách để TỰ KIỂM CHỨNG công việc của chính nó (`Claude works best when it can verify its own work before considering the task finished`)",
-      "Cấm không cho Claude chạy bất kỳ bài test hay công cụ kiểm tra nào",
-      "Đặt giới hạn thời gian bắt buộc Claude phải viết xong mọi tính năng trong vòng 3 giây",
-      "Tắt toàn bộ thông báo lỗi của trình biên dịch"
+      "Ensuring Claude can verify its own work before considering the task finished",
+      "Forbidding Claude from running any tests or checking tools",
+      "Setting a time limit forcing Claude to finish writing every feature within 3 seconds",
+      "Disabling all compiler error messages"
     ],
     "answer": 0,
-    "explanation": "Theo mục 'Code' (Bài 3.1): 'Claude works best when it can verify its own work before considering the task finished, instead of you having to be the QA. Verification gives Claude a feedback loop — it runs tests or checks, sees the output, which helps inform Claude's next decisions.'",
+    "explanation": "According to the 'Code' section (Lesson 3.1): 'Claude works best when it can verify its own work before considering the task finished, instead of you having to be the QA. Verification gives Claude a feedback loop — it runs tests or checks, sees the output, which helps inform Claude's next decisions.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-40"
   },
   {
     "id": 41,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Hai mẹo thực tế nào được Bài 3.1 khuyến nghị để giúp quá trình tự kiểm chứng (`Verification`) của Claude trong giai đoạn `Code` trở nên hiệu quả hơn?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "What two practical tips does Lesson 3.1 recommend to make Claude's self-verification (`Verification`) during the `Code` phase more effective?",
     "options": [
-      "1) Chỉ rõ các công cụ kiểm chứng hiện có trong dự án (như lệnh chạy test suite, build script), và 2) Bổ sung các công cụ mới giúp Claude tự kiểm tra qua lại (như cài đặt tiện ích `Claude in Chrome extension` khi làm web để Claude tự mở trang và tương tác kiểm thử UI)",
-      "1) Xóa toàn bộ thư mục `tests/` của dự án, và 2) Gỡ cài đặt trình duyệt Chrome",
-      "1) Luôn tự mình kiểm tra thủ công bằng mắt mà không cho Claude chạy lệnh, và 2) Tắt Terminal",
-      "1) Chỉ dùng lệnh `echo` để kiểm tra, và 2) Không bao giờ dùng `CLAUDE.md`"
+      "1) Call out existing verification tools in the project (such as test suite commands or build scripts), and 2) Add new ways for Claude to check its work back and forth (such as installing the `Claude in Chrome extension` when building websites so Claude can open a tab and test the UI directly)",
+      "1) Delete the entire `tests/` directory of the project, and 2) Uninstall the Chrome browser",
+      "1) Always test manually by eye without letting Claude run commands, and 2) Close the Terminal",
+      "1) Only use the `echo` command to test, and 2) Never use `CLAUDE.md`"
     ],
     "answer": 0,
-    "explanation": "Bài 3.1 nêu rõ 2 mẹo: (1) 'Call out existing verification tools' (chỉ cho Claude biết lệnh chạy test/linter hiện có), và (2) 'Add new ways for Claude to keep iterating and checking its work back and forth. For example, if you're building websites, install the Claude in Chrome extension so Claude Code can open a new browser tab and test the UI directly.'",
+    "explanation": "Lesson 3.1 states 2 clear tips: (1) 'Call out existing verification tools' (telling Claude the existing test/linter commands), and (2) 'Add new ways for Claude to keep iterating and checking its work back and forth. For example, if you're building websites, install the Claude in Chrome extension so Claude Code can open a new browser tab and test the UI directly.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-41"
   },
   {
     "id": 42,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Theo `Quick tip` ở cuối mục `Code` (Bài 3.1), nếu bạn thấy Claude cứ bị vấp lặp đi lặp lại ở cùng một vấn đề (ví dụ: tìm ra cách chạy đúng một câu lệnh phức tạp hoặc một quy ước riêng của dự án), bạn nên làm gì?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "According to the `Quick tip` at the end of the `Code` section (Lesson 3.1), if you find Claude keeps running into the same issue repeatedly (e.g., how to run a tricky command or a project-specific convention), what should you do?",
     "options": [
-      "Yêu cầu Claude ghi luôn giải pháp/quy tắc đó vào trong file `CLAUDE.md` để nó ghi nhớ cho tất cả các lần sau (`ask it to write the solution to its CLAUDE.md file`)",
-      "Ghi giải pháp đó ra một tờ giấy nhớ dán lên màn hình máy tính của bạn",
-      "Xóa dự án đi và tạo lại từ đầu",
-      "Đổi sang một ngôn ngữ lập trình khác"
+      "Ask Claude to write the solution/rule to its `CLAUDE.md` file so it remembers for all future sessions",
+      "Write the solution on a sticky note and stick it to your computer monitor",
+      "Delete the project and recreate it from scratch",
+      "Switch to a different programming language"
     ],
     "answer": 0,
     "explanation": "'Quick tip: If you find Claude keeps running into the same issue, ask it to write the solution to its CLAUDE.md file.'",
@@ -673,104 +673,104 @@
   },
   {
     "id": 43,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Ở bước thứ 4 (`Commit`) trong quy trình `Explore -> Plan -> Code -> Commit`, tại sao bạn nên kiểm tra nhanh danh sách các file đã sửa đổi (`git status` / `git diff`) trước khi bảo Claude thực hiện commit?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "In step 4 (`Commit`) of the `Explore -> Plan -> Code -> Commit` workflow, why should you do a quick check of the modified files (`git status` / `git diff`) before having Claude commit?",
     "options": [
-      "Để đảm bảo bản commit là một bước tiến gọn gàng, sạch sẽ trên codebase — không bị sót lại các đoạn code thử nghiệm dở dang hoặc các file nháp mà hai bên đã thử trên đường đi (`doesn't carry detritus that you and Claude might have tried on the way`)",
-      "Vì Git bắt buộc người dùng phải tự mở từng file bằng tay thì mới cho phép chạy lệnh `git commit`",
-      "Vì Claude Code không có khả năng chạy lệnh `git commit` hay viết commit message",
-      "Để xóa toàn bộ các file đã sửa trước khi tạo commit rỗng"
+      "To make sure the commit is a clean point-in-time step on the codebase — free of leftover experimental code or scratch files that you and Claude might have tried along the way",
+      "Because Git requires the user to manually open every file before allowing `git commit`",
+      "Because Claude Code cannot run `git commit` or write commit messages",
+      "To delete all modified files before creating an empty commit"
     ],
     "answer": 0,
-    "explanation": "Theo mục 'Commit' (Bài 3.1): 'Before you commit, do a quick check of the modified files to make sure the update is a clean point-in-time step on the codebase — it doesn't carry detritus that you and Claude might have tried on the way. Then get Claude to generate a commit message in your style, commit and push.'",
+    "explanation": "According to the 'Commit' section (Lesson 3.1): 'Before you commit, do a quick check of the modified files to make sure the update is a clean point-in-time step on the codebase — it doesn't carry detritus that you and Claude might have tried on the way. Then get Claude to generate a commit message in your style, commit and push.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-43"
   },
   {
     "id": 44,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Trong phần `Recap` của Bài 3.1, vai trò của từng bước trong quy trình 4 bước `Explore, Plan, Code, and Commit` được tóm tắt như thế nào?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "In the `Recap` of Lesson 3.1, how is the role of each step in the 4-step workflow `Explore, Plan, Code, and Commit` summarized?",
     "options": [
-      "`Explore` cung cấp ngữ cảnh liên quan; `Plan` lập kế hoạch hành động để bạn duyệt và điều chỉnh; `Code` là quá trình thực thi & kiểm chứng qua lại; `Commit` giúp rà soát và đẩy code sạch để bạn sẵn sàng bắt đầu bước tiếp theo một cách gọn gàng",
-      "`Explore` dùng để xóa code; `Plan` dùng để đẩy lên Git; `Code` dùng để đọc tài liệu; `Commit` dùng để cài đặt thư viện",
-      "Cả 4 bước đều làm cùng một việc giống hệt nhau là chạy lệnh `/clear`",
-      "`Explore` và `Plan` chỉ dành cho người mới, còn lập trình viên lâu năm chỉ cần bước `Commit`"
+      "`Explore` gives Claude relevant context; `Plan` creates a plan of action for you to review and course-correct; `Code` is the back-and-forth execution and verification; `Commit` helps you review and push clean code so you can start your next step cleanly",
+      "`Explore` is for deleting code; `Plan` is for pushing to Git; `Code` is for reading docs; `Commit` is for installing libraries",
+      "All 4 steps do the exact same thing: running `/clear`",
+      "`Explore` and `Plan` are only for beginners, while senior developers only need the `Commit` step"
     ],
     "answer": 0,
-    "explanation": "Recap Bài 3.1 tóm tắt rất rõ: Explore gives Claude the relevant context; Plan creates a plan of action that you can review and course-correct; Code is the back-and-forth between you and Claude before settling on the final solution; Commit helps you review and push your code so you can start on your next step cleanly.",
+    "explanation": "The Lesson 3.1 Recap summarizes it clearly: Explore gives Claude the relevant context; Plan creates a plan of action that you can review and course-correct; Code is the back-and-forth between you and Claude before settling on the final solution; Commit helps you review and push your code so you can start on your next step cleanly.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-44"
   },
   {
     "id": 45,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Trong Bài 3.2 (`Context Management`), rủi ro tiềm ẩn khi bạn cứ để Context Window tự động đầy tràn rồi phụ thuộc hoàn toàn vào cơ chế nén tự động (`Auto-compaction`) của Claude Code là gì?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "In Lesson 3.2 (`Context Management`), what is the potential risk of letting the Context Window fill up automatically and relying entirely on Claude Code's `Auto-compaction`?",
     "options": [
-      "Khi tự động nén, Claude phải tự đoán xem những gì là quan trọng đối với tác vụ của bạn để giữ lại — và đôi khi nó có thể vô tình làm mất đi các chi tiết quan trọng (`potentially lose details`)",
-      "Khi Context Window đầy, Claude Code sẽ tự động thu phí gấp 50 lần cho mỗi ký tự",
-      "Cơ chế Auto-compaction sẽ xóa sạch file `CLAUDE.md` trên ổ cứng của bạn",
-      "Claude Code không hề có cơ chế tự động nén mà sẽ treo máy ngay lập tức"
+      "When auto-compacting, Claude has to guess what is important to your task to keep — and it can potentially lose important details",
+      "When the Context Window fills up, Claude Code automatically charges 50x more per character",
+      "Auto-compaction wipes your `CLAUDE.md` file from your hard drive",
+      "Claude Code has no auto-compaction mechanism and will freeze your machine immediately"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.2 ('What Happens When Context Fills Up'): 'When you approach the limit, Claude Code automatically compacts your conversation so you can keep working. Most of the time this works fine, but Claude has to guess what's important to your task — and it can potentially lose details.'",
+    "explanation": "According to Lesson 3.2 ('What Happens When Context Fills Up'): 'When you approach the limit, Claude Code automatically compacts your conversation so you can keep working. Most of the time this works fine, but Claude has to guess what's important to your task — and it can potentially lose details.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-45"
   },
   {
     "id": 46,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Câu lệnh `/compact` trong Claude Code thực hiện công việc gì?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "What does the `/compact` command in Claude Code do?",
     "options": [
-      "Nén toàn bộ cuộc hội thoại tính đến thời điểm hiện tại: giúp giải phóng không gian Context Window trong khi VẪN GIỮ LẠI một bản tóm tắt những gì bạn đã làm việc trước đó",
-      "Xóa trắng 100% toàn bộ cuộc hội thoại mà không giữ lại bất kỳ bản tóm tắt nào",
-      "Nén toàn bộ thư mục mã nguồn dự án thành một file `.zip`",
-      "Hiển thị danh sách các MCP servers đang kết nối"
+      "Compacts the conversation up to that point: freeing up Context Window space while KEEPING a summary of what you have already worked on",
+      "Wipes 100% of the conversation without keeping any summary",
+      "Compresses the entire project source folder into a `.zip` file",
+      "Displays the list of currently connected MCP servers"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.2 ('Commands'): 'You can trigger compaction yourself with the `/compact` command. This compacts everything up to that point. It's handy when you want to free up context space while keeping a summary of what you've already worked on.'",
+    "explanation": "According to Lesson 3.2 ('Commands'): 'You can trigger compaction yourself with the `/compact` command. This compacts everything up to that point. It's handy when you want to free up context space while keeping a summary of what you've already worked on.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-46"
   },
   {
     "id": 47,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Bạn có thể truyền thêm thông tin gì đi kèm với câu lệnh `/compact` (ví dụ: `/compact focus on the authentication API changes and database schema`)?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "What additional information can you pass along with the `/compact` command (for example: `/compact focus on the authentication API changes and database schema`)?",
     "options": [
-      "Bạn có thể truyền kèm chỉ dẫn cụ thể để bảo Claude chính xác những thông tin nào là quan trọng cần ưu tiên giữ lại trong bản tóm tắt khi nén",
-      "Chỉ có thể truyền vào một con số nguyên từ 1 đến 9",
-      "Không được phép truyền bất kỳ chữ nào sau lệnh `/compact`, nếu truyền sẽ báo lỗi cú pháp",
-      "Truyền vào mật khẩu tài khoản GitHub để tự động push code"
+      "You can pass specific instructions telling Claude exactly what information is important to prioritize keeping in the summary during compaction",
+      "You can only pass an integer from 1 to 9",
+      "You are not allowed to pass any text after `/compact`, or it will throw a syntax error",
+      "You pass your GitHub account password to automatically push code"
     ],
     "answer": 0,
-    "explanation": "Khác với auto-compaction (khi Claude phải tự đoán cái gì quan trọng), khi chủ động gõ `/compact <instructions>`, bạn có thể chỉ định rõ cho Claude biết cần giữ lại trọng tâm nào cho bước tiếp theo!",
+    "explanation": "Unlike auto-compaction (where Claude has to guess what matters), when you proactively run `/compact <instructions>`, you can tell Claude exactly which focus areas to preserve for the next step!",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-47"
   },
   {
     "id": 48,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Câu lệnh `/clear` trong Claude Code khác với `/compact` như thế nào?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "How does the `/clear` command in Claude Code differ from `/compact`?",
     "options": [
-      "`/clear` xóa sạch 100% ngữ cảnh cuộc hội thoại hiện tại (`clears everything`) để bắt đầu hoàn toàn mới mà KHÔNG giữ lại bất kỳ bản tóm tắt nào của phiên trước",
-      "`/clear` giữ lại toàn bộ lịch sử chat còn `/compact` thì xóa sạch mọi thứ",
-      "`/clear` dùng để xóa tất cả các file mã nguồn trong thư mục dự án trên ổ cứng",
-      "Hai lệnh `/clear` và `/compact` hoạt động giống hệt nhau 100%"
+      "`/clear` wipes 100% of the current conversation context (`clears everything`) to start completely fresh with NO summary of the previous session",
+      "`/clear` keeps the entire chat history, whereas `/compact` wipes everything",
+      "`/clear` deletes all source code files in the project folder on your hard drive",
+      "`/clear` and `/compact` behave 100% identically"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.2: 'If you want to start completely fresh, with no summary of the previous session, use `/clear`. This clears everything.'",
+    "explanation": "According to Lesson 3.2: 'If you want to start completely fresh, with no summary of the previous session, use `/clear`. This clears everything.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-48"
   },
   {
     "id": 49,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Để kiểm tra xem hiện tại những thành phần nào đang chiếm dụng không gian bên trong Context Window của bạn kèm biểu đồ trực quan (`visual graph`), bạn sử dụng câu lệnh nào?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "Which command do you use to check what is currently taking up space inside your Context Window along with a `visual graph`?",
     "options": [
       "`/context`",
       "`/compact`",
@@ -778,463 +778,463 @@
       "`/init`"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.2: 'To see what's actually in your context, run the `/context` command. You'll get a high-level overview of your context usage, what's taking up the most space, and a visual graph showing the breakdown.'",
+    "explanation": "According to Lesson 3.2: 'To see what's actually in your context, run the `/context` command. You'll get a high-level overview of your context usage, what's taking up the most space, and a visual graph showing the breakdown.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-49"
   },
   {
     "id": 50,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Theo quy tắc ngón tay cái (`When to Use Which`) trong Bài 3.2, khi nào bạn nên dùng `/compact` và khi nào bạn nên dùng `/clear`?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "According to the rule of thumb (`When to Use Which`) in Lesson 3.2, when should you use `/compact` and when should you use `/clear`?",
     "options": [
-      "Dùng `/compact` khi bạn VẪN ĐANG LÀM TIẾP trên cùng một tác vụ và sắp chạm giới hạn context; dùng `/clear` khi bạn CHUYỂN SANG một tác vụ mới không liên quan (file `CLAUDE.md` và `git history` đã đủ cung cấp nền tảng cho phiên mới)",
-      "Dùng `/clear` khi đang làm dở giữa chừng một tính năng cần nhớ bước trước; dùng `/compact` khi đổi sang dự án khác",
-      "Luôn luôn dùng cả `/compact` và `/clear` cùng một lúc sau mỗi câu hỏi",
-      "Không bao giờ dùng `/clear` vì nó sẽ làm mất file `CLAUDE.md`"
+      "Use `/compact` when you are STILL working on the same task and running up against the context limit; use `/clear` when you are SWITCHING to something unrelated (`CLAUDE.md` and `git history` are still there to give Claude the basics)",
+      "Use `/clear` when you are in the middle of a feature and need to remember the previous step; use `/compact` when switching to a different project",
+      "Always run both `/compact` and `/clear` together after every question",
+      "Never use `/clear` because it will delete your `CLAUDE.md` file"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.2 ('When to Use Which'): Dùng `/compact` khi 'you're working on the same task and running up against the context limit'; dùng `/clear` khi 'you're switching to something unrelated and don't want the previous context to confuse Claude. Your CLAUDE.md file and git history are still there to give Claude the basics.'",
+    "explanation": "According to Lesson 3.2 ('When to Use Which'): Use `/compact` when 'you're working on the same task and running up against the context limit'; use `/clear` when 'you're switching to something unrelated and don't want the previous context to confuse Claude. Your CLAUDE.md file and git history are still there to give Claude the basics.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-50"
   },
   {
     "id": 51,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Theo mục `Tips for Saving Context Space` (Bài 3.2), tại sao bạn nên giữ cho file `CLAUDE.md` luôn ngắn gọn, súc tích (`Be concise in your CLAUDE.md`)?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "According to `Tips for Saving Context Space` (Lesson 3.2), why should you keep your `CLAUDE.md` file concise?",
     "options": [
-      "Vì `CLAUDE.md` được nạp tự động vào MỌI phiên làm việc; nếu nó quá dài dòng, nó sẽ ngốn mất không gian Context Window ngay từ trước khi bạn bắt đầu làm bất cứ việc gì",
-      "Vì Claude Code chỉ đọc được tối đa 10 dòng đầu tiên của file `CLAUDE.md`",
-      "Vì nếu `CLAUDE.md` dài quá 500 từ thì Git sẽ từ chối commit",
-      "Vì `CLAUDE.md` càng dài thì màu chữ trên Terminal càng mờ đi"
+      "Because `CLAUDE.md` gets loaded automatically into EVERY session; if it is bloated, it eats into your Context Window working space before you even start",
+      "Because Claude Code can only read up to the first 10 lines of `CLAUDE.md`",
+      "Because if `CLAUDE.md` is longer than 500 words, Git will refuse to commit",
+      "Because the longer `CLAUDE.md` is, the dimmer the text color becomes in the Terminal"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.2: 'Be concise in your CLAUDE.md. That file gets loaded into every session, so if it's bloated, it's eating into your working space before you even start. Move detailed guidance that's only relevant sometimes into a skill or a separate file that you reference as needed.'",
+    "explanation": "According to Lesson 3.2: 'Be concise in your CLAUDE.md. That file gets loaded into every session, so if it's bloated, it's eating into your working space before you even start. Move detailed guidance that's only relevant sometimes into a skill or a separate file that you reference as needed.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-51"
   },
   {
     "id": 52,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Tại sao các máy chủ MCP (`MCP servers`) đang kết nối lại tiêu tốn dung lượng Context Window ngay cả khi bạn không hề gọi đến công cụ của chúng trong cuộc trò chuyện?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "Why do connected `MCP servers` consume Context Window space even when you do not invoke any of their tools in the conversation?",
     "options": [
-      "Vì mặc định mọi MCP server đang kết nối đều nạp tên công cụ và mô tả lược đồ (tool definitions/schemas) của chúng vào Context Window của bạn; do đó bạn nên dùng lệnh `/mcp` để tắt các server không thực sự cần dùng",
-      "Vì các MCP servers tự động tải video quảng cáo vào trong cửa sổ Terminal",
-      "Vì MCP servers nhân đôi toàn bộ lịch sử chat của bạn sau mỗi phút",
-      "Các MCP servers hoàn toàn không chiếm bất kỳ token nào trong Context Window"
+      "Because by default, every connected MCP server loads its tool definitions and schemas into your Context Window; therefore, you should use `/mcp` to disable servers you do not actively need",
+      "Because MCP servers automatically download video ads into the Terminal window",
+      "Because MCP servers duplicate your entire chat history every minute",
+      "MCP servers do not consume any tokens in the Context Window at all"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.2: 'Manage your MCP servers. By default, connected MCP servers load their tool definitions into your context window, and should only stay enabled when you actually need them. Each server adds context overhead, so if you have servers configured for one project that you don't need in another, disable them with `/mcp`.'",
+    "explanation": "According to Lesson 3.2: 'Manage your MCP servers. By default, connected MCP servers load their tool definitions into your context window, and should only stay enabled when you actually need them. Each server adds context overhead, so if you have servers configured for one project that you don't need in another, disable them with `/mcp`.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-52"
   },
   {
     "id": 53,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Mẹo thứ 3 để tiết kiệm không gian Context Window trong Bài 3.2 khi bạn cần Claude tìm hiểu một câu hỏi lớn về codebase mà không muốn quá trình tìm kiếm đó làm lộn xộn phiên làm việc chính là gì?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "What is the 3rd tip for saving Context Window space in Lesson 3.2 when you need Claude to investigate a big question about your codebase without cluttering your main session?",
     "options": [
-      "Sử dụng Subagents (`Use subagents`) — yêu cầu Claude giao việc điều tra cho một subagent để nó làm việc trong cửa sổ ngữ cảnh riêng và chỉ trả về bản tóm tắt kết quả cho luồng chính",
-      "Chạy lệnh `/clear` sau mỗi lần Claude đọc 1 file",
-      "Mở file mã nguồn bằng trình duyệt web rồi tự tìm bằng mắt",
-      "Xóa toàn bộ file `CLAUDE.md` và `.mcp.json`"
+      "Use subagents — tell Claude to delegate the investigation to a subagent so it works in its own context window and returns only a summary to your main thread",
+      "Run `/clear` after every single file Claude reads",
+      "Open the source files in a web browser and search manually by eye",
+      "Delete all `CLAUDE.md` and `.mcp.json` files"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.2: 'Use subagents. If you want to ask a big question about your codebase, but don't want the exploration to clutter up your main session, tell Claude to \"use a subagent to investigate...\" The subagent does the digging in its own context window and returns just a summary to your main agent, keeping your main context clean.'",
+    "explanation": "According to Lesson 3.2: 'Use subagents. If you want to ask a big question about your codebase, but don't want the exploration to clutter up your main session, tell Claude to \"use a subagent to investigate...\" The subagent does the digging in its own context window and returns just a summary to your main agent, keeping your main context clean.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-53"
   },
   {
     "id": 54,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Theo Bài 3.3 (`Code Review`), bước kiểm tra đầu tiên và tự nhiên nhất để rà soát mã nguồn khi làm việc với Claude Code là gì?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "According to Lesson 3.3 (`Code Review`), what is the first and most natural step to review code when working with Claude Code?",
     "options": [
-      "Đọc theo dõi công việc của Claude ngay trong lúc nó đang thực hiện (`Read through the work as it goes`) — quan sát các thay đổi và đặt câu hỏi hoặc nắn chỉnh ngay khi thấy điều gì chưa hợp lý",
-      "Nhắm mắt bấm Approve tất cả mọi thứ rồi đẩy thẳng lên nhánh Production mà không đọc dòng nào",
-      "Chờ đến khi khách hàng báo lỗi sập hệ thống rồi mới mở code ra xem",
-      "In toàn bộ mã nguồn ra giấy sau mỗi tháng một lần"
+      "Read through the work as it goes — watch the changes and ask questions or steer Claude right away if something looks off",
+      "Blindly click Approve on everything and push straight to Production without reading a single line",
+      "Wait until customers report a system crash before opening the code to inspect it",
+      "Print out the entire source code on paper once a month"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.3 ('Read through the work as it goes'): Bạn vẫn là người chịu trách nhiệm cuối cùng cho những gì đi vào codebase. Việc đọc lướt các diff và đặt câu hỏi ngay trong quá trình Claude làm việc giúp bắt lỗi sớm nhất.",
+    "explanation": "According to Lesson 3.3 ('Read through the work as it goes'): You remain ultimately responsible for what goes into the codebase. Reviewing diffs and asking questions while Claude works helps catch mistakes earliest.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-54"
   },
   {
     "id": 55,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Tại sao Bài 3.3 lại khuyên bạn KHÔNG NÊN chỉ yêu cầu Claude review lại code ngay bên trong CÙNG phiên hội thoại mà nó vừa mới viết ra đoạn code đó?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "Why does Lesson 3.3 advise you NOT to only ask Claude to review code inside the SAME conversation session where it just wrote that code?",
     "options": [
-      "Vì trong cùng phiên hội thoại đó, Claude vẫn đang mang toàn bộ ngữ cảnh và lý lẽ biện hộ cho những quyết định nó vừa đưa ra (thiên kiến xác nhận), nên nó dễ bỏ qua lỗi của chính mình hơn là một phiên mới độc lập!",
-      "Vì Claude Code cấm người dùng gõ từ `review` trong phiên hội thoại đã có sẵn code",
-      "Vì nếu review trong cùng phiên thì toàn bộ file vừa viết sẽ bị tự động xóa",
-      "Vì một phiên hội thoại chỉ cho phép gửi tối đa 2 tin nhắn"
+      "Because in that same session, Claude still carries all the context and reasoning justifying the decisions it just made (confirmation bias), making it more likely to overlook its own mistakes than a fresh, independent session!",
+      "Because Claude Code forbids users from typing the word `review` in a session that already has code",
+      "Because reviewing in the same session will automatically delete all newly written files",
+      "Because a single conversation session only allows sending at most 2 messages"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.3 ('Ask for a second opinion'): Khi review trong cùng phiên vừa viết code, mô hình đã có sẵn mạch suy luận vì sao nó viết như vậy nên khó nhìn ra điểm mù. Sử dụng một ngữ cảnh mới sạch sẽ (fresh context) giúp đánh giá khách quan hơn hẳn.",
+    "explanation": "According to Lesson 3.3 ('Ask for a second opinion'): When reviewing in the same session where it wrote the code, the model already has the reasoning chain of why it wrote it that way, making it harder to spot blind spots. Using a fresh context yields a much more objective evaluation.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-55"
   },
   {
     "id": 56,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Làm thế nào để bạn 'xin ý kiến đánh giá độc lập thứ hai' (`Ask for a second opinion`) với một ngữ cảnh hoàn toàn mới và khách quan trong Claude Code theo Bài 3.3?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "How do you `Ask for a second opinion` with a completely fresh, objective context in Claude Code according to Lesson 3.3?",
     "options": [
-      "Chạy lệnh tích hợp sẵn `/review` (hoặc `/code-review`), hoặc mở một tab/phiên Claude Code mới (hoặc dùng một `code-reviewer` subagent độc lập) để kiểm tra các thay đổi mà không bị ảnh hưởng bởi lịch sử cuộc trò chuyện viết code trước đó",
-      "Bắt buộc phải mua thêm một tài khoản Anthropic thứ hai trên một máy tính khác",
-      "Chạy lệnh `/compact` rồi hỏi Claude xem nó có thích đoạn code vừa viết không",
-      "Đổi màu giao diện Terminal từ màu tối sang màu sáng"
+      "Run the built-in `/review` (or `/code-review`) command, or open a new Claude Code tab/session (or use an independent `code-reviewer` subagent) to inspect the changes without being influenced by the prior coding conversation",
+      "You must buy a second Anthropic account on a different computer",
+      "Run `/compact` and then ask Claude if it likes the code it just wrote",
+      "Switch the Terminal theme from dark mode to light mode"
     ],
     "answer": 0,
-    "explanation": "Lệnh `/review` (hoặc mở một phiên mới / gọi subagent review) khởi tạo một ngữ cảnh sạch chỉ tập trung đọc bản diff và mã nguồn thực tế, không bị thiên kiến bởi quá trình thảo luận viết code trước đó và không tự ý sửa file của bạn.",
+    "explanation": "The `/review` command (or opening a new session / invoking a review subagent) starts a clean context focused solely on reading the actual diff and source code, unbiased by the earlier coding discussion and without modifying your files.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-56"
   },
   {
     "id": 57,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Khi bản báo cáo Code Review trả về một danh sách các phát hiện (findings), theo mục `Decide what to do with each finding` (Bài 3.3), bạn nên xử lý chúng như thế nào?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "When a Code Review report returns a list of findings, how should you handle them according to `Decide what to do with each finding` (Lesson 3.3)?",
     "options": [
-      "Đánh giá từng mục và tự quyết định: những lỗi thực sự quan trọng thì bảo Claude sửa ngay; những việc ngoài phạm vi có thể tạo Issue để làm sau; và những cảnh báo giả (false positives) hoặc gợi ý rườm rà thì có thể bỏ qua",
-      "Bắt buộc phải bảo Claude sửa tất cả 100% mọi gợi ý dù nhỏ nhặt hay sai lệch đến đâu",
-      "Xóa toàn bộ báo cáo review mà không đọc mục nào",
-      "Luôn từ chối sửa tất cả mọi lỗi được tìm thấy"
+      "Evaluate each item and decide: have Claude fix the genuinely important issues right away; create Issues for out-of-scope items to handle later; and ignore false positives or overly pedantic suggestions",
+      "You must have Claude fix 100% of every suggestion regardless of how trivial or inaccurate it is",
+      "Delete the entire review report without reading any item",
+      "Always refuse to fix any bugs found"
     ],
     "answer": 0,
-    "explanation": "Không phải mọi nhận xét của AI Reviewer đều cần sửa ngay: bạn là người quyết định mục nào cần fix ngay (bugs, security, edge cases), mục nào để dành cho PR sau, và mục nào là false positive có thể bỏ qua.",
+    "explanation": "Not every comment from an AI reviewer needs immediate fixing: you decide which items to fix now (bugs, security, edge cases), which to defer to a later PR, and which are false positives you can safely skip.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-57"
   },
   {
     "id": 58,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Trong mục `Check if parts of the codebase were missed` (Bài 3.3), lỗi phổ biến nào thường xảy ra khi thực hiện thay đổi trên một dự án lớn và bạn nên hỏi Claude điều gì để phòng tránh?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "In `Check if parts of the codebase were missed` (Lesson 3.3), what common mistake occurs when making changes in a large project, and what should you ask Claude to prevent it?",
     "options": [
-      "Thay đổi được áp dụng ở một nơi nhưng lại bỏ quên các file liên quan khác (như nơi gọi hàm, tests, types, docs); bạn nên chủ động hỏi Claude xem còn chỗ nào khác trong codebase bị ảnh hưởng bởi thay đổi này mà chưa được cập nhật không",
-      "Claude tự động dịch tên các thư mục sang tiếng Tây Ban Nha",
-      "Git tự động xóa các nhánh cũ trên máy chủ từ xa",
-      "Trình duyệt tự động xóa lịch sử duyệt web"
+      "Changes are applied in one place while other related files (callers, tests, types, docs) are forgotten; proactively ask Claude if any other parts of the codebase are affected by this change and still need updating",
+      "Claude automatically translates folder names into Spanish",
+      "Git automatically deletes old branches on the remote server",
+      "The browser automatically clears its browsing history"
     ],
     "answer": 0,
-    "explanation": "Khi sửa code, rất dễ xảy ra việc cập nhật logic chính nhưng quên cập nhật các callers, unit tests, hoặc tài liệu liên quan. Nhờ Claude quét kiểm tra toàn bộ các phần liên quan giúp đảm bảo tính đồng bộ.",
+    "explanation": "When editing code, it is easy to update the core logic while forgetting to update callers, unit tests, or related documentation. Asking Claude to scan all related parts ensures consistency.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-58"
   },
   {
     "id": 59,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Theo mục `Try it out after fixing findings` (Bài 3.3), tại sao sau khi bảo Claude sửa các lỗi phát hiện được trong lúc Code Review, bạn lại phải chạy kiểm thử lại ứng dụng một lần nữa trước khi Commit?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "According to `Try it out after fixing findings` (Lesson 3.3), why must you re-run tests and verify the application again after having Claude fix issues found during Code Review before committing?",
     "options": [
-      "Vì chính các bản vá lỗi mới trong lúc review cũng có thể vô tình làm phát sinh lỗi mới (regressions); việc chạy test và kiểm thử lại đảm bảo mọi thứ thực sự hoạt động trơn tru trước khi đóng gói commit",
-      "Vì Git không cho phép chạy lệnh `git commit` nếu chưa mở trình duyệt Chrome",
-      "Vì mỗi lần sửa code thì file `CLAUDE.md` sẽ bị mất nội dung",
-      "Vì Claude Code bắt buộc phải chạy đủ 100 lệnh terminal mới cho phép thoát"
+      "Because the new fixes applied during review can themselves accidentally introduce new bugs (regressions); re-running tests and verifying ensures everything actually works smoothly before committing",
+      "Because Git does not allow running `git commit` unless Chrome is open",
+      "Because every code edit erases the contents of `CLAUDE.md`",
+      "Because Claude Code requires running at least 100 terminal commands before exiting"
     ],
     "answer": 0,
-    "explanation": "Mọi thay đổi mã nguồn — kể cả những thay đổi nhằm vá lỗi được chỉ ra từ bước code review — đều có nguy cơ tạo ra lỗi mới. Luôn chạy lại tests/build và thử nghiệm thực tế trước khi commit!",
+    "explanation": "Any code change — even one meant to fix a bug flagged during code review — carries the risk of introducing regressions. Always re-run tests/builds and verify in practice before committing!",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-59"
   },
   {
     "id": 60,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Khi sử dụng tiện ích `Claude in Chrome extension` kết hợp với Claude Code trong quá trình phát triển ứng dụng Web (Bài 3.1), lợi ích lớn nhất là gì?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "When using the `Claude in Chrome extension` together with Claude Code during Web application development (Lesson 3.1), what is the biggest benefit?",
     "options": [
-      "Claude Code có thể tự mở một tab trình duyệt mới, trực tiếp kiểm thử giao diện UI vừa viết, quan sát kết quả/lỗi console và tự lặp lại việc sửa lỗi cho tới khi giao diện hoạt động đúng",
-      "Nó chỉ dùng để chặn quảng cáo khi bạn xem video trên YouTube",
-      "Nó giúp trình duyệt Chrome tiêu tốn ít RAM hơn 90%",
-      "Nó thay thế hoàn toàn nhu cầu sử dụng Git trong dự án"
+      "Claude Code can open a new browser tab, directly test the UI it just wrote, observe the results/console errors, and iterate on fixes until the UI works properly",
+      "It is only used to block ads when watching YouTube videos",
+      "It makes Chrome use 90% less RAM",
+      "It completely replaces the need for Git in the project"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 3.1: '...if you're building websites, install the Claude in Chrome extension so Claude Code can open a new browser tab and test the UI directly.' Điều này tạo ra một vòng lặp tự kiểm chứng (verification feedback loop) khép kín cho cả giao diện Frontend.",
+    "explanation": "According to Lesson 3.1: '...if you're building websites, install the Claude in Chrome extension so Claude Code can open a new browser tab and test the UI directly.' This creates a closed-loop verification feedback cycle for Frontend UI as well.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-60"
   },
   {
     "id": 61,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Nếu bạn có một tài liệu hướng dẫn quy trình rất chi tiết (dài hàng trăm dòng) nhưng CHỈ thỉnh thoảng mới cần dùng tới cho một tác vụ đặc thù, Bài 3.2 khuyên bạn nên đặt nó ở đâu để không làm lãng phí Context Window?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "If you have a very detailed workflow guide (hundreds of lines long) that is ONLY occasionally needed for a specialized task, where does Lesson 3.2 recommend placing it to avoid wasting Context Window space?",
     "options": [
-      "Chuyển hướng dẫn chi tiết đó sang một `Skill` (hoặc một file tài liệu riêng chỉ tham chiếu tới khi cần), giữ cho file `CLAUDE.md` luôn ngắn gọn",
-      "Dán toàn bộ hàng trăm dòng đó vào ngay đầu file `CLAUDE.md`",
-      "Nhân bản nội dung đó vào tất cả các file mã nguồn trong dự án",
-      "Đặt nó vào trong tên của một MCP Server"
+      "Move the detailed guidance into a `Skill` (or a separate documentation file referenced only when needed), keeping `CLAUDE.md` concise",
+      "Paste all hundreds of lines right at the top of `CLAUDE.md`",
+      "Duplicate that content into every source file in the project",
+      "Put it inside the name of an MCP Server"
     ],
     "answer": 0,
-    "explanation": "'Move detailed guidance that's only relevant sometimes into a skill or a separate file that you reference as needed.' Nhờ đó các phiên làm việc thông thường không bị tốn context vô ích.",
+    "explanation": "'Move detailed guidance that's only relevant sometimes into a skill or a separate file that you reference as needed.' This keeps normal sessions from wasting context unnecessarily.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-61"
   },
   {
     "id": 62,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Giả sử bạn vừa hoàn tất việc sửa lỗi cho hệ thống Thanh toán (Payment), đã commit xong xuôi và bây giờ muốn chuyển sang làm một tính năng hoàn toàn mới ở phần Giao diện Hồ sơ cá nhân (User Profile). Bạn nên gõ lệnh nào trong Claude Code trước khi bắt đầu tính năng mới?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "Suppose you just finished fixing a bug in the Payment system, committed everything cleanly, and now want to switch to building a completely new feature in the User Profile UI. Which command should you run in Claude Code before starting the new feature?",
     "options": [
-      "`/clear` (để xóa toàn bộ ngữ cảnh của bài toán Thanh toán cũ, tránh làm nhiễu suy luận của Claude khi sang bài toán Hồ sơ cá nhân mới)",
-      "`/compact` (để giữ lại toàn bộ chi tiết của hệ thống Thanh toán trộn lẫn vào bài toán mới)",
-      "`/context` (vì lệnh này tự động viết code tính năng mới)",
-      "`/mcp` (để xóa toàn bộ lịch sử Git)"
+      "`/clear` (to wipe all context from the old Payment task, preventing it from confusing Claude on the new User Profile task)",
+      "`/compact` (to keep all details of the Payment system mixed into the new task)",
+      "`/context` (because this command automatically writes the new feature code)",
+      "`/mcp` (to delete all Git history)"
     ],
     "answer": 0,
-    "explanation": "Khi đã commit xong việc cũ và chuyển sang một việc hoàn toàn không liên quan (`switching to something unrelated`), `/clear` là lựa chọn chuẩn xác nhất để giải phóng 100% Context Window.",
+    "explanation": "When you have committed the old work and are `switching to something unrelated`, `/clear` is the right choice to free up 100% of the Context Window.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-62"
   },
   {
     "id": 63,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Giả sử bạn đang ở giữa chừng một cuộc đại phẫu tái cấu trúc (refactoring) hệ thống Authentication gồm 5 chặng, bạn vừa xong chặng 2 và thấy Context Window đã đầy 85%. Bạn nên gõ lệnh nào để làm tiếp chặng 3?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "Suppose you are midway through a 5-stage Authentication system refactoring, you just finished stage 2, and you see the Context Window is 85% full. Which command should you run to continue to stage 3?",
     "options": [
-      "`/compact` (để giải phóng dung lượng Context Window nhưng vẫn giữ lại bản tóm tắt những gì đã làm ở chặng 1 và chặng 2)",
-      "`/clear` (để xóa sạch mọi ký ức về chặng 1 và chặng 2)",
-      "`exit` rồi gỡ cài đặt Claude Code",
-      "`git reset --hard` để xóa toàn bộ code vừa viết"
+      "`/compact` (to free up Context Window space while keeping a summary of what was done in stages 1 and 2)",
+      "`/clear` (to wipe all memory of stages 1 and 2)",
+      "`exit` and uninstall Claude Code",
+      "`git reset --hard` to delete all newly written code"
     ],
     "answer": 0,
-    "explanation": "Vì bạn vẫn đang làm việc tiếp trên CÙNG một tác vụ lớn (`working on the same task and running up against the context limit`), `/compact` giúp thu gọn ngữ cảnh cũ thành bản tóm tắt súc tích để bạn đi tiếp chặng 3 mượt mà.",
+    "explanation": "Because you are still `working on the same task and running up against the context limit`, `/compact` condenses the old context into a concise summary so you can continue smoothly to stage 3.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-63"
   },
   {
     "id": 64,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Khi chạy lệnh `/context` trong Claude Code, những thông tin hữu ích nào được hiển thị trên màn hình?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "When you run `/context` in Claude Code, what useful information is displayed on screen?",
     "options": [
-      "Tổng quan mức sử dụng Context Window hiện tại, danh sách các thành phần đang chiếm nhiều dung lượng nhất (System prompt, MCP tools, Memory files, Messages...) và biểu đồ trực quan phân bổ dung lượng",
-      "Danh sách mật khẩu Wi-Fi của tất cả các mạng xung quanh",
-      "Biểu đồ nhiệt độ của CPU và tốc độ quay của ổ cứng",
-      "Toàn bộ lịch sử commit của mọi kho lưu trữ trên GitHub"
+      "An overview of current Context Window usage, a breakdown of what is taking up the most space (System prompt, MCP tools, Memory files, Messages, etc.), and a visual graph of the allocation",
+      "A list of Wi-Fi passwords for all nearby networks",
+      "A graph of CPU temperature and hard drive spin speed",
+      "The entire commit history of every repository on GitHub"
     ],
     "answer": 0,
-    "explanation": "`/context` cung cấp bức tranh minh bạch về việc bộ nhớ làm việc (Context Window) đang được tiêu thụ vào đâu, giúp bạn dễ dàng nhận ra nếu có một MCP server hay file `CLAUDE.md` đang chiếm quá nhiều chỗ.",
+    "explanation": "`/context` gives a transparent view of where your working memory (Context Window) is being spent, making it easy to spot if an MCP server or `CLAUDE.md` file is taking up too much space.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-64"
   },
   {
     "id": 65,
-    "chapter": "Chương 3: Daily Workflows",
-    "question": "Theo phần `Recap` của Bài 3.3 (`Code Review`), 3 bước cốt lõi để thực hiện Code Review hiệu quả với sự trợ giúp của Claude là gì?",
+    "chapter": "Chapter 3: Daily Workflows",
+    "question": "According to the `Recap` of Lesson 3.3 (`Code Review`), what are the 3 core steps for performing an effective Code Review with Claude's help?",
     "options": [
-      "1) Tự đọc hiểu các thay đổi và chạy `/review` (hoặc phiên mới) để có góc nhìn thứ hai trong ngữ cảnh sạch, 2) Quyết định xem phát hiện nào thực sự đáng sửa và kiểm tra các phần bị bỏ sót, 3) Chạy thử nghiệm lại ứng dụng sau khi sửa lỗi trước khi commit",
-      "1) Để Claude tự review trong cùng phiên viết code, 2) Chấp nhận mọi gợi ý không cần đọc, 3) Commit ngay lập tức mà không chạy lại test",
-      "1) Chỉ kiểm tra tên biến, 2) Xóa toàn bộ unit tests, 3) Push thẳng lên nhánh main",
-      "1) Chạy `/clear`, 2) Chạy `/compact`, 3) Tắt máy"
+      "1) Read through the changes yourself and run `/review` (or a new session) for a second opinion in a clean context, 2) Decide which findings are actually worth fixing and check for missed parts, 3) Re-test the application after fixing issues before committing",
+      "1) Have Claude self-review in the same coding session, 2) Accept every suggestion without reading, 3) Commit immediately without re-running tests",
+      "1) Only check variable names, 2) Delete all unit tests, 3) Push straight to main",
+      "1) Run `/clear`, 2) Run `/compact`, 3) Shut down the computer"
     ],
     "answer": 0,
-    "explanation": "Recap Bài 3.3 nhấn mạnh: đọc kiểm tra + dùng `/review` trong clean context để lấy second opinion, chọn lọc những lỗi đáng sửa + rà soát phần bị bỏ sót, và luôn test lại sau khi áp dụng các bản vá review.",
+    "explanation": "The Lesson 3.3 Recap emphasizes: inspect changes + use `/review` in a clean context for a second opinion, triage which findings to fix + check for missed parts, and always re-test after applying review fixes.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-65"
   },
   {
     "id": 66,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "File `CLAUDE.md` đóng vai trò gì trong Claude Code và được nạp vào thời điểm nào?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "What role does the `CLAUDE.md` file play in Claude Code, and when is it loaded?",
     "options": [
-      "Cung cấp bộ nhớ bền vững (persistent memory) về dự án của bạn; Claude Code tự động đọc file này mỗi khi bạn bắt đầu một phiên làm việc mới và đính kèm nội dung của nó vào prompt",
-      "Là file chỉ được đọc duy nhất một lần khi bạn cài đặt hệ điều hành và bị xóa ngay sau đó",
-      "Là file lưu trữ mã nhị phân đã biên dịch của dự án, chỉ nạp khi bạn gõ lệnh `/mcp`",
-      "Là file nhật ký chỉ dùng cho con người đọc, Claude Code hoàn toàn bỏ qua file này"
+      "It provides persistent memory about your project; Claude Code reads it automatically every time you start a new session and appends its contents to your prompt",
+      "It is read only once when you install your operating system and deleted immediately afterward",
+      "It stores the project's compiled binary code and is only loaded when you type `/mcp`",
+      "It is a log file strictly for human readers; Claude Code completely ignores it"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.1 ('The CLAUDE.md File'): 'One of the most useful features in Claude Code is the CLAUDE.md file. It gives Claude Code persistent memory about your project... Claude Code reads it automatically every time you start a session. CLAUDE.md files are appended to your prompt.'",
+    "explanation": "According to Lesson 4.1 ('The CLAUDE.md File'): 'One of the most useful features in Claude Code is the CLAUDE.md file. It gives Claude Code persistent memory about your project... Claude Code reads it automatically every time you start a session. CLAUDE.md files are appended to your prompt.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-66"
   },
   {
     "id": 67,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Nếu một dự án KHÔNG có file `CLAUDE.md`, hạn chế gì sẽ xảy ra mỗi khi bạn mở một phiên làm việc mới với Claude Code?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "If a project does NOT have a `CLAUDE.md` file, what limitation occurs every time you start a new Claude Code session?",
     "options": [
-      "Claude phải bắt đầu lại từ con số 0 ở mỗi phiên: phải tự khám phá lại codebase, tự đoán các thư viện phụ thuộc và các tính năng đã có, đôi khi đưa ra giả định sai làm bạn khó định hướng nó đi đúng đường",
-      "Claude Code sẽ từ chối khởi động và báo lỗi `MissingClaudeMdException`",
-      "Claude Code sẽ tự động xóa toàn bộ file trong thư mục dự án",
-      "Bạn sẽ không thể sử dụng phím tắt `Shift + Tab`"
+      "Claude has to start fresh from scratch every session: re-exploring your codebase, guessing dependencies and existing features, and sometimes making assumptions that make it harder to steer back in the right direction",
+      "Claude Code refuses to launch and throws `MissingClaudeMdException`",
+      "Claude Code automatically deletes all files in the project directory",
+      "You will not be able to use the `Shift + Tab` shortcut"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.1 ('The Problem It Solves'): 'When you open Claude Code without a CLAUDE.md file, it starts fresh every time. It has to re-explore your codebase, figure out what dependencies are needed, and understand what features are already implemented. Sometimes it makes assumptions, which makes it harder to steer back in the right direction.'",
+    "explanation": "According to Lesson 4.1 ('The Problem It Solves'): 'When you open Claude Code without a CLAUDE.md file, it starts fresh every time. It has to re-explore your codebase, figure out what dependencies are needed, and understand what features are already implemented. Sometimes it makes assumptions, which makes it harder to steer back in the right direction.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-67"
   },
   {
     "id": 68,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Trong ví dụ điển hình ở Bài 4.1 (`An Example`), một file `CLAUDE.md` gọn gàng và hiệu quả thường bao gồm 3 nhóm thông tin chính nào?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "In the typical example in Lesson 4.1 (`An Example`), what 3 main groups of information does a clean, effective `CLAUDE.md` file usually include?",
     "options": [
-      "1) `# Project` (mô tả ngắn tech stack: Next.js, Tailwind, Drizzle ORM...), 2) `# Commands` (các lệnh dev server, test, lint), và 3) `# Code Style` (quy ước viết code và cấu trúc thư mục)",
-      "1) Toàn bộ mã nguồn của tất cả các file trong dự án, 2) Lịch sử chat của 6 tháng trước, và 3) Danh sách mật khẩu database",
-      "1) Tiểu sử của tất cả nhân viên trong công ty, 2) Báo cáo tài chính năm, và 3) Kế hoạch nghỉ lễ",
-      "1) Mã HTML của trang chủ Google, 2) File ảnh logo công ty mã hóa Base64, và 3) Danh sách 10.000 từ vựng tiếng Anh"
+      "1) `# Project` (brief tech stack overview: Next.js, Tailwind, Drizzle ORM, etc.), 2) `# Commands` (dev server, test, and lint commands), and 3) `# Code Style` (coding conventions and directory structure)",
+      "1) The full source code of every file in the project, 2) Chat history from the past 6 months, and 3) Database passwords",
+      "1) Biographies of all company employees, 2) Annual financial reports, and 3) Holiday schedules",
+      "1) HTML source of the Google homepage, 2) Base64-encoded company logo image, and 3) A list of 10,000 English vocabulary words"
     ],
     "answer": 0,
-    "explanation": "Ví dụ chuẩn trong Bài 4.1 chia `CLAUDE.md` thành 3 mục cực kỳ ngắn gọn và thực dụng: `# Project` (stack công nghệ), `# Commands` (`npm run dev`, `npm test`, `npm run lint`), và `# Code Style` (TypeScript strict mode, named exports, vị trí đặt API routes).",
+    "explanation": "The standard example in Lesson 4.1 divides `CLAUDE.md` into 3 concise, practical sections: `# Project` (tech stack), `# Commands` (`npm run dev`, `npm test`, `npm run lint`), and `# Code Style` (TypeScript strict mode, named exports, API route locations).",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-68"
   },
   {
     "id": 69,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Theo mục `CLAUDE.md is for Teams` (Bài 4.1), sự khác biệt giữa `Project-level CLAUDE.md` và `User-level CLAUDE.md` là gì?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "According to `CLAUDE.md is for Teams` (Lesson 4.1), what is the difference between `Project-level CLAUDE.md` and `User-level CLAUDE.md`?",
     "options": [
-      "`Project-level CLAUDE.md` nằm ở thư mục gốc của dự án và được commit vào Git để chia sẻ với cả nhóm; còn `User-level CLAUDE.md` nằm trong thư mục cấu hình cá nhân (`~/.claude/CLAUDE.md`) và áp dụng cho mọi dự án của riêng bạn",
-      "`Project-level CLAUDE.md` chỉ dùng được trên Windows, còn `User-level CLAUDE.md` chỉ dùng được trên macOS",
-      "Bạn chỉ được phép dùng một trong hai file chứ hệ thống không bao giờ kết hợp cả hai",
-      "`User-level CLAUDE.md` bắt buộc phải được đẩy lên GitHub công khai của công ty"
+      "`Project-level CLAUDE.md` lives at the project root and is committed to Git to share with the whole team; `User-level CLAUDE.md` lives in your personal config directory (`~/.claude/CLAUDE.md`) and applies across all your own projects",
+      "`Project-level CLAUDE.md` only works on Windows, while `User-level CLAUDE.md` only works on macOS",
+      "You are only allowed to use one of the two files; the system never combines both",
+      "`User-level CLAUDE.md` must be pushed to the company's public GitHub repository"
     ],
     "answer": 0,
-    "explanation": "Hệ thống hỗ trợ phân cấp bộ nhớ (hierarchy of memory files): Project-level `CLAUDE.md` ở thư mục gốc dự án để chia sẻ quy chuẩn chung cho cả team qua version control; User-level `CLAUDE.md` ở thư mục cấu hình cá nhân để lưu sở thích riêng áp dụng trên mọi dự án của bạn.",
+    "explanation": "The system supports a hierarchy of memory files: Project-level `CLAUDE.md` at the project root to share team-wide standards via version control; User-level `CLAUDE.md` in your personal config folder to store personal preferences across all your projects.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-69"
   },
   {
     "id": 70,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Theo mục `Tips` của Bài 4.1, nếu bạn nhận thấy mình đang phải nhắc đi nhắc lại để sửa lưng Claude cùng một lỗi (ví dụ: luôn nhắc nó dùng Server Actions thay vì API routes), cách nhanh nhất để lưu quy tắc đó vào bộ nhớ là gì?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "According to `Tips` in Lesson 4.1, if you find yourself repeatedly correcting Claude on the same thing (e.g., always reminding it to use Server Actions instead of API routes), what is the fastest way to save that rule to memory?",
     "options": [
-      "Nói trực tiếp với Claude ngay trong khung chat: bảo nó hãy cập nhật file `CLAUDE.md` để ghi nhớ quy tắc đó cho các lần sau (`explicitly ask Claude to update your CLAUDE.md so it remembers next time`)",
-      "Phải tắt Claude Code, gỡ cài đặt rồi cài lại từ đầu",
-      "Gõ lệnh `/clear` 5 lần liên tiếp",
-      "Đổi chế độ phân quyền sang `Plan Mode`"
+      "Tell Claude directly in the chat: explicitly ask it to update your `CLAUDE.md` so it remembers the rule next time",
+      "Close Claude Code, uninstall it, and reinstall it from scratch",
+      "Run `/clear` 5 times in a row",
+      "Switch the permission mode to `Plan Mode`"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.1 ('Tips - Save corrections to memory'): 'If you find yourself correcting Claude repeatedly — like telling it to always use server actions instead of API routes — explicitly ask Claude to update your CLAUDE.md so it remembers next time.'",
+    "explanation": "According to Lesson 4.1 ('Tips - Save corrections to memory'): 'If you find yourself correcting Claude repeatedly — like telling it to always use server actions instead of API routes — explicitly ask Claude to update your CLAUDE.md so it remembers next time.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-70"
   },
   {
     "id": 71,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Làm thế nào để bạn tham chiếu tới một file tài liệu có sẵn trong dự án (ví dụ `README.md` hoặc `docs/api.md`) từ bên trong file `CLAUDE.md` để Claude biết đường đọc khi cần?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "How can you reference an existing documentation file in your project (such as `README.md` or `docs/api.md`) from inside `CLAUDE.md` so Claude knows to read it when needed?",
     "options": [
-      "Sử dụng ký hiệu `@` đi kèm với đường dẫn file (ví dụ: `Please read if you need more info: @README.md`)",
-      "Sử dụng thẻ HTML `<iframe src=\"README.md\"></iframe>`",
-      "Sử dụng từ khóa `IMPORT_BINARY(README.md)`",
-      "Không thể tham chiếu tới file khác từ bên trong `CLAUDE.md`"
+      "Use the `@` symbol followed by the file path (for example: `Please read if you need more info: @README.md`)",
+      "Use the HTML tag `<iframe src=\"README.md\"></iframe>`",
+      "Use the keyword `IMPORT_BINARY(README.md)`",
+      "You cannot reference other files from inside `CLAUDE.md`"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.1 ('Tips - Reference project docs'): 'If you have documentation in your project that you want Claude to reference, use the `@` symbol with the file path: `Please read if you need more info: @README.md`.'",
+    "explanation": "According to Lesson 4.1 ('Tips - Reference project docs'): 'If you have documentation in your project that you want Claude to reference, use the `@` symbol with the file path: `Please read if you need more info: @README.md`.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-71"
   },
   {
     "id": 72,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Tại sao Bài 4.1 lại đưa ra lời khuyên `Start without one` (Bắt đầu dự án mà chưa cần tạo ngay file `CLAUDE.md` từ phút đầu tiên, rồi sau đó mới chạy `/init`)?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "Why does Lesson 4.1 recommend `Start without one` (starting a project without creating `CLAUDE.md` from minute one, and running `/init` later)?",
     "options": [
-      "Để bạn quan sát xem trong thực tế mình thường xuyên phải nắn chỉnh (course-correct) mô hình ở những điểm nào, nhờ đó giữ cho `CLAUDE.md` luôn ngắn gọn và chỉ tập trung vào những thông tin thực sự cần thiết; khi đã sẵn sàng, chạy `/init` để Claude tự sinh file cho bạn",
-      "Vì lệnh `/init` chỉ chạy được sau khi dự án đã có ít nhất 1.000 commits trên Git",
-      "Vì nếu tạo `CLAUDE.md` ngay từ đầu thì Claude Code sẽ không thể đọc được file mã nguồn",
-      "Vì file `CLAUDE.md` sẽ tự động hết hạn sau 24 giờ"
+      "So you can observe where you constantly have to course-correct the model in practice, keeping `CLAUDE.md` compact and focused only on necessary information; when ready, run `/init` to have Claude generate one for you",
+      "Because `/init` only works after a project has at least 1,000 Git commits",
+      "Because if you create `CLAUDE.md` at the start, Claude Code cannot read source files",
+      "Because `CLAUDE.md` automatically expires after 24 hours"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.1: 'Start without one. We recommend starting a project without a CLAUDE.md file so you can see where you constantly have to course-correct the model. This keeps your CLAUDE.md compact and focused on only the necessary information. When you're ready, run `/init` to have Claude generate one for you.'",
+    "explanation": "According to Lesson 4.1: 'Start without one. We recommend starting a project without a CLAUDE.md file so you can see where you constantly have to course-correct the model. This keeps your CLAUDE.md compact and focused on only the necessary information. When you're ready, run `/init` to have Claude generate one for you.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-72"
   },
   {
     "id": 73,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Trong Bài 4.2 (`Subagents`), nếu bạn tự tạo hoặc thêm một file cấu hình Subagent mới vào thư mục `.claude/agents/` trong khi phiên làm việc Claude Code đã được mở sẵn từ trước, bạn cần làm gì để Claude Code nạp Subagent mới đó?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "In Lesson 4.2 (`Subagents`), if you create or add a new Subagent configuration file to `.claude/agents/` while a Claude Code session is already open, what must you do for Claude Code to load that new Subagent?",
     "options": [
-      "Khởi động lại phiên Claude Code (`restart Claude Code to load the new subagent`) hoặc tạo thông qua trình `/agents` ngay trong phiên",
-      "Phải cài đặt lại toàn bộ hệ điều hành",
-      "Phải xóa file `CLAUDE.md` đi thì Subagent mới hoạt động",
-      "Phải đổi đuôi file từ `.md` sang `.json`"
+      "Restart Claude Code to load the new subagent, or create it via `/agents` directly inside the session",
+      "Reinstall the entire operating system",
+      "Delete the `CLAUDE.md` file for the Subagent to work",
+      "Change the file extension from `.md` to `.json`"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.2: Nếu file subagent được tạo từ bên ngoài khi phiên của bạn đang mở sẵn, hãy khởi động lại Claude Code để nó quét và nạp subagent mới vào danh sách.",
+    "explanation": "According to Lesson 4.2: If a subagent file is created externally while your session is already open, restart Claude Code so it scans and loads the new subagent into the list.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-73"
   },
   {
     "id": 74,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Theo mục `Further Customization` trong Bài 4.2 (`Subagents`), khi bạn nạp sẵn các Skills vào một Subagent bằng cách thêm khóa `skills` vào YAML frontmatter của Subagent đó, cơ chế nạp này khác với cách Skills hoạt động trong cuộc hội thoại chính như thế nào?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "According to `Further Customization` in Lesson 4.2 (`Subagents`), when you preload Skills into a Subagent by adding the `skills` key to its YAML frontmatter, how does this loading mechanism differ from how Skills work in the main conversation?",
     "options": [
-      "Khác với cuộc hội thoại chính (nơi chỉ nạp `name` + `description` và chỉ tải toàn bộ skill khi cần), các skills được liệt kê trong khóa `skills` của Subagent sẽ được nạp TOÀN BỘ nội dung vào ngay trong Context Window của Subagent đó (`the entire skill is loaded into context here`)",
-      "Trong Subagent thì chỉ có tên của Skill được nạp, còn phần thân của Skill bị xóa bỏ hoàn toàn",
-      "Các Skills được khai báo trong Subagent sẽ tự động bị vô hiệu hóa không cho phép sử dụng",
-      "Không có bất kỳ sự khác biệt nào giữa hai cơ chế"
+      "Unlike in the main conversation (where only `name` + `description` are loaded upfront and the full skill is loaded on demand), skills listed in a Subagent's `skills` key have their ENTIRE content loaded into the Subagent's Context Window immediately",
+      "In a Subagent, only the Skill's name is loaded while the body of the Skill is completely stripped",
+      "Skills declared in a Subagent are automatically disabled and cannot be used",
+      "There is no difference between the two mechanisms"
     ],
     "answer": 0,
-    "explanation": "Đây là điểm rất đáng chú ý trong Bài 4.2 ('Further Customization'): 'Preload skills into subagents by adding the `skills` key and listing skills by name. Note that unlike skills in your main conversation, the entire skill is loaded into context here.'",
+    "explanation": "This is a notable detail in Lesson 4.2 ('Further Customization'): 'Preload skills into subagents by adding the `skills` key and listing skills by name. Note that unlike skills in your main conversation, the entire skill is loaded into context here.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-74"
   },
   {
     "id": 75,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Ngoài việc nạp sẵn Skills (`skills` key), tính năng tùy chỉnh nâng cao nào khác của Subagents được nhắc tới trong mục `Further Customization` (Bài 4.2) giúp Subagent làm việc hiệu quả hơn khi được dùng lặp đi lặp lại trên cùng một dự án?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "Besides preloading Skills (`skills` key), what other advanced Subagent customization feature mentioned in `Further Customization` (Lesson 4.2) helps a Subagent work more effectively when used repeatedly on the same project?",
     "options": [
-      "`Persistent memory` — cho phép Subagent của bạn duy trì bộ nhớ xuyên suốt qua các cuộc hội thoại khác nhau (`retain memory across conversations`)",
-      "`Auto-overclocking` — cho phép Subagent tự ép xung tốc độ GPU",
-      "`Global broadcasting` — cho phép Subagent gửi tin nhắn tới mọi máy tính trong mạng LAN",
-      "`Infinite recursion` — cho phép Subagent tự gọi lại chính nó vô hạn lần"
+      "`Persistent memory` — lets your subagent retain memory across different conversations",
+      "`Auto-overclocking` — lets the subagent overclock GPU speed",
+      "`Global broadcasting` — lets the subagent send messages to every computer on the LAN",
+      "`Infinite recursion` — lets the subagent call itself infinitely"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.2: 'Persistent memory lets your subagent retain memory across conversations. This is great if you're using it consistently on the same projects.'",
+    "explanation": "According to Lesson 4.2: 'Persistent memory lets your subagent retain memory across conversations. This is great if you're using it consistently on the same projects.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-75"
   },
   {
     "id": 76,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Trong Bài 4.3 (`Skills`), sự khác biệt cốt lõi nhất giữa việc đặt hướng dẫn trong `CLAUDE.md` so với đặt trong một `Skill` (`.claude/skills/<name>/SKILL.md`) là gì?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "In Lesson 4.3 (`Skills`), what is the core difference between placing instructions in `CLAUDE.md` versus placing them in a `Skill` (`.claude/skills/<name>/SKILL.md`)?",
     "options": [
-      "`CLAUDE.md` luôn được nạp toàn bộ vào MỌI phiên làm việc (dành cho thông tin luôn cần thiết), còn `Skills` chỉ nạp `name` và `description` lúc đầu và chỉ nạp toàn bộ nội dung `SKILL.md` theo nhu cầu (on-demand) khi tác vụ khớp hoặc khi bạn gõ `/skill-name`",
-      "`Skills` luôn được nạp toàn bộ 100% vào mọi phiên làm việc, còn `CLAUDE.md` chỉ được nạp khi bạn gõ lệnh `/claude-md`",
-      "`CLAUDE.md` chỉ viết được bằng tiếng Anh, còn `Skills` chỉ viết được bằng ngôn ngữ Python",
-      "`Skills` không thể chia sẻ qua Git, chỉ có `CLAUDE.md` mới chia sẻ được qua Git"
+      "`CLAUDE.md` is always loaded in full into EVERY session (for always-needed info), whereas `Skills` only load `name` and `description` initially and load the full `SKILL.md` content on-demand when a task matches or when you type `/skill-name`",
+      "`Skills` are always loaded 100% into every session, whereas `CLAUDE.md` is only loaded when you run `/claude-md`",
+      "`CLAUDE.md` can only be written in English, whereas `Skills` can only be written in Python",
+      "`Skills` cannot be shared via Git; only `CLAUDE.md` can be shared via Git"
     ],
     "answer": 0,
-    "explanation": "`CLAUDE.md` tiêu tốn context ở mọi phiên vì nó luôn được nạp tự động. Ngược lại, `Skills` áp dụng Progressive Disclosure: bình thường chỉ tốn vài chục token cho `name` + `description`, khi nào đụng đúng việc mới nạp toàn bộ hướng dẫn chi tiết vào context!",
+    "explanation": "`CLAUDE.md` consumes context in every session because it is always loaded automatically. By contrast, `Skills` use Progressive Disclosure: normally they cost only a few dozen tokens for `name` + `description`, and only load the full detailed instructions into context when the relevant task arises!",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-76"
   },
   {
     "id": 77,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Làm thế nào để bạn kích hoạt một Skill trong Claude Code?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "How do you trigger a Skill in Claude Code?",
     "options": [
-      "Hoặc để Claude tự động kích hoạt khi yêu cầu của bạn khớp với trường `description` của Skill, hoặc bạn chủ động gõ lệnh `/<skill-name>` (slash command) trực tiếp trong khung chat",
-      "Phải mở file `SKILL.md` rồi sao chép toàn bộ nội dung dán vào khung chat ở mỗi lượt",
-      "Phải khởi động lại máy tính mỗi khi muốn dùng một Skill",
-      "Chỉ có thể kích hoạt bằng cách sửa file `.mcp.json`"
+      "Either let Claude automatically invoke it when your request matches the Skill's `description`, or manually type `/<skill-name>` (slash command) directly in the chat",
+      "Open `SKILL.md` and copy-paste its entire contents into the chat on every turn",
+      "Restart your computer every time you want to use a Skill",
+      "It can only be triggered by editing `.mcp.json`"
     ],
     "answer": 0,
-    "explanation": "Skills vừa hỗ trợ kích hoạt tự động qua đối sánh ngữ nghĩa với trường `description`, vừa tự động đăng ký thành một lệnh gạch chéo `/<skill-name>` để bạn gọi thủ công bất cứ lúc nào.",
+    "explanation": "Skills support both automatic invocation via semantic matching against the `description` field and automatic registration as a `/<skill-name>` slash command that you can invoke manually at any time.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-77"
   },
   {
     "id": 78,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Nếu bạn tạo một Skill (ví dụ: quy trình tạo bản phát hành `release-notes` hoặc chạy script nhạy cảm) và CHỈ muốn nó chạy khi chính tay bạn gõ lệnh `/<skill-name>` chứ không muốn Claude tự động kích hoạt nó, bạn cần thêm cấu hình nào vào YAML frontmatter của `SKILL.md`?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "If you create a Skill (e.g., a `release-notes` workflow or a sensitive script) and ONLY want it to run when you manually type `/<skill-name>` — preventing Claude from invoking it automatically — which setting should you add to the YAML frontmatter of `SKILL.md`?",
     "options": [
       "`disable-model-invocation: true`",
       "`auto-run: never`",
@@ -1242,63 +1242,63 @@
       "`block-claude: 100`"
     ],
     "answer": 0,
-    "explanation": "Thiết lập `disable-model-invocation: true` trong YAML frontmatter của `SKILL.md` sẽ ngăn Claude tự ý kích hoạt skill đó, đảm bảo skill chỉ chạy khi người dùng chủ động gọi `/<skill-name>`.",
+    "explanation": "Setting `disable-model-invocation: true` in the YAML frontmatter of `SKILL.md` prevents Claude from autonomously invoking that skill, ensuring it only runs when the user explicitly calls `/<skill-name>`.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-78"
   },
   {
     "id": 79,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Theo Bài 4.4 (`MCP`), giao thức `Model Context Protocol (MCP)` giải quyết bài toán gì cho Claude Code?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "According to Lesson 4.4 (`MCP`), what problem does the `Model Context Protocol (MCP)` solve for Claude Code?",
     "options": [
-      "Là một chuẩn mở cho phép Claude Code kết nối với các công cụ và nguồn dữ liệu bên ngoài nằm ngoài codebase của bạn (như trình quản lý dự án Linear, Jira, trình duyệt web, hoặc kho tài liệu cập nhật trực tuyến như Context7)",
-      "Là một thuật toán nén file giúp giảm kích thước ổ cứng xuống 10 lần",
-      "Là một bộ giao diện màu sắc giúp thay đổi hình nền của VS Code",
-      "Là một trình biên dịch giúp chuyển đổi code Python sang Java"
+      "It is an open standard that lets Claude Code connect to external tools and data sources outside your codebase (such as project trackers like Linear or Jira, web browsers, or up-to-date documentation repositories like Context7)",
+      "It is a file compression algorithm that shrinks hard drive usage by 10x",
+      "It is a color theme engine for changing VS Code's background",
+      "It is a compiler that translates Python code into Java"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.4: 'Model Context Protocol (MCP) is an open standard that lets Claude Code connect to external tools and data sources... A lot of your context lives outside your codebase — in databases, productivity apps, or public repositories. MCP bridges that gap.'",
+    "explanation": "According to Lesson 4.4: 'Model Context Protocol (MCP) is an open standard that lets Claude Code connect to external tools and data sources... A lot of your context lives outside your codebase — in databases, productivity apps, or public repositories. MCP bridges that gap.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-79"
   },
   {
     "id": 80,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Trong Bài 4.4, hai ví dụ thực tế nào được nêu ra để minh họa những gì bạn có thể làm khi kết nối MCP Server vào Claude Code?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "In Lesson 4.4, what two real-world examples are given to illustrate what you can do when connecting an MCP Server to Claude Code?",
     "options": [
-      "1) Kết nối `Linear MCP server` để hỏi xem những issues nào đang được giao cho bạn, và 2) Kết nối `Context7` MCP server để cung cấp tài liệu thư viện cập nhật mới nhất (up-to-date documentation) cho Claude Code",
-      "1) Kết nối máy in 3D để in vỏ máy tính, và 2) Kết nối lò vi sóng để hâm nóng thức ăn",
-      "1) Kết nối phần mềm nghe nhạc Spotify, và 2) Kết nối trò chơi cờ vua",
-      "1) Thay thế trình biên dịch TypeScript, và 2) Xóa bỏ hoàn toàn nhu cầu dùng file `CLAUDE.md`"
+      "1) Connecting a `Linear MCP server` to ask what issues are assigned to you, and 2) Connecting a `Context7` MCP server to provide up-to-date library documentation to Claude Code",
+      "1) Connecting a 3D printer to print computer cases, and 2) Connecting a microwave to heat food",
+      "1) Connecting Spotify music software, and 2) Connecting a chess game",
+      "1) Replacing the TypeScript compiler, and 2) Eliminating the need for `CLAUDE.md`"
     ],
     "answer": 0,
-    "explanation": "Bài 4.4 nêu đích danh 2 ví dụ: 'For example, if your team uses Linear for project management, you can add a Linear MCP server to bring in the details of what's assigned to you. If you need up-to-date documentation for a specific coding task, an MCP server like Context7 can provide that to Claude Code.'",
+    "explanation": "Lesson 4.4 explicitly cites these 2 examples: 'For example, if your team uses Linear for project management, you can add a Linear MCP server to bring in the details of what's assigned to you. If you need up-to-date documentation for a specific coding task, an MCP server like Context7 can provide that to Claude Code.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-80"
   },
   {
     "id": 81,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Bạn sử dụng câu lệnh CLI nào để thêm một MCP Server mới vào Claude Code, và hai loại giao thức kết nối (server types) được giới thiệu trong Bài 4.4 là gì?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "Which CLI command do you use to add a new MCP Server to Claude Code, and what are the two server connection types introduced in Lesson 4.4?",
     "options": [
-      "Dùng lệnh `claude mcp add`, với 2 loại server là: 1) `HTTP servers` (dành cho các dịch vụ từ xa kết nối qua mạng), và 2) `Stdio servers` (dành cho các tiến trình cục bộ chạy trực tiếp trên máy của bạn)",
-      "Dùng lệnh `npm install mcp`, với 2 loại server là `FTP servers` và `Bluetooth servers`",
-      "Dùng lệnh `git add mcp`, với 2 loại server là `SQL servers` và `HTML servers`",
-      "Dùng lệnh `/init mcp`, chỉ hỗ trợ duy nhất giao thức `UDP`"
+      "Use `claude mcp add`, with 2 server types: 1) `HTTP servers` (for remote services connected over the network), and 2) `Stdio servers` (for local processes running directly on your machine)",
+      "Use `npm install mcp`, with 2 server types: `FTP servers` and `Bluetooth servers`",
+      "Use `git add mcp`, with 2 server types: `SQL servers` and `HTML servers`",
+      "Use `/init mcp`, which only supports the `UDP` protocol"
     ],
     "answer": 0,
-    "explanation": "Theo mục 'Adding an MCP Server' (Bài 4.4): 'You can add MCP servers with the `claude mcp add` command. There are two types: HTTP servers are for remote services (hosted by the service provider and connect over the network); Stdio servers are for local processes that run on your machine.'",
+    "explanation": "According to 'Adding an MCP Server' (Lesson 4.4): 'You can add MCP servers with the `claude mcp add` command. There are two types: HTTP servers are for remote services (hosted by the service provider and connect over the network); Stdio servers are for local processes that run on your machine.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-81"
   },
   {
     "id": 82,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Bên trong một phiên làm việc của Claude Code, bạn gõ câu lệnh nào để xem những MCP servers nào đang kết nối, kiểm tra lỗi kết nối và tắt (disable) các servers bạn không cần dùng?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "Inside a Claude Code session, which command do you run to see which MCP servers are connected, check for connection errors, and disable servers you do not need?",
     "options": [
       "`/mcp`",
       "`/hooks`",
@@ -1306,31 +1306,31 @@
       "`/compact`"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.4: 'You can manage your servers with `/mcp` inside a Claude Code session to see what's connected, check errors, and disable servers you don't need.'",
+    "explanation": "According to Lesson 4.4: 'You can manage your servers with `/mcp` inside a Claude Code session to see what's connected, check errors, and disable servers you don't need.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-82"
   },
   {
     "id": 83,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Theo mục `Scoping Servers` (Bài 4.4), các MCP servers trong Claude Code có thể được phân phạm vi (scoped) theo 3 cấp độ nào?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "According to `Scoping Servers` (Lesson 4.4), what are the 3 levels at which MCP servers in Claude Code can be scoped?",
     "options": [
-      "1) `Local` (chỉ bật trong dự án hiện tại cho riêng bạn), 2) `User` (khả dụng trên tất cả các dự án của bạn), và 3) `Project` (sử dụng file `.mcp.json` được commit vào Git để cả nhóm cùng dùng chung)",
-      "1) `Frontend`, 2) `Backend`, và 3) `Database`",
-      "1) `Development`, 2) `Staging`, và 3) `Production`",
-      "1) `Read-only`, 2) `Auto-accept`, và 3) `Plan`"
+      "1) `Local` (only enabled in the current project, just for you), 2) `User` (available across all your projects), and 3) `Project` (uses a `.mcp.json` file checked into Git so everyone on the team shares the same servers)",
+      "1) `Frontend`, 2) `Backend`, and 3) `Database`",
+      "1) `Development`, 2) `Staging`, and 3) `Production`",
+      "1) `Read-only`, 2) `Auto-accept`, and 3) `Plan`"
     ],
     "answer": 0,
-    "explanation": "Theo mục 'Scoping Servers' (Bài 4.4): (1) Local — only enabled in the current project, just for you; (2) User — available across all your projects; (3) Project — uses a `.mcp.json` file that you check into version control so everyone on the team gets the same servers.",
+    "explanation": "According to 'Scoping Servers' (Lesson 4.4): (1) Local — only enabled in the current project, just for you; (2) User — available across all your projects; (3) Project — uses a `.mcp.json` file that you check into version control so everyone on the team gets the same servers.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-83"
   },
   {
     "id": 84,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Khi bạn cấu hình một MCP server ở phạm vi `Project` để chia sẻ cho tất cả các thành viên trong nhóm qua Git, thông tin cấu hình của MCP server đó được lưu trong file nào?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "When you configure an MCP server at the `Project` scope to share with all team members via Git, which file stores that MCP server configuration?",
     "options": [
       "`.mcp.json`",
       "`CLAUDE.md`",
@@ -1338,79 +1338,79 @@
       "`.gitignore`"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.4: 'Project — uses a `.mcp.json` file that you check into version control so everyone on the team gets the same servers.'",
+    "explanation": "According to Lesson 4.4: 'Project — uses a `.mcp.json` file that you check into version control so everyone on the team gets the same servers.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-84"
   },
   {
     "id": 85,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Theo mục `Context Costs` (Bài 4.4), tại sao việc kết nối quá nhiều MCP servers cùng lúc lại gây bất lợi cho Context Window của bạn?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "According to `Context Costs` (Lesson 4.4), why is having too many MCP servers connected simultaneously detrimental to your Context Window?",
     "options": [
-      "Vì các MCP servers luôn nạp toàn bộ tên công cụ và lược đồ tham số (`tool names and schemas`) của chúng vào Context Window ngay cả khi bạn không hề sử dụng chúng trong phiên đó",
-      "Vì mỗi MCP server sẽ tự động xóa 1.000 dòng code trong dự án của bạn",
-      "Vì MCP servers bắt buộc Claude Code phải tắt tính năng Auto-compaction",
-      "Vì MCP servers làm hỏng định dạng của file `CLAUDE.md`"
+      "Because MCP servers always load all of their `tool names and schemas` into your Context Window even when you are not actively using them in that session",
+      "Because each MCP server automatically deletes 1,000 lines of code in your project",
+      "Because MCP servers force Claude Code to disable Auto-compaction",
+      "Because MCP servers corrupt the formatting of `CLAUDE.md`"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.4 ('Context Costs'): 'MCP servers add their tool names and schemas into your context window, even when you're not actively using them. Each connected server takes up space, so run `/mcp` to see what's connected and disable anything you're not actively using.'",
+    "explanation": "According to Lesson 4.4 ('Context Costs'): 'MCP servers add their tool names and schemas into your context window, even when you're not actively using them. Each connected server takes up space, so run `/mcp` to see what's connected and disable anything you're not actively using.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-85"
   },
   {
     "id": 86,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Theo Bài 4.5 (`Hooks`), điểm khác biệt lớn nhất (`The big difference`) giữa `Hooks` và tất cả các tính năng khác được học trong khóa Claude Code 101 (`CLAUDE.md`, `Skills`, `Subagents`, `MCP`) là gì?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "According to Lesson 4.5 (`Hooks`), what is `The big difference` between `Hooks` and everything else covered in Claude Code 101 (`CLAUDE.md`, `Skills`, `Subagents`, `MCP`)?",
     "options": [
-      "Hooks có tính TẤT ĐỊNH — chúng luôn luôn chạy 100% không có ngoại lệ (`hooks are deterministic — they always run`), biến các quy tắc của bạn thành sự đảm bảo tuyệt đối chứ không chỉ là lời gợi ý cho mô hình AI!",
-      "Hooks chỉ chạy khi mô hình AI cảm thấy thích, còn `CLAUDE.md` mới là tất định 100%",
-      "Hooks là tính năng duy nhất dùng để trò chuyện với người dùng bằng giọng nói",
-      "Hooks chỉ hoạt động trên giao diện Web chứ không hoạt động trong Terminal"
+      "Hooks are DETERMINISTIC — they always run 100% of the time without exception, turning your rules into absolute guarantees rather than mere suggestions to the AI model!",
+      "Hooks only run when the AI model feels like it, whereas `CLAUDE.md` is 100% deterministic",
+      "Hooks are the only feature used to chat with the user by voice",
+      "Hooks only work on the Web interface and not in the Terminal"
     ],
     "answer": 0,
-    "explanation": "Câu mở đầu Bài 4.5 khẳng định: 'Hooks let you run commands at specific points in Claude Code's lifecycle. The big difference between hooks and everything else covered in this course is that hooks are deterministic — they always run.'",
+    "explanation": "The opening of Lesson 4.5 states: 'Hooks let you run commands at specific points in Claude Code's lifecycle. The big difference between hooks and everything else covered in this course is that hooks are deterministic — they always run.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-86"
   },
   {
     "id": 87,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Tại sao bạn nên dùng một `Hook` để chạy công cụ định dạng code (như `Prettier` hoặc `gofmt`) sau mỗi lần sửa file thay vì chỉ viết dòng chữ `'Hãy chạy Prettier sau mỗi lần sửa file'` vào trong `CLAUDE.md`?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "Why should you use a `Hook` to run a code formatter (like `Prettier` or `gofmt`) after every file edit instead of just writing `'Run Prettier after every file edit'` in `CLAUDE.md`?",
     "options": [
-      "Vì khi viết trong `CLAUDE.md`, hầu hết các lần Claude sẽ làm theo nhưng đôi khi nó sẽ quên (`Most of the time it will. But sometimes it won't`); trong khi một Hook đảm bảo lệnh Prettier được thực thi 100% mọi lần không có bất kỳ ngoại lệ nào!",
-      "Vì `CLAUDE.md` không cho phép nhắc đến tên công cụ `Prettier`",
-      "Vì chạy Prettier qua Hook không cần cài đặt Node.js trên máy",
-      "Vì Hook chạy chậm hơn `CLAUDE.md` nhưng đẹp hơn"
+      "Because when written in `CLAUDE.md`, Claude will follow it most of the time but sometimes it won't; whereas a Hook guarantees Prettier executes 100% of the time with no exceptions!",
+      "Because `CLAUDE.md` does not allow mentioning the tool name `Prettier`",
+      "Because running Prettier via a Hook does not require Node.js to be installed on the machine",
+      "Because a Hook runs slower than `CLAUDE.md` but looks prettier"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.5 ('Why Use Hooks'): 'You can tell Claude in your CLAUDE.md to run Prettier after every file edit. Most of the time it will. But sometimes it won't. A hook makes it happen every single time, no exceptions... Hooks turn your team's conventions into guarantees, not suggestions.'",
+    "explanation": "According to Lesson 4.5 ('Why Use Hooks'): 'You can tell Claude in your CLAUDE.md to run Prettier after every file edit. Most of the time it will. But sometimes it won't. A hook makes it happen every single time, no exceptions... Hooks turn your team's conventions into guarantees, not suggestions.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-87"
   },
   {
     "id": 88,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Các Hooks trong Claude Code được cấu hình ở file nào và bao gồm 5 sự kiện vòng đời (`lifecycle events`) phổ biến nào được liệt kê trong Bài 4.5?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "Where are Hooks in Claude Code configured, and what are the 5 common `lifecycle events` listed in Lesson 4.5?",
     "options": [
-      "Cấu hình trong `settings.json` (như `.claude/settings.json`), với 5 sự kiện phổ biến là: `PreToolUse`, `PostToolUse`, `UserPromptSubmit`, `Stop`, và `Notification`",
-      "Cấu hình trong `.mcp.json`, với 5 sự kiện là: `OnClick`, `OnHover`, `OnScroll`, `OnLoad`, và `OnResize`",
-      "Cấu hình trong `CLAUDE.md`, với 5 sự kiện là: `GitInit`, `GitAdd`, `GitCommit`, `GitPush`, và `GitPull`",
-      "Cấu hình trong `package.json`, với 5 sự kiện là: `Start`, `Pause`, `Resume`, `Kill`, và `Restart`"
+      "Configured in `settings.json` (such as `.claude/settings.json`), with the 5 common events being: `PreToolUse`, `PostToolUse`, `UserPromptSubmit`, `Stop`, and `Notification`",
+      "Configured in `.mcp.json`, with the 5 events being: `OnClick`, `OnHover`, `OnScroll`, `OnLoad`, and `OnResize`",
+      "Configured in `CLAUDE.md`, with the 5 events being: `GitInit`, `GitAdd`, `GitCommit`, `GitPush`, and `GitPull`",
+      "Configured in `package.json`, with the 5 events being: `Start`, `Pause`, `Resume`, `Kill`, and `Restart`"
     ],
     "answer": 0,
-    "explanation": "Theo mục 'How They Work' (Bài 4.5): Hooks được cấu hình trong `settings.json` với các sự kiện phổ biến gồm: `PreToolUse` (trước khi gọi tool), `PostToolUse` (sau khi tool chạy xong), `UserPromptSubmit` (khi user vừa gửi prompt), `Stop` (khi Claude trả lời xong), và `Notification` (khi Claude gửi thông báo).",
+    "explanation": "According to 'How They Work' (Lesson 4.5): Hooks are configured in `settings.json` with common events including: `PreToolUse` (before a tool call), `PostToolUse` (after a tool finishes), `UserPromptSubmit` (when the user submits a prompt), `Stop` (when Claude finishes responding), and `Notification` (when Claude sends a notification).",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-88"
   },
   {
     "id": 89,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Bên trong phiên làm việc của Claude Code, bạn có thể gõ câu lệnh nào để mở danh sách chỉ đọc (read-only list) kiểm tra xem các Hooks mình đã cấu hình có hiển thị đúng hay chưa?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "Inside a Claude Code session, which command can you run to open a read-only list to verify whether your configured Hooks are showing up properly?",
     "options": [
       "`/hooks`",
       "`/mcp`",
@@ -1418,95 +1418,95 @@
       "`/review`"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.5: Running `/hooks` inside Claude Code opens a read-only list of your configured hooks, so you can check that new ones show up.",
+    "explanation": "According to Lesson 4.5: Running `/hooks` inside Claude Code opens a read-only list of your configured hooks, so you can check that new ones show up.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-89"
   },
   {
     "id": 90,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Để thiết lập một Hook phổ biến nhất là tự động định dạng code (auto-formatting) ngay sau mỗi lần Claude chỉnh sửa hoặc tạo mới một file, bạn nên chọn sự kiện nào và đặt trường `matcher` là gì?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "To set up the most common Hook — auto-formatting code right after every time Claude edits or creates a file — which event should you choose and what should the `matcher` field be set to?",
     "options": [
-      "Chọn sự kiện `PostToolUse` với `matcher` là `\"Edit|Write\"`",
-      "Chọn sự kiện `PreToolUse` với `matcher` là `\"Read|Grep\"`",
-      "Chọn sự kiện `UserPromptSubmit` với `matcher` là `\"Bash\"`",
-      "Chọn sự kiện `Notification` không có `matcher`"
+      "Choose the `PostToolUse` event with a `matcher` of `\"Edit|Write\"`",
+      "Choose the `PreToolUse` event with a `matcher` of `\"Read|Grep\"`",
+      "Choose the `UserPromptSubmit` event with a `matcher` of `\"Bash\"`",
+      "Choose the `Notification` event with no `matcher`"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.5: 'The most common hook is auto-formatting after edits. Set a `PostToolUse` hook with a matcher of `\"Edit|Write\"` so it fires after Claude uses the Edit or Write tool. The command checks the file extension and runs the appropriate formatter.'",
+    "explanation": "According to Lesson 4.5: 'The most common hook is auto-formatting after edits. Set a `PostToolUse` hook with a matcher of `\"Edit|Write\"` so it fires after Claude uses the Edit or Write tool. The command checks the file extension and runs the appropriate formatter.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-90"
   },
   {
     "id": 91,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Khi một Hook gắn vào sự kiện `PreToolUse` được kích hoạt, nó nhận thông tin về tên công cụ (`tool name`) và tham số đầu vào (`input`) mà Claude sắp gọi bằng cách nào?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "When a Hook attached to the `PreToolUse` event is triggered, how does it receive information about the `tool name` and `input` arguments Claude is about to call?",
     "options": [
-      "Hook nhận tên công cụ và tham số đầu vào dưới dạng dữ liệu JSON qua luồng đầu vào chuẩn `stdin` (`receives the tool name and input as JSON on stdin`)",
-      "Hook phải tự đọc từ một file ảnh chụp màn hình trên ổ cứng",
-      "Hook nhận thông tin qua cổng âm thanh microphone",
-      "`PreToolUse` hoàn toàn không biết Claude sắp gọi công cụ gì hay truyền tham số gì"
+      "The Hook receives the tool name and input as JSON on standard input `stdin`",
+      "The Hook must read from a screenshot image file on the hard drive",
+      "The Hook receives information through the microphone audio port",
+      "`PreToolUse` has no way of knowing which tool or arguments Claude is about to call"
     ],
     "answer": 0,
-    "explanation": "Theo mục 'Blocking with PreToolUse' (Bài 4.5): 'PreToolUse hooks can block tool calls before they happen. Your hook receives the tool name and input as JSON on stdin. The exit code determines what happens.'",
+    "explanation": "According to 'Blocking with PreToolUse' (Lesson 4.5): 'PreToolUse hooks can block tool calls before they happen. Your hook receives the tool name and input as JSON on stdin. The exit code determines what happens.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-91"
   },
   {
     "id": 92,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Trong một `PreToolUse` Hook, nếu script kiểm tra của bạn muốn CHẶN ĐỨNG hành động gọi công cụ của Claude và gửi lý do bị chặn ngược lại cho Claude đọc để nó tự điều chỉnh, script của bạn phải trả về mã thoát (`Exit code`) bằng bao nhiêu và in thông báo ra đâu?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "In a `PreToolUse` Hook, if your validation script wants to BLOCK Claude's tool call and send the rejection reason back to Claude so it can adjust, what `Exit code` must your script return and where must it print the message?",
     "options": [
-      "Trả về `Exit code 2` và ghi thông báo lý do chặn ra luồng lỗi chuẩn `stderr` (`The stderr message gets fed back to Claude as feedback so it knows why it was blocked and can adjust`)",
-      "Trả về `Exit code 0` và không in ra bất cứ thông báo nào",
-      "Trả về `Exit code 1` và ghi thông báo vào file `README.md`",
-      "Trả về `Exit code 404` và tắt nguồn máy tính"
+      "Return `Exit code 2` and write the blocking reason to standard error `stderr` (which gets fed back to Claude as feedback so it knows why it was blocked and can adjust)",
+      "Return `Exit code 0` and print nothing",
+      "Return `Exit code 1` and write the message into `README.md`",
+      "Return `Exit code 404` and power off the computer"
     ],
     "answer": 0,
-    "explanation": "Đây là kiến thức cực kỳ quan trọng trong Bài 4.5 ('Blocking with PreToolUse'):\n- `Exit code 0` — proceed normally.\n- `Exit code 2` — block the action. The stderr message gets fed back to Claude as feedback so it knows why it was blocked and can adjust.\n- `Any other exit code` — a non-blocking error that gets shown to you but doesn't stop anything.",
+    "explanation": "This is a critical concept in Lesson 4.5 ('Blocking with PreToolUse'):\n- `Exit code 0` — proceed normally.\n- `Exit code 2` — block the action. The stderr message gets fed back to Claude as feedback so it knows why it was blocked and can adjust.\n- `Any other exit code` — a non-blocking error that gets shown to you but doesn't stop anything.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-92"
   },
   {
     "id": 93,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Chuyện gì sẽ xảy ra nếu một `PreToolUse` Hook trả về `Exit code 1` (hoặc bất kỳ mã thoát nào khác `0` và `2`)?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "What happens if a `PreToolUse` Hook returns `Exit code 1` (or any exit code other than `0` and `2`)?",
     "options": [
-      "Nó được coi là một lỗi không chặn (`a non-blocking error`): thông báo lỗi sẽ được hiển thị cho người dùng nhìn thấy nhưng KHÔNG dừng hành động gọi công cụ của Claude!",
-      "Nó sẽ chặn đứng hành động giống hệt như `Exit code 2`",
-      "Nó sẽ xóa file `settings.json` của dự án",
-      "Nó sẽ tự động chuyển Claude Code sang chế độ `Plan Mode`"
+      "It is treated as a `non-blocking error`: the error message is shown to the user, but it does NOT stop Claude's tool call!",
+      "It blocks the action identically to `Exit code 2`",
+      "It deletes the project's `settings.json` file",
+      "It automatically switches Claude Code into `Plan Mode`"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.5: Chỉ có `Exit code 2` mới thực sự chặn (block) lời gọi tool. Mọi mã thoát khác `0` và `2` (ví dụ `Exit code 1`) chỉ là 'a non-blocking error that gets shown to you but doesn't stop anything'.",
+    "explanation": "According to Lesson 4.5: Only `Exit code 2` actually blocks a tool call. Any exit code other than `0` and `2` (such as `Exit code 1`) is simply 'a non-blocking error that gets shown to you but doesn't stop anything'.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-93"
   },
   {
     "id": 94,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Để chia sẻ bộ cấu hình Hooks cho toàn bộ các thành viên trong nhóm thông qua kho lưu trữ Git (`Sharing Hooks with Your Team`), bạn nên đặt cấu hình Hooks ở file nào và sử dụng biến môi trường nào khi gọi các file script nằm trong dự án?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "To share your Hooks configuration with all team members via a Git repository (`Sharing Hooks with Your Team`), which file should you place the Hooks configuration in and which environment variable should you use when referencing scripts stored in the project?",
     "options": [
-      "Đặt cấu hình trong `.claude/settings.json` (commit vào repo) và sử dụng biến môi trường `$CLAUDE_PROJECT_DIR` trong câu lệnh để tham chiếu tới các script trong dự án (đảm bảo chạy đúng bất kể thư mục làm việc hiện tại của Claude đang ở đâu)",
-      "Đặt cấu hình trong `/tmp/settings.json` và dùng đường dẫn tuyệt đối chứa tên tài khoản cá nhân của bạn như `C:\\Users\\kuga\\...`",
-      "Đặt cấu hình trong file `.gitignore` để không ai nhìn thấy",
-      "Đặt cấu hình trong biến môi trường `$HOME_PASSWORD`"
+      "Place the configuration in `.claude/settings.json` (committed to the repo) and use the `$CLAUDE_PROJECT_DIR` environment variable in commands to reference project scripts (ensuring they work regardless of Claude's current working directory)",
+      "Place the configuration in `/tmp/settings.json` and use an absolute path containing your personal username like `C:\\Users\\kuga\\...`",
+      "Place the configuration in `.gitignore` so nobody can see it",
+      "Place the configuration in the `$HOME_PASSWORD` environment variable"
     ],
     "answer": 0,
-    "explanation": "Theo mục cuối Bài 4.5 ('Sharing Hooks with Your Team'): 'Hooks configured in `.claude/settings.json` are project-level and can be checked into your repo... Use the `$CLAUDE_PROJECT_DIR` environment variable in your commands to reference scripts stored in your project, so they work regardless of Claude's current working directory.'",
+    "explanation": "According to the end of Lesson 4.5 ('Sharing Hooks with Your Team'): 'Hooks configured in `.claude/settings.json` are project-level and can be checked into your repo... Use the `$CLAUDE_PROJECT_DIR` environment variable in your commands to reference scripts stored in your project, so they work regardless of Claude's current working directory.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-94"
   },
   {
     "id": 95,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Sự kiện Hook nào trong `settings.json` được kích hoạt ngay khi bạn vừa nhấn Enter gửi một câu lệnh prompt, TRƯỚC KHI Claude bắt đầu xử lý câu lệnh đó?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "Which Hook event in `settings.json` fires right when you press Enter to submit a prompt, BEFORE Claude begins processing it?",
     "options": [
       "`UserPromptSubmit`",
       "`PostToolUse`",
@@ -1514,15 +1514,15 @@
       "`Notification`"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.5: '`UserPromptSubmit` — runs when you submit a prompt, before Claude processes it.'",
+    "explanation": "According to Lesson 4.5: '`UserPromptSubmit` — runs when you submit a prompt, before Claude processes it.'",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-95"
   },
   {
     "id": 96,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Sự kiện Hook nào chạy ngay khi Claude vừa hoàn tất việc trả lời của một lượt (`runs when Claude finishes responding`)?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "Which Hook event runs right when Claude finishes responding for a turn?",
     "options": [
       "`Stop`",
       "`PreToolUse`",
@@ -1530,15 +1530,15 @@
       "`PostToolUse`"
     ],
     "answer": 0,
-    "explanation": "Theo Bài 4.5: '`Stop` — runs when Claude finishes responding' (rất hữu ích để chạy kiểm tra cuối lượt hoặc phát âm thanh/thông báo khi một tác vụ dài đã hoàn tất).",
+    "explanation": "According to Lesson 4.5: '`Stop` — runs when Claude finishes responding' (very useful for running end-of-turn checks or playing a sound/notification when a long task completes).",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-96"
   },
   {
     "id": 97,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Hãy ghép nối đúng 5 nhu cầu thực tế sau đây với 5 công cụ tùy chỉnh của Chương 4 (`CLAUDE.md`, `Subagents`, `Skills`, `MCP`, `Hooks`):\n(1) Lưu các lệnh `npm test`, `npm run lint` luôn nạp ở mọi phiên;\n(2) Đảm bảo 100% luôn chạy Prettier sau mỗi lần sửa file;\n(3) Kết nối với hệ thống quản lý ticket Linear;\n(4) Đóng gói hướng dẫn viết migration chỉ nạp khi đụng tới database;\n(5) Giao việc tìm kiếm 50 files cho một trợ lý chạy trong context riêng.",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "Correctly match the following 5 practical needs with the 5 customization tools from Chapter 4 (`CLAUDE.md`, `Subagents`, `Skills`, `MCP`, `Hooks`):\n(1) Store `npm test` and `npm run lint` commands always loaded in every session;\n(2) Guarantee 100% that Prettier runs after every file edit;\n(3) Connect to the Linear ticket management system;\n(4) Package migration-writing instructions loaded only when touching the database;\n(5) Delegate searching 50 files to an assistant running in an isolated context.",
     "options": [
       "(1) `CLAUDE.md` • (2) `Hooks` • (3) `MCP` • (4) `Skills` • (5) `Subagents`",
       "(1) `Hooks` • (2) `MCP` • (3) `CLAUDE.md` • (4) `Subagents` • (5) `Skills`",
@@ -1546,55 +1546,55 @@
       "(1) `Subagents` • (2) `CLAUDE.md` • (3) `Skills` • (4) `Hooks` • (5) `MCP`"
     ],
     "answer": 0,
-    "explanation": "Đây là bức tranh tổng hợp toàn bộ Chương 4: (1) `CLAUDE.md` cho bộ nhớ dự án luôn nạp mỗi phiên; (2) `Hooks` cho hành động tất định 100% như auto-format; (3) `MCP` để kết nối dịch vụ bên ngoài như Linear/Context7; (4) `Skills` cho quy trình chuyên biệt nạp theo nhu cầu; và (5) `Subagents` để cô lập các tác vụ tốn nhiều ngữ cảnh.",
+    "explanation": "This summarizes all of Chapter 4: (1) `CLAUDE.md` for project memory always loaded each session; (2) `Hooks` for 100% deterministic actions like auto-formatting; (3) `MCP` to connect external services like Linear/Context7; (4) `Skills` for specialized workflows loaded on demand; and (5) `Subagents` to isolate context-heavy tasks.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-97"
   },
   {
     "id": 98,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Khi làm việc nhóm trên một repository Git, những file và thư mục cấu hình nào của Claude Code nên được commit vào hệ thống quản lý phiên bản (version control) để cả nhóm cùng hưởng lợi?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "When collaborating as a team on a Git repository, which Claude Code configuration files and directories should be committed to version control so the whole team benefits?",
     "options": [
-      "File `CLAUDE.md` ở gốc dự án, thư mục `.claude/agents/` (Project subagents), `.claude/skills/` (Project skills), `.claude/settings.json` (Project hooks/permissions), và file `.mcp.json` (Project MCP servers)",
-      "Thư mục `~/.claude/` nằm trong ổ cứng cá nhân của riêng bạn và file `.env` chứa khóa bí mật",
-      "Không có bất kỳ file nào của Claude Code được phép commit vào Git",
-      "Toàn bộ thư mục `node_modules/` và `.venv/`"
+      "The root `CLAUDE.md` file, `.claude/agents/` (Project subagents), `.claude/skills/` (Project skills), `.claude/settings.json` (Project hooks/permissions), and `.mcp.json` (Project MCP servers)",
+      "Your personal `~/.claude/` directory on your local hard drive and `.env` files containing secret keys",
+      "No Claude Code files are ever allowed to be committed to Git",
+      "The entire `node_modules/` and `.venv/` directories"
     ],
     "answer": 0,
-    "explanation": "Tất cả 5 thành phần cấp độ Project (`CLAUDE.md`, `.claude/agents/`, `.claude/skills/`, `.claude/settings.json`, và `.mcp.json`) đều được thiết kế để check-in vào Git giúp chuẩn hóa quy trình làm việc cho cả đội ngũ.",
+    "explanation": "All 5 project-level components (`CLAUDE.md`, `.claude/agents/`, `.claude/skills/`, `.claude/settings.json`, and `.mcp.json`) are designed to be checked into Git to standardize workflows across the entire team.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-98"
   },
   {
     "id": 99,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Trong Lab 04 (`customizing_claude_code.py`), khi hàm `evaluate_pre_tool_use_exit_code(2, 'Không được phép chỉnh sửa trực tiếp file .env!')` được gọi, kết quả trả về cho biết điều gì?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "In Lab 04 (`customizing_claude_code.py`), when `evaluate_pre_tool_use_exit_code(2, 'Direct editing of the .env file is not allowed!')` is called, what does the return value indicate?",
     "options": [
-      "Hành động bị chặn hoàn toàn (`blocked: True`) và chuỗi thông báo lỗi trên `stderr` được gửi ngược lại cho Claude làm feedback (`fed_to_claude: True`) để Claude biết lý do và tự điều chỉnh",
-      "Hành động vẫn được cho phép chạy bình thường (`blocked: False`)",
-      "Thông báo lỗi chỉ hiện cho người dùng xem chứ Claude không nhận được feedback nào",
-      "Toàn bộ phiên làm việc bị xóa sạch tương tự như lệnh `/clear`"
+      "The action is completely blocked (`blocked: True`) and the `stderr` error message is sent back to Claude as feedback (`fed_to_claude: True`) so Claude knows why it was blocked and can adjust",
+      "The action is still allowed to run normally (`blocked: False`)",
+      "The error message is only shown to the user, and Claude receives no feedback",
+      "The entire session is wiped just like running `/clear`"
     ],
     "answer": 0,
-    "explanation": "Trong `PreToolUse` hook, `Exit code 2` vừa chặn đứng lời gọi công cụ (`blocked: True`) vừa chuyển nội dung từ `stderr` về lại cho Claude (`fed_to_claude: True`) để nó hiểu vì sao bị từ chối.",
+    "explanation": "In a `PreToolUse` hook, `Exit code 2` both blocks the tool call (`blocked: True`) and feeds the `stderr` message back to Claude (`fed_to_claude: True`) so it understands why it was rejected.",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-99"
   },
   {
     "id": 100,
-    "chapter": "Chương 4: Customizing Claude Code",
-    "question": "Tổng kết toàn khóa học *Claude Code 101*: Đâu là bộ nguyên tắc vàng giúp bạn làm chủ hoàn toàn Claude Code trong công việc phát triển phần mềm hàng ngày?",
+    "chapter": "Chapter 4: Customizing Claude Code",
+    "question": "Summary of the entire *Claude Code 101* course: What is the golden set of principles for mastering Claude Code in daily software development?",
     "options": [
-      "Hiểu rõ Agentic Loop & dùng `Shift + Tab` chọn Permission Mode/Plan Mode phù hợp (Chương 1 & 2) -> Thực hành thói quen `Explore -> Plan -> Code -> Commit`, chủ động quản lý ngữ cảnh bằng `/compact`, `/clear`, `/context` và review code độc lập bằng `/review` (Chương 3) -> Tùy chỉnh dự án với `CLAUDE.md`, `Subagents`, `Skills`, `MCP` và các `Hooks` tất định (Chương 4)",
-      "Luôn bỏ qua bước lập kế hoạch -> Không bao giờ kiểm tra lại code của AI -> Nhồi mọi thứ vào một file `CLAUDE.md` dài 50.000 dòng -> Bật tất cả MCP servers không dùng tới",
-      "Chỉ dùng Claude Code để hỏi đáp lý thuyết mà không cho phép nó đọc file hay chạy lệnh terminal",
-      "Luôn review code ngay trong cùng phiên vừa viết code và không bao giờ chạy lại unit tests sau khi sửa lỗi"
+      "Understand the Agentic Loop & use `Shift + Tab` to choose the right Permission Mode/Plan Mode (Chapters 1 & 2) -> Practice the `Explore -> Plan -> Code -> Commit` habit, actively manage context with `/compact`, `/clear`, `/context` and perform independent code reviews with `/review` (Chapter 3) -> Customize projects with `CLAUDE.md`, `Subagents`, `Skills`, `MCP`, and deterministic `Hooks` (Chapter 4)",
+      "Always skip planning -> Never verify AI-generated code -> Stuff everything into a 50,000-line `CLAUDE.md` file -> Enable all unused MCP servers",
+      "Only use Claude Code for theoretical Q&A without letting it read files or run terminal commands",
+      "Always review code in the same session where it was written and never re-run unit tests after fixing bugs"
     ],
     "answer": 0,
-    "explanation": "Đáp án đúc kết trọn vẹn toàn bộ 4 chương (12 bài học) của khóa học chính thức *Claude Code 101* từ Anthropic Academy!",
+    "explanation": "This answer encapsulates all 4 chapters (12 lessons) of the official *Claude Code 101* course from Anthropic Academy!",
     "course_id": "claude-code-101",
     "course_title": "Claude Code 101",
     "uid": "claude-code-101-100"

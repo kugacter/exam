@@ -1,72 +1,72 @@
 [
   {
     "id": 1,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Sampling trong MCP là gì?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "What is Sampling in MCP?",
     "options": [
-      "Cơ chế cho phép MCP server nhờ client gọi mô hình AI (Claude) hộ mình",
-      "Cơ chế lấy mẫu ngẫu nhiên dữ liệu từ database",
-      "Cơ chế nén log của server",
-      "Cơ chế client lấy mẫu danh sách tools"
+      "A mechanism that allows an MCP server to ask the client to call an AI model (Claude) on its behalf",
+      "A mechanism to randomly sample data from a database",
+      "A mechanism to compress server logs",
+      "A mechanism for the client to sample the list of tools"
     ],
     "answer": 0,
-    "explanation": "Sampling cho server yêu cầu client thực hiện lời gọi LLM và trả kết quả về.",
+    "explanation": "Sampling lets the server request that the client execute an LLM call and return the result.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-1"
   },
   {
     "id": 2,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Vấn đề chính mà Sampling giải quyết là gì?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "What main problem does Sampling solve?",
     "options": [
-      "Server cần năng lực AI nhưng không muốn tự tích hợp mô hình, giữ API key và trả chi phí token",
-      "Client tải file quá chậm",
-      "Server không thể chạy tool đồng bộ",
-      "Thiếu cách xác thực người dùng"
+      "A server needs AI capabilities without wanting to integrate a model itself, hold API keys, or pay token costs",
+      "The client downloads files too slowly",
+      "The server cannot run tools synchronously",
+      "Lack of a user authentication method"
     ],
     "answer": 0,
-    "explanation": "Server đẩy việc gọi Claude sang client để không cần API key/tích hợp AI riêng.",
+    "explanation": "The server offloads calling Claude to the client so it doesn't need its own API key or AI integration.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-2"
   },
   {
     "id": 3,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Trong luồng Sampling, ai thực sự gọi Claude?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "In the Sampling flow, who actually calls Claude?",
     "options": [
-      "Client (sau khi nhận sampling request từ server)",
-      "Server bằng API key của nó",
-      "Một proxy của Anthropic gắn trong MCP",
-      "Người dùng gọi thủ công"
+      "The client (after receiving a sampling request from the server)",
+      "The server using its own API key",
+      "An Anthropic proxy embedded in MCP",
+      "The user manually"
     ],
     "answer": 0,
-    "explanation": "Server gửi sampling request, client gọi Claude và trả kết quả.",
+    "explanation": "The server sends a sampling request; the client calls Claude and returns the result.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-3"
   },
   {
     "id": 4,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Ai chịu chi phí token khi dùng Sampling?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "Who bears the token cost when using Sampling?",
     "options": [
-      "Client (nơi gọi Claude), không phải server",
-      "Server",
-      "Nhà cung cấp transport",
-      "Không ai, miễn phí"
+      "The client (which calls Claude), not the server",
+      "The server",
+      "The transport provider",
+      "Nobody, it is free"
     ],
     "answer": 0,
-    "explanation": "Lợi ích: chi phí và trách nhiệm chuyển sang client.",
+    "explanation": "Benefit: cost and responsibility shift to the client.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-4"
   },
   {
     "id": 5,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Phía server (Python SDK) gửi sampling request bằng phương thức nào?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "On the server side (Python SDK), which method sends a sampling request?",
     "options": [
       "ctx.session.create_message(...)",
       "ctx.sample_ai(...)",
@@ -74,276 +74,276 @@
       "mcp.ask_client(...)"
     ],
     "answer": 0,
-    "explanation": "Server dùng `create_message` với danh sách SamplingMessage, max_tokens, system_prompt...",
+    "explanation": "The server uses `create_message` with a list of SamplingMessage, max_tokens, system_prompt, etc.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-5"
   },
   {
     "id": 6,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Phía client cần cung cấp gì để hỗ trợ Sampling?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "What does the client need to provide to support Sampling?",
     "options": [
-      "sampling_callback truyền vào ClientSession",
-      "logging_callback truyền vào call_tool",
-      "File roots.json",
-      "Biến môi trường SAMPLING=1"
+      "sampling_callback passed into ClientSession",
+      "logging_callback passed into call_tool",
+      "A roots.json file",
+      "The environment variable SAMPLING=1"
     ],
     "answer": 0,
-    "explanation": "Client định nghĩa `sampling_callback` và truyền khi tạo ClientSession.",
+    "explanation": "The client defines `sampling_callback` and passes it when creating ClientSession.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-6"
   },
   {
     "id": 7,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "sampling_callback của client trả về kiểu dữ liệu nào?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "What data type does the client's sampling_callback return?",
     "options": [
       "CreateMessageResult (role assistant, model, content)",
-      "Một chuỗi JSON thô",
+      "A raw JSON string",
       "ListRootsResult",
       "InitializeResult"
     ],
     "answer": 0,
-    "explanation": "Callback trả `CreateMessageResult` chứa nội dung do Claude sinh ra.",
+    "explanation": "The callback returns `CreateMessageResult` containing the content generated by Claude.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-7"
   },
   {
     "id": 8,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Sampling hữu ích nhất trong trường hợp nào?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "In which scenario is Sampling most useful?",
     "options": [
-      "MCP server public mà bạn không kiểm soát client",
-      "Khi bạn kiểm soát cả server lẫn client",
-      "Khi server chạy bằng STDIO trên máy cá nhân duy nhất",
-      "Khi không có AI nào được dùng"
+      "A public MCP server where you do not control the client",
+      "When you control both the server and the client",
+      "When the server runs via STDIO on a single personal machine",
+      "When no AI is being used"
     ],
     "answer": 0,
-    "explanation": "Với server public, sampling giúp server dùng AI mà không cần key riêng.",
+    "explanation": "For public servers, sampling lets the server use AI without needing its own API key.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-8"
   },
   {
     "id": 9,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Khi bạn kiểm soát cả server lẫn client, nhận định nào hợp lý?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "When you control both the server and the client, which statement is reasonable?",
     "options": [
-      "Thường không cần Sampling vì server có thể tự tích hợp AI",
-      "Bắt buộc dùng Sampling",
-      "Sampling bị cấm",
-      "Phải dùng Roots thay thế"
+      "Sampling is usually unnecessary because the server can integrate AI directly",
+      "Sampling is mandatory",
+      "Sampling is prohibited",
+      "Roots must be used instead"
     ],
     "answer": 0,
-    "explanation": "Sampling chủ yếu giải quyết bài toán server không muốn tự tích hợp AI.",
+    "explanation": "Sampling primarily solves the problem of a server not wanting to integrate AI itself.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-9"
   },
   {
     "id": 10,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Một MCP server dùng Sampling có cần API key Anthropic không?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "Does an MCP server using Sampling need an Anthropic API key?",
     "options": [
-      "Không, vì client sẽ gọi Claude",
-      "Có, luôn luôn",
-      "Chỉ khi dùng STDIO",
-      "Chỉ khi dùng Roots"
+      "No, because the client will call Claude",
+      "Yes, always",
+      "Only when using STDIO",
+      "Only when using Roots"
     ],
     "answer": 0,
-    "explanation": "Server không cần key — đó là một lợi ích chính.",
+    "explanation": "The server needs no key—that is one of the main benefits.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-10"
   },
   {
     "id": 11,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Mục đích của log và progress notifications là gì?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "What is the purpose of log and progress notifications?",
     "options": [
-      "Cho người dùng biết điều gì đang xảy ra trong lúc tool chạy lâu",
-      "Mã hóa dữ liệu",
-      "Thay thế tool result",
-      "Xác thực client"
+      "To let users know what is happening while a long-running tool executes",
+      "To encrypt data",
+      "To replace the tool result",
+      "To authenticate the client"
     ],
     "answer": 0,
-    "explanation": "Giúp tránh cảm giác treo, cung cấp phản hồi thời gian thực.",
+    "explanation": "They prevent the feeling of a frozen app by providing real-time feedback.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-11"
   },
   {
     "id": 12,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Trong Python MCP SDK, tool truy cập logging/progress qua đối tượng nào?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "In the Python MCP SDK, through which object does a tool access logging/progress?",
     "options": [
-      "Context (tham số ctx tự động được cung cấp)",
-      "Biến toàn cục LOGGER",
+      "Context (the automatically provided ctx parameter)",
+      "Global variable LOGGER",
       "ClientSession",
       "Roots"
     ],
     "answer": 0,
-    "explanation": "Context cho các method như ctx.info() và ctx.report_progress().",
+    "explanation": "Context provides methods such as ctx.info() and ctx.report_progress().",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-12"
   },
   {
     "id": 13,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Chữ ký ctx.report_progress(...) nhận gì?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "What arguments does ctx.report_progress(...) accept?",
     "options": [
-      "progress hiện tại và total",
-      "Chỉ một chuỗi thông báo",
-      "Tên client",
-      "Danh sách roots"
+      "Current progress and total",
+      "Only a message string",
+      "The client name",
+      "A list of roots"
     ],
     "answer": 0,
-    "explanation": "Ví dụ `await ctx.report_progress(20, 100)`.",
+    "explanation": "For example, `await ctx.report_progress(20, 100)`.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-13"
   },
   {
     "id": 14,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Callback nhận log messages ở client được truyền ở đâu?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "Where is the callback that receives log messages passed on the client?",
     "options": [
-      "logging_callback khi tạo ClientSession",
+      "logging_callback when creating ClientSession",
       "call_tool(progress_callback=...)",
       "initialize()",
       "list_roots()"
     ],
     "answer": 0,
-    "explanation": "logging_callback truyền khi tạo session; progress_callback truyền khi gọi tool.",
+    "explanation": "logging_callback is passed when creating the session; progress_callback is passed when calling a tool.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-14"
   },
   {
     "id": 15,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "progress_callback ở client được truyền ở đâu?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "Where is progress_callback passed on the client?",
     "options": [
-      "Khi gọi session.call_tool(..., progress_callback=...)",
-      "Khi tạo ClientSession",
-      "Trong file cấu hình",
-      "Khi gọi initialize"
+      "When calling session.call_tool(..., progress_callback=...)",
+      "When creating ClientSession",
+      "In the config file",
+      "When calling initialize"
     ],
     "answer": 0,
-    "explanation": "Progress gắn với từng lời gọi tool cụ thể.",
+    "explanation": "Progress is tied to each specific tool call.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-15"
   },
   {
     "id": 16,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Việc triển khai notifications có bắt buộc không?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "Is implementing notifications mandatory?",
     "options": [
-      "Không, hoàn toàn tùy chọn — client có thể bỏ qua",
-      "Bắt buộc theo đặc tả",
-      "Bắt buộc với STDIO",
-      "Bắt buộc với StreamableHTTP"
+      "No, it is completely optional—the client may ignore them",
+      "Mandatory per specification",
+      "Mandatory for STDIO",
+      "Mandatory for StreamableHTTP"
     ],
     "answer": 0,
-    "explanation": "Chỉ là cải thiện trải nghiệm người dùng.",
+    "explanation": "They are solely for improving user experience.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-16"
   },
   {
     "id": 17,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Ứng dụng Web nên trình bày progress/log bằng cách nào?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "How should a Web application present progress/logs?",
     "options": [
-      "WebSocket, server-sent events hoặc polling để đẩy cập nhật lên trình duyệt",
-      "In ra terminal của server",
-      "Không thể hiển thị",
-      "Gửi email"
+      "WebSocket, server-sent events, or polling to push updates to the browser",
+      "Print to the server's terminal",
+      "They cannot be displayed",
+      "Send an email"
     ],
     "answer": 0,
-    "explanation": "CLI: in terminal; Web: WebSocket/SSE/polling; Desktop: progress bar.",
+    "explanation": "CLI: print to terminal; Web: WebSocket/SSE/polling; Desktop: progress bar.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-17"
   },
   {
     "id": 18,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Roots trong MCP dùng để làm gì?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "What are Roots used for in MCP?",
     "options": [
-      "Cấp cho server quyền truy cập các file/thư mục cụ thể",
-      "Chỉ định thư mục cài Python",
-      "Khai báo cổng mạng",
-      "Lưu tool schemas"
+      "Granting the server access to specific files or folders",
+      "Specifying the Python installation directory",
+      "Declaring network ports",
+      "Storing tool schemas"
     ],
     "answer": 0,
-    "explanation": "Roots cho phép người dùng cấp quyền truy cập path cụ thể cho server.",
+    "explanation": "Roots allow users to grant a server access to specific paths.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-18"
   },
   {
     "id": 19,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Nếu không có Roots, vấn đề gì xảy ra với tool xử lý file (vd convert video)?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "Without Roots, what problem occurs for file-processing tools (e.g., video conversion)?",
     "options": [
-      "Server không biết nên tìm file ở đâu và người dùng không kiểm soát phạm vi truy cập",
-      "Tool chạy nhanh hơn",
-      "Không có vấn đề",
-      "Claude tự động nhớ mọi đường dẫn"
+      "The server doesn't know where to look for files and the user cannot control the access scope",
+      "The tool runs faster",
+      "There is no problem",
+      "Claude automatically remembers every path"
     ],
     "answer": 0,
-    "explanation": "Roots xác định vùng được phép tìm kiếm và truy cập.",
+    "explanation": "Roots define the allowed area for searching and access.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-19"
   },
   {
     "id": 20,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "MCP Python SDK có tự động enforce giới hạn roots không?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "Does the MCP Python SDK automatically enforce roots boundaries?",
     "options": [
-      "Không — bạn phải tự cài đặt kiểm tra (vd is_path_allowed) trước khi đọc/ghi file",
-      "Có, hoàn toàn tự động",
-      "Chỉ khi dùng StreamableHTTP",
-      "Chỉ khi bật json_response"
+      "No—you must implement checks yourself (e.g., is_path_allowed) before reading or writing files",
+      "Yes, completely automatically",
+      "Only when using StreamableHTTP",
+      "Only when json_response is enabled"
     ],
     "answer": 0,
-    "explanation": "Cần hàm tiện ích kiểm tra path nằm trong roots được cấp.",
+    "explanation": "A helper function is needed to verify that a path lies within the granted roots.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-20"
   },
   {
     "id": 21,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Thứ tự đúng của Roots in Action là gì?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "What is the correct sequence of Roots in Action?",
     "options": [
-      "User yêu cầu → Claude gọi tool với path → server kiểm tra path thuộc roots → thực hiện thao tác",
-      "Server thực hiện thao tác → rồi mới hỏi user",
-      "Client tải toàn bộ ổ đĩa lên server",
-      "Claude tự xóa file ngoài roots"
+      "User requests -> Claude calls tool with path -> server checks path is within roots -> performs operation",
+      "Server performs operation -> then asks user",
+      "Client uploads the entire disk to the server",
+      "Claude automatically deletes files outside roots"
     ],
     "answer": 0,
-    "explanation": "Kiểm tra roots diễn ra trước khi thao tác file.",
+    "explanation": "The roots check happens before performing the file operation.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-21"
   },
   {
     "id": 22,
-    "chapter": "Chương 1: Core MCP Features",
-    "question": "Đâu là lợi ích chính của Roots?",
+    "chapter": "Chapter 1: Core MCP Features",
+    "question": "What are the main benefits of Roots?",
     "options": [
-      "Người dùng kiểm soát quyền truy cập, tìm kiếm tập trung, tăng an toàn và linh hoạt",
-      "Tăng tốc độ mạng",
-      "Thay thế Sampling",
-      "Tự mã hóa file"
+      "User control over access, focused search, increased security, and flexibility",
+      "Faster network speed",
+      "Replacing Sampling",
+      "Automatic file encryption"
     ],
     "answer": 0,
     "explanation": "Roots: user control, focused search, security, flexibility.",
@@ -353,88 +353,88 @@
   },
   {
     "id": 23,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "Các JSON message của MCP được định nghĩa chính thức ở đâu?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "Where are MCP's JSON messages officially defined?",
     "options": [
-      "TypeScript schema trong repo đặc tả MCP chính thức",
-      "Trong file .proto",
-      "Trong OpenAPI YAML riêng của mỗi server",
-      "Không có định nghĩa chính thức"
+      "TypeScript schema in the official MCP specification repository",
+      "In a .proto file",
+      "In each server's own OpenAPI YAML",
+      "There is no official definition"
     ],
     "answer": 0,
-    "explanation": "Đặc tả MCP định nghĩa message bằng TypeScript schema.",
+    "explanation": "The MCP specification defines messages using a TypeScript schema.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-23"
   },
   {
     "id": 24,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "Vì sao đặc tả MCP dùng TypeScript?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "Why does the MCP specification use TypeScript?",
     "options": [
-      "Làm ngôn ngữ schema mô tả kiểu message, không bắt buộc dùng TypeScript để cài đặt",
-      "Vì MCP chỉ chạy trên Node.js",
-      "Vì client bắt buộc viết bằng TypeScript",
-      "Vì TypeScript nhanh hơn Python"
+      "As a schema language to describe message types; using TypeScript for implementation is not required",
+      "Because MCP only runs on Node.js",
+      "Because clients must be written in TypeScript",
+      "Because TypeScript is faster than Python"
     ],
     "answer": 0,
-    "explanation": "TypeScript chỉ là cách mô tả schema.",
+    "explanation": "TypeScript is used solely as a way to describe the schema.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-24"
   },
   {
     "id": 25,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "MCP message chia thành hai nhóm lớn nào?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "Into which two major groups are MCP messages divided?",
     "options": [
-      "Request–Result và Notification",
-      "Sync và Async",
-      "Tool và Prompt",
-      "Public và Private"
+      "Request–Result and Notification",
+      "Sync and Async",
+      "Tool and Prompt",
+      "Public and Private"
     ],
     "answer": 0,
-    "explanation": "Request luôn có Result; Notification thì không.",
+    "explanation": "A Request always has a Result; a Notification does not.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-25"
   },
   {
     "id": 26,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "Cặp nào sau đây là Request–Result?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "Which of the following pairs is a Request–Result?",
     "options": [
-      "Call Tool Request → Call Tool Result",
-      "Progress Notification → Result",
-      "Logging Message → Result",
-      "Tool List Changed → Result"
+      "Call Tool Request -> Call Tool Result",
+      "Progress Notification -> Result",
+      "Logging Message -> Result",
+      "Tool List Changed -> Result"
     ],
     "answer": 0,
-    "explanation": "Các cặp: Call Tool, List Prompts, Read Resource, Initialize...",
+    "explanation": "Examples of pairs: Call Tool, List Prompts, Read Resource, Initialize...",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-26"
   },
   {
     "id": 27,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "Notification khác Request ở điểm nào?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "How does a Notification differ from a Request?",
     "options": [
-      "Không yêu cầu phản hồi",
-      "Luôn chứa API key",
-      "Chỉ do client gửi",
-      "Luôn dùng SSE"
+      "It does not require a response",
+      "It always contains an API key",
+      "It is only sent by the client",
+      "It always uses SSE"
     ],
     "answer": 0,
-    "explanation": "Notification là thông báo một chiều, không cần Result.",
+    "explanation": "A Notification is a one-way message that does not require a Result.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-27"
   },
   {
     "id": 28,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "Ví dụ nào là Notification?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "Which of the following is an example of a Notification?",
     "options": [
       "Progress, Logging Message, Tool List Changed, Resource Updated",
       "Call Tool Request",
@@ -442,31 +442,31 @@
       "Read Resource Request"
     ],
     "answer": 0,
-    "explanation": "Đây là các notification điển hình của MCP.",
+    "explanation": "These are typical MCP notifications.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-28"
   },
   {
     "id": 29,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "Message nào sau đây do SERVER gửi cho CLIENT?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "Which of the following messages is sent from the SERVER to the CLIENT?",
     "options": [
-      "Create Message Request (sampling) và List Roots Request",
+      "Create Message Request (sampling) and List Roots Request",
       "Call Tool Request",
       "List Tools Request",
       "Initialize Request"
     ],
     "answer": 0,
-    "explanation": "Sampling và roots là yêu cầu server→client.",
+    "explanation": "Sampling and roots are server->client requests.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-29"
   },
   {
     "id": 30,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "Message nào do CLIENT gửi cho SERVER?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "Which messages are sent from the CLIENT to the SERVER?",
     "options": [
       "Call Tool, List Tools, Read Resource, Initialize",
       "Create Message Request",
@@ -474,175 +474,175 @@
       "Progress Notification"
     ],
     "answer": 0,
-    "explanation": "Các thao tác 'dùng' server do client khởi tạo.",
+    "explanation": "Operations that 'use' the server are initiated by the client.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-30"
   },
   {
     "id": 31,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "Vì sao cần hiểu các loại message trước khi chọn transport?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "Why is it important to understand message types before choosing a transport?",
     "options": [
-      "Vì một số transport (StreamableHTTP) hạn chế message chiều server→client",
-      "Vì mọi transport đều giống hệt nhau",
-      "Vì chỉ liên quan tới bảo mật",
-      "Vì chỉ liên quan tới Roots"
+      "Because some transports (StreamableHTTP) restrict server->client messages",
+      "Because all transports are identical",
+      "Because it only relates to security",
+      "Because it only relates to Roots"
     ],
     "answer": 0,
-    "explanation": "Giới hạn của HTTP ảnh hưởng tới loại message nào dùng được.",
+    "explanation": "HTTP limitations affect which message types can be used.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-31"
   },
   {
     "id": 32,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "STDIO transport hoạt động như thế nào?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "How does the STDIO transport work?",
     "options": [
-      "Client khởi chạy server như tiến trình con và giao tiếp qua stdin/stdout",
-      "Qua HTTP POST tới server remote",
-      "Qua WebSocket",
-      "Qua file chia sẻ"
+      "The client launches the server as a child process and communicates via stdin/stdout",
+      "Via HTTP POST to a remote server",
+      "Via WebSocket",
+      "Via a shared file"
     ],
     "answer": 0,
-    "explanation": "Server là subprocess của client.",
+    "explanation": "The server runs as a subprocess of the client.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-32"
   },
   {
     "id": 33,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "Đặc điểm giao tiếp của STDIO?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "What is a communication characteristic of STDIO?",
     "options": [
-      "Hai chiều đầy đủ — server có thể gửi message bất kỳ lúc nào",
-      "Chỉ client gửi được",
-      "Cần mcp-session-id",
-      "Cần SSE workaround"
+      "Full bidirectional—the server can send messages at any time",
+      "Only the client can send",
+      "Requires mcp-session-id",
+      "Requires an SSE workaround"
     ],
     "answer": 0,
-    "explanation": "STDIO không có hạn chế như HTTP.",
+    "explanation": "STDIO does not have HTTP's limitations.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-33"
   },
   {
     "id": 34,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "STDIO phù hợp nhất khi nào?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "When is STDIO most suitable?",
     "options": [
-      "Client và server chạy cùng một máy",
-      "Server ở xa qua Internet",
-      "Cần scale ngang",
-      "Cần load balancer"
+      "When the client and server run on the same machine",
+      "When the server is remote over the Internet",
+      "When horizontal scaling is needed",
+      "When a load balancer is needed"
     ],
     "answer": 0,
-    "explanation": "STDIO dùng cho môi trường local.",
+    "explanation": "STDIO is used for local environments.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-34"
   },
   {
     "id": 35,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "Chuỗi khởi tạo MCP gồm 3 bước nào?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "What 3 steps make up the MCP initialization sequence?",
     "options": [
-      "Initialize Request → Initialize Result → Initialized Notification",
-      "Hello → Ack → Bye",
-      "Auth → Token → Ready",
-      "List Tools → Call Tool → Result"
+      "Initialize Request -> Initialize Result -> Initialized Notification",
+      "Hello -> Ack -> Bye",
+      "Auth -> Token -> Ready",
+      "List Tools -> Call Tool -> Result"
     ],
     "answer": 0,
-    "explanation": "Client gửi Initialize, server trả Result, client gửi Initialized Notification.",
+    "explanation": "Client sends Initialize, server returns Result, client sends Initialized Notification.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-35"
   },
   {
     "id": 36,
-    "chapter": "Chương 2: JSON Message Types & STDIO",
-    "question": "Bốn kịch bản giao tiếp (client→server request, server→client result, server→client request, client→server result) được hỗ trợ ra sao bởi STDIO?",
+    "chapter": "Chapter 2: JSON Message Types & STDIO",
+    "question": "How are the four communication scenarios (client->server request, server->client result, server->client request, client->server result) supported by STDIO?",
     "options": [
-      "Tất cả đều được hỗ trợ",
-      "Chỉ kịch bản 1 và 2",
-      "Chỉ khi bật json_response",
-      "Không kịch bản nào"
+      "All of them are supported",
+      "Only scenarios 1 and 2",
+      "Only when json_response is enabled",
+      "None of them"
     ],
     "answer": 0,
-    "explanation": "STDIO cho phép mọi hướng giao tiếp.",
+    "explanation": "STDIO permits communication in all directions.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-36"
   },
   {
     "id": 37,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "StreamableHTTP transport dùng khi nào?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "When is the StreamableHTTP transport used?",
     "options": [
-      "Khi client và server ở hai máy khác nhau (server remote)",
-      "Khi chạy trên cùng máy bằng subprocess",
-      "Chỉ khi test",
-      "Chỉ khi không có mạng"
+      "When the client and server are on different machines (remote server)",
+      "When running on the same machine as a subprocess",
+      "Only during testing",
+      "Only when there is no network"
     ],
     "answer": 0,
-    "explanation": "Dùng cho server remote qua HTTP.",
+    "explanation": "Used for remote servers over HTTP.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-37"
   },
   {
     "id": 38,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Hạn chế cốt lõi của HTTP đối với MCP là gì?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "What is the core limitation of HTTP for MCP?",
     "options": [
-      "Server không thể chủ động gửi request tới client",
-      "Client không gửi được request",
-      "HTTP không mang JSON",
-      "HTTP không có header"
+      "The server cannot proactively send requests to the client",
+      "The client cannot send requests",
+      "HTTP cannot carry JSON",
+      "HTTP has no headers"
     ],
     "answer": 0,
-    "explanation": "HTTP là mô hình client request – server response.",
+    "explanation": "HTTP follows a client-request, server-response model.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-38"
   },
   {
     "id": 39,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Loại message nào bị ảnh hưởng bởi hạn chế đó?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "Which message types are affected by that limitation?",
     "options": [
-      "Server→client requests (sampling, list roots) và notifications (logging, progress...)",
+      "Server->client requests (sampling, list roots) and notifications (logging, progress, etc.)",
       "Call Tool Request",
       "Initialize Request",
       "List Tools Request"
     ],
     "answer": 0,
-    "explanation": "Các message do server khởi tạo cần kênh ngược.",
+    "explanation": "Server-initiated messages need a reverse channel.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-39"
   },
   {
     "id": 40,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "StreamableHTTP vượt hạn chế bằng cơ chế nào?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "Through what mechanism does StreamableHTTP overcome this limitation?",
     "options": [
-      "Workaround dùng Server-Sent Events (SSE)",
-      "WebSocket bắt buộc",
-      "Polling mỗi giây",
-      "Chạy thêm STDIO"
+      "A workaround using Server-Sent Events (SSE)",
+      "Mandatory WebSocket",
+      "Polling every second",
+      "Running STDIO alongside it"
     ],
     "answer": 0,
-    "explanation": "SSE cho phép server đẩy dữ liệu tới client.",
+    "explanation": "SSE allows the server to push data to the client.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-40"
   },
   {
     "id": 41,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Header nào định danh session trong StreamableHTTP?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "Which header identifies a session in StreamableHTTP?",
     "options": [
       "mcp-session-id",
       "x-api-key",
@@ -650,31 +650,31 @@
       "x-mcp-root"
     ],
     "answer": 0,
-    "explanation": "Server trả mcp-session-id trong Initialize Result.",
+    "explanation": "The server returns mcp-session-id in the Initialize Result.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-41"
   },
   {
     "id": 42,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Chuỗi khởi tạo kết nối StreamableHTTP gồm?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "What does the StreamableHTTP connection initialization sequence consist of?",
     "options": [
-      "Initialize Request → server trả Initialize Result + mcp-session-id → Initialized Notification",
-      "GET /session → POST /token",
+      "Initialize Request -> server returns Initialize Result + mcp-session-id -> Initialized Notification",
+      "GET /session -> POST /token",
       "WebSocket handshake",
-      "Chỉ cần gọi tool trực tiếp"
+      "Just calling a tool directly"
     ],
     "answer": 0,
-    "explanation": "Giống chuỗi 3 bước, thêm mcp-session-id.",
+    "explanation": "Same 3-step sequence, plus mcp-session-id.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-42"
   },
   {
     "id": 43,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Client mở kết nối SSE chính bằng request nào?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "With which request does the client open the main SSE connection?",
     "options": [
       "GET request",
       "DELETE request",
@@ -682,159 +682,159 @@
       "OPTIONS request"
     ],
     "answer": 0,
-    "explanation": "GET mở luồng SSE để server đẩy message.",
+    "explanation": "GET opens the SSE stream so the server can push messages.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-43"
   },
   {
     "id": 44,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Khi gọi một tool bằng POST, workaround SSE hoạt động ra sao?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "When calling a tool via POST, how does the SSE workaround behave?",
     "options": [
-      "Có thể mở thêm SSE riêng cho tool call, tạo dual SSE connections",
-      "Đóng mọi SSE",
-      "Chuyển sang STDIO",
-      "Hủy session"
+      "An additional SSE stream can be opened for the tool call, creating dual SSE connections",
+      "Closes all SSE streams",
+      "Switches to STDIO",
+      "Terminates the session"
     ],
     "answer": 0,
-    "explanation": "Dual SSE: SSE chính + SSE gắn với tool call.",
+    "explanation": "Dual SSE: main SSE + SSE tied to the tool call.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-44"
   },
   {
     "id": 45,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Thông báo/yêu cầu gắn với một tool call thường đi qua kênh nào?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "Through which channel do notifications/requests tied to a tool call typically travel?",
     "options": [
-      "SSE của chính tool call đó",
+      "That tool call's own SSE stream",
       "STDIO",
-      "Header HTTP",
-      "File log"
+      "HTTP headers",
+      "A log file"
     ],
     "answer": 0,
-    "explanation": "Còn thông báo độc lập đi qua SSE chính.",
+    "explanation": "Independent notifications travel over the main SSE stream.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-45"
   },
   {
     "id": 46,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Hai cờ cấu hình nào của FastMCP làm hỏng SSE workaround?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "Which two FastMCP configuration flags break the SSE workaround?",
     "options": [
-      "stateless_http=True và json_response=True",
-      "debug=True và verbose=True",
-      "stdio=False và sse=False",
-      "cache=True và retry=True"
+      "stateless_http=True and json_response=True",
+      "debug=True and verbose=True",
+      "stdio=False and sse=False",
+      "cache=True and retry=True"
     ],
     "answer": 0,
-    "explanation": "Hai cờ này loại bỏ session/streaming.",
+    "explanation": "These two flags remove session/streaming.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-46"
   },
   {
     "id": 47,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "json_response=True làm gì?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "What does json_response=True do?",
     "options": [
-      "Trả response dạng JSON thường thay vì stream SSE",
-      "Bật mã hóa",
-      "Bật session id",
-      "Bật sampling"
+      "Returns a standard JSON response instead of an SSE stream",
+      "Enables encryption",
+      "Enables session id",
+      "Enables sampling"
     ],
     "answer": 0,
-    "explanation": "Không còn streaming → mất progress/logging dạng stream.",
+    "explanation": "No streaming -> loses streamed progress/logging.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-47"
   },
   {
     "id": 48,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "stateless_http=True nghĩa là gì?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "What does stateless_http=True mean?",
     "options": [
-      "Server không giữ session, không cấp mcp-session-id, client không cần initialize trước",
-      "Server giữ session lâu hơn",
-      "Bắt buộc dùng STDIO",
-      "Bật Roots tự động"
+      "The server retains no session, issues no mcp-session-id, and the client does not need to initialize beforehand",
+      "The server retains sessions longer",
+      "Forces STDIO usage",
+      "Automatically enables Roots"
     ],
     "answer": 0,
-    "explanation": "Mỗi request độc lập.",
+    "explanation": "Each request is independent.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-48"
   },
   {
     "id": 49,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Khi bật stateless HTTP, tính năng nào bị mất?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "When stateless HTTP is enabled, which features are lost?",
     "options": [
-      "Sampling, progress, logging và subscriptions (mọi server→client)",
+      "Sampling, progress, logging, and subscriptions (all server->client features)",
       "Call Tool",
       "List Tools",
       "Read Resource"
     ],
     "answer": 0,
-    "explanation": "Chỉ còn mô hình request-response thuần.",
+    "explanation": "Only the pure request-response model remains.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-49"
   },
   {
     "id": 50,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Vì sao production cần chế độ stateless?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "Why does production need stateless mode?",
     "options": [
-      "Sau load balancer có nhiều server; request sau có thể tới server khác không giữ session",
-      "Vì stateless nhanh hơn STDIO",
-      "Vì HTTP cấm session",
-      "Vì SSE bị chặn bởi trình duyệt"
+      "Behind a load balancer with multiple servers, a subsequent request may hit a different server that does not hold the session",
+      "Because stateless is faster than STDIO",
+      "Because HTTP forbids sessions",
+      "Because SSE is blocked by browsers"
     ],
     "answer": 0,
-    "explanation": "Stateless cho phép scale ngang.",
+    "explanation": "Stateless enables horizontal scaling.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-50"
   },
   {
     "id": 51,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Vấn đề của cấu hình stateful khi có nhiều server instance là gì?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "What is the problem with a stateful configuration when there are multiple server instances?",
     "options": [
-      "Session/SSE gắn với một server cụ thể nên request tới server khác sẽ lỗi",
-      "Tool không chạy được",
-      "Không có JSON",
-      "Không có Initialize"
+      "Sessions/SSE are tied to a specific server, so requests hitting another server will fail",
+      "Tools cannot run",
+      "There is no JSON",
+      "There is no Initialize"
     ],
     "answer": 0,
-    "explanation": "Stateful cần client luôn chạm đúng server.",
+    "explanation": "Stateful requires the client to always hit the exact same server.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-51"
   },
   {
     "id": 52,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Với stateless HTTP, client có cần gửi Initialize Request trước không?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "With stateless HTTP, does the client need to send an Initialize Request first?",
     "options": [
-      "Không bắt buộc",
-      "Bắt buộc luôn",
-      "Chỉ lần đầu trong ngày",
-      "Chỉ với tool async"
+      "Not required",
+      "Always required",
+      "Only the first time each day",
+      "Only for async tools"
     ],
     "answer": 0,
-    "explanation": "Không có session để thiết lập.",
+    "explanation": "There is no session to establish.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-52"
   },
   {
     "id": 53,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Đoạn code nào bật stateless + JSON response?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "Which code snippet enables stateless + JSON response?",
     "options": [
       "FastMCP(\"name\", stateless_http=True, json_response=True)",
       "FastMCP(\"name\").stateless()",
@@ -842,15 +842,15 @@
       "FastMCP(\"name\", stdio=False)"
     ],
     "answer": 0,
-    "explanation": "Hai cờ truyền vào constructor FastMCP.",
+    "explanation": "Both flags are passed to the FastMCP constructor.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-53"
   },
   {
     "id": 54,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Hàm nào trả về ASGI app của StreamableHTTP để chạy với server HTTP?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "Which method returns the StreamableHTTP ASGI app to run with an HTTP server?",
     "options": [
       "mcp.streamable_http_app()",
       "mcp.stdio_app()",
@@ -858,103 +858,103 @@
       "mcp.build_http()"
     ],
     "answer": 0,
-    "explanation": "Dùng để mount/chạy qua uvicorn.",
+    "explanation": "Used to mount/run via uvicorn.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-54"
   },
   {
     "id": 55,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Ứng dụng remote cần sampling và progress notifications nên chọn gì?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "What should a remote application needing sampling and progress notifications choose?",
     "options": [
-      "StreamableHTTP stateful (mặc định)",
+      "StreamableHTTP stateful (default)",
       "stateless_http=True",
       "json_response=True",
-      "Không thể dùng HTTP"
+      "HTTP cannot be used"
     ],
     "answer": 0,
-    "explanation": "Cần SSE workaround và session.",
+    "explanation": "Requires the SSE workaround and sessions.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-55"
   },
   {
     "id": 56,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Server MCP chạy local do client khởi chạy nên dùng transport nào?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "Which transport should a local MCP server launched by the client use?",
     "options": [
       "STDIO",
       "StreamableHTTP stateless",
-      "Chỉ SSE",
+      "SSE only",
       "WebSocket"
     ],
     "answer": 0,
-    "explanation": "STDIO đơn giản và đầy đủ tính năng.",
+    "explanation": "STDIO is simple and full-featured.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-56"
   },
   {
     "id": 57,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Server remote scale ngang sau load balancer, không cần server→client nên chọn?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "What should a horizontally scaled remote server behind a load balancer that does not need server->client communication choose?",
     "options": [
-      "StreamableHTTP với stateless_http=True (và json_response=True)",
+      "StreamableHTTP with stateless_http=True (and json_response=True)",
       "STDIO",
-      "StreamableHTTP stateful với sticky mọi lúc",
-      "Không dùng transport"
+      "StreamableHTTP stateful with sticky sessions at all times",
+      "Use no transport"
     ],
     "answer": 0,
-    "explanation": "Đánh đổi tính năng lấy khả năng scale.",
+    "explanation": "Trades features for scalability.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-57"
   },
   {
     "id": 58,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Phát biểu nào về ma trận khả năng là ĐÚNG?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "Which statement about the capability matrix is TRUE?",
     "options": [
-      "STDIO và StreamableHTTP stateful hỗ trợ đầy đủ server→client; stateless HTTP thì không",
-      "Stateless HTTP hỗ trợ sampling",
-      "STDIO không hỗ trợ progress",
-      "json_response=True bật subscriptions"
+      "STDIO and StreamableHTTP stateful fully support server->client; stateless HTTP does not",
+      "Stateless HTTP supports sampling",
+      "STDIO does not support progress",
+      "json_response=True enables subscriptions"
     ],
     "answer": 0,
-    "explanation": "Stateless bỏ mọi giao tiếp server→client.",
+    "explanation": "Stateless drops all server->client communication.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-58"
   },
   {
     "id": 59,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Trong Lab 03, với recommend(local=False, need_server_to_client=False, behind_load_balancer=True), kết quả là gì?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "In Lab 03, with recommend(local=False, need_server_to_client=False, behind_load_balancer=True), what is the result?",
     "options": [
-      "StreamableHTTP với stateless_http=True, json_response=True",
+      "StreamableHTTP with stateless_http=True, json_response=True",
       "STDIO",
       "StreamableHTTP stateful",
-      "Không có khuyến nghị"
+      "No recommendation"
     ],
     "answer": 0,
-    "explanation": "Remote + load balancer + không cần chiều ngược → stateless.",
+    "explanation": "Remote + load balancer + no reverse channel -> stateless.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-59"
   },
   {
     "id": 60,
-    "chapter": "Chương 3: StreamableHTTP Transport",
-    "question": "Tổng kết khóa: công thức chọn tính năng và transport đúng là gì?",
+    "chapter": "Chapter 3: StreamableHTTP Transport",
+    "question": "Course summary: what is the right formula for choosing features and transport?",
     "options": [
-      "Dùng Sampling/Notifications/Roots khi cần; local → STDIO; remote cần chiều ngược → StreamableHTTP stateful; scale ngang không cần chiều ngược → stateless",
-      "Luôn dùng stateless",
-      "Luôn dùng STDIO cho remote",
-      "Không bao giờ dùng Roots"
+      "Use Sampling/Notifications/Roots when needed; local -> STDIO; remote needing reverse channel -> StreamableHTTP stateful; horizontal scaling without reverse channel -> stateless",
+      "Always use stateless",
+      "Always use STDIO for remote",
+      "Never use Roots"
     ],
     "answer": 0,
-    "explanation": "Chọn theo nhu cầu tính năng và kiến trúc triển khai.",
+    "explanation": "Choose based on feature requirements and deployment architecture.",
     "course_id": "mcp-advanced",
     "course_title": "MCP: Advanced Topics",
     "uid": "mcp-advanced-60"

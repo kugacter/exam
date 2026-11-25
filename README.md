@@ -1,20 +1,20 @@
-# 🎓 Anthropic Developer Track — Static Quiz Web (640 Câu Hỏi)
+# 🎓 Anthropic Developer Track — Static Quiz & Mock Exam Portal (640 Questions)
 
-Thư mục này chỉ chứa **HTML + Data (JSON/JS)** thuần tĩnh — không cần Python hay Backend Server.
+This folder contains **pure static HTML + Data (JSON/JS)** — no Python or Backend Server required.
 
-## 🚀 Cách dùng
-1. **Mở trực tiếp trên máy:** Double-click vào [`index.html`](./index.html).
-2. **Push lên Git / GitHub Pages:**
-   - Đẩy thư mục `quiz-web/` lên repo GitHub của bạn (hoặc tách thành 1 repo riêng).
-   - Vào **Settings -> Pages -> Deploy from a branch**, chọn nhánh `main` và thư mục `/ (root)` (nếu là repo riêng) hoặc `/quiz-web`.
-   - Mở URL GitHub Pages là làm bài trắc nghiệm trực tuyến mọi lúc mọi nơi!
+## 🚀 Usage
+1. **Run Locally:** Double-click [`index.html`](./index.html) in your browser.
+2. **Deploy to Git / GitHub Pages:**
+   - Push the `quiz-web/` folder to your GitHub repository.
+   - Go to **Settings -> Pages -> Deploy from a branch**, select `main` and `/quiz-web` (or `/ (root)` if in a standalone repo).
 
-## 📦 Dữ liệu bên trong (`data/`)
-- `data/courses.json` — Toàn bộ dữ liệu gộp của cả 6 khóa học.
-- `data/courses_bundle.js` — Bundle JS giúp chạy offline `file://` không dính CORS.
-- `data/ai-fluency.json` — 🧭 AI Fluency: Framework & Foundations (80 câu)
-- `data/mcp-advanced.json` — 🔌 MCP: Advanced Topics (60 câu)
-- `data/claude-api.json` — ⚡ Building with the Claude API (200 câu)
-- `data/agent-skills.json` — 🛠️ Introduction to Agent Skills (120 câu)
-- `data/subagents.json` — 🤖 Introduction to Subagents (80 câu)
-- `data/claude-code-101.json` — 💻 Claude Code 101 (100 câu)
+## 📦 Data Files (`data/`)
+- `data/courses.json` — Combined dataset for all 6 courses.
+- `data/exam_8_domains.json` — 8-Domain Exam Guide question pool (661 questions).
+- `data/courses_bundle.js` — JS bundle enabling offline `file://` usage without CORS errors.
+- `data/ai-fluency.json` — 🧭 AI Fluency: Framework & Foundations (80 questions)
+- `data/mcp-advanced.json` — 🔌 MCP: Advanced Topics (60 questions)
+- `data/claude-api.json` — ⚡ Building with the Claude API (200 questions)
+- `data/agent-skills.json` — 🛠️ Introduction to Agent Skills (120 questions)
+- `data/subagents.json` — 🤖 Introduction to Subagents (80 questions)
+- `data/claude-code-101.json` — 💻 Claude Code 101 (100 questions)

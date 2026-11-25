@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="vi" class="dark">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anthropic Developer Track — Cổng Ôn Tập & Thi Thử Tổng Hợp (640 Câu Hỏi)</title>
+  <title>Anthropic Developer Track — Unified Quiz &amp; Mock Exam Portal (640 Questions)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
@@ -37,23 +37,23 @@
       <div class="flex flex-wrap items-center justify-between gap-2">
         <div>
           <h1 class="text-base sm:text-lg font-bold tracking-tight flex items-center gap-2">
-            <span>🎓 Cổng Quiz Tổng Hợp: Anthropic / Claude Developer Track (640 Câu Hỏi)</span>
+            <span>🎓 Anthropic Developer Track — Quiz &amp; Mock Exam Portal (640 Questions)</span>
           </h1>
           <p class="text-xs text-[var(--muted-foreground)] mt-0.5">
-            Gộp trọn bộ 3 Khóa học vào 1 trang duy nhất • Chuyển khóa tức thì • Random đề thông minh ưu tiên câu chưa gặp &amp; tự động đảo đáp án A/B/C/D
+            All 6 Courses + Official 8-Domain 60-Question Mock Exam • Smart Unseen-First Randomizer &amp; Auto-Shuffled Options
           </p>
         </div>
         <div class="flex flex-wrap items-center gap-2">
           <button onclick="selectCourse('MOCK_EXAM_60')"
             class="text-xs font-bold px-3 py-1.5 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white shadow-sm transition cursor-pointer flex items-center gap-1.5">
-            <span>🎯 Thi Thử 60 Câu (8 Domains)</span>
+            <span>🎯 60-Question Mock Exam (8 Domains)</span>
           </button>
           <span id="unseenBadge" class="text-xs font-mono px-2.5 py-1 rounded-full border border-[var(--border)] bg-[var(--secondary)] text-[var(--secondary-foreground)]">
-            Chưa gặp: 0/0
+            Unseen: 0/0
           </span>
-          <button id="resetHistoryBtn" onclick="resetSeenHistory()" title="Reset lịch sử các câu đã làm của khóa đang chọn"
+          <button id="resetHistoryBtn" onclick="resetSeenHistory()" title="Reset seen question history for the active tab"
             class="text-xs px-2.5 py-1 rounded-lg border border-[var(--border)] hover:bg-[var(--secondary)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition cursor-pointer">
-            ↺ Reset Lịch Sử
+            ↺ Reset History
           </button>
         </div>
       </div>
@@ -65,10 +65,10 @@
       <div id="mockExamBlueprintBox" class="hidden rounded-xl border border-emerald-500/40 bg-emerald-500/5 p-3 space-y-2">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <div class="text-xs font-bold text-emerald-400">
-            🎯 Đề Thi Thử 60 Câu — Phân bổ chuẩn tỷ trọng 8 Domains (Exam Guide chính thức)
+            🎯 60-Question Mock Exam — Weighted across all 8 Official Exam Guide Domains
           </div>
           <div class="text-[11px] text-[var(--muted-foreground)]">
-            Bấm 🎲 Random Đề Mới để bốc ngẫu nhiên lại đúng 60 câu theo tỷ trọng này (ưu tiên câu chưa gặp)
+            Click 🎲 New Random Exam to generate a fresh 60-question set following these exact domain weights (unseen-first)
           </div>
         </div>
         <div id="mockExamDomainGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
@@ -77,29 +77,29 @@
       <!-- TOOLBAR: FILTER CHAPTER + EXAM SIZE + RANDOM BUTTON -->
       <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 pt-2 border-t border-[var(--border)]">
         <div class="sm:col-span-6">
-          <label class="block text-xs text-[var(--muted-foreground)] mb-1">Chọn Chương (Chapter Filter)</label>
+          <label class="block text-xs text-[var(--muted-foreground)] mb-1">Chapter / Domain Filter</label>
           <select id="chapterSelect" onchange="generateRandomExam()"
             class="w-full text-xs rounded-lg border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] px-2.5 py-1.5 focus:outline-none">
           </select>
         </div>
 
         <div class="sm:col-span-3">
-          <label class="block text-xs text-[var(--muted-foreground)] mb-1">Số câu mỗi đề</label>
+          <label class="block text-xs text-[var(--muted-foreground)] mb-1">Questions per Exam</label>
           <select id="examSizeSelect" onchange="generateRandomExam()"
             class="w-full text-xs rounded-lg border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] px-2.5 py-1.5 focus:outline-none">
-            <option value="10">10 câu (Ôn tập nhanh)</option>
-            <option value="20" selected>20 câu (Chuẩn Quiz)</option>
-            <option value="23">23 câu (Chuẩn Final Exam)</option>
-            <option value="50">50 câu (Đề nâng cao)</option>
-            <option value="60">60 câu (Chuẩn 8 Domains)</option>
-            <option value="9999">Toàn bộ câu hỏi hiện tại</option>
+            <option value="10">10 Questions (Quick Practice)</option>
+            <option value="20" selected>20 Questions (Standard Quiz)</option>
+            <option value="23">23 Questions (Course Final)</option>
+            <option value="50">50 Questions (Extended)</option>
+            <option value="60">60 Questions (8-Domain Exam)</option>
+            <option value="9999">All Questions in Pool</option>
           </select>
         </div>
 
         <div class="sm:col-span-3 flex items-end">
           <button onclick="generateRandomExam()"
             class="w-full text-xs font-semibold px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white shadow-sm transition flex items-center justify-center gap-1.5 cursor-pointer">
-            <span>🎲 Random Đề Mới</span>
+            <span>🎲 New Random Exam</span>
           </button>
         </div>
       </div>
@@ -107,15 +107,15 @@
       <!-- SCORE & PROGRESS BAR -->
       <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-[var(--border)] text-xs">
         <div class="flex items-center flex-wrap gap-2">
-          <span id="questionCounter" class="font-semibold">Câu 1 / 20</span>
-          <span id="courseTag" class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-semibold border border-amber-500/30">Khóa học</span>
-          <span id="chapterTag" class="px-2 py-0.5 rounded bg-[var(--secondary)] text-[var(--secondary-foreground)]">Chương 1</span>
+          <span id="questionCounter" class="font-semibold">Question 1 / 20</span>
+          <span id="courseTag" class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-semibold border border-amber-500/30">Course</span>
+          <span id="chapterTag" class="px-2 py-0.5 rounded bg-[var(--secondary)] text-[var(--secondary-foreground)]">Chapter 1</span>
           <span id="questionIdTag" class="font-mono text-[var(--muted-foreground)]">#ID-001</span>
         </div>
         <div class="flex items-center gap-3 font-mono">
-          <span class="text-emerald-500 font-semibold">✔ Đúng: <span id="correctCount">0</span></span>
-          <span class="text-rose-500 font-semibold">✘ Sai: <span id="wrongCount">0</span></span>
-          <span class="font-bold">Điểm: <span id="scorePercent">0%</span></span>
+          <span class="text-emerald-500 font-semibold">✔ Correct: <span id="correctCount">0</span></span>
+          <span class="text-rose-500 font-semibold">✘ Wrong: <span id="wrongCount">0</span></span>
+          <span class="font-bold">Score: <span id="scorePercent">0%</span></span>
         </div>
       </div>
       <div class="w-full h-1.5 bg-[var(--secondary)] rounded-full overflow-hidden">
@@ -126,7 +126,7 @@
     <!-- QUESTION CARD -->
     <div id="questionCard" class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 sm:p-5 shadow-sm space-y-4">
       <div id="questionText" class="text-sm sm:text-base font-semibold leading-relaxed">
-        Đang tải câu hỏi...
+        Loading question...
       </div>
 
       <!-- OPTIONS LIST -->
@@ -137,18 +137,18 @@
         <div class="flex items-center gap-2">
           <button id="prevBtn" onclick="prevQuestion()"
             class="text-xs px-3 py-1.5 rounded-lg border border-[var(--border)] hover:bg-[var(--secondary)] disabled:opacity-40 transition cursor-pointer">
-            ← Câu Trước
+            ← Previous
           </button>
           <button id="nextBtn" onclick="nextQuestion()"
             class="text-xs px-3 py-1.5 rounded-lg border border-[var(--border)] hover:bg-[var(--secondary)] disabled:opacity-40 transition cursor-pointer">
-            Câu Tiếp →
+            Next →
           </button>
         </div>
 
         <div class="flex items-center gap-2">
           <button id="submitBtn" onclick="submitAnswer()"
             class="text-xs font-semibold px-4 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white shadow-sm disabled:opacity-40 transition cursor-pointer">
-            ✔ Submit Đáp Án
+            ✔ Submit Answer
           </button>
         </div>
       </div>
@@ -164,9 +164,9 @@
     <!-- QUESTION NAVIGATOR PILLS -->
     <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-3 shadow-sm">
       <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-semibold text-[var(--muted-foreground)]">Bản đồ câu hỏi trong đề hiện tại (Bấm số để chuyển nhanh):</span>
+        <span class="text-xs font-semibold text-[var(--muted-foreground)]">Question Navigator (Click a number to jump):</span>
         <button onclick="showAllListModal()" class="text-xs text-amber-500 hover:underline font-medium cursor-pointer">
-          📋 Xem / Tìm kiếm toàn bộ ngân hàng câu hỏi
+          📋 Browse / Search Full Question Bank
         </button>
       </div>
       <div id="pillNavigator" class="flex flex-wrap gap-1.5"></div>
@@ -175,12 +175,12 @@
     <!-- FULL QUESTIONS SEARCH MODAL / DRAWER -->
     <div id="allQuestionsModal" class="hidden bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 shadow-lg space-y-3">
       <div class="flex items-center justify-between gap-2 pb-2 border-b border-[var(--border)]">
-        <h2 id="modalTitle" class="text-sm font-bold">📋 Danh sách toàn bộ Câu hỏi trong Ngân hàng đề</h2>
+        <h2 id="modalTitle" class="text-sm font-bold">📋 Question Bank</h2>
         <button onclick="toggleAllListModal(false)" class="text-xs px-2.5 py-1 rounded border border-[var(--border)] hover:bg-[var(--secondary)] cursor-pointer">
-          Đóng ✕
+          Close ✕
         </button>
       </div>
-      <input id="searchInput" type="text" oninput="renderAllQuestionsList()" placeholder="🔍 Nhập từ khóa để tìm nhanh câu hỏi (vd: SKILL.md, proactively, Explore, caching, BM25, MCP...)"
+      <input id="searchInput" type="text" oninput="renderAllQuestionsList()" placeholder="🔍 Search questions by keyword (e.g., SKILL.md, proactively, Explore, caching, BM25, MCP, Batch API...)"
         class="w-full text-xs rounded-lg border border-[var(--border)] bg-[var(--background)] px-3 py-2 focus:outline-none" />
       <div id="allQuestionsList" class="max-h-96 overflow-y-auto space-y-2 pr-1"></div>
     </div>
@@ -228,7 +228,7 @@
       const unseenCount = pool.filter(q => !seenUids.has(q.uid)).length;
       const badge = document.getElementById("unseenBadge");
       if (badge) {
-        badge.textContent = `Chưa gặp: ${unseenCount}/${pool.length}`;
+        badge.textContent = `Unseen: ${unseenCount}/${pool.length}`;
       }
     }
 
@@ -255,16 +255,16 @@
         {
           id: "ALL_COURSES",
           icon: "🌟",
-          title: "Tổng Hợp Cả 6 Khóa",
-          badge: `Tất cả 30 Chương • ${ALL_COMBINED_QUESTIONS.length} Câu`,
+          title: "All 6 Courses Combined",
+          badge: `All 30 Chapters • ${ALL_COMBINED_QUESTIONS.length} Qs`,
           total: ALL_COMBINED_QUESTIONS.length,
           unseen: ALL_COMBINED_QUESTIONS.filter(q => !seenUids.has(q.uid)).length
         },
         {
           id: "MOCK_EXAM_60",
           icon: "🎯",
-          title: "Thi Thử 60 Câu (8 Domains)",
-          badge: `Chuẩn Exam Guide • ${EXAM_POOL.length} Câu Kho`,
+          title: "60-Q Mock Exam (8 Domains)",
+          badge: `Official Weights • ${EXAM_POOL.length} Qs Pool`,
           total: EXAM_POOL.length,
           unseen: EXAM_POOL.filter(q => !seenUids.has(q.uid)).length
         }
@@ -300,7 +300,9 @@
 
       const allOpt = document.createElement("option");
       allOpt.value = "ALL";
-      allOpt.textContent = `📚 Tất cả các Chương (${pool.length} câu)`;
+      allOpt.textContent = activeCourseId === "MOCK_EXAM_60"
+        ? `🎯 All 8 Domains (60-Question Stratified Exam)`
+        : `📚 All Chapters (${pool.length} questions)`;
       select.appendChild(allOpt);
 
       // Gom nhóm theo chapter (kèm tên khóa nếu đang ở chế độ ALL_COURSES)
@@ -315,7 +317,7 @@
       for (const [chName, count] of chapterCounts.entries()) {
         const opt = document.createElement("option");
         opt.value = chName;
-        opt.textContent = `${chName} (${count} câu)`;
+        opt.textContent = `${chName} (${count} Qs)`;
         select.appendChild(opt);
       }
     }
@@ -469,10 +471,10 @@
       const wrongCount = submittedList.length - correctCount;
       const pct = submittedList.length > 0 ? Math.round((correctCount / submittedList.length) * 100) : 0;
 
-      document.getElementById("questionCounter").textContent = `Câu ${currentIndex + 1} / ${currentExam.length}`;
+      document.getElementById("questionCounter").textContent = `Question ${currentIndex + 1} / ${currentExam.length}`;
       document.getElementById("courseTag").textContent = q.course_title;
       document.getElementById("chapterTag").textContent = q.chapter;
-      document.getElementById("questionIdTag").textContent = `#Câu-${String(q.id).padStart(3, "0")}`;
+      document.getElementById("questionIdTag").textContent = `#Q-${String(q.id).padStart(3, "0")}`;
       document.getElementById("correctCount").textContent = correctCount;
       document.getElementById("wrongCount").textContent = wrongCount;
       document.getElementById("scorePercent").textContent = `${pct}%`;
@@ -534,14 +536,14 @@
         feedbackBox.classList.remove("hidden");
         if (q.isCorrect) {
           feedbackBox.className = "rounded-xl p-3.5 border border-emerald-500/50 bg-emerald-500/10 text-xs sm:text-sm space-y-1.5";
-          feedbackTitle.innerHTML = `<span class="text-emerald-500">✅ CHÍNH XÁC 100%!</span>`;
-          correctAnswerLine.textContent = `Đáp án đúng: [${letters[q.correctIndex]}] ${q.displayOptions[q.correctIndex]}`;
+          feedbackTitle.innerHTML = `<span class="text-emerald-500">✅ CORRECT!</span>`;
+          correctAnswerLine.textContent = `Correct Answer: [${letters[q.correctIndex]}] ${q.displayOptions[q.correctIndex]}`;
         } else {
           feedbackBox.className = "rounded-xl p-3.5 border border-rose-500/50 bg-rose-500/10 text-xs sm:text-sm space-y-1.5";
-          feedbackTitle.innerHTML = `<span class="text-rose-500">❌ CHƯA ĐÚNG! (Bạn đã chọn đáp án ${letters[q.selectedOption]})</span>`;
-          correctAnswerLine.innerHTML = `<span class="text-emerald-500">👉 Đáp án đúng là [${letters[q.correctIndex]}]: ${escapeHtml(q.displayOptions[q.correctIndex])}</span>`;
+          feedbackTitle.innerHTML = `<span class="text-rose-500">❌ INCORRECT! (You selected option ${letters[q.selectedOption]})</span>`;
+          correctAnswerLine.innerHTML = `<span class="text-emerald-500">👉 Correct Answer is [${letters[q.correctIndex]}]: ${escapeHtml(q.displayOptions[q.correctIndex])}</span>`;
         }
-        explanationText.innerHTML = `<strong>💡 Giải thích chi tiết:</strong> ${escapeHtml(q.explanation)}`;
+        explanationText.innerHTML = `<strong>💡 Explanation:</strong> ${escapeHtml(q.explanation)}`;
       } else {
         feedbackBox.classList.add("hidden");
       }
@@ -568,8 +570,8 @@
             <span class="font-mono text-amber-400 shrink-0">${d.weight}%</span>
           </div>
           <div class="flex items-center justify-between text-[var(--muted-foreground)]">
-            <span>Số câu: <strong class="text-[var(--foreground)]">${inExam.length}</strong></span>
-            <span>Đúng: <strong class="text-emerald-400">${correct}/${submitted.length}</strong></span>
+            <span>Count: <strong class="text-[var(--foreground)]">${inExam.length}</strong></span>
+            <span>Score: <strong class="text-emerald-400">${correct}/${submitted.length}</strong></span>
           </div>
         `;
         grid.appendChild(card);
@@ -632,7 +634,7 @@
       const query = (document.getElementById("searchInput").value || "").toLowerCase().trim();
       const container = document.getElementById("allQuestionsList");
       const pool = getActiveCourseQuestions();
-      document.getElementById("modalTitle").textContent = `📋 Ngân hàng Câu hỏi đang chọn (${pool.length} câu)`;
+      document.getElementById("modalTitle").textContent = `📋 Active Question Bank (${pool.length} questions)`;
       container.innerHTML = "";
 
       const filtered = pool.filter(q =>
@@ -657,7 +659,7 @@
             </div>
             <div class="font-medium text-[var(--foreground)]">${escapeHtml(q.question)}</div>
           </div>
-          <span class="text-xs text-blue-500 shrink-0 font-semibold">Làm câu này →</span>
+          <span class="text-xs text-blue-500 shrink-0 font-semibold">Open →</span>
         `;
         container.appendChild(row);
       });
@@ -671,7 +673,7 @@
         .replace(/"/g, "&quot;");
     }
 
-    // Khởi tạo lần đầu
+    // Khởi tạo mặc định (mở chế độ Đề Thi Thử 60 Câu hoặc Khóa đầu tiên)
     selectCourse(COURSES[0].id);
   </script>
 </body>

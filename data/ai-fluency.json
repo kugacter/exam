@@ -1,248 +1,248 @@
 [
   {
     "id": 1,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Trọng tâm chính của khóa học 'AI Fluency: Framework & Foundations' là gì?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "What is the primary focus of the 'AI Fluency: Framework & Foundations' course?",
     "options": [
-      "Phát triển kỹ năng cộng tác có ý nghĩa và bền vững giữa con người với AI, chứ không chỉ học mẹo công nghệ nhất thời",
-      "Chỉ học cách lập trình mạng nơ-ron từ con số 0",
-      "Chỉ học thuộc danh sách các câu lệnh terminal",
-      "Thay thế hoàn toàn con người bằng máy móc"
+      "Developing meaningful and lasting human-AI collaboration skills rather than just learning temporary tech tips",
+      "Only learning how to program neural networks from scratch",
+      "Only memorizing a list of terminal commands",
+      "Completely replacing humans with machines"
     ],
     "answer": 0,
-    "explanation": "Khóa học tập trung vào human-AI collaboration (cộng tác người-AI) và xây dựng kỹ năng bền vững khi công nghệ AI tiếp tục phát triển.",
+    "explanation": "The course focuses on human-AI collaboration and building lasting skills as AI technology continues to evolve.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-1"
   },
   {
     "id": 2,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Theo định nghĩa trong khóa học, 'AI Fluency' nghĩa là khả năng tương tác với các hệ thống AI theo 4 tiêu chí nào?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "According to the course definition, 'AI Fluency' means the ability to interact with AI systems according to which 4 criteria?",
     "options": [
-      "Effective (Hiệu quả), Efficient (Hiệu suất), Ethical (Đạo đức) và Safe (An toàn)",
-      "Fast (Nhanh), Free (Miễn phí), Fun (Vui) và Fancy (Đẹp)",
-      "Secret (Bí mật), Complex (Phức tạp), Automatic (Tự động) và Rigid (Cứng nhắc)",
-      "Offline (Ngoại tuyến), Manual (Thủ công), Static (Tĩnh) và Closed (Đóng)"
+      "Effective, Efficient, Ethical, and Safe",
+      "Fast, Free, Fun, and Fancy",
+      "Secret, Complex, Automatic, and Rigid",
+      "Offline, Manual, Static, and Closed"
     ],
     "answer": 0,
-    "explanation": "AI Fluency = tương tác với hệ thống AI theo cách Effective, Efficient, Ethical, và Safe.",
+    "explanation": "AI Fluency = interacting with AI systems in a way that is Effective, Efficient, Ethical, and Safe.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-2"
   },
   {
     "id": 3,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Khung năng lực cốt lõi '4D Framework' bao gồm 4 chữ D nào?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "Which 4 Ds make up the core '4D Framework'?",
     "options": [
-      "Delegation, Description, Discernment, và Diligence",
-      "Design, Develop, Deploy, và Debug",
-      "Data, Database, Docker, và Domain",
-      "Download, Delete, Duplicate, và Distribute"
+      "Delegation, Description, Discernment, and Diligence",
+      "Design, Develop, Deploy, and Debug",
+      "Data, Database, Docker, and Domain",
+      "Download, Delete, Duplicate, and Distribute"
     ],
     "answer": 0,
-    "explanation": "4D Framework của Dakan, Feller và Anthropic gồm: Delegation, Description, Discernment, Diligence.",
+    "explanation": "The 4D Framework by Dakan, Feller, and Anthropic consists of: Delegation, Description, Discernment, and Diligence.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-3"
   },
   {
     "id": 4,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Bản chất của 4 năng lực (4Ds) trong AI Fluency Framework là gì?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "What is the nature of the 4 competencies (4Ds) in the AI Fluency Framework?",
     "options": [
-      "Là 4 tập hợp kỹ năng, kiến thức, hiểu biết và giá trị có mối liên kết chặt chẽ với nhau (interconnected competencies)",
-      "Là 4 bước rời rạc chỉ dùng một lần rồi bỏ",
-      "Là 4 tên gọi của 4 mô hình ngôn ngữ khác nhau",
-      "Là 4 loại giấy phép phần mềm"
+      "They are 4 interconnected competencies encompassing skills, knowledge, understanding, and values",
+      "They are 4 isolated steps used only once and then discarded",
+      "They are 4 names of different language models",
+      "They are 4 types of software licenses"
     ],
     "answer": 0,
-    "explanation": "Delegation, Description, Discernment và Diligence là các năng lực liên kết, bổ trợ lẫn nhau.",
+    "explanation": "Delegation, Description, Discernment, and Diligence are interconnected competencies that complement one another.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-4"
   },
   {
     "id": 5,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Ba chế độ tương tác giữa con người và AI (Three Modes of AI Interaction) được giới thiệu ở Chương 1 là gì?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "What are the Three Modes of AI Interaction introduced in Chapter 1?",
     "options": [
-      "Automation, Augmentation, và Agency",
-      "Input, Process, và Output",
-      "Training, Testing, và Serving",
-      "Read, Write, và Execute"
+      "Automation, Augmentation, and Agency",
+      "Input, Process, and Output",
+      "Training, Testing, and Serving",
+      "Read, Write, and Execute"
     ],
     "answer": 0,
-    "explanation": "Ba cách con người cộng tác với AI là: Automation, Augmentation và Agency.",
+    "explanation": "The three ways humans collaborate with AI are Automation, Augmentation, and Agency.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-5"
   },
   {
     "id": 6,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Chế độ tương tác 'Automation' trong AI Fluency được định nghĩa như thế nào?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "How is the 'Automation' interaction mode defined in AI Fluency?",
     "options": [
-      "AI thực hiện các tác vụ cụ thể dựa trên chỉ dẫn của con người (completes specific tasks based on your instructions)",
-      "Con người và AI cùng nhau động não như hai đối tác ngang hàng",
-      "AI tự đặt mục tiêu sống riêng mà không cần con người",
-      "Con người tự làm mọi việc không dùng AI"
+      "AI completes specific tasks based on your instructions",
+      "Humans and AI brainstorm together as equal partners",
+      "AI sets its own life goals without needing humans",
+      "Humans do everything themselves without using AI"
     ],
     "answer": 0,
-    "explanation": "Automation: bạn giao nhiệm vụ cụ thể và chỉ dẫn rõ ràng để AI thực thi tác vụ đó.",
+    "explanation": "Automation: you assign a specific task and provide clear instructions for the AI to execute that task.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-6"
   },
   {
     "id": 7,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Chế độ tương tác 'Augmentation' mang ý nghĩa gì?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "What does the 'Augmentation' interaction mode mean?",
     "options": [
-      "Bạn và AI cộng tác với nhau như những đối tác tư duy và thực thi (collaborate as creative thinking and task execution partners)",
-      "AI tự chạy ngầm không bao giờ hỏi ý kiến bạn",
-      "Bạn chỉ dùng AI để kiểm tra lỗi chính tả cuối cùng",
-      "AI thay thế hoàn toàn quyền quyết định của bạn"
+      "You and AI collaborate as creative thinking and task execution partners",
+      "AI runs silently in the background and never asks for your input",
+      "You only use AI for a final spell-check",
+      "AI completely replaces your decision-making authority"
     ],
     "answer": 0,
-    "explanation": "Augmentation là sự cộng tác tương tác qua lại giữa con người và AI như 'thinking partners'.",
+    "explanation": "Augmentation is back-and-forth interactive collaboration between humans and AI as 'thinking partners'.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-7"
   },
   {
     "id": 8,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Chế độ tương tác 'Agency' khác với 'Automation' ở điểm nào?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "How does the 'Agency' interaction mode differ from 'Automation'?",
     "options": [
-      "Ở chế độ Agency, bạn cấu hình AI làm việc độc lập thay mặt bạn — thiết lập kiến thức và khuôn mẫu hành vi (knowledge & behavior patterns) thay vì chỉ giao từng tác vụ lẻ",
-      "Agency chỉ dùng cho việc viết email ngắn",
-      "Automation không cần bất kỳ chỉ dẫn nào từ người dùng",
-      "Agency không cho phép dùng bất kỳ công cụ nào"
+      "In Agency mode, you configure AI to work independently on your behalf—establishing knowledge and behavior patterns rather than only assigning individual tasks",
+      "Agency is only used for writing short emails",
+      "Automation does not require any instructions from the user",
+      "Agency does not allow using any tools"
     ],
     "answer": 0,
-    "explanation": "Agency là cấu hình AI hoạt động tự chủ thay mặt bạn dựa trên tri thức và quy tắc hành vi đã thiết lập.",
+    "explanation": "Agency means configuring AI to operate autonomously on your behalf based on established knowledge and behavioral rules.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-8"
   },
   {
     "id": 9,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Trong khung 4D, năng lực 'Delegation' (Ủy quyền) có nghĩa là gì?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "In the 4D Framework, what does the 'Delegation' competency mean?",
     "options": [
-      "Đặt mục tiêu và quyết định có nên dùng AI không, khi nào dùng và dùng như thế nào (whether, when, and how to engage with AI)",
-      "Chấm điểm độ chính xác của đầu ra AI",
-      "Khai báo với sếp rằng mình đã dùng AI",
-      "Viết prompt thật dài để AI đoán ý"
+      "Setting goals and deciding whether, when, and how to engage with AI",
+      "Grading the accuracy of AI outputs",
+      "Reporting to your manager that you used AI",
+      "Writing a very long prompt so the AI has to guess your intent"
     ],
     "answer": 0,
-    "explanation": "Delegation là bước ra quyết định phân chia công việc: việc nào người làm, việc nào AI làm, việc nào làm chung.",
+    "explanation": "Delegation is the decision-making step of dividing work: what humans do, what AI does, and what is done together.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-9"
   },
   {
     "id": 10,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Trong khung 4D, năng lực 'Description' (Mô tả) tập trung vào điều gì?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "In the 4D Framework, what does the 'Description' competency focus on?",
     "options": [
-      "Mô tả mục tiêu hiệu quả để gợi ra những hành vi và đầu ra hữu ích từ AI (effectively describing goals to prompt useful AI behaviors and outputs)",
-      "Kiểm tra xem AI có bịa đặt số liệu hay không",
-      "Xin lỗi khách hàng khi AI làm sai",
-      "Cài đặt phần cứng máy chủ"
+      "Effectively describing goals to prompt useful AI behaviors and outputs",
+      "Checking whether the AI has fabricated statistics",
+      "Apologizing to customers when the AI makes a mistake",
+      "Installing server hardware"
     ],
     "answer": 0,
-    "explanation": "Description là khả năng giao tiếp rõ ràng với AI để tạo ra môi trường cộng tác hiệu quả.",
+    "explanation": "Description is the ability to communicate clearly with AI to create an effective collaborative environment.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-10"
   },
   {
     "id": 11,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Trong khung 4D, năng lực 'Discernment' (Thẩm định) là gì?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "In the 4D Framework, what is the 'Discernment' competency?",
     "options": [
-      "Đánh giá chính xác mức độ hữu ích, chất lượng của các đầu ra và hành vi của AI (accurately assessing the usefulness of AI outputs and behaviours)",
-      "Giao toàn bộ công việc cho AI làm tự động",
-      "Sao chép nguyên văn câu trả lời của AI mà không đọc lại",
-      "Tạo tài khoản miễn phí trên Claude"
+      "Accurately assessing the usefulness and quality of AI outputs and behaviors",
+      "Handing over all work to AI to run automatically",
+      "Copying AI answers verbatim without reading them",
+      "Creating a free account on Claude"
     ],
     "answer": 0,
-    "explanation": "Discernment giúp bạn đánh giá phản biện kết quả, quy trình và thái độ tương tác của AI.",
+    "explanation": "Discernment helps you critically evaluate the results, process, and interaction style of AI.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-11"
   },
   {
     "id": 12,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Trong khung 4D, năng lực 'Diligence' (Trách nhiệm / Cẩn trọng) nhấn mạnh điều gì?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "In the 4D Framework, what does the 'Diligence' competency emphasize?",
     "options": [
-      "Chịu trách nhiệm về những gì chúng ta làm với AI và cách chúng ta làm điều đó (taking responsibility for what we do with AI and how we do it)",
-      "Bắt buộc AI phải trả lời trong vòng 1 giây",
-      "Chỉ dùng AI để viết code Python",
-      "Không bao giờ cho phép ai biết mình đã dùng AI"
+      "Taking responsibility for what we do with AI and how we do it",
+      "Forcing AI to reply within 1 second",
+      "Using AI only to write Python code",
+      "Never letting anyone know you used AI"
     ],
     "answer": 0,
-    "explanation": "Diligence đảm bảo tính đạo đức, minh bạch và an toàn khi sử dụng và chia sẻ sản phẩm có sự tham gia của AI.",
+    "explanation": "Diligence ensures ethics, transparency, and safety when using and sharing AI-assisted work.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-12"
   },
   {
     "id": 13,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Để thực hành các bài tập trong khóa AI Fluency, người học cần điều kiện gì?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "What is required to practice the exercises in the AI Fluency course?",
     "options": [
-      "Chỉ cần truy cập một mô hình ngôn ngữ lớn (ví dụ tài khoản Claude miễn phí hoặc chatbot AI bất kỳ) — không bắt buộc gói trả phí",
-      "Bắt buộc phải mua gói trả phí đắt nhất và có GPU riêng",
-      "Phải biết lập trình C++ thành thạo",
-      "Phải cài đặt Linux từ mã nguồn"
+      "Only access to a large language model (such as a free Claude account or any AI chatbot)—no paid plan required",
+      "Mandatory purchase of the most expensive paid tier and a dedicated GPU",
+      "Proficiency in C++ programming",
+      "Installing Linux from source code"
     ],
     "answer": 0,
-    "explanation": "Khóa học dùng Claude làm ví dụ minh họa (có bản miễn phí) nhưng nguyên tắc áp dụng cho mọi hệ thống AI.",
+    "explanation": "The course uses Claude as an illustrative example (which has a free tier), though the principles apply to any AI system.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-13"
   },
   {
     "id": 14,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Vì sao khóa học nhấn mạnh mục tiêu là xây dựng kỹ năng 'bền vững' (lasting skills)?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "Why does the course emphasize building 'lasting skills'?",
     "options": [
-      "Vì công nghệ và mô hình AI thay đổi liên tục, nên khung tư duy 4D sẽ vẫn giữ nguyên giá trị ngay cả khi các công cụ AI mới xuất hiện",
-      "Vì các mô hình AI sẽ không bao giờ được nâng cấp thêm nữa",
-      "Vì bạn chỉ cần học một mẹo prompt duy nhất cho cả đời",
-      "Vì AI không thể học thêm kỹ năng mới"
+      "Because AI technology and models change constantly, so the 4D mindset remains valuable even as new AI tools emerge",
+      "Because AI models will never be upgraded again",
+      "Because you only need to learn one single prompt trick for life",
+      "Because AI cannot learn new skills"
     ],
     "answer": 0,
-    "explanation": "Mẹo vặt theo phiên bản model nhanh lỗi thời, còn tư duy Delegation/Description/Discernment/Diligence luôn có giá trị lâu dài.",
+    "explanation": "Model-specific tricks quickly become outdated, whereas Delegation, Description, Discernment, and Diligence thinking retains long-term value.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-14"
   },
   {
     "id": 15,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Cộng tác hiệu quả với AI đòi hỏi sự kết hợp của hai yếu tố nào theo phần Key Takeaways của Bài 1?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "According to Lesson 1 Key Takeaways, effective AI collaboration requires a combination of which two elements?",
     "options": [
-      "Cả kỹ năng thực hành (practical skills) lẫn sự thay đổi căn bản trong tư duy về cách làm việc cùng AI (a fundamental shift in how we think about working with AI)",
-      "Chỉ cần tốc độ gõ phím nhanh và đường truyền Internet mạnh",
-      "Chỉ cần biết tiếng Anh chuyên ngành toán học",
-      "Chỉ cần dùng một câu prompt cố định"
+      "Both practical skills and a fundamental shift in how we think about working with AI",
+      "Only fast typing speed and a strong Internet connection",
+      "Only knowing technical mathematical English",
+      "Only using a single fixed prompt"
     ],
     "answer": 0,
-    "explanation": "AI Fluency đòi hỏi cả kỹ năng thực hành lẫn tư duy coi AI là đối tác cộng tác có trách nhiệm.",
+    "explanation": "AI Fluency requires both practical skills and a mindset that treats AI as a responsible collaborative partner.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-15"
   },
   {
     "id": 16,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Trong bài tập ứng dụng khung 4D cho một chiến dịch truyền thông (Communication project), bước hỏi 'Phần nào AI làm tốt, phần nào cần tiếng nói con người?' thuộc chữ D nào?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "In the exercise applying the 4D Framework to a communication project, asking 'Which parts does AI do well, and which parts need a human voice?' belongs to which D?",
     "options": [
       "Delegation",
       "Description",
@@ -250,111 +250,111 @@
       "Diligence"
     ],
     "answer": 0,
-    "explanation": "Quyết định phân chia công việc giữa người và AI là cốt lõi của Delegation.",
+    "explanation": "Deciding how to divide work between humans and AI is the core of Delegation.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-16"
   },
   {
     "id": 17,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Cũng trong bài tập đó, bước hỏi 'Tôi sẽ kiểm chứng độ chính xác của đầu ra AI bằng cách nào?' thuộc chữ D nào?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "In that same exercise, asking 'How will I verify the accuracy of the AI's outputs?' belongs to which D?",
     "options": [
-      "Discernment (và gắn với Deployment Diligence khi phát hành)",
+      "Discernment (and ties into Deployment Diligence upon release)",
       "Delegation",
       "Description",
       "Automation"
     ],
     "answer": 0,
-    "explanation": "Đánh giá chất lượng và tính chính xác của đầu ra AI là Discernment.",
+    "explanation": "Assessing the quality and accuracy of AI outputs is Discernment.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-17"
   },
   {
     "id": 18,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Bước hỏi 'Tôi sẽ ghi nhận/công khai sự tham gia của AI như thế nào khi xuất bản tác phẩm?' thuộc chữ D nào?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "Asking 'How will I acknowledge/disclose AI's involvement when publishing the work?' belongs to which D?",
     "options": [
-      "Diligence (cụ thể là Transparency Diligence)",
+      "Diligence (specifically Transparency Diligence)",
       "Delegation",
       "Description",
       "Discernment"
     ],
     "answer": 0,
-    "explanation": "Minh bạch về vai trò của AI thuộc về năng lực Diligence.",
+    "explanation": "Being transparent about AI's role belongs to the Diligence competency.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-18"
   },
   {
     "id": 19,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Ví dụ nào sau đây thể hiện rõ nhất chế độ 'Augmentation' thay vì 'Automation'?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "Which of the following examples best demonstrates 'Augmentation' rather than 'Automation'?",
     "options": [
-      "Bạn yêu cầu AI đóng vai người phản biện để cùng bạn tranh luận, tinh chỉnh từng luận điểm cho bài thuyết trình",
-      "Bạn đưa danh sách 100 hóa đơn để AI trích xuất ngày tháng theo mẫu có sẵn",
-      "Bạn cấu hình một agent tự động trực email cả tuần không cần bạn xem",
-      "Bạn tắt AI và tự viết tay toàn bộ"
+      "Asking AI to act as a critical reviewer to debate with you and refine each argument for a presentation",
+      "Giving AI a list of 100 invoices to extract dates into a predefined template",
+      "Configuring an agent to automatically monitor email all week without your review",
+      "Turning off AI and writing everything manually"
     ],
     "answer": 0,
-    "explanation": "Cùng nhau tư duy, phản biện và cải thiện ý tưởng là Augmentation.",
+    "explanation": "Thinking, debating, and improving ideas together is Augmentation.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-19"
   },
   {
     "id": 20,
-    "chapter": "Chương 1: Introduction & The 4D Framework",
-    "question": "Khóa học 'AI Fluency: Framework & Foundations' được xây dựng dựa trên khung học thuật của những tác giả nào phối hợp cùng Anthropic?",
+    "chapter": "Chapter 1: Introduction & The 4D Framework",
+    "question": "Which authors collaborated with Anthropic to create the academic framework behind 'AI Fluency: Framework & Foundations'?",
     "options": [
-      "Rick Dakan và Joseph Feller (phát hành theo giấy phép CC BY-NC-SA 4.0)",
-      "Alan Turing và John McCarthy",
-      "Linus Torvalds và Guido van Rossum",
-      "Tim Berners-Lee và Vint Cerf"
+      "Rick Dakan and Joseph Feller (released under the CC BY-NC-SA 4.0 license)",
+      "Alan Turing and John McCarthy",
+      "Linus Torvalds and Guido van Rossum",
+      "Tim Berners-Lee and Vint Cerf"
     ],
     "answer": 0,
-    "explanation": "Khóa học dựa trên The AI Fluency Framework của Rick Dakan, Joseph Feller và Anthropic (CC BY-NC-SA 4.0).",
+    "explanation": "The course is based on The AI Fluency Framework by Rick Dakan, Joseph Feller, and Anthropic (CC BY-NC-SA 4.0).",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-20"
   },
   {
     "id": 21,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Điểm khác biệt cơ bản giữa Traditional AI (AI truyền thống) và Generative AI (AI tạo sinh) là gì?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "What is the fundamental difference between Traditional AI and Generative AI?",
     "options": [
-      "Traditional AI phân tích/phân loại dữ liệu có sẵn (vd: lọc email spam), còn Generative AI có khả năng tạo ra nội dung hoàn toàn mới (vd: tự viết một email mới)",
-      "Traditional AI luôn chạy nhanh hơn và thông minh hơn Generative AI ở mọi tác vụ",
-      "Generative AI chỉ xử lý được con số, không xử lý được văn bản",
-      "Hai loại này hoàn toàn giống nhau"
+      "Traditional AI analyzes or classifies existing data (e.g., spam filtering), whereas Generative AI can create entirely new content (e.g., drafting a new email)",
+      "Traditional AI always runs faster and is smarter than Generative AI at every task",
+      "Generative AI can only process numbers, not text",
+      "The two types are completely identical"
     ],
     "answer": 0,
-    "explanation": "Generative AI tạo nội dung mới (text, images, code) thay vì chỉ phân tích/gán nhãn dữ liệu hiện có.",
+    "explanation": "Generative AI creates new content (text, images, code) rather than only analyzing or labeling existing data.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-21"
   },
   {
     "id": 22,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Ba trụ cột công nghệ (Three pillars) giúp sự bùng nổ của Generative AI hiện đại trở nên khả thi là gì?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "What are the Three Pillars of technology that made the modern Generative AI boom possible?",
     "options": [
-      "1) Algorithms (kiến trúc Transformer năm 2017), 2) Data explosion (dữ liệu số khổng lồ), và 3) Computing power (chip xử lý mạnh mẽ như GPU)",
-      "1) Blockchain, 2) Virtual Reality, và 3) Mạng 3G",
-      "1) Đĩa mềm, 2) Máy in kim, và 3) Ngôn ngữ Assembly",
-      "1) Chỉ có dữ liệu giấy, 2) CPU đơn nhân, và 3) Quy tắc if-else viết tay"
+      "1) Algorithms (the 2017 Transformer architecture), 2) Data explosion (massive digital data), and 3) Computing power (powerful processors like GPUs)",
+      "1) Blockchain, 2) Virtual Reality, and 3) 3G networks",
+      "1) Floppy disks, 2) Dot-matrix printers, and 3) Assembly language",
+      "1) Paper-only data, 2) Single-core CPUs, and 3) Hand-written if-else rules"
     ],
     "answer": 0,
-    "explanation": "Ba trụ cột gồm: Algorithms (Transformer 2017), Data explosion và Computing power (GPUs).",
+    "explanation": "The three pillars are Algorithms (Transformer 2017), Data explosion, and Computing power (GPUs).",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-22"
   },
   {
     "id": 23,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Kiến trúc thuật toán bước ngoặt ra đời năm 2017 giúp xử lý hiệu quả các đoạn văn bản dài trong LLM có tên là gì?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "What is the name of the breakthrough algorithmic architecture introduced in 2017 that enabled LLMs to efficiently process long text sequences?",
     "options": [
       "Transformer architecture",
       "Bubble Sort architecture",
@@ -362,15 +362,15 @@
       "Client-Server FTP architecture"
     ],
     "answer": 0,
-    "explanation": "Kiến trúc Transformer (2017) đã cách mạng hóa việc xử lý ngữ cảnh dài trong ngôn ngữ tự nhiên.",
+    "explanation": "The Transformer architecture (2017) revolutionized handling long-range context in natural language.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-23"
   },
   {
     "id": 24,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Ba giai đoạn chính trong vòng đời xây dựng và vận hành của một mô hình ngôn ngữ lớn (LLM) là gì?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "What are the three main stages in the lifecycle of building and operating a Large Language Model (LLM)?",
     "options": [
       "Pre-training -> Fine-tuning -> Deployment",
       "Compile -> Link -> Zip",
@@ -378,340 +378,340 @@
       "Encrypt -> Hash -> Delete"
     ],
     "answer": 0,
-    "explanation": "Mô hình trải qua Pre-training (học mẫu từ hàng tỷ ví dụ), Fine-tuning (học làm theo chỉ dẫn an toàn), và Deployment (phản hồi prompt người dùng).",
+    "explanation": "Models go through Pre-training (learning patterns from billions of examples), Fine-tuning (learning to follow instructions safely), and Deployment (responding to user prompts).",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-24"
   },
   {
     "id": 25,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Trong giai đoạn 'Pre-training' (Tiền huấn luyện), mô hình LLM học điều gì?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "During the 'Pre-training' stage, what does an LLM learn?",
     "options": [
-      "Phân tích hàng tỷ ví dụ văn bản để học các quy luật ngôn ngữ và dự đoán điều gì xuất hiện tiếp theo (predict what comes next)",
-      "Học cách đọc suy nghĩ của riêng từng người dùng qua webcam",
-      "Chỉ học đúng 100 câu hỏi trắc nghiệm",
-      "Tự động cài đặt hệ điều hành Windows"
+      "Analyzing billions of text examples to learn language patterns and predict what comes next",
+      "Learning to read each individual user's thoughts via webcam",
+      "Memorizing only 100 multiple-choice questions",
+      "Automatically installing the Windows operating system"
     ],
     "answer": 0,
-    "explanation": "Pre-training giúp mô hình tiếp thu kiến thức và mẫu ngôn ngữ rộng lớn bằng cách dự đoán token tiếp theo.",
+    "explanation": "Pre-training equips the model with broad knowledge and language patterns by predicting the next token.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-25"
   },
   {
     "id": 26,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Mục tiêu chính của giai đoạn 'Fine-tuning' (Tinh chỉnh) sau khi Pre-training là gì?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "What is the main goal of the 'Fine-tuning' stage after Pre-training?",
     "options": [
-      "Tinh chỉnh mô hình để biết làm theo chỉ dẫn của người dùng, trả lời hữu ích và tránh tạo ra nội dung có hại",
-      "Xóa toàn bộ kiến thức đã học ở bước Pre-training",
-      "Tăng kích thước file ảnh lên gấp đôi",
-      "Ngắt kết nối mô hình khỏi mọi công cụ"
+      "Refining the model to follow user instructions, respond helpfully, and avoid generating harmful content",
+      "Erasing all knowledge learned during Pre-training",
+      "Doubling the size of image files",
+      "Disconnecting the model from all tools"
     ],
     "answer": 0,
-    "explanation": "Fine-tuning biến một mô hình dự đoán văn bản thô thành trợ lý hữu ích, tuân thủ chỉ dẫn và an toàn.",
+    "explanation": "Fine-tuning transforms a raw text-prediction model into a helpful, instruction-following, and safe assistant.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-26"
   },
   {
     "id": 27,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Ở giai đoạn 'Deployment' (Triển khai sử dụng), mô hình tạo ra câu trả lời như thế nào?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "In the 'Deployment' stage, how does the model generate an answer?",
     "options": [
-      "Người dùng gửi prompt, mô hình sinh ra phản hồi dựa trên prompt đó kết hợp với các mẫu đã học trong quá trình huấn luyện",
-      "Mô hình tra cứu một bảng đáp án viết sẵn cố định cho từng câu hỏi",
-      "Mô hình gửi câu hỏi cho nhân viên gõ tay trả lời",
-      "Mô hình không sử dụng prompt của người dùng"
+      "The user sends a prompt, and the model generates a response based on that prompt combined with patterns learned during training",
+      "The model looks up a fixed, pre-written answer table for each question",
+      "The model forwards the question to a human staff member to type the answer",
+      "The model does not use the user's prompt"
     ],
     "answer": 0,
-    "explanation": "Tại Deployment, LLM sinh phản hồi động theo xác suất dựa trên prompt đầu vào và trọng số đã huấn luyện.",
+    "explanation": "At Deployment, the LLM probabilistically generates dynamic responses based on the input prompt and trained weights.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-27"
   },
   {
     "id": 28,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Đâu là 4 năng lực nổi bật (Key capabilities) của Generative AI hiện nay theo tài liệu khóa học?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "According to the course materials, what are the 4 Key Capabilities of modern Generative AI?",
     "options": [
-      "Kỹ năng ngôn ngữ đa dạng, năng lực đa dụng (chuyển đổi giữa nhiều tác vụ không cần huấn luyện lại), học từ ví dụ, và kết nối công cụ/dữ liệu bên ngoài",
-      "Luôn biết trước tương lai 100%, không bao giờ sai toán, bộ nhớ vô hạn, và có ý thức con người",
-      "Chỉ dịch được tiếng Anh sang tiếng Pháp",
-      "Chỉ chạy được khi không có điện"
+      "Versatile language skills, general-purpose abilities (switching tasks without retraining), learning from examples, and connecting to external tools and data",
+      "Always knowing the future 100%, never making math errors, infinite memory, and human consciousness",
+      "Only translating English to French",
+      "Only running without electricity"
     ],
     "answer": 0,
-    "explanation": "4 năng lực gồm: Versatile language skills, General-purpose abilities, Learning from examples, Connecting to external tools and data.",
+    "explanation": "The 4 capabilities are: Versatile language skills, General-purpose abilities, Learning from examples, and Connecting to external tools and data.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-28"
   },
   {
     "id": 29,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Đâu là 4 hạn chế hiện tại (Current limitations) của Generative AI được nhấn mạnh trong Bài 3B?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "Which 4 Current Limitations of Generative AI are highlighted in Lesson 3B?",
     "options": [
-      "Knowledge cutoff date, Potential inaccuracies ('hallucinations'), Context window constraints, và Challenges with complex reasoning and math",
-      "Không thể viết email, không thể tóm tắt văn bản, không thể sinh code, và không hiểu tiếng Anh",
-      "Chỉ hoạt động vào ban đêm",
-      "Luôn tốn 1 giờ để trả lời 1 câu hỏi"
+      "Knowledge cutoff date, potential inaccuracies ('hallucinations'), context window constraints, and challenges with complex reasoning and math",
+      "Cannot write emails, cannot summarize text, cannot generate code, and cannot understand English",
+      "Only works at night",
+      "Always takes 1 hour to answer 1 question"
     ],
     "answer": 0,
-    "explanation": "4 hạn chế cốt lõi: mốc cắt kiến thức (cutoff), ảo giác (hallucinations), giới hạn context window và khó khăn với suy luận/toán phức tạp.",
+    "explanation": "The 4 core limitations are: knowledge cutoff date, hallucinations, context window limits, and difficulty with complex reasoning/math.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-29"
   },
   {
     "id": 30,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Thuật ngữ 'Hallucination' (Ảo giác) trong Generative AI chỉ hiện tượng gì?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "What does the term 'Hallucination' refer to in Generative AI?",
     "options": [
-      "Mô hình tạo ra thông tin sai sự thật (factually incorrect outputs) nhưng trình bày với giọng điệu rất tự tin và nghe có vẻ hợp lý",
-      "Mô hình bị lỗi màn hình xanh không in ra chữ",
-      "Mô hình từ chối trả lời câu hỏi vi phạm pháp luật",
-      "Mô hình tự động dịch văn bản sang ngôn ngữ khác"
+      "When the model produces factually incorrect outputs presented in a very confident and plausible-sounding tone",
+      "When the model crashes with a blue screen and outputs no text",
+      "When the model refuses to answer an illegal request",
+      "When the model automatically translates text into another language"
     ],
     "answer": 0,
-    "explanation": "Hallucination là khi LLM bịa đặt thông tin/trích dẫn không có thật nhưng văn phong vẫn mượt mà, thuyết phục.",
+    "explanation": "Hallucination occurs when an LLM fabricates nonexistent facts or citations while maintaining a smooth, convincing style.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-30"
   },
   {
     "id": 31,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "'Knowledge cutoff date' (Mốc giới hạn kiến thức) ảnh hưởng như thế nào đến câu trả lời của LLM?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "How does the 'Knowledge cutoff date' affect an LLM's responses?",
     "options": [
-      "Mô hình không tự biết các sự kiện, phiên bản thư viện hoặc tin tức xảy ra sau thời điểm dữ liệu huấn luyện của nó kết thúc (trừ khi được nối thêm công cụ tìm kiếm/dữ liệu ngoài)",
-      "Mô hình sẽ tự động ngừng hoạt động sau ngày đó",
-      "Mô hình quên toàn bộ kiến thức lịch sử trước năm 2000",
-      "Mô hình không thể đọc file người dùng tải lên"
+      "The model does not inherently know events, library versions, or news that occurred after its training data ended (unless connected to external search/data tools)",
+      "The model automatically stops working after that date",
+      "The model forgets all historical knowledge prior to the year 2000",
+      "The model cannot read files uploaded by the user"
     ],
     "answer": 0,
-    "explanation": "Kiến thức nội tại của model bị đóng băng tại thời điểm cutoff; muốn dữ liệu mới cần nối Web Search/MCP/RAG.",
+    "explanation": "A model's internal knowledge is frozen at its cutoff date; accessing newer data requires Web Search, MCP, or RAG.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-31"
   },
   {
     "id": 32,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Khi yêu cầu một LLM thuần túy (không có công cụ chạy code) tính toán một bài toán tài chính phức tạp nhiều bước, rủi ro nào dễ xảy ra?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "When asking a standalone LLM (with no code-execution tool) to perform a multi-step complex financial calculation, what risk is likely to occur?",
     "options": [
-      "Sai sót tính toán hoặc lập luận vì LLM dự đoán token theo xác suất chứ không phải máy tính số học tất định",
-      "Máy tính bị cháy GPU",
-      "LLM luôn từ chối làm toán cộng đơn giản",
-      "Kết quả luôn chính xác 100% tuyệt đối"
+      "Calculation or reasoning errors, because LLMs predict tokens probabilistically rather than acting as deterministic arithmetic calculators",
+      "The computer's GPU catches fire",
+      "The LLM always refuses to do simple addition",
+      "The result is always 100% accurate"
     ],
     "answer": 0,
-    "explanation": "Một trong 4 hạn chế của LLM là 'Challenges with complex reasoning and math'; dùng tool chạy code sẽ khắc phục tốt.",
+    "explanation": "One of the 4 LLM limitations is 'Challenges with complex reasoning and math'; using a code-execution tool effectively mitigates this.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-32"
   },
   {
     "id": 33,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Khả năng 'Học từ ví dụ' (Learning from examples) và 'Duy trì mạch hội thoại' (Conversational awareness) mang lại lợi ích gì cho người dùng?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "What benefit do 'Learning from examples' and 'Conversational awareness' provide to users?",
     "options": [
-      "Bạn có thể đưa vài ví dụ mẫu ngay trong prompt để AI bắt chước đúng định dạng/văn phong và trao đổi nhiều lượt mà không cần huấn luyện lại mô hình",
-      "Bạn phải huấn luyện lại toàn bộ mô hình từ đầu mỗi lần đổi yêu cầu",
-      "Bạn chỉ được hỏi đúng 1 câu rồi phải tắt trang web",
-      "AI sẽ tự nhớ mọi cuộc trò chuyện của người khác"
+      "You can include a few sample examples right in the prompt for the AI to match your desired format/style and iterate over multiple turns without retraining the model",
+      "You must retrain the entire model from scratch every time you change your request",
+      "You can only ask 1 question before closing the webpage",
+      "The AI automatically remembers every other user's conversations"
     ],
     "answer": 0,
-    "explanation": "In-context learning cho phép AI thích ứng linh hoạt qua từng lượt chat chỉ bằng ví dụ trong prompt.",
+    "explanation": "In-context learning allows AI to adapt flexibly across chat turns simply through examples in the prompt.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-33"
   },
   {
     "id": 34,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Theo Bài 3B, những ứng dụng AI hiệu quả nhất được tạo ra bằng cách kết hợp như thế nào?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "According to Lesson 3B, how are the most effective AI applications created?",
     "options": [
-      "Kết hợp thế mạnh bổ sung của con người và AI: con người cung cấp tư duy phản biện, phán đoán, sáng tạo và giám sát đạo đức",
-      "Loại bỏ hoàn toàn con người khỏi quy trình kiểm tra",
-      "Để AI tự do ra quyết định pháp lý và y tế không cần duyệt",
-      "Chỉ dùng AI cho các việc AI làm kém nhất"
+      "By combining the complementary strengths of humans and AI: humans provide critical thinking, judgment, creativity, and ethical oversight",
+      "By completely removing humans from the review process",
+      "By letting AI freely make legal and medical decisions without approval",
+      "By using AI only for the tasks it performs worst at"
     ],
     "answer": 0,
-    "explanation": "Human-AI complementarity: AI xử lý tốc độ và quy mô ngôn ngữ; con người giữ critical thinking, judgment, creativity, ethical oversight.",
+    "explanation": "Human-AI complementarity: AI handles speed and language scale, while humans provide critical thinking, judgment, creativity, and ethical oversight.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-34"
   },
   {
     "id": 35,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Vì sao hiểu biết về Pre-training, Fine-tuning và Limitations trong Deep Dive 1 lại giúp ích cho năng lực 'Delegation'?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "Why does understanding Pre-training, Fine-tuning, and Limitations in Deep Dive 1 help with the 'Delegation' competency?",
     "options": [
-      "Nó xây dựng 'Platform Awareness' — giúp bạn biết AI giỏi gì và yếu gì để giao đúng việc và gắn đúng công cụ hỗ trợ",
-      "Nó giúp bạn tự lắp ráp chip GPU tại nhà",
-      "Nó giúp bạn không bao giờ cần viết prompt nữa",
-      "Nó giúp loại bỏ hoàn toàn giới hạn Context Window"
+      "It builds 'Platform Awareness'—helping you know what AI is good and weak at so you assign the right tasks and attach the right supporting tools",
+      "It helps you assemble GPU chips at home",
+      "It means you never need to write prompts again",
+      "It completely eliminates Context Window limits"
     ],
     "answer": 0,
-    "explanation": "Hiểu nền tảng kỹ thuật giúp bạn ra quyết định Delegation thông minh hơn thay vì kỳ vọng sai lệch vào AI.",
+    "explanation": "Understanding technical foundations helps you make smarter Delegation decisions rather than holding misplaced expectations of AI.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-35"
   },
   {
     "id": 36,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Trong Lab 02 (`genai_capabilities_lab.py`), nếu một tác vụ cần tra giá cổ phiếu hôm nay nhưng KHÔNG có công cụ bên ngoài (no external tool), hệ thống cảnh báo rủi ro gì?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "In Lab 02 (`genai_capabilities_lab.py`), if a task requires looking up today's stock prices with NO external tool, what risk warning does the system flag?",
     "options": [
-      "HIGH_RISK_CUTOFF — Dễ dính giới hạn Knowledge Cutoff hoặc Hallucination, cần nối Web Search hoặc MCP",
-      "GOOD_FIT — AI luôn biết giá cổ phiếu hôm nay mà không cần mạng",
-      "Không có rủi ro nào",
-      "AI sẽ tự động mở sàn chứng khoán"
+      "HIGH_RISK_CUTOFF — Likely to hit Knowledge Cutoff or Hallucination limits; requires connecting Web Search or MCP",
+      "GOOD_FIT — AI always knows today's stock prices without internet access",
+      "No risk at all",
+      "AI will automatically open the stock exchange"
     ],
     "answer": 0,
-    "explanation": "Dữ liệu thời gian thực sau ngày cutoff bắt buộc cần công cụ truy xuất bên ngoài.",
+    "explanation": "Real-time data after the cutoff date strictly requires an external retrieval tool.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-36"
   },
   {
     "id": 37,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Hạn chế 'Context window constraints' có ý nghĩa thực tế gì khi bạn làm việc với tài liệu cực dài?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "What is the practical impact of 'Context window constraints' when working with extremely long documents?",
     "options": [
-      "Không gian nhớ làm việc của AI có giới hạn; nếu nhồi quá nhiều thông tin cùng lúc, AI có thể bỏ sót chi tiết ở giữa hoặc chạm ngưỡng dung lượng",
-      "AI chỉ đọc được đúng 1 câu mỗi ngày",
-      "AI sẽ tự động xóa file gốc trên máy bạn",
-      "Không có ảnh hưởng gì"
+      "The AI's working memory space is finite; stuffing too much information in at once can cause the AI to miss details in the middle or hit capacity limits",
+      "The AI can only read 1 sentence per day",
+      "The AI will automatically delete the original file on your machine",
+      "There is no impact"
     ],
     "answer": 0,
-    "explanation": "Context window là hữu hạn nên cần quản lý gọn gàng và chia nhỏ thông tin hợp lý.",
+    "explanation": "The context window is finite, so information must be managed cleanly and chunked appropriately.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-37"
   },
   {
     "id": 38,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Ví dụ nào minh họa đúng năng lực 'Connecting to external tools and data' của Generative AI hiện đại?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "Which example accurately illustrates the 'Connecting to external tools and data' capability of modern Generative AI?",
     "options": [
-      "Claude gọi công cụ tìm kiếm web, chạy code Python hoặc kết nối MCP server để đọc dữ liệu mới nhất ngoài kho huấn luyện",
-      "Claude tự bịa ra một đường link không tồn tại",
-      "Claude chỉ trả lời bằng văn bản thuần không bao giờ gọi hàm",
-      "Người dùng tự gõ tay dữ liệu vào file Excel"
+      "Claude invokes a web search tool, runs Python code, or connects to an MCP server to read up-to-date data outside its training corpus",
+      "Claude fabricates a nonexistent URL",
+      "Claude only replies in plain text and never calls functions",
+      "The user manually types data into an Excel file"
     ],
     "answer": 0,
-    "explanation": "Kết nối công cụ ngoài giúp LLM vượt qua giới hạn cutoff và tính toán thuần túy.",
+    "explanation": "Connecting to external tools helps LLMs overcome cutoff limits and pure-text arithmetic limitations.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-38"
   },
   {
     "id": 39,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Phát biểu nào sau đây về Generative AI là SAI?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "Which of the following statements about Generative AI is FALSE?",
     "options": [
-      "Generative AI luôn trả lời chính xác 100% mọi sự kiện lịch sử và thời sự mà không cần kiểm chứng",
-      "Generative AI tạo nội dung mới như văn bản, hình ảnh, mã nguồn",
-      "Transformer (2017) là một trong các bước ngoặt thuật toán quan trọng",
-      "Con người cần giữ vai trò tư duy phản biện và giám sát đạo đức"
+      "Generative AI always answers 100% of historical and current events accurately without needing verification",
+      "Generative AI creates new content such as text, images, and source code",
+      "The Transformer (2017) was a major algorithmic breakthrough",
+      "Humans must retain the role of critical thinking and ethical oversight"
     ],
     "answer": 0,
-    "explanation": "Generative AI có thể hallucinate và bị giới hạn knowledge cutoff nên luôn cần con người kiểm chứng.",
+    "explanation": "Generative AI can hallucinate and is constrained by its knowledge cutoff, so human verification is always required.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-39"
   },
   {
     "id": 40,
-    "chapter": "Chương 2: Generative AI Deep Dive",
-    "question": "Theo Bài 3B, tại sao Generative AI lại linh hoạt (versatile) hơn các hệ thống AI chuyên biệt thế hệ cũ?",
+    "chapter": "Chapter 2: Generative AI Deep Dive",
+    "question": "According to Lesson 3B, why is Generative AI more versatile than older specialized AI systems?",
     "options": [
-      "Vì một mô hình đa dụng có thể chuyển đổi mượt mà giữa nhiều tác vụ ngôn ngữ (tóm tắt, dịch, viết code, động não) mà không cần huấn luyện lại riêng cho từng tác vụ",
-      "Vì nó chỉ làm được duy nhất một nhiệm vụ phân loại spam",
-      "Vì nó không cần dữ liệu huấn luyện",
-      "Vì nó chạy bằng cơ chế ngẫu nhiên hoàn toàn"
+      "Because a single general-purpose model can smoothly switch across many language tasks (summarizing, translating, coding, brainstorming) without separate retraining for each task",
+      "Because it can only perform a single spam-classification task",
+      "Because it requires no training data",
+      "Because it operates purely by random chance"
     ],
     "answer": 0,
-    "explanation": "Khả năng tổng quát hóa (general-purpose abilities) giúp LLM xử lý đa dạng tác vụ chỉ qua thay đổi prompt.",
+    "explanation": "General-purpose abilities allow LLMs to handle diverse tasks simply by changing the prompt.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-40"
   },
   {
     "id": 41,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Ba thành phần cốt lõi của năng lực 'Delegation' (The 4Ds: Delegation) là gì?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "What are the three core components of the 'Delegation' competency (The 4Ds: Delegation)?",
     "options": [
-      "Problem Awareness, Platform Awareness, và Task Delegation",
-      "Product, Process, và Performance",
-      "Creation, Transparency, và Deployment",
-      "Pre-training, Fine-tuning, và Deployment"
+      "Problem Awareness, Platform Awareness, and Task Delegation",
+      "Product, Process, and Performance",
+      "Creation, Transparency, and Deployment",
+      "Pre-training, Fine-tuning, and Deployment"
     ],
     "answer": 0,
-    "explanation": "Delegation gồm: Problem Awareness ('What am I trying to do?'), Platform Awareness ('What do you do well?'), và Task Delegation ('OK, here's the plan').",
+    "explanation": "Delegation consists of: Problem Awareness ('What am I trying to do?'), Platform Awareness ('What do you do well?'), and Task Delegation ('OK, here's the plan').",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-41"
   },
   {
     "id": 42,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Câu hỏi trọng tâm của 'Problem Awareness' trong Delegation là gì?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "What is the central question of 'Problem Awareness' in Delegation?",
     "options": [
-      "'What am I trying to do?' — Hiểu rõ mục tiêu và bản chất công việc trước khi đưa AI vào",
-      "'What do you do well?' — Hiểu điểm mạnh của từng hệ thống AI",
+      "'What am I trying to do?' — Clearly understanding the goal and nature of the work before bringing AI in",
+      "'What do you do well?' — Understanding the strengths of each AI system",
       "'Which font should I use?'",
       "'How many GPUs does the server have?'"
     ],
     "answer": 0,
-    "explanation": "Problem Awareness yêu cầu xác định rõ mục tiêu, tiêu chí thành công và bản chất công việc trước khi đụng tới AI.",
+    "explanation": "Problem Awareness requires clearly defining the goal, success criteria, and nature of the task before touching AI.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-42"
   },
   {
     "id": 43,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "'Platform Awareness' trong Delegation đòi hỏi người dùng điều gì?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "What does 'Platform Awareness' in Delegation require from the user?",
     "options": [
-      "Hiểu rõ năng lực và giới hạn của các hệ thống/mô hình AI khác nhau để chọn đúng công cụ cho đúng việc",
-      "Chỉ biết duy nhất một nút bấm trên trình duyệt",
-      "Viết lại hệ điều hành từ đầu",
-      "Không cần quan tâm đến giới hạn của AI"
+      "Understanding the capabilities and limitations of different AI systems/models to pick the right tool for the right job",
+      "Knowing only a single button in the browser",
+      "Rewriting the operating system from scratch",
+      "Ignoring AI limitations"
     ],
     "answer": 0,
-    "explanation": "Platform Awareness: 'What do you do well?' — biết mô hình nào mạnh mặt nào và hạn chế ở đâu.",
+    "explanation": "Platform Awareness: 'What do you do well?'—knowing which model excels where and where its limitations lie.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-43"
   },
   {
     "id": 44,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Mục tiêu của bước 'Task Delegation' ('OK, here's the plan') là gì?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "What is the goal of the 'Task Delegation' ('OK, here's the plan') step?",
     "options": [
-      "Phân chia công việc một cách có suy tính giữa con người và AI để phát huy tối đa thế mạnh của mỗi bên",
-      "Đẩy 100% mọi công việc cho AI rồi không kiểm tra",
-      "Làm 100% bằng tay và cấm AI tham gia",
-      "Chia nhỏ file thành từng ký tự"
+      "Thoughtfully dividing work between humans and AI to maximize each party's strengths",
+      "Dumping 100% of all work onto AI without reviewing it",
+      "Doing 100% manually and banning AI participation",
+      "Splitting a file into individual characters"
     ],
     "answer": 0,
-    "explanation": "Task Delegation sắp xếp phần nào người làm, phần nào AI làm, phần nào hai bên cộng tác.",
+    "explanation": "Task Delegation organizes which parts humans handle, which parts AI handles, and which parts both collaborate on.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-44"
   },
   {
     "id": 45,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Theo slide 'The 4Ds: Delegation', Delegation hiệu quả đòi hỏi sự kết hợp của hai yếu tố nào?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "According to the 'The 4Ds: Delegation' slide, effective Delegation requires a combination of which two factors?",
     "options": [
-      "Cả chuyên môn lĩnh vực (domain expertise) lẫn sự am hiểu về năng lực của AI (understanding of AI capabilities)",
-      "Chỉ cần biết viết code JavaScript",
-      "Chỉ cần có tài khoản trả phí",
-      "Chỉ cần đặt câu hỏi càng ngắn càng tốt"
+      "Both domain expertise and an understanding of AI capabilities",
+      "Only knowing how to write JavaScript code",
+      "Only having a paid account",
+      "Only asking the shortest possible questions"
     ],
     "answer": 0,
     "explanation": "'Effective delegation requires both domain expertise and an understanding of AI capabilities.'",
@@ -721,560 +721,560 @@
   },
   {
     "id": 46,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Trong bài thực hành 'Project planning and delegation', bạn nên trao đổi với Claude như thế nào ở Bước 3 (Task breakdown)?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "In the 'Project planning and delegation' exercise, how should you interact with Claude in Step 3 (Task breakdown)?",
     "options": [
-      "Trao đổi như một cuộc đối thoại thực sự: thách thức giả định, hỏi làm rõ từng nhiệm vụ xem đâu cần thế mạnh con người, đâu tận dụng AI, thay vì chỉ phát biểu một chiều",
-      "Ra lệnh một câu rồi đóng trình duyệt ngay",
-      "Không cho phép Claude hỏi lại câu nào",
-      "Chỉ làm các dự án kéo dài 10 năm"
+      "Engage in a genuine conversation: challenge assumptions and ask clarifying questions about which tasks need human strengths vs. AI, rather than issuing one-way statements",
+      "Issue a single command and close the browser immediately",
+      "Forbid Claude from asking any follow-up questions",
+      "Only work on 10-year projects"
     ],
     "answer": 0,
-    "explanation": "Khóa học nhấn mạnh 'genuine conversation': thách thức giả định, hỏi làm rõ và cởi mở với góc nhìn bất ngờ.",
+    "explanation": "The course emphasizes 'genuine conversation': challenging assumptions, asking clarifying questions, and staying open to unexpected perspectives.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-46"
   },
   {
     "id": 47,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Ba thành phần của năng lực 'Description' (The 4Ds: Description) là gì?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "What are the three components of the 'Description' competency (The 4Ds: Description)?",
     "options": [
-      "Product Description, Process Description, và Performance Description",
-      "Problem Awareness, Platform Awareness, và Task Delegation",
-      "Creation, Transparency, và Deployment",
-      "Automation, Augmentation, và Agency"
+      "Product Description, Process Description, and Performance Description",
+      "Problem Awareness, Platform Awareness, and Task Delegation",
+      "Creation, Transparency, and Deployment",
+      "Automation, Augmentation, and Agency"
     ],
     "answer": 0,
-    "explanation": "Description gồm: Product (cái gì), Process (cách làm), và Performance (hành vi/thái độ khi cộng tác).",
+    "explanation": "Description comprises: Product (what), Process (how), and Performance (behavior/attitude during collaboration).",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-47"
   },
   {
     "id": 48,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "'Product Description' định nghĩa điều gì cho AI?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "What does 'Product Description' define for the AI?",
     "options": [
-      "Định nghĩa CÁI BẠN MUỐN về mặt đầu ra, định dạng, đối tượng người đọc và phong cách (outputs, format, audience, and style)",
-      "Định nghĩa từng bước thuật toán AI phải chạy",
-      "Định nghĩa thái độ của AI (như đóng vai gia sư Socratic)",
-      "Định nghĩa chính sách bảo mật công ty"
+      "Defining WHAT YOU WANT in terms of outputs, format, audience, and style",
+      "Defining the step-by-step algorithm the AI must run",
+      "Defining the AI's demeanor (such as acting as a Socratic tutor)",
+      "Defining company security policies"
     ],
     "answer": 0,
-    "explanation": "Product Description mô tả sản phẩm đầu ra mong muốn (đừng bắt AI đoán xem bạn đang nghĩ gì!).",
+    "explanation": "Product Description specifies the desired output (don't make the AI guess what you're thinking!).",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-48"
   },
   {
     "id": 49,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "'Process Description' trong giao tiếp với AI mang ý nghĩa gì?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "What does 'Process Description' mean when communicating with AI?",
     "options": [
-      "Định nghĩa CÁCH AI tiếp cận yêu cầu của bạn, chẳng hạn cung cấp các bước hướng dẫn tuần tự để AI làm theo",
-      "Chỉ nói tên sản phẩm cuối cùng mà không gợi ý cách làm",
-      "Quy định màu sắc giao diện ứng dụng",
-      "Kiểm tra lại kết quả sau khi AI đã làm xong"
+      "Defining HOW the AI should approach your request, such as providing step-by-step instructions for it to follow",
+      "Only stating the final product name without suggesting how to make it",
+      "Specifying the application UI colors",
+      "Reviewing the result after the AI has finished"
     ],
     "answer": 0,
-    "explanation": "Process Description hướng dẫn quy trình tư duy/thực hiện (vd: 'The first thing we need to do...').",
+    "explanation": "Process Description guides the thinking/execution workflow (e.g., 'The first thing we need to do...').",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-49"
   },
   {
     "id": 50,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Ví dụ 'Act as a Socratic tutor' (Đóng vai một gia sư theo phương pháp Socrates, hay đặt câu hỏi gợi mở) thuộc loại Description nào?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "The example 'Act as a Socratic tutor' (asking guiding questions) belongs to which type of Description?",
     "options": [
-      "Performance Description (định nghĩa hành vi và phong cách tương tác của AI trong quá trình cộng tác)",
+      "Performance Description (defining the AI's behavior and interaction style during collaboration)",
       "Product Description",
       "Problem Awareness",
       "Deployment Diligence"
     ],
     "answer": 0,
-    "explanation": "Performance Description quy định cách AI cư xử trong lúc làm việc chung (ngắn gọn/chi tiết, phản biện/ủng hộ...).",
+    "explanation": "Performance Description specifies how the AI should behave while working together (concise vs. detailed, challenging vs. supportive, etc.).",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-50"
   },
   {
     "id": 51,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Theo PDF '6 Techniques for Effective Prompt Engineering', 6 kỹ thuật nền tảng gồm những gì?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "According to the PDF '6 Techniques for Effective Prompt Engineering', what are the 6 foundational techniques?",
     "options": [
       "1) Provide context, 2) Show examples of what 'good' looks like, 3) Specify output constraints, 4) Break complex tasks into steps, 5) Ask it to think first, 6) Define the AI's role",
-      "1) Viết thật ngắn, 2) Không đưa ví dụ, 3) Không giới hạn độ dài, 4) Gộp mọi thứ vào 1 câu, 5) Cấm AI suy nghĩ, 6) Không đặt vai trò",
-      "Chỉ dùng 1 kỹ thuật duy nhất là viết chữ IN HOA",
-      "Chỉ dùng mã hóa Base64"
+      "1) Write as short as possible, 2) Give no examples, 3) Set no length limits, 4) Merge everything into 1 sentence, 5) Forbid AI from thinking, 6) Define no role",
+      "Use only 1 technique: typing in ALL CAPS",
+      "Use only Base64 encoding"
     ],
     "answer": 0,
-    "explanation": "6 kỹ thuật nền tảng được trình bày kèm ví dụ Before/After trong tài liệu Deep Dive 2.",
+    "explanation": "The 6 foundational techniques are presented with Before/After examples in the Deep Dive 2 document.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-51"
   },
   {
     "id": 52,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Trong kỹ thuật 1 ('Provide context'), sự khác biệt giữa prompt 'Before: Tell me about climate change' và prompt 'After' là gì?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "In Technique 1 ('Provide context'), what is the difference between the 'Before: Tell me about climate change' prompt and the 'After' prompt?",
     "options": [
-      "Prompt 'After' nêu cụ thể phạm vi, địa lý, khung thời gian và yêu cầu ví dụ ('3 tác động lớn lên nông nghiệp vùng nhiệt đới trong thập kỷ qua kèm ví dụ')",
-      "Prompt 'After' rút ngắn xuống chỉ còn 1 từ 'Climate'",
-      "Prompt 'After' chuyển sang tiếng Latin",
-      "Không có sự khác biệt nào"
+      "The 'After' prompt specifies scope, geography, timeframe, and asks for examples ('3 major impacts on tropical agriculture over the past decade with examples')",
+      "The 'After' prompt shortens it to a single word 'Climate'",
+      "The 'After' prompt switches to Latin",
+      "There is no difference"
     ],
     "answer": 0,
-    "explanation": "Provide context yêu cầu cụ thể về scope, geography, timeframe và các tham số liên quan.",
+    "explanation": "Provide context requires specifying scope, geography, timeframe, and relevant parameters.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-52"
   },
   {
     "id": 53,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Kỹ thuật 2 ('Show examples of what \"good\" looks like') giúp ích cho AI như thế nào?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "How does Technique 2 ('Show examples of what \"good\" looks like') help the AI?",
     "options": [
-      "Đưa ví dụ mẫu (Before -> After) giúp AI nắm bắt mẫu câu, phong cách và định dạng bạn muốn rõ ràng hơn nhiều so với chỉ mô tả suông",
-      "Làm AI bị rối và không trả lời được",
-      "Giúp bỏ qua hoàn toàn nhu cầu kiểm tra đầu ra",
-      "Chỉ dùng được cho các bài toán số học"
+      "Providing sample examples (Before -> After) helps the AI grasp your desired phrasing, style, and format much more clearly than abstract descriptions alone",
+      "It confuses the AI so it cannot answer",
+      "It eliminates the need to check outputs entirely",
+      "It only works for arithmetic problems"
     ],
     "answer": 0,
-    "explanation": "Ví dụ minh họa (few-shot examples) truyền đạt chuẩn chất lượng và format chính xác hơn mô tả trừu tượng.",
+    "explanation": "Illustrative examples (few-shot examples) communicate quality standards and formatting more accurately than abstract descriptions.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-53"
   },
   {
     "id": 54,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Trong kỹ thuật 3 ('Specify output constraints'), bạn nên chỉ định rõ những yếu tố nào cho đầu ra?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "In Technique 3 ('Specify output constraints'), what elements should you clearly specify for the output?",
     "options": [
-      "Cấu trúc các phần, định dạng hiển thị, độ dài hoặc các ràng buộc thiết kế cụ thể (vd: trang portfolio gồm Hero, About Me, Skills..., menu sticky, bảng màu sunset, có dark/light toggle)",
-      "Cố tình giữ mọi ràng buộc ở mức bí mật để AI tự đoán",
-      "Chỉ ghi 'làm cho đẹp'",
-      "Bắt buộc AI trả về 10.000 trang"
+      "Section structure, display format, length, or specific design constraints (e.g., a portfolio page with Hero, About Me, Skills..., sticky nav, sunset palette, dark/light toggle)",
+      "Intentionally keeping all constraints secret so the AI guesses",
+      "Just writing 'make it pretty'",
+      "Forcing the AI to return 10,000 pages"
     ],
     "answer": 0,
-    "explanation": "Chỉ rõ format, các mục bắt buộc, độ dài và ràng buộc giúp kết quả khớp kỳ vọng ngay.",
+    "explanation": "Specifying format, required sections, length, and constraints ensures the output matches expectations right away.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-54"
   },
   {
     "id": 55,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Kỹ thuật 4 ('Break complex tasks into steps') có tác dụng gì đối với mô hình AI?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "What effect does Technique 4 ('Break complex tasks into steps') have on an AI model?",
     "options": [
-      "Dẫn dắt quá trình suy luận của AI đi theo lộ trình rõ ràng từng bước (1, 2, 3, 4), đảm bảo câu trả lời đầy đủ và có phương pháp",
-      "Làm AI quên mất bước đầu tiên",
-      "Giảm chất lượng phân tích dữ liệu",
-      "Cấm AI phân tích xu hướng"
+      "It guides the AI's reasoning along a clear step-by-step path (1, 2, 3, 4), ensuring a thorough and methodical answer",
+      "It makes the AI forget the first step",
+      "It degrades data analysis quality",
+      "It prevents the AI from analyzing trends"
     ],
     "answer": 0,
-    "explanation": "Chia nhỏ nhiệm vụ phức tạp thành các bước tuần tự giúp AI không bỏ sót khía cạnh quan trọng.",
+    "explanation": "Breaking complex tasks into sequential steps prevents the AI from skipping important aspects.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-55"
   },
   {
     "id": 56,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Kỹ thuật 5 ('Ask it to think first') khuyên bạn yêu cầu AI làm gì trước khi đưa ra khuyến nghị cuối cùng?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "What does Technique 5 ('Ask it to think first') advise you to ask the AI to do before giving its final recommendation?",
     "options": [
-      "Suy nghĩ thấu đáo qua các yếu tố liên quan, các ràng buộc tiềm ẩn và nhiều hướng tiếp cận khác nhau trước khi chốt giải pháp tối ưu",
-      "Trả lời ngay lập tức từ đầu tiên hiện ra trong đầu",
-      "Bỏ qua mọi ràng buộc thực tế",
-      "Chỉ đưa ra một từ Có hoặc Không"
+      "Think carefully through relevant factors, potential constraints, and multiple approaches before settling on the optimal solution",
+      "Answer immediately with the very first word that comes to mind",
+      "Ignore all practical constraints",
+      "Give only a single word: Yes or No"
     ],
     "answer": 0,
-    "explanation": "Cho AI không gian suy nghĩ trước ('Before answering, please think through...') giúp câu trả lời sâu sắc và toàn diện hơn.",
+    "explanation": "Giving AI room to think first ('Before answering, please think through...') produces deeper and more comprehensive answers.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-56"
   },
   {
     "id": 57,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Kỹ thuật 6 ('Define the AI's role') định hình điều gì trong phản hồi của AI?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "What does Technique 6 ('Define the AI's role') shape in the AI's response?",
     "options": [
-      "Định hình vai trò, giọng điệu và phong cách giải thích phù hợp với đối tượng cụ thể (vd: giáo viên khoa học giàu kinh nghiệm giảng cho bé 10 tuổi ham học hỏi)",
-      "Thay đổi giá tiền của API",
-      "Thay đổi tốc độ mạng",
-      "Xóa bộ nhớ đệm của trình duyệt"
+      "It shapes the role, tone, and explanation style tailored to a specific audience (e.g., an experienced science teacher explaining to a curious 10-year-old)",
+      "It changes the API pricing",
+      "It changes network speed",
+      "It clears the browser cache"
     ],
     "answer": 0,
-    "explanation": "Xác định role/tone/style giúp câu trả lời khớp chính xác với trình độ và ngữ cảnh người đọc.",
+    "explanation": "Defining role/tone/style aligns the response precisely with the reader's level and context.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-57"
   },
   {
     "id": 58,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Theo PDF '6 Techniques', đâu là 'Vũ khí bí mật' (Secret Weapon) khi bạn không chắc mình nên viết prompt như thế nào để đạt kết quả tốt nhất?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "According to the '6 Techniques' PDF, what is the 'Secret Weapon' when you aren't sure how to write a prompt for the best results?",
     "options": [
-      "Nhờ chính AI giúp soạn prompt ('Ask the AI for help with prompting' — trình bày mục tiêu của bạn và nhờ Claude gợi ý một prompt hiệu quả)",
-      "Từ bỏ không dùng AI nữa",
-      "Copy prompt của người khác về một lĩnh vực hoàn toàn khác",
-      "Gõ lặp lại cùng một câu hỏi 20 lần"
+      "Asking the AI for help with prompting (describing your goal and asking Claude to suggest an effective prompt)",
+      "Giving up on using AI",
+      "Copying someone else's prompt from a completely unrelated field",
+      "Typing the exact same question 20 times"
     ],
     "answer": 0,
-    "explanation": "Nhờ AI tự thiết kế/cải thiện prompt cho mục tiêu của bạn được gọi là 'Secret Weapon' — có lẽ là kỹ thuật mạnh mẽ nhất!",
+    "explanation": "Asking AI to design/improve a prompt for your goal is called the 'Secret Weapon'—perhaps the most powerful technique!",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-58"
   },
   {
     "id": 59,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Trong bài tập 'Bad Prompt Makeover' (Bài 6), bạn cải thiện một prompt tệ bằng cách kết hợp 3 khía cạnh nào của Description?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "In the 'Bad Prompt Makeover' exercise (Lesson 6), you improve a bad prompt by combining which 3 aspects of Description?",
     "options": [
-      "Product description (muốn nhận gì), Process description (muốn Claude tiếp cận ra sao), và Performance description (muốn Claude hành xử thế nào trong lúc làm việc chung)",
-      "Chỉ sửa lỗi chính tả của từ đầu tiên",
-      "Chỉ đổi dấu chấm thành dấu chấm than",
-      "Thêm thật nhiều emoji vào cuối câu"
+      "Product description (what you want), Process description (how Claude should approach it), and Performance description (how Claude should behave while working together)",
+      "Only fixing spelling errors in the first word",
+      "Only changing periods to exclamation marks",
+      "Adding lots of emojis at the end of the sentence"
     ],
     "answer": 0,
-    "explanation": "Cải tạo prompt bằng cả 3 lăng kính Product, Process, Performance biến tương tác AI từ mơ hồ thành sắc nét.",
+    "explanation": "Remaking a prompt through all 3 lenses—Product, Process, and Performance—turns vague AI interactions into sharp ones.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-59"
   },
   {
     "id": 60,
-    "chapter": "Chương 3: Delegation, Description & Prompting",
-    "question": "Phát biểu nào đúng về quá trình tạo prompt hiệu quả trong Bài 7?",
+    "chapter": "Chapter 3: Delegation, Description & Prompting",
+    "question": "Which statement is true about creating effective prompts in Lesson 7?",
     "options": [
-      "Prompting thành công mang tính lặp và cộng tác (iterative and collaborative) — hãy kỳ vọng sẽ tinh chỉnh dần dựa trên kết quả AI trả về",
-      "Một prompt tốt phải hoàn hảo ngay từ lần gõ đầu tiên và không bao giờ cần sửa",
-      "Không bao giờ được hỏi lại AI để sửa prompt",
-      "Prompting chỉ áp dụng cho lập trình viên"
+      "Successful prompting is iterative and collaborative—expect to refine it gradually based on the AI's responses",
+      "A good prompt must be perfect on the very first try and never need editing",
+      "You should never ask the AI to revise a prompt",
+      "Prompting only applies to programmers"
     ],
     "answer": 0,
-    "explanation": "Prompting là quá trình lặp liên tục giữa giao tiếp và phản hồi.",
+    "explanation": "Prompting is a continuous iterative loop between communication and feedback.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-60"
   },
   {
     "id": 61,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "Theo slide 'The 4Ds: Discernment', năng lực Discernment gồm 3 loại nào?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "According to the 'The 4Ds: Discernment' slide, what are the 3 types of Discernment?",
     "options": [
-      "Product Discernment, Process Discernment, và Performance Discernment",
-      "Product Description, Process Description, và Performance Description",
-      "Creation, Transparency, và Deployment",
-      "Problem, Platform, và Task"
+      "Product Discernment, Process Discernment, and Performance Discernment",
+      "Product Description, Process Description, and Performance Description",
+      "Creation, Transparency, and Deployment",
+      "Problem, Platform, and Task"
     ],
     "answer": 0,
-    "explanation": "3 loại Discernment tương ứng song hành với 3 loại Description: Product, Process và Performance.",
+    "explanation": "The 3 types of Discernment parallel the 3 types of Description: Product, Process, and Performance.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-61"
   },
   {
     "id": 62,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "'Product Discernment' đánh giá khía cạnh nào của tương tác AI?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "Which aspect of AI interaction does 'Product Discernment' evaluate?",
     "options": [
-      "Đánh giá chất lượng của những gì AI tạo ra: độ chính xác (accuracy), tính phù hợp (appropriateness), sự mạch lạc (coherence) và tính liên quan (relevance)",
-      "Đánh giá xem AI có dùng giọng điệu thân thiện không",
-      "Đánh giá xem mình có nên khai báo dùng AI hay không",
-      "Đánh giá tốc độ gõ phím của người dùng"
+      "Evaluating the quality of what the AI produced: accuracy, appropriateness, coherence, and relevance",
+      "Evaluating whether the AI used a friendly tone",
+      "Evaluating whether you should disclose AI usage",
+      "Evaluating the user's typing speed"
     ],
     "answer": 0,
-    "explanation": "Product Discernment kiểm tra chất lượng đầu ra cuối cùng của AI.",
+    "explanation": "Product Discernment inspects the quality of the AI's final output.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-62"
   },
   {
     "id": 63,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "'Process Discernment' tập trung kiểm tra điều gì?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "What does 'Process Discernment' focus on checking?",
     "options": [
-      "Đánh giá cách AI đi đến đầu ra: tìm lỗi logic, sự lơ là/mất tập trung (lapses in attention) hoặc các bước lập luận không phù hợp",
-      "Đánh giá màu sắc của nút bấm trên trang web",
-      "Đánh giá xem AI nói nhanh hay chậm",
-      "Đánh giá hóa đơn tiền điện"
+      "Evaluating how the AI arrived at its output: looking for logical errors, lapses in attention, or inappropriate reasoning steps",
+      "Evaluating the color of buttons on a webpage",
+      "Evaluating whether the AI speaks fast or slow",
+      "Evaluating electricity bills"
     ],
     "answer": 0,
-    "explanation": "Process Discernment soi xét chuỗi lập luận và cách AI thực hiện quy trình bạn đã giao.",
+    "explanation": "Process Discernment scrutinizes the reasoning chain and how the AI executed the process you assigned.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-63"
   },
   {
     "id": 64,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "'Performance Discernment' đánh giá điều gì trong quá trình làm việc với AI?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "What does 'Performance Discernment' evaluate while working with AI?",
     "options": [
-      "Đánh giá cách AI hành xử trong suốt quá trình tương tác với bạn và xem phong cách giao tiếp của nó có hiệu quả cho nhu cầu của bạn hay không",
-      "Đánh giá tốc độ CPU của máy chủ",
-      "Đánh giá dung lượng ổ cứng",
-      "Đánh giá bản quyền hình ảnh"
+      "Evaluating how the AI behaved throughout its interaction with you and whether its communication style was effective for your needs",
+      "Evaluating the server's CPU speed",
+      "Evaluating hard drive capacity",
+      "Evaluating image copyrights"
     ],
     "answer": 0,
-    "explanation": "Performance Discernment xem xét thái độ, phong cách cộng tác của AI (vd: có hỏi gợi mở tốt không, có quá dài dòng không).",
+    "explanation": "Performance Discernment examines the AI's demeanor and collaboration style (e.g., whether it asked good guiding questions or was overly verbose).",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-64"
   },
   {
     "id": 65,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "Trong Bài 9, 'The Description–Discernment loop' vận hành theo quy luật nào?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "In Lesson 9, how does 'The Description–Discernment loop' operate?",
     "options": [
-      "Description rõ ràng -> Nhận kết quả -> Discernment (Product/Process/Performance) -> Tinh chỉnh Description & tích hợp chuyên môn của bạn -> Lặp lại cho tới khi đạt chuẩn",
-      "Viết 1 lần -> Chấp nhận ngay lập tức không đọc lại",
-      "Đánh giá trước rồi mới mô tả mục tiêu sau",
-      "Chỉ lặp lại nếu AI bị mất kết nối mạng"
+      "Clear Description -> Receive output -> Discernment (Product/Process/Performance) -> Refine Description & integrate your expertise -> Repeat until standard is met",
+      "Write once -> Accept immediately without reading",
+      "Evaluate first, then describe the goal afterward",
+      "Repeat only if the AI loses network connection"
     ],
     "answer": 0,
-    "explanation": "Description và Discernment tạo thành vòng lặp phản hồi liên tục giúp kết quả vượt trội hơn việc chỉ người hoặc AI làm một mình.",
+    "explanation": "Description and Discernment form a continuous feedback loop that produces results superior to either humans or AI working alone.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-65"
   },
   {
     "id": 66,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "Trong Bước 3.4 của bài tập 'Project execution with description-discernment loops' (Bài 9), vai trò 'Integrate your own expertise and judgment' đòi hỏi bạn làm gì?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "In Step 3.4 of the 'Project execution with description-discernment loops' exercise (Lesson 9), what does 'Integrate your own expertise and judgment' require you to do?",
     "options": [
-      "Bổ sung góc nhìn, sự sáng tạo hoặc kiến thức chuyên môn riêng; tự ra quyết định cuối cùng giữ/sửa/bỏ phần nào; và chịu trách nhiệm cho sản phẩm cuối",
-      "Để AI quyết định toàn bộ việc giữ hay bỏ nội dung",
-      "Xóa hết ý kiến cá nhân để giữ nguyên văn AI",
-      "Không cần đọc lại sản phẩm cuối cùng"
+      "Add your own perspective, creativity, or domain knowledge; make the final call on what to keep, edit, or discard; and take responsibility for the final product",
+      "Let AI make all decisions on what to keep or discard",
+      "Delete all personal opinions to keep the AI's text verbatim",
+      "Skip reading the final product"
     ],
     "answer": 0,
-    "explanation": "Con người luôn là người tích hợp chuyên môn, ra quyết định cuối cùng và chịu trách nhiệm.",
+    "explanation": "Humans always remain the ones integrating expertise, making final decisions, and taking responsibility.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-66"
   },
   {
     "id": 67,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "So với 3 chữ D đầu tiên (Delegation, Description, Discernment) vốn tập trung vào hiệu quả và hiệu suất, chữ D thứ tư — 'Diligence' — giải quyết trọng tâm gì?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "Compared to the first 3 Ds (Delegation, Description, Discernment) which focus on effectiveness and efficiency, what core focus does the fourth D—'Diligence'—address?",
     "options": [
-      "Khía cạnh đạo đức (ethical) và an toàn (safe) — đảm bảo sự cộng tác với AI có trách nhiệm, minh bạch và đáng tin cậy",
-      "Chỉ tập trung tăng tốc độ gõ prompt",
-      "Chỉ tập trung giảm số từ trong câu trả lời",
-      "Chỉ tập trung chọn màu giao diện"
+      "Ethical and safe aspects—ensuring AI collaboration is responsible, transparent, and trustworthy",
+      "Only increasing prompt typing speed",
+      "Only reducing word count in answers",
+      "Only choosing UI colors"
     ],
     "answer": 0,
-    "explanation": "Diligence chuyển trọng tâm sang trách nhiệm đạo đức, minh bạch và kiểm chứng an toàn.",
+    "explanation": "Diligence shifts focus to ethical responsibility, transparency, and safety verification.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-67"
   },
   {
     "id": 68,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "Ba thành phần của 'Diligence' (The 4Ds: Diligence) gồm những gì?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "What are the three components of 'Diligence' (The 4Ds: Diligence)?",
     "options": [
-      "Creation Diligence, Transparency Diligence, và Deployment Diligence",
-      "Product, Process, và Performance",
-      "Automation, Augmentation, và Agency",
-      "Algorithms, Data, và Computing power"
+      "Creation Diligence, Transparency Diligence, and Deployment Diligence",
+      "Product, Process, and Performance",
+      "Automation, Augmentation, and Agency",
+      "Algorithms, Data, and Computing power"
     ],
     "answer": 0,
-    "explanation": "3 trụ cột Diligence: Creation (khi tạo), Transparency (khi minh bạch), và Deployment (khi phát hành/sử dụng).",
+    "explanation": "The 3 pillars of Diligence are Creation (when creating), Transparency (when disclosing), and Deployment (when releasing/using).",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-68"
   },
   {
     "id": 69,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "'Creation Diligence' đề cập đến trách nhiệm gì khi bạn làm việc với AI?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "What responsibility does 'Creation Diligence' refer to when working with AI?",
     "options": [
-      "Thận trọng, có suy xét khi lựa chọn hệ thống AI nào để sử dụng và cách bạn tương tác với nó (vd: bảo vệ dữ liệu riêng tư/nhạy cảm, tránh vi phạm bản quyền)",
-      "Tự ý đưa toàn bộ mật khẩu và dữ liệu bí mật khách hàng lên mọi chatbot công cộng",
-      "Chỉ sử dụng các mô hình AI không rõ nguồn gốc",
-      "Không quan tâm đến quyền sở hữu trí tuệ"
+      "Being thoughtful and intentional about which AI system you choose to use and how you interact with it (e.g., protecting private/sensitive data, avoiding copyright infringement)",
+      "Freely pasting all passwords and confidential customer data into any public chatbot",
+      "Using only AI models from unknown sources",
+      "Ignoring intellectual property rights"
     ],
     "answer": 0,
-    "explanation": "Creation Diligence: cẩn trọng chọn hệ thống AI phù hợp và cách đưa dữ liệu/tương tác có trách nhiệm.",
+    "explanation": "Creation Diligence: carefully choosing an appropriate AI system and providing data/interacting responsibly.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-69"
   },
   {
     "id": 70,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "'Transparency Diligence' yêu cầu điều gì?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "What does 'Transparency Diligence' require?",
     "options": [
-      "Trung thực, minh bạch về vai trò của AI trong công việc của bạn với tất cả những người cần biết (tùy theo ngữ cảnh cá nhân, học thuật hay nghề nghiệp)",
-      "Giấu kín hoàn toàn việc có sử dụng AI ngay cả khi tổ chức yêu cầu khai báo",
-      "Nhận vơ 100% sản phẩm do AI tạo tự động là công sức viết tay hoàn toàn khi nộp bài",
-      "Công khai khóa API bí mật của bạn lên mạng"
+      "Being honest and transparent about AI's role in your work with everyone who needs to know (depending on personal, academic, or professional context)",
+      "Completely hiding AI usage even when an organization requires disclosure",
+      "Claiming 100% credit for fully AI-generated work as entirely handwritten when submitting assignments",
+      "Publishing your secret API keys online"
     ],
     "answer": 0,
-    "explanation": "Transparency Diligence: trung thực về mức độ đóng góp của AI với các bên liên quan.",
+    "explanation": "Transparency Diligence: being honest about the extent of AI's contribution with relevant stakeholders.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-70"
   },
   {
     "id": 71,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "'Deployment Diligence' có nghĩa là gì?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "What does 'Deployment Diligence' mean?",
     "options": [
-      "Chịu trách nhiệm xác minh và bảo chứng (verifying and vouching) cho các đầu ra AI mà bạn sử dụng hoặc chia sẻ ra bên ngoài",
-      "Đưa thẳng kết quả AI chưa kiểm tra lên hệ thống sản xuất hoặc gửi khách hàng",
-      "Đổ lỗi hoàn toàn cho công ty làm AI nếu sản phẩm của bạn có sai sót",
-      "Chỉ chạy thử một lần rồi bỏ qua lỗi"
+      "Taking responsibility for verifying and vouching for the AI outputs that you use or share externally",
+      "Pushing unverified AI outputs straight to production or sending them to clients",
+      "Blaming the AI company entirely if your product has errors",
+      "Testing once and ignoring errors"
     ],
     "answer": 0,
-    "explanation": "Nếu bạn đưa sản phẩm ra sử dụng/chia sẻ, bạn là người xác minh và đứng ra bảo chứng cho chất lượng của nó.",
+    "explanation": "If you put a product into use or share it, you are the one verifying and vouching for its quality.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-71"
   },
   {
     "id": 72,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "Vì sao các ngữ cảnh khác nhau (personal, academic, professional) lại có kỳ vọng khác nhau đối với Diligence?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "Why do different contexts (personal, academic, professional) have different expectations for Diligence?",
     "options": [
-      "Vì yêu cầu về khai báo (disclosure) và mức độ kiểm chứng (verification) ở mỗi môi trường là khác nhau (vd: viết ghi chú cá nhân khác với nộp luận văn đại học hay báo cáo y tế/doanh nghiệp)",
-      "Vì AI không hoạt động trong môi trường học thuật",
-      "Vì chỉ môi trường cá nhân mới cần đạo đức",
-      "Không có sự khác biệt nào giữa các ngữ cảnh"
+      "Because disclosure and verification requirements vary by environment (e.g., personal notes differ from university theses or medical/enterprise reports)",
+      "Because AI does not work in academic environments",
+      "Because only personal environments require ethics",
+      "There is no difference across contexts"
     ],
     "answer": 0,
-    "explanation": "Các chuẩn mực và quy định công khai/kiểm chứng thay đổi tùy theo bối cảnh cá nhân, học thuật hay nghề nghiệp.",
+    "explanation": "Standards and rules for disclosure and verification change depending on personal, academic, or professional context.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-72"
   },
   {
     "id": 73,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "Trong bài tập 'Creating a Diligence Statement' (Bài 10), một 'Diligence Statement' là gì?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "In the 'Creating a Diligence Statement' exercise (Lesson 10), what is a 'Diligence Statement'?",
     "options": [
-      "Một bản tuyên bố minh bạch ghi nhận vai trò của AI trong sản phẩm của bạn, chứng minh quá trình kiểm chứng cẩn trọng và giải trình các lựa chọn đạo đức của bạn",
-      "Một đoạn code Python dùng để tắt server",
-      "Một hóa đơn thanh toán tiền mạng",
-      "Một yêu cầu AI tự viết bài không cần bạn đọc"
+      "A transparent statement acknowledging AI's role in your work, demonstrating careful verification, and explaining your ethical choices",
+      "A Python snippet used to shut down a server",
+      "An internet billing invoice",
+      "A request for AI to write a paper without you reading it"
     ],
     "answer": 0,
-    "explanation": "Diligence Statement giúp người đọc/đồng nghiệp/giảng viên thấy rõ AI hỗ trợ ở đâu và bạn đã kiểm chứng, chịu trách nhiệm ra sao.",
+    "explanation": "A Diligence Statement helps readers, colleagues, or instructors see clearly where AI assisted and how you verified and took responsibility.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-73"
   },
   {
     "id": 74,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "Khi tự phản chiếu về 'Transparency Diligence' trong lúc viết Diligence Statement, câu hỏi nào bạn cần trả lời?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "When reflecting on 'Transparency Diligence' while writing a Diligence Statement, which question do you need to answer?",
     "options": [
-      "Những ai cần biết về việc tôi đã dùng AI? Tôi nên trình bày thế nào cho trung thực, và mức độ chi tiết nào là phù hợp cho từng phần việc?",
-      "Làm sao để giấu không ai phát hiện ra?",
-      "Tôi có thể dùng bao nhiêu màu sắc trong slide?",
-      "Mô hình AI nặng bao nhiêu gigabyte?"
+      "Who needs to know about my AI usage? How should I present it honestly, and what level of detail is appropriate for each part of the work?",
+      "How can I hide it so nobody notices?",
+      "How many colors can I use in the slides?",
+      "How many gigabytes is the AI model?"
     ],
     "answer": 0,
-    "explanation": "Transparency Diligence xem xét đúng đối tượng cần biết (audience) và mức độ minh bạch phù hợp.",
+    "explanation": "Transparency Diligence considers the right audience who needs to know and the appropriate level of transparency.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-74"
   },
   {
     "id": 75,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "Khi tự phản chiếu về 'Deployment Diligence', câu hỏi nào là cốt lõi nhất?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "When reflecting on 'Deployment Diligence', what is the most central question?",
     "options": [
-      "Tôi đã thực hiện những bước nào để xác minh tính chính xác/phù hợp của nội dung AI? Tôi đã kiểm tra lỗi, thiên kiến (bias) hay thiếu sót chưa? Tôi tự tin bảo chứng cho thành phẩm đến mức nào?",
-      "AI có viết nhanh dưới 2 giây không?",
-      "Tôi đã dùng hết bao nhiêu token?",
-      "Máy tính còn bao nhiêu phần trăm pin?"
+      "What steps did I take to verify the accuracy/appropriateness of AI content? Did I check for errors, bias, or omissions? How confident am I in vouching for the final product?",
+      "Did the AI write it in under 2 seconds?",
+      "How many tokens did I spend?",
+      "What percentage of battery is left on my computer?"
     ],
     "answer": 0,
-    "explanation": "Deployment Diligence đòi hỏi quy trình verify thực chất trước khi vouch (bảo chứng) cho đầu ra.",
+    "explanation": "Deployment Diligence requires a substantive verification process before vouching for the output.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-75"
   },
   {
     "id": 76,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "Trong Bài 11 ('Conclusion'), bài tập 'Build a Personal AI Policy' (Xây dựng Chính sách AI Cá nhân) giúp bạn xác định những gì?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "In Lesson 11 ('Conclusion'), what does the 'Build a Personal AI Policy' exercise help you define?",
     "options": [
-      "Xác định các ngữ cảnh bạn dùng AI, ranh giới không dùng AI, quy trình kiểm chứng đầu ra, xử lý dữ liệu nhạy cảm, mẫu tuyên bố minh bạch và tác động đến người khác",
-      "Chỉ chọn màu nền yêu thích cho giao diện chat",
-      "Liệt kê mật khẩu các tài khoản mạng xã hội",
-      "Xóa hết các bài học cũ"
+      "Defining contexts where you use AI, boundaries where you don't, output verification workflows, sensitive data handling, transparency templates, and impact on others",
+      "Only picking a favorite background color for the chat UI",
+      "Listing social media account passwords",
+      "Deleting all previous lessons"
     ],
     "answer": 0,
-    "explanation": "Personal AI Policy là kim chỉ nam cá nhân/nghề nghiệp giúp áp dụng nhất quán 4D Framework.",
+    "explanation": "A Personal AI Policy serves as a personal/professional compass for consistently applying the 4D Framework.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-76"
   },
   {
     "id": 77,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "Theo phần Key Takeaways của Bài 11, khi nào sự cộng tác giữa con người và AI tạo ra kết quả mạnh mẽ nhất?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "According to Lesson 11 Key Takeaways, when does human-AI collaboration produce the strongest results?",
     "options": [
-      "Khi con người và AI cùng phát huy thế mạnh bổ sung của nhau (build on each other's strengths) dưới sự dẫn dắt của tư duy và trách nhiệm con người",
-      "Khi con người giao phó hoàn toàn không giám sát",
-      "Khi con người từ chối dùng bất kỳ công cụ AI nào",
-      "Khi chỉ dùng AI ở chế độ Automation cho mọi vấn đề sáng tạo"
+      "When humans and AI build on each other's complementary strengths under the guidance of human thinking and responsibility",
+      "When humans delegate completely without oversight",
+      "When humans refuse to use any AI tools",
+      "When using AI only in Automation mode for every creative problem"
     ],
     "answer": 0,
-    "explanation": "Kết quả mạnh nhất xuất hiện khi kết hợp tốc độ/phạm vi của AI với phán đoán, sáng tạo và đạo đức của con người.",
+    "explanation": "The strongest results emerge when combining AI's speed and reach with human judgment, creativity, and ethics.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-77"
   },
   {
     "id": 78,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "Trong Lab 04 (`discernment_diligence_lab.py`), nếu phản hồi của AI có 'has_unverified_claim: True' và 'followed_all_steps: False', hệ thống đánh giá theo những loại Discernment nào?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "In Lab 04 (`discernment_diligence_lab.py`), if an AI response has `has_unverified_claim: True` and `followed_all_steps: False`, which types of Discernment does the system flag?",
     "options": [
-      "Cảnh báo ở cả Product Discernment (nhận định chưa kiểm chứng) và Process Discernment (bỏ sót bước yêu cầu), đồng thời yêu cầu quay lại vòng lặp Description–Discernment",
-      "Đánh dấu đạt chuẩn 100% và cho phép phát hành ngay",
-      "Chỉ cảnh báo lỗi mạng",
-      "Tự động xóa dữ liệu"
+      "It flags both Product Discernment (unverified claim) and Process Discernment (skipped required steps), and requires returning to the Description–Discernment loop",
+      "It marks it 100% compliant and allows immediate release",
+      "It only flags a network error",
+      "It automatically deletes the data"
     ],
     "answer": 0,
-    "explanation": "Mỗi loại lỗi ánh xạ trực tiếp tới Product, Process hoặc Performance Discernment để sửa đúng chỗ trong vòng lặp.",
+    "explanation": "Each error type maps directly to Product, Process, or Performance Discernment to fix the right issue in the loop.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-78"
   },
   {
     "id": 79,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "Mối liên hệ đúng giữa 4 chữ D trong toàn bộ khóa học là gì?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "What is the correct relationship among the 4 Ds across the entire course?",
     "options": [
-      "Delegation (chọn việc) -> Description (giao tiếp rõ) <-> Discernment (thẩm định lặp) -> Diligence (chịu trách nhiệm đạo đức, minh bạch, xác minh)",
-      "Chỉ cần làm Diligence rồi bỏ qua 3 chữ D kia",
-      "Description không liên quan gì đến Discernment",
-      "Delegation là bước cuối cùng sau khi đã phát hành sản phẩm"
+      "Delegation (choosing work) -> Description (clear communication) <-> Discernment (iterative evaluation) -> Diligence (ethical, transparent, verified responsibility)",
+      "Only do Diligence and skip the other 3 Ds",
+      "Description has nothing to do with Discernment",
+      "Delegation is the final step after releasing the product"
     ],
     "answer": 0,
-    "explanation": "4D tạo thành một hệ thống khép kín giúp tương tác AI hiệu quả, hiệu suất, đạo đức và an toàn.",
+    "explanation": "The 4Ds form a closed-loop system that keeps AI interactions effective, efficient, ethical, and safe.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-79"
   },
   {
     "id": 80,
-    "chapter": "Chương 4: Discernment, Loop & Diligence",
-    "question": "Thông điệp cuối cùng của khóa học 'AI Fluency: Framework & Foundations' về tương lai kỹ năng của bạn là gì?",
+    "chapter": "Chapter 4: Discernment, Loop & Diligence",
+    "question": "What is the final takeaway of 'AI Fluency: Framework & Foundations' regarding the future of your skills?",
     "options": [
-      "AI Fluency phát triển qua thực hành; mỗi tương tác với AI là một cơ hội rèn luyện 4D để giữ vững hiệu quả, hiệu suất, đạo đức và an toàn khi công nghệ tiếp tục tiến hóa",
-      "Học xong khóa này là không bao giờ cần thực hành thêm nữa",
-      "Chỉ cần nhớ tên 4 chữ D mà không cần áp dụng vào thực tế",
-      "AI sẽ tự động chịu mọi trách nhiệm pháp lý thay cho người dùng"
+      "AI Fluency develops through practice; every AI interaction is an opportunity to practice the 4Ds to stay effective, efficient, ethical, and safe as technology evolves",
+      "Once you finish this course, you never need to practice again",
+      "Just memorize the names of the 4 Ds without applying them in practice",
+      "AI will automatically assume all legal responsibility on behalf of users"
     ],
     "answer": 0,
-    "explanation": "Fluency develops through practice — thực hành có chủ đích 4D giúp bạn luôn làm chủ công nghệ AI tương lai.",
+    "explanation": "Fluency develops through practice—intentional practice of the 4Ds helps you master future AI technology.",
     "course_id": "ai-fluency",
     "course_title": "AI Fluency: Framework & Foundations",
     "uid": "ai-fluency-80"
