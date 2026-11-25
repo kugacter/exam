@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anthropic Developer Track — Cổng Ôn Tập & Thi Thử Tổng Hợp (640 Câu Hỏi)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --background: #0f172a;
+      --foreground: #f8fafc;
+      --card: #1e293b;
+      --card-foreground: #f8fafc;
+      --border: #334155;
+      --muted: #64748b;
+      --muted-foreground: #94a3b8;
+      --secondary: #0f172a;
+      --secondary-foreground: #e2e8f0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+    }
+    .opt-btn {
+      transition: all 0.15s ease;
+    }
+    .opt-btn:hover:not(:disabled) {
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-0 m-0 min-h-screen">
+  <div class="max-w-5xl mx-auto p-3 sm:p-4 space-y-3">
+    <!-- TOP PORTAL HEADER & COURSE SWITCHER TABS -->
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-3 sm:p-4 shadow-sm space-y-3">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <div>
+          <h1 class="text-base sm:text-lg font-bold tracking-tight flex items-center gap-2">
+            <span>🎓 Cổng Quiz Tổng Hợp: Anthropic / Claude Developer Track (640 Câu Hỏi)</span>
+          </h1>
+          <p class="text-xs text-[var(--muted-foreground)] mt-0.5">
+            Gộp trọn bộ 3 Khóa học vào 1 trang duy nhất • Chuyển khóa tức thì • Random đề thông minh ưu tiên câu chưa gặp &amp; tự động đảo đáp án A/B/C/D
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="selectCourse('MOCK_EXAM_60')"
+            class="text-xs font-bold px-3 py-1.5 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white shadow-sm transition cursor-pointer flex items-center gap-1.5">
+            <span>🎯 Thi Thử 60 Câu (8 Domains)</span>
+          </button>
+          <span id="unseenBadge" class="text-xs font-mono px-2.5 py-1 rounded-full border border-[var(--border)] bg-[var(--secondary)] text-[var(--secondary-foreground)]">
+            Chưa gặp: 0/0
+          </span>
+          <button id="resetHistoryBtn" onclick="resetSeenHistory()" title="Reset lịch sử các câu đã làm của khóa đang chọn"
+            class="text-xs px-2.5 py-1 rounded-lg border border-[var(--border)] hover:bg-[var(--secondary)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition cursor-pointer">
+            ↺ Reset Lịch Sử
+          </button>
+        </div>
+      </div>
+
+      <!-- COURSE TABS (6 COURSES + ALL COMBINED + 60-QUESTION MOCK EXAM) -->
+      <div id="courseTabsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 pt-2 border-t border-[var(--border)]"></div>
+
+      <!-- 8-DOMAIN MOCK EXAM BLUEPRINT & LIVE SCORE BREAKDOWN -->
+      <div id="mockExamBlueprintBox" class="hidden rounded-xl border border-emerald-500/40 bg-emerald-500/5 p-3 space-y-2">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="text-xs font-bold text-emerald-400">
+            🎯 Đề Thi Thử 60 Câu — Phân bổ chuẩn tỷ trọng 8 Domains (Exam Guide chính thức)
+          </div>
+          <div class="text-[11px] text-[var(--muted-foreground)]">
+            Bấm 🎲 Random Đề Mới để bốc ngẫu nhiên lại đúng 60 câu theo tỷ trọng này (ưu tiên câu chưa gặp)
+          </div>
+        </div>
+        <div id="mockExamDomainGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
+      </div>
+
+      <!-- TOOLBAR: FILTER CHAPTER + EXAM SIZE + RANDOM BUTTON -->
+      <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 pt-2 border-t border-[var(--border)]">
+        <div class="sm:col-span-6">
+          <label class="block text-xs text-[var(--muted-foreground)] mb-1">Chọn Chương (Chapter Filter)</label>
+          <select id="chapterSelect" onchange="generateRandomExam()"
+            class="w-full text-xs rounded-lg border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] px-2.5 py-1.5 focus:outline-none">
+          </select>
+        </div>
+
+        <div class="sm:col-span-3">
+          <label class="block text-xs text-[var(--muted-foreground)] mb-1">Số câu mỗi đề</label>
+          <select id="examSizeSelect" onchange="generateRandomExam()"
+            class="w-full text-xs rounded-lg border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] px-2.5 py-1.5 focus:outline-none">
+            <option value="10">10 câu (Ôn tập nhanh)</option>
+            <option value="20" selected>20 câu (Chuẩn Quiz)</option>
+            <option value="23">23 câu (Chuẩn Final Exam)</option>
+            <option value="50">50 câu (Đề nâng cao)</option>
+            <option value="60">60 câu (Chuẩn 8 Domains)</option>
+            <option value="9999">Toàn bộ câu hỏi hiện tại</option>
+          </select>
+        </div>
+
+        <div class="sm:col-span-3 flex items-end">
+          <button onclick="generateRandomExam()"
+            class="w-full text-xs font-semibold px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white shadow-sm transition flex items-center justify-center gap-1.5 cursor-pointer">
+            <span>🎲 Random Đề Mới</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- SCORE & PROGRESS BAR -->
+      <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-[var(--border)] text-xs">
+        <div class="flex items-center flex-wrap gap-2">
+          <span id="questionCounter" class="font-semibold">Câu 1 / 20</span>
+          <span id="courseTag" class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-semibold border border-amber-500/30">Khóa học</span>
+          <span id="chapterTag" class="px-2 py-0.5 rounded bg-[var(--secondary)] text-[var(--secondary-foreground)]">Chương 1</span>
+          <span id="questionIdTag" class="font-mono text-[var(--muted-foreground)]">#ID-001</span>
+        </div>
+        <div class="flex items-center gap-3 font-mono">
+          <span class="text-emerald-500 font-semibold">✔ Đúng: <span id="correctCount">0</span></span>
+          <span class="text-rose-500 font-semibold">✘ Sai: <span id="wrongCount">0</span></span>
+          <span class="font-bold">Điểm: <span id="scorePercent">0%</span></span>
+        </div>
+      </div>
+      <div class="w-full h-1.5 bg-[var(--secondary)] rounded-full overflow-hidden">
+        <div id="progressBar" class="h-full bg-amber-500 transition-all duration-300" style="width: 5%"></div>
+      </div>
+    </div>
+
+    <!-- QUESTION CARD -->
+    <div id="questionCard" class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 sm:p-5 shadow-sm space-y-4">
+      <div id="questionText" class="text-sm sm:text-base font-semibold leading-relaxed">
+        Đang tải câu hỏi...
+      </div>
+
+      <!-- OPTIONS LIST -->
+      <div id="optionsContainer" class="space-y-2"></div>
+
+      <!-- ACTION BUTTONS -->
+      <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-[var(--border)]">
+        <div class="flex items-center gap-2">
+          <button id="prevBtn" onclick="prevQuestion()"
+            class="text-xs px-3 py-1.5 rounded-lg border border-[var(--border)] hover:bg-[var(--secondary)] disabled:opacity-40 transition cursor-pointer">
+            ← Câu Trước
+          </button>
+          <button id="nextBtn" onclick="nextQuestion()"
+            class="text-xs px-3 py-1.5 rounded-lg border border-[var(--border)] hover:bg-[var(--secondary)] disabled:opacity-40 transition cursor-pointer">
+            Câu Tiếp →
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button id="submitBtn" onclick="submitAnswer()"
+            class="text-xs font-semibold px-4 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white shadow-sm disabled:opacity-40 transition cursor-pointer">
+            ✔ Submit Đáp Án
+          </button>
+        </div>
+      </div>
+
+      <!-- FEEDBACK & EXPLANATION BOX -->
+      <div id="feedbackBox" class="hidden rounded-xl p-3.5 border text-xs sm:text-sm space-y-1.5">
+        <div id="feedbackTitle" class="font-bold text-sm flex items-center gap-1.5"></div>
+        <div id="correctAnswerLine" class="font-semibold"></div>
+        <div id="explanationText" class="text-xs sm:text-sm leading-relaxed opacity-95 pt-1"></div>
+      </div>
+    </div>
+
+    <!-- QUESTION NAVIGATOR PILLS -->
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-3 shadow-sm">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs font-semibold text-[var(--muted-foreground)]">Bản đồ câu hỏi trong đề hiện tại (Bấm số để chuyển nhanh):</span>
+        <button onclick="showAllListModal()" class="text-xs text-amber-500 hover:underline font-medium cursor-pointer">
+          📋 Xem / Tìm kiếm toàn bộ ngân hàng câu hỏi
+        </button>
+      </div>
+      <div id="pillNavigator" class="flex flex-wrap gap-1.5"></div>
+    </div>
+
+    <!-- FULL QUESTIONS SEARCH MODAL / DRAWER -->
+    <div id="allQuestionsModal" class="hidden bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 shadow-lg space-y-3">
+      <div class="flex items-center justify-between gap-2 pb-2 border-b border-[var(--border)]">
+        <h2 id="modalTitle" class="text-sm font-bold">📋 Danh sách toàn bộ Câu hỏi trong Ngân hàng đề</h2>
+        <button onclick="toggleAllListModal(false)" class="text-xs px-2.5 py-1 rounded border border-[var(--border)] hover:bg-[var(--secondary)] cursor-pointer">
+          Đóng ✕
+        </button>
+      </div>
+      <input id="searchInput" type="text" oninput="renderAllQuestionsList()" placeholder="🔍 Nhập từ khóa để tìm nhanh câu hỏi (vd: SKILL.md, proactively, Explore, caching, BM25, MCP...)"
+        class="w-full text-xs rounded-lg border border-[var(--border)] bg-[var(--background)] px-3 py-2 focus:outline-none" />
+      <div id="allQuestionsList" class="max-h-96 overflow-y-auto space-y-2 pr-1"></div>
+    </div>
+  </div>
+
+  <script src="./data/courses_bundle.js"></script>
+  <script>
+    const COURSES = window.COURSES || [];
+    const EXAM_DOMAINS = window.EXAM_DOMAINS || [];
+    const EXAM_POOL = window.EXAM_POOL || [];
+    const ALL_COMBINED_QUESTIONS = COURSES.flatMap(c => c.questions);
+    const STORAGE_KEY = "anthropic_unified_quiz_seen_uids_v1";
+
+    let activeCourseId = COURSES[0].id; // Mặc định mở khóa đầu tiên hoặc có thể chọn "ALL_COURSES"
+    let seenUids = new Set();
+
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        JSON.parse(saved).forEach(uid => seenUids.add(uid));
+      }
+    } catch (e) {}
+
+    function saveSeenUids() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(seenUids)));
+      } catch (e) {}
+      updateUnseenBadge();
+      renderCourseTabs();
+    }
+
+    function getActiveCourseQuestions() {
+      if (activeCourseId === "MOCK_EXAM_60") {
+        return EXAM_POOL;
+      }
+      if (activeCourseId === "ALL_COURSES") {
+        return ALL_COMBINED_QUESTIONS;
+      }
+      const found = COURSES.find(c => c.id === activeCourseId);
+      return found ? found.questions : ALL_COMBINED_QUESTIONS;
+    }
+
+    function updateUnseenBadge() {
+      const pool = getActiveCourseQuestions();
+      const unseenCount = pool.filter(q => !seenUids.has(q.uid)).length;
+      const badge = document.getElementById("unseenBadge");
+      if (badge) {
+        badge.textContent = `Chưa gặp: ${unseenCount}/${pool.length}`;
+      }
+    }
+
+    function resetSeenHistory() {
+      const pool = getActiveCourseQuestions();
+      pool.forEach(q => seenUids.delete(q.uid));
+      saveSeenUids();
+      generateRandomExam();
+    }
+
+    function renderCourseTabs() {
+      const container = document.getElementById("courseTabsContainer");
+      container.innerHTML = "";
+
+      const tabs = [
+        ...COURSES.map(c => ({
+          id: c.id,
+          icon: c.icon,
+          title: c.title,
+          badge: c.badge,
+          total: c.questions.length,
+          unseen: c.questions.filter(q => !seenUids.has(q.uid)).length
+        })),
+        {
+          id: "ALL_COURSES",
+          icon: "🌟",
+          title: "Tổng Hợp Cả 6 Khóa",
+          badge: `Tất cả 30 Chương • ${ALL_COMBINED_QUESTIONS.length} Câu`,
+          total: ALL_COMBINED_QUESTIONS.length,
+          unseen: ALL_COMBINED_QUESTIONS.filter(q => !seenUids.has(q.uid)).length
+        },
+        {
+          id: "MOCK_EXAM_60",
+          icon: "🎯",
+          title: "Thi Thử 60 Câu (8 Domains)",
+          badge: `Chuẩn Exam Guide • ${EXAM_POOL.length} Câu Kho`,
+          total: EXAM_POOL.length,
+          unseen: EXAM_POOL.filter(q => !seenUids.has(q.uid)).length
+        }
+      ];
+
+      tabs.forEach(tab => {
+        const isActive = (tab.id === activeCourseId);
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.onclick = () => selectCourse(tab.id);
+        const activeCls = isActive
+          ? "border-amber-500 ring-2 ring-amber-500/30 bg-amber-500/10 text-white"
+          : "border-[var(--border)] bg-[var(--background)] hover:border-amber-500/50 text-[var(--muted-foreground)] hover:text-[var(--foreground)]";
+
+        btn.className = `p-2.5 rounded-xl border text-left transition flex flex-col justify-between gap-1 cursor-pointer ${activeCls}`;
+        btn.innerHTML = `
+          <div class="flex items-center justify-between gap-1">
+            <span class="text-xs font-bold truncate">${tab.icon} ${escapeHtml(tab.title)}</span>
+          </div>
+          <div class="flex items-center justify-between text-[11px] opacity-85">
+            <span>${escapeHtml(tab.badge)}</span>
+            <span class="font-mono text-amber-400">${tab.unseen}/${tab.total}</span>
+          </div>
+        `;
+        container.appendChild(btn);
+      });
+    }
+
+    function populateChapterDropdown() {
+      const select = document.getElementById("chapterSelect");
+      const pool = getActiveCourseQuestions();
+      select.innerHTML = "";
+
+      const allOpt = document.createElement("option");
+      allOpt.value = "ALL";
+      allOpt.textContent = `📚 Tất cả các Chương (${pool.length} câu)`;
+      select.appendChild(allOpt);
+
+      // Gom nhóm theo chapter (kèm tên khóa nếu đang ở chế độ ALL_COURSES)
+      const chapterCounts = new Map();
+      pool.forEach(q => {
+        const key = activeCourseId === "ALL_COURSES"
+          ? `[${q.course_title}] ${q.chapter}`
+          : q.chapter;
+        chapterCounts.set(key, (chapterCounts.get(key) || 0) + 1);
+      });
+
+      for (const [chName, count] of chapterCounts.entries()) {
+        const opt = document.createElement("option");
+        opt.value = chName;
+        opt.textContent = `${chName} (${count} câu)`;
+        select.appendChild(opt);
+      }
+    }
+
+    function selectCourse(courseId) {
+      activeCourseId = courseId;
+      const found = COURSES.find(c => c.id === courseId);
+      const sizeSelect = document.getElementById("examSizeSelect");
+      const blueprintBox = document.getElementById("mockExamBlueprintBox");
+      if (courseId === "MOCK_EXAM_60") {
+        sizeSelect.value = "60";
+        blueprintBox.classList.remove("hidden");
+      } else {
+        blueprintBox.classList.add("hidden");
+        if (found && found.default_exam_size) {
+          sizeSelect.value = String(found.default_exam_size);
+        }
+      }
+      renderCourseTabs();
+      populateChapterDropdown();
+      updateUnseenBadge();
+      generateRandomExam();
+    }
+
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    let currentExam = [];
+    let currentIndex = 0;
+
+    function prepareQuestionWithShuffledOptions(q) {
+      const indexedOptions = q.options.map((optText, idx) => ({
+        text: optText,
+        isCorrect: idx === q.answer
+      }));
+      const shuffled = shuffleArray(indexedOptions);
+      const newAnswerIndex = shuffled.findIndex(item => item.isCorrect);
+      return {
+        ...q,
+        displayOptions: shuffled.map(item => item.text),
+        correctIndex: newAnswerIndex,
+        selectedOption: null,
+        submitted: false,
+        isCorrect: null
+      };
+    }
+
+    function pickFromPoolPreferUnseen(pool, count) {
+      const unseenPool = shuffleArray(pool.filter(q => !seenUids.has(q.uid)));
+      const seenPool = shuffleArray(pool.filter(q => seenUids.has(q.uid)));
+      let selected = [];
+      if (unseenPool.length >= count) {
+        selected = unseenPool.slice(0, count);
+      } else {
+        selected = [...unseenPool];
+        const needed = Math.min(count - selected.length, seenPool.length);
+        selected.push(...seenPool.slice(0, needed));
+        if (unseenPool.length === 0) {
+          pool.forEach(q => seenUids.delete(q.uid));
+        }
+      }
+      return selected;
+    }
+
+    function generateRandomExam() {
+      const chapterFilter = document.getElementById("chapterSelect").value;
+      const rawSize = parseInt(document.getElementById("examSizeSelect").value, 10) || 20;
+
+      let selected = [];
+      if (activeCourseId === "MOCK_EXAM_60" && (!chapterFilter || chapterFilter === "ALL")) {
+        // Random phân tầng chuẩn 60 câu theo đúng tỷ trọng 8 Domains
+        EXAM_DOMAINS.forEach(d => {
+          const domainPool = EXAM_POOL.filter(q => q.domain_id === d.id);
+          const picked = pickFromPoolPreferUnseen(domainPool, d.target_count);
+          selected.push(...picked);
+        });
+      } else {
+        let pool = getActiveCourseQuestions();
+        if (chapterFilter && chapterFilter !== "ALL") {
+          pool = pool.filter(q => {
+            const key = activeCourseId === "ALL_COURSES"
+              ? `[${q.course_title}] ${q.chapter}`
+              : q.chapter;
+            return key === chapterFilter;
+          });
+        }
+        const requestedSize = Math.min(rawSize, pool.length);
+        selected = pickFromPoolPreferUnseen(pool, requestedSize);
+      }
+
+      selected.forEach(q => seenUids.add(q.uid));
+      saveSeenUids();
+
+      currentExam = shuffleArray(selected).map(prepareQuestionWithShuffledOptions);
+      currentIndex = 0;
+      renderCurrentQuestion();
+      if (!document.getElementById("allQuestionsModal").classList.contains("hidden")) {
+        renderAllQuestionsList();
+      }
+    }
+
+    function selectOption(optIdx) {
+      const q = currentExam[currentIndex];
+      if (!q || q.submitted) return;
+      q.selectedOption = optIdx;
+      renderCurrentQuestion();
+    }
+
+    function submitAnswer() {
+      const q = currentExam[currentIndex];
+      if (!q || q.submitted || q.selectedOption === null) return;
+      q.submitted = true;
+      q.isCorrect = (q.selectedOption === q.correctIndex);
+      renderCurrentQuestion();
+    }
+
+    function prevQuestion() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        renderCurrentQuestion();
+      }
+    }
+
+    function nextQuestion() {
+      if (currentIndex < currentExam.length - 1) {
+        currentIndex++;
+        renderCurrentQuestion();
+      }
+    }
+
+    function jumpToQuestion(idx) {
+      if (idx >= 0 && idx < currentExam.length) {
+        currentIndex = idx;
+        renderCurrentQuestion();
+      }
+    }
+
+    function renderCurrentQuestion() {
+      if (!currentExam.length) return;
+      const q = currentExam[currentIndex];
+      const letters = ["A", "B", "C", "D"];
+
+      const submittedList = currentExam.filter(item => item.submitted);
+      const correctCount = submittedList.filter(item => item.isCorrect).length;
+      const wrongCount = submittedList.length - correctCount;
+      const pct = submittedList.length > 0 ? Math.round((correctCount / submittedList.length) * 100) : 0;
+
+      document.getElementById("questionCounter").textContent = `Câu ${currentIndex + 1} / ${currentExam.length}`;
+      document.getElementById("courseTag").textContent = q.course_title;
+      document.getElementById("chapterTag").textContent = q.chapter;
+      document.getElementById("questionIdTag").textContent = `#Câu-${String(q.id).padStart(3, "0")}`;
+      document.getElementById("correctCount").textContent = correctCount;
+      document.getElementById("wrongCount").textContent = wrongCount;
+      document.getElementById("scorePercent").textContent = `${pct}%`;
+
+      const progressPct = Math.round(((currentIndex + 1) / currentExam.length) * 100);
+      document.getElementById("progressBar").style.width = `${progressPct}%`;
+
+      document.getElementById("questionText").textContent = q.question;
+
+      const optionsContainer = document.getElementById("optionsContainer");
+      optionsContainer.innerHTML = "";
+
+      q.displayOptions.forEach((optText, idx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.disabled = q.submitted;
+        btn.onclick = () => selectOption(idx);
+
+        let borderClass = "border-[var(--border)] bg-[var(--background)] hover:border-amber-500/60";
+        let badgeClass = "border border-[var(--border)] bg-[var(--secondary)] text-[var(--foreground)]";
+
+        if (!q.submitted) {
+          if (q.selectedOption === idx) {
+            borderClass = "border-blue-500 ring-2 ring-blue-500/30 bg-blue-500/10";
+            badgeClass = "bg-blue-600 text-white border-blue-600";
+          }
+        } else {
+          if (idx === q.correctIndex) {
+            borderClass = "border-emerald-500 ring-2 ring-emerald-500/30 bg-emerald-500/15";
+            badgeClass = "bg-emerald-600 text-white border-emerald-600";
+          } else if (idx === q.selectedOption && !q.isCorrect) {
+            borderClass = "border-rose-500 ring-2 ring-rose-500/30 bg-rose-500/15";
+            badgeClass = "bg-rose-600 text-white border-rose-600";
+          } else {
+            borderClass = "border-[var(--border)] opacity-60";
+          }
+        }
+
+        btn.className = `opt-btn w-full text-left p-3 rounded-xl border ${borderClass} flex items-start gap-3 cursor-pointer`;
+        btn.innerHTML = `
+          <span class="w-6 h-6 rounded-lg text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 ${badgeClass}">
+            ${letters[idx]}
+          </span>
+          <span class="text-xs sm:text-sm leading-relaxed flex-1">${escapeHtml(optText)}</span>
+        `;
+        optionsContainer.appendChild(btn);
+      });
+
+      document.getElementById("prevBtn").disabled = (currentIndex === 0);
+      document.getElementById("nextBtn").disabled = (currentIndex === currentExam.length - 1);
+      document.getElementById("submitBtn").disabled = (q.submitted || q.selectedOption === null);
+
+      const feedbackBox = document.getElementById("feedbackBox");
+      const feedbackTitle = document.getElementById("feedbackTitle");
+      const correctAnswerLine = document.getElementById("correctAnswerLine");
+      const explanationText = document.getElementById("explanationText");
+
+      if (q.submitted) {
+        feedbackBox.classList.remove("hidden");
+        if (q.isCorrect) {
+          feedbackBox.className = "rounded-xl p-3.5 border border-emerald-500/50 bg-emerald-500/10 text-xs sm:text-sm space-y-1.5";
+          feedbackTitle.innerHTML = `<span class="text-emerald-500">✅ CHÍNH XÁC 100%!</span>`;
+          correctAnswerLine.textContent = `Đáp án đúng: [${letters[q.correctIndex]}] ${q.displayOptions[q.correctIndex]}`;
+        } else {
+          feedbackBox.className = "rounded-xl p-3.5 border border-rose-500/50 bg-rose-500/10 text-xs sm:text-sm space-y-1.5";
+          feedbackTitle.innerHTML = `<span class="text-rose-500">❌ CHƯA ĐÚNG! (Bạn đã chọn đáp án ${letters[q.selectedOption]})</span>`;
+          correctAnswerLine.innerHTML = `<span class="text-emerald-500">👉 Đáp án đúng là [${letters[q.correctIndex]}]: ${escapeHtml(q.displayOptions[q.correctIndex])}</span>`;
+        }
+        explanationText.innerHTML = `<strong>💡 Giải thích chi tiết:</strong> ${escapeHtml(q.explanation)}`;
+      } else {
+        feedbackBox.classList.add("hidden");
+      }
+
+      renderPills();
+      if (activeCourseId === "MOCK_EXAM_60") {
+        renderMockExamDomains();
+      }
+    }
+
+    function renderMockExamDomains() {
+      const grid = document.getElementById("mockExamDomainGrid");
+      if (!grid) return;
+      grid.innerHTML = "";
+      EXAM_DOMAINS.forEach(d => {
+        const inExam = currentExam.filter(q => q.domain_id === d.id);
+        const submitted = inExam.filter(q => q.submitted);
+        const correct = submitted.filter(q => q.isCorrect).length;
+        const card = document.createElement("div");
+        card.className = "rounded-lg border border-[var(--border)] bg-[var(--background)] p-2 text-[11px] space-y-0.5";
+        card.innerHTML = `
+          <div class="flex items-center justify-between gap-1 font-bold">
+            <span class="truncate text-emerald-400">${d.id}. ${escapeHtml(d.name)}</span>
+            <span class="font-mono text-amber-400 shrink-0">${d.weight}%</span>
+          </div>
+          <div class="flex items-center justify-between text-[var(--muted-foreground)]">
+            <span>Số câu: <strong class="text-[var(--foreground)]">${inExam.length}</strong></span>
+            <span>Đúng: <strong class="text-emerald-400">${correct}/${submitted.length}</strong></span>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function renderPills() {
+      const nav = document.getElementById("pillNavigator");
+      nav.innerHTML = "";
+      currentExam.forEach((item, idx) => {
+        const pill = document.createElement("button");
+        pill.type = "button";
+        pill.onclick = () => jumpToQuestion(idx);
+        let cls = "border-[var(--border)] bg-[var(--background)] text-[var(--muted-foreground)]";
+        if (item.submitted) {
+          cls = item.isCorrect
+            ? "bg-emerald-600 text-white border-emerald-600"
+            : "bg-rose-600 text-white border-rose-600";
+        } else if (item.selectedOption !== null) {
+          cls = "border-blue-500 text-blue-500 font-semibold";
+        }
+        if (idx === currentIndex) {
+          cls += " ring-2 ring-amber-500 font-bold";
+        }
+        pill.className = `w-7 h-7 rounded-lg border text-xs flex items-center justify-center transition cursor-pointer ${cls}`;
+        pill.textContent = idx + 1;
+        nav.appendChild(pill);
+      });
+    }
+
+    function showAllListModal() {
+      toggleAllListModal(true);
+      renderAllQuestionsList();
+    }
+
+    function toggleAllListModal(show) {
+      const modal = document.getElementById("allQuestionsModal");
+      if (show) {
+        modal.classList.remove("hidden");
+      } else {
+        modal.classList.add("hidden");
+      }
+    }
+
+    function loadSingleQuestionIntoView(uid) {
+      const found = ALL_COMBINED_QUESTIONS.find(q => q.uid === uid);
+      if (!found) return;
+      const existingIdx = currentExam.findIndex(q => q.uid === uid);
+      if (existingIdx !== -1) {
+        currentIndex = existingIdx;
+      } else {
+        currentExam.push(prepareQuestionWithShuffledOptions(found));
+        currentIndex = currentExam.length - 1;
+      }
+      toggleAllListModal(false);
+      renderCurrentQuestion();
+    }
+
+    function renderAllQuestionsList() {
+      const query = (document.getElementById("searchInput").value || "").toLowerCase().trim();
+      const container = document.getElementById("allQuestionsList");
+      const pool = getActiveCourseQuestions();
+      document.getElementById("modalTitle").textContent = `📋 Ngân hàng Câu hỏi đang chọn (${pool.length} câu)`;
+      container.innerHTML = "";
+
+      const filtered = pool.filter(q =>
+        !query ||
+        q.question.toLowerCase().includes(query) ||
+        q.chapter.toLowerCase().includes(query) ||
+        q.course_title.toLowerCase().includes(query) ||
+        q.explanation.toLowerCase().includes(query) ||
+        q.options.some(o => o.toLowerCase().includes(query))
+      );
+
+      filtered.forEach(q => {
+        const row = document.createElement("div");
+        row.className = "p-2.5 rounded-lg border border-[var(--border)] bg-[var(--background)] hover:border-amber-500/60 flex items-start justify-between gap-3 cursor-pointer";
+        row.onclick = () => loadSingleQuestionIntoView(q.uid);
+        row.innerHTML = `
+          <div class="space-y-1 text-xs">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-mono font-bold text-amber-500">#${String(q.id).padStart(3, "0")}</span>
+              <span class="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-semibold">${escapeHtml(q.course_title)}</span>
+              <span class="px-1.5 py-0.5 rounded bg-[var(--secondary)] text-[var(--secondary-foreground)]">${escapeHtml(q.chapter)}</span>
+            </div>
+            <div class="font-medium text-[var(--foreground)]">${escapeHtml(q.question)}</div>
+          </div>
+          <span class="text-xs text-blue-500 shrink-0 font-semibold">Làm câu này →</span>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    // Khởi tạo lần đầu
+    selectCourse(COURSES[0].id);
+  </script>
+</body>
+</html>
