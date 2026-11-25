@@ -61,14 +61,25 @@
       <!-- COURSE TABS (6 COURSES + ALL COMBINED + 60-QUESTION MOCK EXAM) -->
       <div id="courseTabsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 pt-2 border-t border-[var(--border)]"></div>
 
-      <!-- 8-DOMAIN MOCK EXAM BLUEPRINT & LIVE SCORE BREAKDOWN -->
-      <div id="mockExamBlueprintBox" class="hidden rounded-xl border border-emerald-500/40 bg-emerald-500/5 p-3 space-y-2">
+      <!-- 8-DOMAIN MOCK EXAM BLUEPRINT & 120-MINUTE TIMER -->
+      <div id="mockExamBlueprintBox" class="hidden rounded-xl border border-emerald-500/40 bg-emerald-500/5 p-3 space-y-2.5">
         <div class="flex flex-wrap items-center justify-between gap-2">
-          <div class="text-xs font-bold text-emerald-400">
-            🎯 60-Question Mock Exam — Weighted across all 8 Official Exam Guide Domains
+          <div>
+            <div class="text-xs font-bold text-emerald-400">
+              🎯 60-Question Mock Exam — Weighted across all 8 Official Exam Guide Domains
+            </div>
+            <div class="text-[11px] text-[var(--muted-foreground)]">
+              Click 🎲 New Random Exam to generate a fresh 60-question set following these exact domain weights
+            </div>
           </div>
-          <div class="text-[11px] text-[var(--muted-foreground)]">
-            Click 🎲 New Random Exam to generate a fresh 60-question set following these exact domain weights (unseen-first)
+          <div class="flex items-center gap-2">
+            <span id="mockTimerDisplay" class="font-mono text-sm font-bold px-3 py-1 rounded-lg border border-emerald-500/40 bg-[var(--background)] text-emerald-400">
+              ⏱ 120:00
+            </span>
+            <button id="mockTimerToggleBtn" type="button" onclick="toggleMockTimer()"
+              class="text-xs px-2.5 py-1 rounded-lg border border-[var(--border)] bg-[var(--background)] hover:bg-[var(--secondary)] text-[var(--foreground)] cursor-pointer">
+              ⏸ Pause
+            </button>
           </div>
         </div>
         <div id="mockExamDomainGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
@@ -253,18 +264,10 @@
           unseen: c.questions.filter(q => !seenUids.has(q.uid)).length
         })),
         {
-          id: "ALL_COURSES",
-          icon: "🌟",
-          title: "All 6 Courses Combined",
-          badge: `All 30 Chapters • ${ALL_COMBINED_QUESTIONS.length} Qs`,
-          total: ALL_COMBINED_QUESTIONS.length,
-          unseen: ALL_COMBINED_QUESTIONS.filter(q => !seenUids.has(q.uid)).length
-        },
-        {
           id: "MOCK_EXAM_60",
           icon: "🎯",
           title: "60-Q Mock Exam (8 Domains)",
-          badge: `Official Weights • ${EXAM_POOL.length} Qs Pool`,
+          badge: `Official Weights • 120 Min • ${EXAM_POOL.length} Qs`,
           total: EXAM_POOL.length,
           unseen: EXAM_POOL.filter(q => !seenUids.has(q.uid)).length
         }
@@ -331,6 +334,7 @@
         sizeSelect.value = "60";
         blueprintBox.classList.remove("hidden");
       } else {
+        stopMockTimer();
         blueprintBox.classList.add("hidden");
         if (found && found.default_exam_size) {
           sizeSelect.value = String(found.default_exam_size);
@@ -353,6 +357,65 @@
 
     let currentExam = [];
     let currentIndex = 0;
+
+    // --- 120-Minute Countdown Timer for 60-Question Mock Exam ---
+    const MOCK_DURATION_SECONDS = 120 * 60;
+    let mockSecondsRemaining = MOCK_DURATION_SECONDS;
+    let mockTimerInterval = null;
+    let mockTimerPaused = false;
+
+    function formatMockTime(totalSec) {
+      const m = Math.floor(totalSec / 60);
+      const s = totalSec % 60;
+      return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+    }
+
+    function updateMockTimerUI() {
+      const el = document.getElementById("mockTimerDisplay");
+      const btn = document.getElementById("mockTimerToggleBtn");
+      if (!el || !btn) return;
+      if (mockSecondsRemaining <= 0) {
+        el.textContent = "⏱ 00:00 (TIME UP)";
+        el.className = "font-mono text-sm font-bold px-3 py-1 rounded-lg border border-rose-500/60 bg-rose-500/15 text-rose-400";
+      } else if (mockSecondsRemaining <= 600) {
+        el.textContent = `⏱ ${formatMockTime(mockSecondsRemaining)}`;
+        el.className = "font-mono text-sm font-bold px-3 py-1 rounded-lg border border-amber-500/60 bg-amber-500/15 text-amber-400";
+      } else {
+        el.textContent = `⏱ ${formatMockTime(mockSecondsRemaining)}`;
+        el.className = "font-mono text-sm font-bold px-3 py-1 rounded-lg border border-emerald-500/40 bg-[var(--background)] text-emerald-400";
+      }
+      btn.textContent = mockTimerPaused ? "▶ Resume" : "⏸ Pause";
+    }
+
+    function stopMockTimer() {
+      if (mockTimerInterval !== null) {
+        clearInterval(mockTimerInterval);
+        mockTimerInterval = null;
+      }
+    }
+
+    function resetAndStartMockTimer() {
+      stopMockTimer();
+      mockSecondsRemaining = MOCK_DURATION_SECONDS;
+      mockTimerPaused = false;
+      updateMockTimerUI();
+      mockTimerInterval = setInterval(() => {
+        if (mockTimerPaused) return;
+        if (mockSecondsRemaining > 0) {
+          mockSecondsRemaining--;
+          updateMockTimerUI();
+          if (mockSecondsRemaining === 0) {
+            stopMockTimer();
+          }
+        }
+      }, 1000);
+    }
+
+    function toggleMockTimer() {
+      if (mockSecondsRemaining <= 0) return;
+      mockTimerPaused = !mockTimerPaused;
+      updateMockTimerUI();
+    }
 
     function prepareQuestionWithShuffledOptions(q) {
       const indexedOptions = q.options.map((optText, idx) => ({
@@ -419,6 +482,9 @@
 
       currentExam = shuffleArray(selected).map(prepareQuestionWithShuffledOptions);
       currentIndex = 0;
+      if (activeCourseId === "MOCK_EXAM_60") {
+        resetAndStartMockTimer();
+      }
       renderCurrentQuestion();
       if (!document.getElementById("allQuestionsModal").classList.contains("hidden")) {
         renderAllQuestionsList();
