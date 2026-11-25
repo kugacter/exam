@@ -1,0 +1,1922 @@
+[
+  {
+    "id": 1,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Trong Claude Code, một 'Skill' (Agent Skill) được định nghĩa chính xác là gì?",
+    "options": [
+      "Một thư mục chứa các hướng dẫn và tài nguyên (trọng tâm là file `SKILL.md` có `name` và `description` ở phần YAML frontmatter) mà Claude Code có thể tự động khám phá và sử dụng theo nhu cầu",
+      "Một mô hình ngôn ngữ lớn (LLM) mới được huấn luyện lại từ đầu bằng GPU của bạn",
+      "Một file cấu hình hệ thống chỉ chạy được trên máy chủ đám mây của Anthropic",
+      "Một đoạn mã JavaScript nhúng vào trình duyệt để thay đổi giao diện màu sắc của Terminal"
+    ],
+    "answer": 0,
+    "explanation": "Skills là các thư mục chứa hướng dẫn và tài nguyên (`folders of instructions and resources`) mà Claude Code có thể tự khám phá và nạp theo nhu cầu. Mỗi skill sống trong một thư mục riêng chứa file `SKILL.md` với `name` và `description` trong YAML frontmatter.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-1"
+  },
+  {
+    "id": 2,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Làm thế nào Claude Code quyết định được khi nào nên kích hoạt một Skill cho yêu cầu của bạn?",
+    "options": [
+      "Claude đối chiếu (matches) yêu cầu của bạn với trường `description` trong YAML frontmatter của các skills hiện có và kích hoạt những skill phù hợp",
+      "Claude luôn kích hoạt đồng thời tất cả các skills đang có trên máy tính ở mọi câu hỏi",
+      "Claude chọn ngẫu nhiên một skill bất kỳ trong thư mục `.claude/skills/`",
+      "Claude chỉ kích hoạt skill khi tên file code của bạn trùng khớp 100% với tên skill"
+    ],
+    "answer": 0,
+    "explanation": "Trường `description` trong YAML frontmatter là cơ chế định tuyến cốt lõi: khi bạn yêu cầu Claude làm việc gì đó, nó so khớp ngữ nghĩa yêu cầu của bạn với danh sách `description` của các skills và tự động nạp skill phù hợp.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-2"
+  },
+  {
+    "id": 3,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Dấu hiệu thực tế nào cho thấy bạn nên viết một Skill mới trong Claude Code?",
+    "options": [
+      "Khi bạn nhận thấy mình đang phải giải thích lặp đi lặp lại cùng một quy trình, tiêu chuẩn hoặc cấu trúc phản hồi cho Claude ở nhiều cuộc hội thoại khác nhau",
+      "Khi bạn chỉ có một câu hỏi duy nhất dùng một lần rồi không bao giờ lặp lại nữa",
+      "Khi bạn muốn thay đổi mật khẩu đăng nhập tài khoản hệ điều hành Windows",
+      "Khi bạn muốn tăng dung lượng ổ cứng vật lý của máy tính"
+    ],
+    "answer": 0,
+    "explanation": "Nguyên tắc vàng trong Chương 1: 'If you notice you're explaining the same thing to Claude repeatedly, that's a skill waiting to be written.' (Ví dụ: quy chuẩn review PR, cách format commit message, tiêu chuẩn viết tài liệu).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-3"
+  },
+  {
+    "id": 4,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Hai phần dữ liệu tối thiểu trong khối YAML frontmatter ở đầu file `SKILL.md` giúp định danh và kích hoạt skill là gì?",
+    "options": [
+      "`name` và `description`",
+      "`import` và `export`",
+      "`username` và `password`",
+      "`port` và `host`"
+    ],
+    "answer": 0,
+    "explanation": "Mỗi file `SKILL.md` bắt đầu bằng YAML frontmatter (giữa hai dòng `---`) chứa `name` (định danh của skill) và `description` (mô tả giúp Claude biết khi nào cần kích hoạt skill đó).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-4"
+  },
+  {
+    "id": 5,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Trên macOS và Linux, các Personal Skills (những skills cá nhân đi theo bạn qua tất cả mọi dự án) được lưu trữ ở đường dẫn nào?",
+    "options": [
+      "`~/.claude/skills/` (trong thư mục Home của người dùng)",
+      "`/tmp/claude/skills/`",
+      "`/var/log/skills/`",
+      "`./node_modules/.skills/`"
+    ],
+    "answer": 0,
+    "explanation": "Personal skills nằm tại `~/.claude/skills/` (thư mục home của bạn) và tự động khả dụng trong mọi dự án bạn làm việc trên máy tính đó.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-5"
+  },
+  {
+    "id": 6,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Trên hệ điều hành Windows, thư mục chứa Personal Skills của bạn nằm ở đâu?",
+    "options": [
+      "`C:\\Users\\<username>\\.claude\\skills`",
+      "`C:\\Windows\\System32\\skills`",
+      "`C:\\Program Files\\Claude\\skills`",
+      "`D:\\Temp\\skills`"
+    ],
+    "answer": 0,
+    "explanation": "Trên Windows, thư mục Home `~` tương ứng với `C:\\Users\\<username>`, do đó Personal skills được đặt tại `C:\\Users\\<username>\\.claude\\skills`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-6"
+  },
+  {
+    "id": 7,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Project Skills (các skills gắn liền với một dự án cụ thể và được chia sẻ với cả nhóm qua Git) được lưu trữ ở đâu?",
+    "options": [
+      "Trong thư mục `.claude/skills/` ngay tại thư mục gốc (root directory) của repository dự án",
+      "Trong thư mục `~/.claude/skills/` trên máy cá nhân của trưởng nhóm",
+      "Trong bảng cơ sở dữ liệu MySQL của dự án",
+      "Trong thư mục `.git/hooks/`"
+    ],
+    "answer": 0,
+    "explanation": "Project skills nằm tại `.claude/skills/` bên trong thư mục gốc của repository. Khi được commit vào hệ thống quản lý phiên bản (Git), bất kỳ thành viên nào clone dự án về đều tự động có sẵn các skills này.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-7"
+  },
+  {
+    "id": 8,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Ví dụ nào sau đây phù hợp nhất để lưu làm một **Personal Skill** (`~/.claude/skills/`) thay vì Project Skill?",
+    "options": [
+      "Phong cách viết commit message cá nhân, định dạng ghi chú riêng, hoặc cách bạn muốn Claude giải thích code cho riêng mình ở mọi dự án",
+      "Quy chuẩn kiến trúc microservice bắt buộc của toàn bộ đội ngũ công ty cho một repo sản phẩm duy nhất",
+      "Quy trình kiểm tra bản quyền thương hiệu (brand guidelines) chung của cả phòng marketing trên repo chung",
+      "Checklist kiểm thử tích hợp bắt buộc trước khi merge của cả nhóm phát triển"
+    ],
+    "answer": 0,
+    "explanation": "Personal skills (`~/.claude/skills/`) dành cho sở thích và quy trình cá nhân theo bạn qua nhiều dự án khác nhau; còn các tiêu chuẩn chung của nhóm cho một codebase cụ thể nên đặt ở Project skills (`.claude/skills/`).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-8"
+  },
+  {
+    "id": 9,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Sự khác biệt quan trọng nhất về thời điểm nạp vào Context Window giữa `CLAUDE.md` và `Skills` là gì?",
+    "options": [
+      "`CLAUDE.md` luôn được nạp toàn bộ vào MỌI cuộc hội thoại ngay từ đầu, trong khi `Skills` chỉ được nạp theo nhu cầu (on demand) khi yêu cầu của bạn khớp với mô tả",
+      "`Skills` luôn được nạp toàn bộ vào mọi cuộc hội thoại, còn `CLAUDE.md` chỉ nạp khi bạn gõ lệnh `/claude`",
+      "Cả `CLAUDE.md` và `Skills` đều không bao giờ tiêu tốn bất kỳ token nào trong Context Window",
+      "`CLAUDE.md` chỉ dùng cho ngôn ngữ Python, còn `Skills` chỉ dùng cho ngôn ngữ JavaScript"
+    ],
+    "answer": 0,
+    "explanation": "`CLAUDE.md` loads into every conversation (luôn bật cho các quy tắc nền tảng), còn Skills load on demand (ban đầu chỉ nạp `name` + `description`, chỉ khi câu hỏi liên quan mới nạp toàn bộ nội dung `SKILL.md` để tiết kiệm Context Window).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-9"
+  },
+  {
+    "id": 10,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Tại sao bạn KHÔNG NÊN đưa một checklist review Pull Request dài 400 dòng vào trực tiếp trong file `CLAUDE.md`?",
+    "options": [
+      "Vì `CLAUDE.md` được nạp vào mọi cuộc hội thoại; việc nhét checklist review PR vào đó sẽ làm tốn Context Window vô ích ngay cả trong những lúc bạn chỉ đang debug lỗi hoặc viết hàm mới",
+      "Vì file `CLAUDE.md` bị giới hạn cứng tối đa chỉ được phép chứa 10 ký tự",
+      "Vì Claude Code sẽ báo lỗi cú pháp và từ chối khởi động nếu `CLAUDE.md` có chứa danh sách gạch đầu dòng",
+      "Vì `CLAUDE.md` không thể lưu trữ được trong Git repository"
+    ],
+    "answer": 0,
+    "explanation": "Checklist review PR chỉ cần thiết khi bạn thực sự yêu cầu review PR. Đặt nó vào một Skill (`.claude/skills/pr-review/SKILL.md`) giúp nó chỉ được nạp vào context khi bạn yêu cầu review, giữ cho các phiên debug thông thường luôn nhẹ nhàng.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-10"
+  },
+  {
+    "id": 11,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Sự khác biệt cơ bản giữa **Skills** và **Slash Commands** truyền thống là gì?",
+    "options": [
+      "Slash Commands đòi hỏi người dùng phải chủ động nhớ và gõ lệnh (ví dụ `/review`) mỗi lần muốn chạy, trong khi Skills được Claude tự động áp dụng ngay khi nhận thấy yêu cầu của bạn phù hợp với ngữ cảnh",
+      "Slash Commands chạy tự động không cần gõ, còn Skills bắt buộc phải gõ tên file đầy đủ mỗi lần",
+      "Slash Commands không thể chứa văn bản hướng dẫn, còn Skills chỉ chứa được 1 dòng lệnh",
+      "Không có bất kỳ sự khác biệt nào giữa hai khái niệm này"
+    ],
+    "answer": 0,
+    "explanation": "Với Slash Commands, trách nhiệm nhớ kích hoạt thuộc về người dùng (bạn phải gõ `/...`). Với Skills, Claude tự động nhận diện tình huống từ câu hỏi tự nhiên của bạn và tự nạp skill phù hợp (ngoài ra mỗi skill vẫn hỗ trợ gọi qua `/skill-name` nếu bạn muốn).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-11"
+  },
+  {
+    "id": 12,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Khi bạn mở Claude Code và chưa gửi yêu cầu nào liên quan đến một skill, phần nào của skill đó được Claude nạp vào ngữ cảnh ban đầu?",
+    "options": [
+      "Chỉ có phần `name` và `description` (để Claude biết danh mục các skills hiện có mà không làm đầy Context Window)",
+      "Toàn bộ 100% nội dung file `SKILL.md` cùng tất cả các file trong thư mục `references/` và `scripts/`",
+      "Không nạp bất cứ thông tin nào, kể cả tên skill",
+      "Chỉ nạp 10 dòng cuối cùng của file `SKILL.md`"
+    ],
+    "answer": 0,
+    "explanation": "Ban đầu Claude chỉ đọc `name` và `description` từ YAML frontmatter của mỗi skill. Nhờ vậy bạn có thể cài hàng chục skills mà hầu như không tiêu tốn Context Window.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-12"
+  },
+  {
+    "id": 13,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Bên dưới phần YAML frontmatter (được đóng bởi dòng `---` thứ hai) trong file `SKILL.md`, bạn viết nội dung gì?",
+    "options": [
+      "Các hướng dẫn chi tiết bằng Markdown (checklist, quy trình từng bước, quy tắc định dạng đầu ra, hoặc những gì Claude cần biết để thực hiện tác vụ đó)",
+      "Mã nhị phân đã biên dịch (compiled binary bytecode)",
+      "Khóa bí mật `ANTHROPIC_API_KEY` dạng thuần túy",
+      "Chỉ được phép viết duy nhất các thẻ HTML `<div>` và `<span>`"
+    ],
+    "answer": 0,
+    "explanation": "Bên dưới YAML frontmatter là phần thân bài viết bằng Markdown tiêu chuẩn chứa toàn bộ chỉ dẫn thực tế (actual instructions) cho tác vụ.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-13"
+  },
+  {
+    "id": 14,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Khi một skill (ví dụ `pr-review`) được Claude tự động kích hoạt trong giao diện dòng lệnh Claude Code, người dùng sẽ nhìn thấy gì trên màn hình?",
+    "options": [
+      "Claude hiển thị thông báo đã gọi/tải skill (ví dụ: `Skill(pr-review)` -> `Successfully loaded skill`) trước khi tiến hành thực hiện công việc theo hướng dẫn",
+      "Màn hình Terminal tự động đóng lại và khởi động lại máy tính",
+      "Claude xóa toàn bộ lịch sử trò chuyện trước đó",
+      "Claude hoạt động hoàn toàn ngầm mà không bao giờ cho phép người dùng biết skill nào đã được nạp"
+    ],
+    "answer": 0,
+    "explanation": "Như minh họa trong bài học Chương 1, khi bạn hỏi 'Can you review the pull request on branch feat/auth?', Claude Code hiển thị rõ khối `Skill(pr-review) -> Successfully loaded skill` rồi mới thực hiện các bước review.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-14"
+  },
+  {
+    "id": 15,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Tình huống nào sau đây là ứng cử viên LÝ TƯỞNG NHẤT để đóng gói thành một Agent Skill?",
+    "options": [
+      "Một quy trình kiểm tra bảo mật và viết báo cáo phát hành (release notes) gồm 5 bước cố định mà nhóm của bạn thực hiện hàng tuần",
+      "Quy tắc ngắn 1 dòng: 'Dự án này sử dụng Python 3.13 và quản lý gói bằng uv'",
+      "Một câu hỏi tra cứu nhanh một lần duy nhất: 'Thủ đô của nước Pháp là gì?'",
+      "Việc tự động chạy linter `eslint --fix` ở tầng hệ điều hành mỗi khi một file `.ts` được lưu xuống ổ đĩa"
+    ],
+    "answer": 0,
+    "explanation": "Quy trình nhiều bước lặp lại theo tác vụ (như tạo release notes hay audit bảo mật) là trường hợp lý tưởng cho Skill. Quy tắc 1 dòng toàn cục thuộc về `CLAUDE.md`, còn tác vụ tự động khi lưu file thuộc về `Hooks`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-15"
+  },
+  {
+    "id": 16,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Nếu một đồng nghiệp mới gia nhập đội ngũ của bạn và clone repository dự án về máy, họ cần làm gì để sử dụng được các Project Skills nằm trong `.claude/skills/` của repo đó?",
+    "options": [
+      "Không cần cài đặt thêm gì cả — ngay khi mở Claude Code trong thư mục dự án đó, các Project Skills trong `.claude/skills/` sẽ tự động được nhận diện và sẵn sàng sử dụng",
+      "Họ bắt buộc phải copy thủ công toàn bộ các file đó sang thư mục `C:\\Windows`",
+      "Họ phải trả thêm phí bản quyền riêng cho từng file `SKILL.md`",
+      "Họ phải biên dịch file `SKILL.md` sang file `.exe` trước khi chạy"
+    ],
+    "answer": 0,
+    "explanation": "Project skills nằm trong `.claude/skills/` được commit vào Git và tự động được Claude Code phát hiện ngay khi bất kỳ ai clone repo và mở Claude Code tại thư mục dự án đó.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-16"
+  },
+  {
+    "id": 17,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Trong khối YAML frontmatter của `SKILL.md`, cặp ký tự nào được dùng ở dòng đầu tiên và dòng kết thúc để đánh dấu ranh giới của frontmatter?",
+    "options": [
+      "Ba dấu gạch ngang `---`",
+      "Ba dấu chấm than `!!!`",
+      "Ba dấu thăng `###`",
+      "Cặp thẻ `<yaml>` và `</yaml>`"
+    ],
+    "answer": 0,
+    "explanation": "Theo chuẩn Markdown YAML Frontmatter, khối metadata ở đầu file `SKILL.md` bắt buộc mở đầu bằng dòng `---` và kết thúc bằng dòng `---`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-17"
+  },
+  {
+    "id": 18,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Phát biểu nào sau đây là ĐÚNG khi so sánh cách tổ chức của một Skill với một file Markdown đơn lẻ thông thường?",
+    "options": [
+      "Mỗi Skill là một thư mục (folder) chuyên biệt chứa file `SKILL.md`, và thư mục đó còn có thể chứa thêm các tài nguyên hỗ trợ khác như scripts, tài liệu tham khảo (references) hoặc biểu mẫu (assets)",
+      "Một Skill chỉ cho phép chứa đúng 1 file văn bản và cấm tuyệt đối mọi thư mục con bên trong",
+      "Tất cả mọi Skills của bạn bắt buộc phải viết chung vào trong cùng 1 file `SKILL.md` duy nhất",
+      "Một Skill không được phép chứa các tiêu đề Markdown (`#`, `##`)"
+    ],
+    "answer": 0,
+    "explanation": "Ngay từ định nghĩa ở bài 1: 'Skills are folders of instructions and resources'. Việc mỗi skill là một thư mục riêng (`<skill-name>/SKILL.md`) cho phép nó mở rộng linh hoạt với các scripts và tài liệu đính kèm.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-18"
+  },
+  {
+    "id": 19,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Khi bạn có một quy tắc nền tảng mà bạn muốn Claude LUÔN LUÔN ghi nhớ trong mọi cuộc hội thoại (ví dụ: 'Luôn dùng TypeScript thay vì JavaScript'), bạn nên đặt nó ở đâu?",
+    "options": [
+      "Trong file `CLAUDE.md`",
+      "Trong một Skill có tên `random-skill` không có description",
+      "Trong file `.gitignore`",
+      "Trong thư mục `assets/` của một plugin"
+    ],
+    "answer": 0,
+    "explanation": "`CLAUDE.md` được nạp vào mọi cuộc hội thoại (`loads into every conversation`), nên các quy tắc toàn cục luôn luôn phải tuân thủ ở mọi lượt chat như 'Luôn dùng TypeScript' phải nằm ở `CLAUDE.md`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-19"
+  },
+  {
+    "id": 20,
+    "chapter": "Chương 1: What are skills?",
+    "question": "Tóm lại, lợi ích cốt lõi nhất của việc sử dụng Agent Skills trong Claude Code là gì?",
+    "options": [
+      "Đóng gói kiến thức chuyên môn và quy trình lặp lại một lần duy nhất để Claude tự động áp dụng đúng lúc theo nhu cầu (on-demand), giúp làm việc chuẩn xác mà vẫn giữ Context Window luôn gọn nhẹ",
+      "Giúp Claude chạy nhanh hơn bằng cách tắt hoàn toàn bước kiểm tra an toàn",
+      "Thay thế hoàn toàn nhu cầu sử dụng Git và hệ thống quản lý mã nguồn",
+      "Cho phép chạy Claude Code mà không cần kết nối mạng hay API"
+    ],
+    "answer": 0,
+    "explanation": "Agent Skills giải quyết đồng thời bài toán chuẩn hóa quy trình (không phải giải thích lại nhiều lần) và bài toán tối ưu bộ nhớ ngữ cảnh (chỉ tải on-demand khi tác vụ phù hợp).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-20"
+  },
+  {
+    "id": 21,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Khi tạo một Project Skill mới có tên là `accessibility-audit`, đường dẫn và tên file chính xác bạn cần tạo là gì?",
+    "options": [
+      "`.claude/skills/accessibility-audit/SKILL.md`",
+      "`.claude/skills/accessibility-audit.md`",
+      "`.claude/skills/accessibility-audit/skill.md`",
+      "`.claude/SKILL.md`"
+    ],
+    "answer": 0,
+    "explanation": "Mỗi skill bắt buộc phải nằm trong một thư mục con trùng tên với skill bên dưới `.claude/skills/`, và file cấu hình bắt buộc phải đặt tên chính xác là `SKILL.md` (viết hoa chữ SKILL).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-21"
+  },
+  {
+    "id": 22,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Tại sao tên thư mục chứa skill (ví dụ: `.claude/skills/accessibility-audit/`) nên trùng khớp với trường `name` trong YAML frontmatter (`name: accessibility-audit`)?",
+    "options": [
+      "Để đảm bảo tính nhất quán khi định danh skill, tạo lệnh `/accessibility-audit` và vượt qua bài kiểm tra của bộ Skills Validator mà không gặp lỗi không khớp định danh",
+      "Vì hệ điều hành không cho phép tạo file Markdown nếu tên thư mục khác với dòng đầu tiên của file",
+      "Vì Git sẽ tự động xóa thư mục nếu tên thư mục không trùng với trường `name`",
+      "Để mã hóa file `SKILL.md` bằng thuật toán AES-256"
+    ],
+    "answer": 0,
+    "explanation": "Quy chuẩn của Agent Skills yêu cầu tên thư mục (`directory name`) khớp với `name` trong frontmatter (chữ thường, chữ số và dấu gạch ngang `-`) để định danh skill và slash command thống nhất.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-22"
+  },
+  {
+    "id": 23,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Sau khi tạo xong một skill trong Claude Code, bạn có thể gõ lệnh nào trong khung chat để kiểm tra danh sách toàn bộ các skills hiện đã được nạp?",
+    "options": [
+      "`/skills`",
+      "`/list-all-files`",
+      "`/show-markdown`",
+      "`/check-ram`"
+    ],
+    "answer": 0,
+    "explanation": "Lệnh `/skills` (hoặc hỏi trực tiếp Claude 'What skills do you have available?') sẽ liệt kê tất cả các User skills, Project skills và Plugin skills đã được nạp thành công.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-23"
+  },
+  {
+    "id": 24,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Ngoài việc đặt câu hỏi tự nhiên để Claude tự động kích hoạt skill `accessibility-audit`, bạn còn có thể chủ động gọi trực tiếp skill này bằng cách nào?",
+    "options": [
+      "Gõ lệnh slash command tương ứng với tên skill: `/accessibility-audit`",
+      "Nhấn tổ hợp phím `Ctrl + Alt + Delete`",
+      "Gõ lệnh `import accessibility_audit` vào Terminal",
+      "Đổi tên file `SKILL.md` thành `RUN.md`"
+    ],
+    "answer": 0,
+    "explanation": "Mỗi skill khi được nạp vào Claude Code đều tự động đăng ký một lệnh slash command trùng với tên của nó (`/skill-name`), cho phép bạn gọi trực tiếp bất cứ lúc nào.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-24"
+  },
+  {
+    "id": 25,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Quy trình 'How Skill Matching Works' trong Claude Code diễn ra qua 2 giai đoạn như thế nào?",
+    "options": [
+      "Giai đoạn 1 (Startup): Chỉ quét và nạp `name` + `description` của mọi skills. Giai đoạn 2 (On-demand): Khi yêu cầu của bạn khớp với một `description`, Claude mới đọc toàn bộ nội dung file `SKILL.md` đó vào cuộc hội thoại",
+      "Giai đoạn 1: Đọc toàn bộ mọi file `SKILL.md` lúc khởi động. Giai đoạn 2: Xóa bớt các skills không dùng sau 5 phút",
+      "Giai đoạn 1: Gửi toàn bộ ổ cứng lên đám mây. Giai đoạn 2: Tải file thực thi về máy",
+      "Giai đoạn 1: Chạy tất cả các scripts trong `scripts/`. Giai đoạn 2: Đọc phần YAML frontmatter"
+    ],
+    "answer": 0,
+    "explanation": "Kiến trúc Two-Stage Loading giúp khởi động cực nhanh và tiết kiệm tối đa Context Window: lúc startup chỉ nạp danh mục (`name` + `description`), khi khớp yêu cầu mới đọc toàn bộ thân bài `SKILL.md`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-25"
+  },
+  {
+    "id": 26,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Giả sử bạn tạo skill `accessibility-audit` với hướng dẫn bên trong thân file `SKILL.md` cực kỳ chi tiết về WCAG, ARIA và độ tương phản màu sắc, nhưng ở phần frontmatter bạn chỉ viết `description: Frontend helper`. Điều gì sẽ xảy ra khi bạn hỏi: 'Hãy kiểm tra lỗi WCAG và ARIA cho trang web này'?",
+    "options": [
+      "Claude rất có thể sẽ KHÔNG kích hoạt skill đó, vì lúc so khớp yêu cầu nó chỉ nhìn thấy câu `description: Frontend helper` quá mơ hồ mà chưa hề đọc phần thân bài bên dưới!",
+      "Claude vẫn kích hoạt chính xác 100% vì nó luôn đọc toàn bộ phần thân bài của mọi file `SKILL.md` trước khi so khớp",
+      "Claude sẽ tự động sửa lại dòng `description` giúp bạn",
+      "Claude sẽ báo lỗi cú pháp YAML và dừng chương trình"
+    ],
+    "answer": 0,
+    "explanation": "Vì Claude KHÔNG đọc phần thân bài `SKILL.md` trước khi kích hoạt, mọi quyết định chọn skill đều phụ thuộc vào trường `description`. Nếu `description` chỉ viết mơ hồ là 'Frontend helper', Claude sẽ không biết skill này dùng cho WCAG/accessibility!",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-26"
+  },
+  {
+    "id": 27,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Khi có nhiều skills ở các phạm vi khác nhau cùng đặt trùng một tên (ví dụ cùng tên là `code-review`), Claude Code áp dụng thứ tự ưu tiên (Priority Order) từ CAO NHẤT xuống THẤP NHẤT như thế nào?",
+    "options": [
+      "1. Enterprise -> 2. Personal -> 3. Project -> 4. Plugins",
+      "1. Plugins -> 2. Project -> 3. Personal -> 4. Enterprise",
+      "1. Project -> 2. Personal -> 3. Plugins -> 4. Enterprise",
+      "1. Personal -> 2. Enterprise -> 3. Plugins -> 4. Project"
+    ],
+    "answer": 0,
+    "explanation": "Thứ tự ưu tiên chuẩn trong Claude Code từ cao xuống thấp là: **1. Enterprise** (Cài đặt quản trị toàn tổ chức) -> **2. Personal** (`~/.claude/skills/`) -> **3. Project** (`.claude/skills/` trong repo) -> **4. Plugins**.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-27"
+  },
+  {
+    "id": 28,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Tại sao cấp **Enterprise** lại được thiết kế nằm ở mức ưu tiên cao số 1 (cao hơn cả Personal và Project)?",
+    "options": [
+      "Để tổ chức/doanh nghiệp có thể áp đặt các tiêu chuẩn bảo mật, tuân thủ (compliance) và quy trình bắt buộc trên toàn công ty mà không một cài đặt cá nhân hay dự án nào có thể vô tình hoặc cố ý ghi đè",
+      "Vì các file Enterprise luôn có dung lượng nhỏ hơn các file Personal",
+      "Vì Enterprise skills không sử dụng định dạng Markdown",
+      "Chỉ để sắp xếp theo thứ tự bảng chữ cái E đứng trước P"
+    ],
+    "answer": 0,
+    "explanation": "Đặt Enterprise ở mức ưu tiên cao nhất giúp các tổ chức đảm bảo rằng những quy chuẩn bắt buộc (mandatory company standards / security checks) luôn được thực thi nhất quán mà không bị ghi đè bởi cấu hình cục bộ.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-28"
+  },
+  {
+    "id": 29,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Một lập trình viên tạo một Personal Skill tại `~/.claude/skills/code-review/SKILL.md`. Sau đó anh ta clone một dự án của nhóm về, trong dự án đó cũng có sẵn một Project Skill tại `.claude/skills/code-review/SKILL.md`. Khi anh ta yêu cầu review code trong dự án đó, điều gì sẽ xảy ra?",
+    "options": [
+      "Personal Skill `code-review` của anh ta sẽ được sử dụng và ghi đè (override/shadow) hoàn toàn Project Skill `code-review` của nhóm, vì Personal có độ ưu tiên cao hơn Project!",
+      "Project Skill của nhóm sẽ ghi đè Personal Skill của anh ta",
+      "Claude sẽ gộp nội dung của cả 2 file `SKILL.md` lại thành một file duy nhất",
+      "Claude sẽ từ chối chạy cả hai và báo lỗi trùng tên"
+    ],
+    "answer": 0,
+    "explanation": "Vì thứ tự ưu tiên là `Enterprise > Personal > Project > Plugins`, nên Personal skill sẽ thắng và che khuất (shadow) Project skill cùng tên. Đây là tình huống thực tế rất hay gặp khiến lập trình viên thắc mắc tại sao skill của nhóm không chạy.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-29"
+  },
+  {
+    "id": 30,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Cách thực hành tốt nhất (Best Practice) để tránh việc các Personal Skills của bạn vô tình ghi đè lên các Project Skills của nhóm là gì?",
+    "options": [
+      "Tránh đặt những cái tên quá chung chung như `code-review` hay `testing`; thay vào đó hãy đặt tên cụ thể theo phạm vi như `frontend-review`, `backend-review`, hoặc `personal-commit-style`",
+      "Xóa hoàn toàn thư mục `.claude/skills/` trong mọi dự án của nhóm",
+      "Luôn đặt tên tất cả các skills bằng một chữ số ngẫu nhiên",
+      "Chuyển toàn bộ nội dung của mọi skills vào trong file `.gitignore`"
+    ],
+    "answer": 0,
+    "explanation": "Đặt tên cụ thể (specific names như `frontend-review` hoặc `backend-review` thay vì `code-review`) giúp tránh xung đột tên giữa cấp Personal và cấp Project.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-30"
+  },
+  {
+    "id": 31,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Khi bạn chỉnh sửa nội dung của một file `SKILL.md` trong khi phiên làm việc của Claude Code đang mở, bạn có bắt buộc phải thoát và khởi động lại Claude Code không?",
+    "options": [
+      "Không cần — Claude Code tự động theo dõi thư mục skills và nạp lại trực tiếp (Hot-Reload) các thay đổi trong `SKILL.md` ngay trong phiên làm việc hiện tại",
+      "Bắt buộc phải khởi động lại toàn bộ hệ điều hành máy tính sau mỗi lần sửa 1 ký tự",
+      "Bắt buộc phải xóa thư mục `.claude/` và tạo lại từ đầu",
+      "Bạn phải cài đặt lại gói npm `@anthropic-ai/claude-code` mỗi khi sửa `SKILL.md`"
+    ],
+    "answer": 0,
+    "explanation": "Claude Code hỗ trợ Hot-Reload cho các file `SKILL.md` trong thư mục skills, nghĩa là bạn có thể chỉnh sửa hướng dẫn hoặc `description` và thử nghiệm lại ngay mà không cần tắt phiên chat.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-31"
+  },
+  {
+    "id": 32,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Nếu bạn vừa cài đặt hoặc cập nhật một **Plugin** mới có chứa các skills trong khi đang mở Claude Code, lệnh nào giúp bạn nạp ngay các skills từ plugin đó mà không cần khởi động lại phiên làm việc?",
+    "options": [
+      "`/reload-plugins`",
+      "`/clear`",
+      "`/compact`",
+      "`/init`"
+    ],
+    "answer": 0,
+    "explanation": "Đối với các skills được phân phối qua Plugins, lệnh `/reload-plugins` sẽ quét và làm mới lại bộ nhớ đệm của toàn bộ plugins ngay trong phiên hiện tại.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-32"
+  },
+  {
+    "id": 33,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Cơ chế khớp lệnh của Claude khi chọn Skill dựa trên nguyên lý nào?",
+    "options": [
+      "So khớp ngữ nghĩa (Semantic Matching): Claude hiểu ý nghĩa yêu cầu của bạn và đối chiếu với ý nghĩa của các câu `description`, chứ không đòi hỏi bạn phải gõ trùng khớp 100% từng chữ",
+      "So khớp chuỗi chính xác tuyệt đối (Exact String Match): bạn phải gõ không sai một dấu phẩy so với câu `description`",
+      "So khớp theo độ dài câu hỏi: câu hỏi dài sẽ kích hoạt skill có file dài nhất",
+      "So khớp theo thời gian tạo file: file `SKILL.md` nào mới tạo gần nhất sẽ luôn được chọn"
+    ],
+    "answer": 0,
+    "explanation": "Claude sử dụng khả năng hiểu ngôn ngữ tự nhiên (Semantic Matching) để khớp yêu cầu của người dùng với `description` của skill (ví dụ bạn hỏi 'Audit this form for screen readers' vẫn khớp với skill mô tả 'WCAG accessibility compliance').",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-33"
+  },
+  {
+    "id": 34,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Quy ước đặt tên chuẩn cho trường `name` của một skill và tên thư mục chứa nó là gì?",
+    "options": [
+      "Sử dụng chữ cái viết thường, chữ số và dấu gạch ngang `kebab-case` (ví dụ: `accessibility-audit`, `api-error-handling`)",
+      "Sử dụng dấu cách và ký tự đặc biệt (ví dụ: `Accessibility Audit @2026!`)",
+      "Bắt buộc viết hoa toàn bộ và có đuôi `.exe` (ví dụ: `ACCESSIBILITY.EXE`)",
+      "Bắt buộc bắt đầu bằng ký tự `$` hoặc `#`"
+    ],
+    "answer": 0,
+    "explanation": "Tên skill và tên thư mục dùng định dạng `kebab-case` (chữ thường `a-z`, số `0-9`, và dấu gạch ngang `-`, tối đa 64 ký tự) để tương thích hoàn hảo với cả hệ thống file lẫn lệnh `/slash-command`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-34"
+  },
+  {
+    "id": 35,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Khi kiểm thử một skill mới vừa viết xong, tại sao bài học khuyên bạn nên thử nghiệm bằng các câu yêu cầu tự nhiên (natural requests) trước khi dùng lệnh `/skill-name`?",
+    "options": [
+      "Vì thử nghiệm bằng câu hỏi tự nhiên giúp bạn kiểm chứng xem trường `description` của bạn đã đủ rõ ràng để Claude tự động nhận diện và kích hoạt skill hay chưa",
+      "Vì lệnh `/skill-name` bị cấm sử dụng trong 24 giờ đầu tiên sau khi tạo skill",
+      "Vì gọi bằng câu hỏi tự nhiên sẽ không tiêu tốn bất kỳ token nào của API",
+      "Vì lệnh `/skill-name` chỉ đọc được phần frontmatter chứ không đọc được phần thân bài"
+    ],
+    "answer": 0,
+    "explanation": "Nếu bạn chỉ test bằng `/skill-name`, bạn đang ép Claude nạp skill đó nên sẽ không phát hiện được việc câu `description` bị viết quá sơ sài. Test bằng câu hỏi tự nhiên giúp kiểm chứng cả cơ chế tự động khớp `description`!",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-35"
+  },
+  {
+    "id": 36,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Trong phần thân bài (Markdown body) của file `SKILL.md` cho skill `accessibility-audit`, việc quy định rõ mục `Output Format` (ví dụ: chia kết quả thành *Critical Violations*, *Warnings*, *Passed Checks*) mang lại lợi ích gì?",
+    "options": [
+      "Đảm bảo mọi lần Claude thực hiện kiểm tra đều trả về báo cáo có cấu trúc đồng nhất, dễ đọc và không bỏ sót mức độ nghiêm trọng của từng lỗi",
+      "Giúp file `SKILL.md` tự động chuyển đổi thành file ảnh `.png`",
+      "Là yêu cầu bắt buộc của trình biên dịch YAML, nếu không có mục `Output Format` thì file sẽ không nạp được",
+      "Để giảm số lượng file trong thư mục dự án"
+    ],
+    "answer": 0,
+    "explanation": "Định nghĩa rõ các bước kiểm tra (Checklist/Steps) kết hợp với cấu trúc đầu ra mong muốn (Output Format) bên trong `SKILL.md` giúp chuẩn hóa chất lượng và hình thức phản hồi của Claude ở mọi lần chạy.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-36"
+  },
+  {
+    "id": 37,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Khi một skill đã được kích hoạt và nội dung `SKILL.md` đã được nạp vào cuộc hội thoại hiện tại, bạn yêu cầu Claude thực hiện tiếp một câu hỏi nối tiếp liên quan đến cùng tác vụ đó trong cùng phiên chat. Điều gì sẽ xảy ra?",
+    "options": [
+      "Hướng dẫn của skill đã nằm sẵn trong ngữ cảnh của cuộc hội thoại đó nên Claude tiếp tục áp dụng mượt mà cho các lượt trao đổi tiếp theo",
+      "Claude sẽ quên sạch nội dung skill ngay sau 1 câu trả lời và bắt bạn phải khởi động lại máy",
+      "Claude sẽ tự động xóa file `SKILL.md` trên ổ cứng sau lần dùng đầu tiên",
+      "Claude sẽ chuyển sang chế độ chỉ trả lời bằng tiếng Pháp"
+    ],
+    "answer": 0,
+    "explanation": "Một khi skill đã được kích hoạt, nội dung chỉ dẫn của nó gia nhập vào ngữ cảnh của cuộc hội thoại hiện tại (`joins your current conversation context`), giúp toàn bộ các bước trao đổi tiếp theo trong phiên đó đều tuân thủ quy trình của skill.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-37"
+  },
+  {
+    "id": 38,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Đâu là 4 tầng phân cấp (scopes) lưu trữ và phân phối Skills trong hệ sinh thái Claude Code?",
+    "options": [
+      "Enterprise, Personal, Project, và Plugins",
+      "LocalStorage, SessionStorage, Cookies, và IndexedDB",
+      "Development, Staging, QA, và Production",
+      "CPU, GPU, RAM, và SSD"
+    ],
+    "answer": 0,
+    "explanation": "4 tầng phân cấp chính thức của Skills trong Claude Code theo đúng thứ tự ưu tiên từ cao xuống thấp là: `Enterprise`, `Personal`, `Project`, và `Plugins`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-38"
+  },
+  {
+    "id": 39,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Nếu một skill từ một **Plugin** bên thứ ba có tên trùng với một **Project Skill** trong repository của nhóm bạn (`.claude/skills/`), skill nào sẽ được ưu tiên sử dụng?",
+    "options": [
+      "Project Skill trong repository của bạn sẽ được ưu tiên sử dụng (vì `Project` có độ ưu tiên cao hơn `Plugins`)",
+      "Plugin Skill luôn ghi đè mọi Project Skill",
+      "Cả hai đều bị vô hiệu hóa",
+      "Claude sẽ tung đồng xu chọn ngẫu nhiên 50/50 ở mỗi lượt hỏi"
+    ],
+    "answer": 0,
+    "explanation": "Trong thứ tự ưu tiên `Enterprise > Personal > Project > Plugins`, cấp `Project` đứng trên cấp `Plugins` (ngoài ra các skills trong Plugin còn được gắn namespace `plugin-name:skill-name` để tránh va chạm).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-39"
+  },
+  {
+    "id": 40,
+    "chapter": "Chương 2: Creating your first skill",
+    "question": "Để xác nhận chắc chắn 100% rằng Claude Code đã nhận diện được thay đổi mới nhất trong câu `description` của một skill vừa sửa, bạn có thể hỏi Claude câu nào?",
+    "options": [
+      "Hỏi trực tiếp: 'When would you use the [skill-name] skill?' hoặc gõ `/skills` để kiểm tra thông tin mô tả mà Claude đang lưu",
+      "Hỏi: 'What is the current CPU temperature?'",
+      "Gõ lệnh `git push --force`",
+      "Gõ lệnh `npm uninstall @anthropic-ai/claude-code`"
+    ],
+    "answer": 0,
+    "explanation": "Gõ `/skills` để xem danh sách kèm mô tả, hoặc hỏi trực tiếp Claude 'When would you use the [skill-name] skill?' để xem Claude diễn giải lại điều kiện kích hoạt dựa trên `description` hiện tại.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-40"
+  },
+  {
+    "id": 41,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Ngoài hai trường cơ bản là `name` và `description`, hai trường cấu hình tùy chọn (optional fields) rất quan trọng trong YAML frontmatter của `SKILL.md` được học ở Chương 3 là gì?",
+    "options": [
+      "`allowed-tools` và `model`",
+      "`temperature` và `top_k`",
+      "`database_url` và `redis_port`",
+      "`css_theme` và `font_size`"
+    ],
+    "answer": 0,
+    "explanation": "Trong Chương 3 (Skill Metadata Fields), hai trường frontmatter tùy chọn quan trọng giúp điều khiển quyền công cụ và mô hình thực thi của skill là `allowed-tools` và `model`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-41"
+  },
+  {
+    "id": 42,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Nếu bạn bỏ trống trường `name` trong YAML frontmatter của file `.claude/skills/codebase-onboarding/SKILL.md`, Claude Code sẽ xử lý định danh của skill này như thế nào?",
+    "options": [
+      "Nó sẽ tự động lấy tên của thư mục chứa file `SKILL.md` đó (tức là `codebase-onboarding`) làm tên của skill",
+      "Nó sẽ báo lỗi nghiêm trọng và xóa ngay file `SKILL.md`",
+      "Nó sẽ đặt tên tất cả các skills không có `name` là `unnamed-skill-0`",
+      "Nó sẽ lấy câu cuối cùng trong file làm tên skill"
+    ],
+    "answer": 0,
+    "explanation": "Theo tài liệu Skill Metadata Fields: Trường `name` định danh skill của bạn; nếu bạn bỏ qua không khai báo, nó sẽ mặc định lấy theo tên thư mục cha (`Defaults to the directory name if you leave it out`), dù vậy việc ghi tường minh vẫn luôn được khuyến nghị.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-42"
+  },
+  {
+    "id": 43,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Theo nguyên tắc 'Writing Effective Descriptions' ở Chương 3, một câu `description` tốt luôn phải trả lời rõ ràng 2 câu hỏi nào?",
+    "options": [
+      "1. What does this skill do? (Skill này làm gì?) và 2. When should Claude use it? (Khi nào Claude nên dùng nó?)",
+      "1. Ai là tác giả của skill này? và 2. Skill này được viết vào ngày tháng năm nào?",
+      "1. File `SKILL.md` này nặng bao nhiêu byte? và 2. Nó dùng bảng mã UTF-8 hay ASCII?",
+      "1. Dự án này có bao nhiêu lập trình viên? và 2. Ngân sách API hàng tháng là bao nhiêu?"
+    ],
+    "answer": 0,
+    "explanation": "Một `description` hiệu quả luôn trả lời 2 câu hỏi: (1) What does this skill do? và (2) When should Claude use it? — kèm theo các từ khóa tự nhiên mà người dùng sẽ nói khi cần tác vụ đó.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-43"
+  },
+  {
+    "id": 44,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Tác dụng chính xác của trường `allowed-tools` trong YAML frontmatter (ví dụ: `allowed-tools: Read, Grep, Glob, Bash`) là gì?",
+    "options": [
+      "Cấp quyền trước (Pre-approves) cho các công cụ được liệt kê để Claude có thể tự động sử dụng chúng mà không cần dừng lại hỏi xin phép bạn ở từng bước trong khi skill đang hoạt động",
+      "Cài đặt mới các phần mềm đó từ Internet về máy tính của bạn",
+      "Xóa vĩnh viễn tất cả các công cụ khác khỏi hệ thống Claude Code",
+      "Tăng giới hạn Context Window của mô hình lên 10 triệu tokens"
+    ],
+    "answer": 0,
+    "explanation": "`allowed-tools` dùng để pre-approve (cấp quyền trước) cho các công cụ cụ thể khi skill hoạt động: Claude có thể chạy các công cụ trong danh sách này ngay lập tức mà không hiện hộp thoại hỏi quyền người dùng.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-44"
+  },
+  {
+    "id": 45,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Trong ví dụ skill `codebase-onboarding` ở Chương 3 với khai báo `allowed-tools: Read, Grep, Glob, Bash`, tại sao tác giả lại KHÔNG đưa `Write` hay `Edit` vào danh sách `allowed-tools`?",
+    "options": [
+      "Vì một skill hướng dẫn tìm hiểu codebase (onboarding) chỉ cần tự động khám phá và đọc dự án chứ không nên tự ý sửa đổi file mà không hỏi; nếu cần sửa file, Claude vẫn có thể hỏi xin phép bạn theo cơ chế thông thường",
+      "Vì trường `allowed-tools` chỉ cho phép liệt kê tối đa đúng 4 công cụ",
+      "Vì Claude Code không hề có công cụ nào tên là `Write` hay `Edit`",
+      "Vì đưa `Edit` vào sẽ làm lỗi cú pháp YAML"
+    ],
+    "answer": 0,
+    "explanation": "Chỉ cấp quyền trước (`allowed-tools`) cho đúng những công cụ mà skill thực sự cần chạy tự động (như `Read, Grep, Glob, Bash` để khám phá repo) giúp quy trình vừa trơn tru không bị gián đoạn, vừa đảm bảo an toàn vì Claude không thể tự ý sửa code nếu chưa hỏi phép bạn!",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-45"
+  },
+  {
+    "id": 46,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Điều gì sẽ xảy ra nếu bạn bỏ qua hoàn toàn (omit) trường `allowed-tools` trong file `SKILL.md`?",
+    "options": [
+      "Không có công cụ bổ sung nào được cấp quyền trước; các công cụ chỉ đọc (`Read`, `Grep`, `Glob`) vẫn chạy bình thường, còn các công cụ như `Bash`, `Write`, `Edit` sẽ hiển thị hộp thoại hỏi xin phép bạn như mặc định",
+      "Claude sẽ bị cấm sử dụng toàn bộ mọi công cụ, kể cả công cụ đọc file `Read`",
+      "Claude sẽ tự động được cấp quyền tối cao chạy mọi lệnh xóa ổ cứng mà không cần hỏi",
+      "Skill đó sẽ bị coi là lỗi cú pháp và không thể nạp vào Claude Code"
+    ],
+    "answer": 0,
+    "explanation": "Nếu bạn không khai báo `allowed-tools`, Claude Code đơn giản giữ nguyên mô hình phân quyền tiêu chuẩn (normal permission behavior): các công cụ đọc chạy bình thường và các công cụ thực thi/ghi file sẽ hỏi xin phép bạn trước khi chạy.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-46"
+  },
+  {
+    "id": 47,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Trường `model` (tùy chọn) trong YAML frontmatter của `SKILL.md` (ví dụ: `model: sonnet` hoặc `model: opus`) dùng để làm gì?",
+    "options": [
+      "Để chỉ định mô hình Claude nào sẽ được sử dụng khi thực thi skill đó (nếu bỏ trống, skill sẽ dùng mô hình hiện tại của phiên làm việc)",
+      "Để đặt tên cho bảng cơ sở dữ liệu ORM trong dự án Python",
+      "Để chọn giao diện hiển thị 3D cho Terminal",
+      "Để bắt buộc người dùng phải mua gói thuê bao mới"
+    ],
+    "answer": 0,
+    "explanation": "Trường `model` (optional) cho phép bạn chỉ định rõ mô hình phù hợp với độ phức tạp của skill đó (ví dụ dùng `opus` cho skill thiết kế kiến trúc phức tạp hoặc `sonnet`/`haiku` cho các tác vụ nhanh).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-47"
+  },
+  {
+    "id": 48,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Nguyên lý **Progressive Disclosure** (Tiết lộ tăng dần) trong việc thiết kế Multi-File Skills giải quyết vấn đề gì?",
+    "options": [
+      "Giữ cho file `SKILL.md` chính luôn ngắn gọn và chỉ nạp thêm các tài liệu tham khảo chi tiết (`references/`), biểu mẫu (`assets/`) hoặc chạy script (`scripts/`) khi tác vụ cụ thể thực sự cần tới, giúp bảo vệ Context Window tối đa",
+      "Mã hóa dần dần từng dòng văn bản để người dùng không đọc được file `SKILL.md`",
+      "Chia một file `SKILL.md` thành 100 skills nhỏ rời rạc ở 100 thư mục khác nhau",
+      "Tự động xóa bớt các câu trả lời cũ của Claude sau mỗi 30 giây"
+    ],
+    "answer": 0,
+    "explanation": "Skills chia sẻ chung Context Window với lịch sử trò chuyện và code của bạn. Progressive Disclosure giúp `SKILL.md` đóng vai trò chỉ dẫn cốt lõi và chỉ bảo Claude đọc các file tham khảo chuyên sâu khi câu hỏi chạm tới phần đó.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-48"
+  },
+  {
+    "id": 49,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Theo khuyến nghị tốt nhất (Rule of thumb) trong Chương 3, bạn nên giữ cho file `SKILL.md` chính có độ dài dưới bao nhiêu dòng?",
+    "options": [
+      "Dưới 500 dòng (các tài liệu tham khảo dài hơn nên được tách sang các file riêng trong thư mục con và liên kết từ `SKILL.md`)",
+      "Dưới 10 dòng",
+      "Từ 5.000 đến 10.000 dòng",
+      "Không bao giờ được vượt quá 50 ký tự"
+    ],
+    "answer": 0,
+    "explanation": "Quy tắc thực hành chuẩn trong Chương 3: 'A good rule of thumb: keep SKILL.md under 500 lines and move detailed reference material into separate files.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-49"
+  },
+  {
+    "id": 50,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Ba thư mục con tiêu chuẩn thường được sử dụng để tổ chức tài nguyên bên trong một Multi-File Skill (như ví dụ `codebase-onboarding`) là gì?",
+    "options": [
+      "`scripts/`, `references/`, và `assets/`",
+      "`bin/`, `obj/`, và `node_modules/`",
+      "`controllers/`, `views/`, và `models/`",
+      "`public/`, `private/`, và `protected/`"
+    ],
+    "answer": 0,
+    "explanation": "Ba thư mục con tiêu chuẩn trong cấu trúc một Multi-File Skill là: `scripts/` (chứa code thực thi), `references/` (chứa tài liệu tham khảo đọc khi cần), và `assets/` (chứa templates, mẫu cấu hình tĩnh).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-50"
+  },
+  {
+    "id": 51,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Trong cấu trúc một Multi-File Skill, thư mục `references/` dùng để lưu trữ loại nội dung gì?",
+    "options": [
+      "Các tài liệu hướng dẫn chuyên sâu, đặc tả API, hoặc quy tắc chi tiết theo từng mảng mà Claude chỉ cần đọc thêm khi yêu cầu của người dùng liên quan trực tiếp đến mảng đó",
+      "Các file thực thi nhị phân `.exe` và `.dll`",
+      "Lịch sử toàn bộ các commit của Git từ lúc khởi tạo dự án",
+      "Danh sách mật khẩu và khóa API của người dùng"
+    ],
+    "answer": 0,
+    "explanation": "`references/` chứa các tài liệu chuyên sâu (như `api-patterns.md`, `testing-guide.md`). Trong `SKILL.md`, bạn hướng dẫn Claude: 'Nếu người dùng hỏi về API, hãy đọc `references/api-patterns.md`'.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-51"
+  },
+  {
+    "id": 52,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Trong cấu trúc một Multi-File Skill, thư mục `assets/` phù hợp nhất để chứa những gì?",
+    "options": [
+      "Các biểu mẫu định dạng tĩnh (templates), khung văn bản mẫu (report templates), hoặc file cấu hình mẫu (boilerplate configs) để Claude dựa vào khi tạo sản phẩm đầu ra",
+      "Toàn bộ cơ sở dữ liệu sản phẩm của công ty",
+      "Trình thông dịch Python hoàn chỉnh",
+      "Các file tạm sinh ra trong lúc chạy unit test"
+    ],
+    "answer": 0,
+    "explanation": "`assets/` dùng để lưu trữ các templates, mẫu báo cáo, hoặc đoạn cấu hình khung (ví dụ `onboarding-template.md`, `pr-template.md`) giúp đầu ra của skill luôn chuẩn xác theo mẫu.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-52"
+  },
+  {
+    "id": 53,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Làm thế nào để Claude biết khi nào cần đọc một file nằm trong thư mục `references/` của một Multi-File Skill?",
+    "options": [
+      "Bạn viết chỉ dẫn rõ ràng ngay trong file `SKILL.md` chính để liên kết tới các file phụ và nói rõ khi nào nên đọc từng file (ví dụ: 'Read `references/api-patterns.md` only when someone asks about API design')",
+      "Claude tự động đọc ngấu nghiến tất cả mọi file trong `references/` ngay từ lúc khởi động máy",
+      "Người dùng bắt buộc phải gõ đường dẫn tuyệt đối của từng file trong `references/` ở mọi câu hỏi",
+      "Claude không bao giờ đọc được các file nằm trong thư mục con của một skill"
+    ],
+    "answer": 0,
+    "explanation": "Trong `SKILL.md`, bạn đóng vai trò người chỉ đường: liệt kê đường dẫn tới các file trong `references/` kèm điều kiện cụ thể khi nào Claude nên mở và đọc file đó.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-53"
+  },
+  {
+    "id": 54,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Tại sao việc sử dụng các file thực thi trong thư mục `scripts/` (Using Scripts Efficiently) lại giúp tiết kiệm Context Window một cách vượt trội?",
+    "options": [
+      "Vì khi Claude chạy một script, toàn bộ mã nguồn của script đó KHÔNG bị nạp vào Context Window — chỉ có kết quả đầu ra (output) do script in ra mới đi vào ngữ cảnh cuộc hội thoại!",
+      "Vì các file trong `scripts/` tự động nén toàn bộ lịch sử trò chuyện xuống còn 1 byte",
+      "Vì khi chạy script thì Claude không cần đọc file `SKILL.md` nữa",
+      "Vì script tự động xóa file `CLAUDE.md` của dự án"
+    ],
+    "answer": 0,
+    "explanation": "Điểm cốt lõi trong mục 'Using Scripts Efficiently': Scripts thực thi mà không nạp mã nguồn của chúng vào Context Window (`Scripts execute without loading their source into context — only the output enters the conversation`).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-54"
+  },
+  {
+    "id": 55,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Ngoài việc tiết kiệm Context Window, việc đóng gói các thao tác kiểm tra phức tạp thành một script Python hoặc Bash trong `scripts/` còn mang lại ưu điểm kỹ thuật lớn nào so với việc để Claude tự làm thủ công bằng suy luận ngôn ngữ?",
+    "options": [
+      "Đảm bảo tính chính xác tất định (deterministic consistency): script luôn thực hiện các phép đếm, phân tích cú pháp hoặc kiểm tra dữ liệu với kết quả chính xác 100% ở mọi lần chạy mà không sợ mô hình đếm nhầm",
+      "Giúp máy tính không cần cài đặt Python hay Bash vẫn chạy được code",
+      "Cho phép bỏ qua hoàn toàn việc viết file `SKILL.md`",
+      "Tự động nâng cấp gói cước tài khoản Anthropic của bạn"
+    ],
+    "answer": 0,
+    "explanation": "Các tác vụ như phân tích cây phụ thuộc, kiểm tra định dạng dữ liệu, hoặc tổng hợp chỉ số nếu chạy bằng script trong `scripts/` sẽ vừa nhanh, vừa tất định (không bị sai số do LLM tự nhẩm tính), lại vừa chỉ trả về kết quả tóm tắt gọn nhẹ.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-55"
+  },
+  {
+    "id": 56,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Nếu một skill có hướng dẫn Claude chạy một script Python nằm trong `scripts/analyze.py`, bạn nên thêm công cụ nào vào trường `allowed-tools` trong `SKILL.md` để quá trình chạy diễn ra tự động mượt mà?",
+    "options": [
+      "`Bash` (hoặc giới hạn cụ thể như `Bash(python:*)`)",
+      "Chỉ cần `Glob` là đủ để chạy file Python",
+      "Chỉ cần `WebSearch`",
+      "`TodoWrite`"
+    ],
+    "answer": 0,
+    "explanation": "Để thực thi một script dòng lệnh trong `scripts/`, Claude cần gọi công cụ `Bash`. Việc đưa `Bash` vào `allowed-tools` giúp Claude chạy script đó ngay mà không phải dừng lại chờ người dùng bấm xác nhận.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-56"
+  },
+  {
+    "id": 57,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Hãy so sánh hai câu `description` sau:\n(A) `description: Helps with codebase onboarding.`\n(B) `description: Helps new developers understand the project architecture, key directories, and setup steps. Use when someone asks for a repo overview, project structure, or how to get started.`\nTại sao câu (B) lại tốt hơn câu (A) rất nhiều?",
+    "options": [
+      "Vì câu (B) trả lời rõ cả *What* (giải thích kiến trúc, thư mục, cài đặt) lẫn *When* (khi người dùng hỏi về repo overview, project structure, how to get started), bao phủ nhiều cách diễn đạt tự nhiên của người dùng",
+      "Vì câu (B) có chứa chữ 'Use' là từ khóa bắt buộc của trình biên dịch YAML",
+      "Vì câu (A) bị lỗi chính tả tiếng Anh",
+      "Vì Claude chỉ kích hoạt những skill có `description` dài trên 500 từ"
+    ],
+    "answer": 0,
+    "explanation": "Người dùng hiếm khi gõ đúng cụm từ 'codebase onboarding'; họ thường hỏi 'How is this project structured?' hoặc 'Give me an overview of the repo'. Câu (B) nêu rõ cả chức năng lẫn các tình huống kích hoạt thực tế đó.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-57"
+  },
+  {
+    "id": 58,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Khi bạn cấu hình `allowed-tools: Read, Grep, Glob, Bash` trong một skill, quyền cấp trước (pre-approval) cho công cụ `Bash` đó có hiệu lực trong phạm vi thời gian nào?",
+    "options": [
+      "Chỉ có hiệu lực trong khi skill đó đang hoạt động (active) để xử lý tác vụ tương ứng",
+      "Thay đổi vĩnh viễn cài đặt toàn cục của hệ điều hành cho mọi phần mềm khác trên máy",
+      "Vô hiệu hóa vĩnh viễn mọi hộp thoại bảo mật của tất cả các dự án khác dù không dùng skill này",
+      "Chỉ có hiệu lực trong đúng 1 mili-giây đầu tiên khi mở máy"
+    ],
+    "answer": 0,
+    "explanation": "Theo tài liệu Chương 3: '`allowed-tools` — Pre-approves listed tools so Claude can use them without asking permission while the skill is active.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-58"
+  },
+  {
+    "id": 59,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Giả sử bạn có một skill hỗ trợ viết tài liệu cho 4 ngôn ngữ lập trình khác nhau (Python, TypeScript, Go, Rust), mỗi ngôn ngữ có một bộ quy tắc dài 300 dòng. Cách thiết kế theo đúng chuẩn **Progressive Disclosure** là gì?",
+    "options": [
+      "Giữ `SKILL.md` ngắn gọn chứa quy trình chung, đặt 4 bộ quy tắc vào `references/python.md`, `references/typescript.md`, `references/go.md`, `references/rust.md` và chỉ dẫn Claude chỉ đọc đúng file của ngôn ngữ đang làm việc",
+      "Gộp cả 4 bộ quy tắc thành một file `SKILL.md` dài 1.300 dòng để lúc nào cũng nạp hết cả 4 ngôn ngữ",
+      "Chép cả 1.300 dòng đó vào file `CLAUDE.md` ở gốc dự án",
+      "Xóa bớt 3 ngôn ngữ và chỉ giữ lại 1 ngôn ngữ duy nhất"
+    ],
+    "answer": 0,
+    "explanation": "Tách riêng từng ngôn ngữ vào `references/` giúp khi làm việc với file Python, Claude chỉ nạp `SKILL.md` + `references/python.md`, tiết kiệm được 900 dòng không liên quan của TypeScript, Go và Rust!",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-59"
+  },
+  {
+    "id": 60,
+    "chapter": "Chương 3: Configuration and multi-file skills",
+    "question": "Khi viết đường dẫn tham chiếu tới các file trong `references/`, `scripts/`, hoặc `assets/` bên trong nội dung `SKILL.md`, bạn nên viết đường dẫn như thế nào?",
+    "options": [
+      "Viết đường dẫn tương đối tính từ thư mục của skill và luôn dùng dấu gạch chéo xuôi `/` (ví dụ: `references/api-patterns.md` hoặc `scripts/validate.py`)",
+      "Luôn dùng dấu gạch chéo ngược `\\` kiểu Windows (ví dụ: `references\\api-patterns.md`)",
+      "Chỉ viết tên file trống không mà không ghi tên thư mục con",
+      "Bắt buộc phải trỏ tới một địa chỉ URL trên Internet (`https://...`)"
+    ],
+    "answer": 0,
+    "explanation": "Luôn dùng đường dẫn tương đối rõ ràng kèm tên thư mục con (`references/...`, `scripts/...`, `assets/...`) với dấu gạch chéo xuôi `/` (forward slashes) để hoạt động ổn định trên mọi hệ điều hành.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-60"
+  },
+  {
+    "id": 61,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Năm tính năng tùy chỉnh và mở rộng cốt lõi của Claude Code được đặt lên bàn cân so sánh trong Chương 4 là những tính năng nào?",
+    "options": [
+      "`CLAUDE.md`, `Skills`, `Subagents`, `Hooks`, và `MCP Servers`",
+      "`HTML`, `CSS`, `JavaScript`, `Python`, và `SQL`",
+      "`Docker`, `Kubernetes`, `Terraform`, `Ansible`, và `Jenkins`",
+      "`Temperature`, `Top-P`, `Top-K`, `Max-Tokens`, và `Stop-Sequences`"
+    ],
+    "answer": 0,
+    "explanation": "Chương 4 phân tích sự khác biệt và cách phối hợp giữa 5 tính năng mở rộng trong hệ sinh thái Claude Code: `CLAUDE.md`, `Skills`, `Subagents`, `Hooks`, và `MCP Servers`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-61"
+  },
+  {
+    "id": 62,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Sự khác biệt cốt lõi nhất giữa **`CLAUDE.md`** và **`Skills`** là gì?",
+    "options": [
+      "`CLAUDE.md` luôn tải vào mọi cuộc hội thoại và dành cho các tiêu chuẩn dự án luôn bật (always-on project standards), trong khi `Skills` tải theo nhu cầu (on-demand) và dành cho kiến thức chuyên môn theo từng tác vụ cụ thể",
+      "`CLAUDE.md` chỉ tải khi có lỗi xảy ra, còn `Skills` luôn tải vào mọi cuộc hội thoại",
+      "`CLAUDE.md` chạy trong ngữ cảnh cô lập, còn `Skills` chạy trên máy chủ bên ngoài",
+      "`CLAUDE.md` dùng để kết nối cơ sở dữ liệu, còn `Skills` dùng để tự động format file khi lưu"
+    ],
+    "answer": 0,
+    "explanation": "`CLAUDE.md` = Always-on project standards (nạp vào mọi cuộc hội thoại). `Skills` = Task-specific expertise that loads on demand (chỉ nạp khi nhiệm vụ yêu cầu).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-62"
+  },
+  {
+    "id": 63,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Nội dung nào sau đây phù hợp nhất để đặt vào **`CLAUDE.md`** thay vì đặt vào một Skill?",
+    "options": [
+      "Các quy tắc toàn cục luôn áp dụng cho mọi công việc trong dự án: 'Luôn dùng TypeScript strict mode', 'Không bao giờ sửa trực tiếp thư mục database migrations', và lệnh chạy test của repo",
+      "Một quy trình dài 350 dòng hướng dẫn từng bước cách kiểm tra lỗi khả năng truy cập WCAG cho các trang giao diện",
+      "Một mẫu kịch bản phỏng vấn người dùng dài 5 trang chỉ dùng mỗi quý một lần",
+      "Một bộ hướng dẫn chi tiết cách viết changelog khi phát hành phiên bản mới"
+    ],
+    "answer": 0,
+    "explanation": "Những quy chuẩn toàn dự án luôn phải tuân thủ ở mọi câu hỏi (`Project-wide standards that always apply`, `Conventions like never modify the database schema`, `Framework preferences and coding style`) thuộc về `CLAUDE.md`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-63"
+  },
+  {
+    "id": 64,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Sự khác biệt kiến trúc quan trọng nhất giữa **Skills** và **Subagents** là gì?",
+    "options": [
+      "Skills nạp kiến thức bổ sung vào NGAY TRONG cuộc hội thoại hiện tại của bạn (current conversation context), trong khi Subagents chạy trong một NGỮ CẢNH THỰC THI CÔ LẬP riêng biệt (isolated execution context) và chỉ trả kết quả về",
+      "Skills chạy trên một máy ảo riêng biệt, còn Subagents luôn chạy chung trong cùng cửa sổ ngữ cảnh chính",
+      "Skills là công cụ sự kiện tự động khi lưu file, còn Subagents là file cấu hình tĩnh luôn bật",
+      "Skills không thể chứa hướng dẫn Markdown, còn Subagents chỉ chứa được duy nhất 1 dòng lệnh"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 4 (Skills vs Subagents): Khi một skill kích hoạt, chỉ dẫn của nó gia nhập ngay vào cuộc hội thoại hiện tại (`instructions join the existing context`). Ngược lại, Subagents chạy trong một ngữ cảnh tách biệt (`run in a separate, isolated context`), nhận việc, tự làm độc lập rồi chỉ trả kết quả cuối cùng về.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-64"
+  },
+  {
+    "id": 65,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Khi nào bạn nên chọn sử dụng một **Subagent** thay vì một **Skill**?",
+    "options": [
+      "Khi bạn muốn ủy thác (delegate) một khối lượng công việc lớn (như rà soát hàng chục file để tìm lỗi) sang một ngữ cảnh thực thi tách biệt có giới hạn công cụ riêng, giúp giữ cho cuộc hội thoại chính không bị tràn ngập bởi log trung gian",
+      "Khi bạn muốn bổ sung kiến thức chuyên môn vào ngay cuộc hội thoại hiện tại để cùng trao đổi qua lại với Claude xuyên suốt phiên làm việc",
+      "Khi bạn muốn tự động chạy lệnh `prettier --write` mỗi khi một file được lưu xuống đĩa",
+      "Khi bạn muốn định nghĩa lệnh `npm run build` mặc định cho toàn dự án"
+    ],
+    "answer": 0,
+    "explanation": "Ba lý do chuẩn để chọn Subagents: (1) Bạn muốn ủy thác công việc sang một ngữ cảnh thực thi riêng biệt, (2) Bạn cần giới hạn quyền công cụ khác với cuộc hội thoại chính, và (3) Bạn muốn cô lập quá trình tìm kiếm/xử lý dài dòng khỏi ngữ cảnh chính.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-65"
+  },
+  {
+    "id": 66,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Khi nào bạn nên chọn sử dụng một **Skill** thay vì một **Subagent**?",
+    "options": [
+      "Khi bạn muốn nâng cao kiến thức chuyên môn của Claude cho tác vụ đang làm ngay trong cuộc hội thoại hiện tại và muốn kiến thức đó được áp dụng xuyên suốt quá trình trò chuyện với bạn",
+      "Khi bạn cần chạy một tác vụ ngầm hoàn toàn tách biệt không được phép nhìn thấy lịch sử chat hiện tại",
+      "Khi bạn cần chặn cứng một lệnh Bash nguy hiểm bằng mã thoát hệ điều hành",
+      "Khi bạn muốn kết nối giao thức mạng tới máy chủ Slack bên ngoài"
+    ],
+    "answer": 0,
+    "explanation": "Dùng Skills khi bạn muốn bổ sung tri thức/quy trình cho chính Claude trong cuộc hội thoại hiện tại (`enhance Claude's knowledge for the current task` và `the expertise applies throughout a conversation`).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-66"
+  },
+  {
+    "id": 67,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Sự khác biệt cốt lõi giữa **Skills** và **Hooks** là gì?",
+    "options": [
+      "Hooks được kích hoạt tự động bởi SỰ KIỆN hệ thống (event-driven: chạy mỗi khi lưu file hoặc trước/sau khi gọi tool), còn Skills được kích hoạt bởi YÊU CẦU ngôn ngữ (request-driven: dựa trên điều bạn đang hỏi)",
+      "Hooks được kích hoạt bởi yêu cầu ngôn ngữ tự nhiên, còn Skills luôn tự chạy mỗi khi bạn bấm Ctrl+S lưu file",
+      "Hooks là một phần của file `CLAUDE.md`, còn Skills là một phần của file `.gitignore`",
+      "Hooks chỉ dùng để viết văn bản sáng tạo, còn Skills chỉ dùng để chặn lệnh terminal"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 4 (Skills vs Hooks): 'Hooks fire on events. A hook might run a linter every time Claude saves a file, or validate input before certain tool calls. They're event-driven. Skills are request-driven. They activate based on what you're asking.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-67"
+  },
+  {
+    "id": 68,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Bạn muốn đảm bảo rằng **mỗi khi Claude lưu hoặc chỉnh sửa bất kỳ file Python nào**, công cụ định dạng code `ruff format` sẽ tự động chạy ngay lập tức mà không phụ thuộc vào việc Claude có nhớ hay không. Bạn phải sử dụng tính năng nào?",
+    "options": [
+      "**Hooks** (vì đây là thao tác tự động tất định phải chạy trên mỗi sự kiện lưu/sửa file)",
+      "**Skills**",
+      "**Subagents**",
+      "**MCP Servers**"
+    ],
+    "answer": 0,
+    "explanation": "Các thao tác bắt buộc phải chạy trên mọi sự kiện lưu file (`Operations that should run on every file save`), kiểm tra trước khi gọi tool (`Validation before specific tool calls`) hoặc tạo side-effects tự động là sở trường tuyệt đối của **Hooks**.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-68"
+  },
+  {
+    "id": 69,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Bạn muốn chặn tuyệt đối không cho phép bất kỳ lời gọi công cụ nào của Claude sửa đổi file `.env` hoặc chạy lệnh `rm -rf` bằng một kịch bản kiểm tra đầu vào trước khi công cụ thực thi. Tính năng nào đảm nhiệm việc này?",
+    "options": [
+      "**Hooks** (cụ thể là Pre-tool validation hook)",
+      "**Skills**",
+      "**CLAUDE.md**",
+      "**Slash Commands**"
+    ],
+    "answer": 0,
+    "explanation": "Hooks cho phép thực hiện `Validation before specific tool calls` một cách tất định ở tầng hệ thống trước khi công cụ được phép chạy.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-69"
+  },
+  {
+    "id": 70,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Vai trò của **MCP Servers** (Model Context Protocol) khác với **Skills** như thế nào?",
+    "options": [
+      "MCP Servers cung cấp các CÔNG CỤ và KẾT NỐI tới hệ thống bên ngoài (như GitHub, Slack, cơ sở dữ liệu, trình duyệt), trong khi Skills cung cấp KIẾN THỨC và QUY TRÌNH dạy Claude cách giải quyết tác vụ (bao gồm cả cách dùng các công cụ đó)",
+      "MCP Servers là file văn bản nằm trong `.claude/skills/`, còn Skills là máy chủ chạy qua giao thức HTTP",
+      "MCP Servers và Skills là hai tên gọi khác nhau của cùng một file `SKILL.md`",
+      "MCP Servers chỉ hoạt động khi đã xóa toàn bộ Skills trong dự án"
+    ],
+    "answer": 0,
+    "explanation": "MCP Servers cung cấp `external tools and integrations` (một danh mục kiến trúc hoàn toàn khác với Skills). Ví dụ: MCP Server cung cấp công cụ truy vấn database, còn Skill dạy Claude quy trình chuẩn của công ty khi phân tích dữ liệu từ database đó.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-70"
+  },
+  {
+    "id": 71,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Hãy ghép nối 5 tính năng của Claude Code với đúng vai trò đặc trưng của chúng (Putting It All Together):\n(1) `CLAUDE.md`\n(2) `Skills`\n(3) `Hooks`\n(4) `Subagents`\n(5) `MCP Servers`",
+    "options": [
+      "(1) Always-on project standards; (2) Task-specific expertise on demand; (3) Automated operations triggered by events; (4) Isolated execution contexts for delegated work; (5) External tools and integrations",
+      "(1) External tools; (2) Event-driven automation; (3) Always-on standards; (4) On-demand expertise; (5) Isolated contexts",
+      "(1) Isolated contexts; (2) Always-on standards; (3) External tools; (4) Event-driven automation; (5) On-demand expertise",
+      "(1) Event-driven automation; (2) Isolated contexts; (3) On-demand expertise; (4) Always-on standards; (5) External tools"
+    ],
+    "answer": 0,
+    "explanation": "Đây chính là 5 định nghĩa chuẩn xác trong mục 'Putting It All Together' của Chương 4: `CLAUDE.md` (luôn bật), `Skills` (chuyên môn theo nhu cầu), `Hooks` (tự động hóa theo sự kiện), `Subagents` (ngữ cảnh cô lập cho việc ủy thác), và `MCP Servers` (công cụ & tích hợp bên ngoài).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-71"
+  },
+  {
+    "id": 72,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Lời khuyên kiến trúc cốt lõi của Anthropic trong mục 'Putting It All Together' khi xây dựng môi trường làm việc với Claude Code là gì?",
+    "options": [
+      "Đừng cố ép mọi thứ vào trong các Skills khi một tính năng khác phù hợp hơn — hãy kết hợp nhiều tính năng (`CLAUDE.md`, `Skills`, `Hooks`, `Subagents`, `MCP`) để chúng bổ trợ lẫn nhau",
+      "Hãy xóa bỏ hoàn toàn `CLAUDE.md`, `Hooks` và `Subagents` rồi chuyển tất cả mọi thứ vào một file `SKILL.md` duy nhất",
+      "Không bao giờ được sử dụng `Skills` và `Hooks` trong cùng một repository",
+      "Chỉ được phép chọn duy nhất 1 trong 5 tính năng cho mỗi dự án"
+    ],
+    "answer": 0,
+    "explanation": "Nguyên văn bài học: 'Each handles its own specialty. Don't force everything into skills when another option fits better — and you can use multiple features together.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-72"
+  },
+  {
+    "id": 73,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Trong một quy trình phát triển tính năng hoàn chỉnh của đội ngũ, cách kết hợp cả 5 tính năng nào sau đây là hợp lý và hiệu quả nhất?",
+    "options": [
+      "`CLAUDE.md` quy định chuẩn code chung -> `MCP Server` lấy thông tin ticket từ Jira/GitHub -> `Skill` hướng dẫn quy trình thiết kế API theo chuẩn nhóm -> `Hook` tự động chạy linter mỗi khi lưu file -> `Subagent` chạy kiểm tra bảo mật độc lập trước khi mở PR",
+      "Dùng `Hook` để viết tài liệu thiết kế -> Dùng `Skill` để kết nối mạng tới máy chủ Jira -> Dùng `MCP Server` để định nghĩa chuẩn TypeScript luôn bật",
+      "Nhét toàn bộ ticket Jira, cấu hình linter và 10.000 dòng tài liệu vào chung file `CLAUDE.md`",
+      "Tạo 500 `Subagents` cho từng dòng code"
+    ],
+    "answer": 0,
+    "explanation": "Mỗi thành phần phát huy đúng sở trường: `CLAUDE.md` giữ quy tắc nền tảng, `MCP` kết nối dịch vụ ngoài, `Skill` nạp quy trình chuyên môn theo nhu cầu, `Hook` tự động hóa kiểm tra khi lưu file, và `Subagent` xử lý tác vụ rà soát độc lập.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-73"
+  },
+  {
+    "id": 74,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Nếu bạn mở file `CLAUDE.md` của dự án ra và thấy trong đó có một đoạn hướng dẫn dài 250 dòng chỉ để dạy Claude cách viết kịch bản video quảng cáo (một việc mà cả tháng bạn mới làm 1 lần), bạn nên tối ưu lại như thế nào?",
+    "options": [
+      "Tách đoạn hướng dẫn 250 dòng đó ra khỏi `CLAUDE.md` và chuyển thành một **Skill** (`.claude/skills/video-script/SKILL.md`) để nó chỉ nạp vào Context Window khi bạn thực sự yêu cầu viết kịch bản video",
+      "Chuyển đoạn hướng dẫn 250 dòng đó vào một **Hook** chạy mỗi khi lưu file code",
+      "Nhân đôi đoạn hướng dẫn đó lên thành 500 dòng trong `CLAUDE.md`",
+      "Xóa hoàn toàn khả năng viết kịch bản của Claude"
+    ],
+    "answer": 0,
+    "explanation": "Đây chính là câu hỏi trong phần 'Lesson reflection' cuối Chương 4: Kiểm tra `CLAUDE.md` và chuyển những hướng dẫn chuyên biệt theo tác vụ (chỉ cần đôi lúc) sang **Skills** để tiết kiệm Context Window cho mọi phiên làm việc khác.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-74"
+  },
+  {
+    "id": 75,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Tính năng nào trong số các tính năng sau đây chạy **bên ngoài** quá trình suy luận của mô hình AI và được kích hoạt hoàn toàn tự động bởi các sự kiện vòng đời công cụ/tập tin?",
+    "options": [
+      "Hooks",
+      "Skills",
+      "CLAUDE.md",
+      "System Prompts"
+    ],
+    "answer": 0,
+    "explanation": "Hooks là các lệnh/scripts được kích hoạt bởi sự kiện hệ thống (event-driven), thực thi độc lập mỗi khi sự kiện (như lưu file hoặc gọi tool) diễn ra.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-75"
+  },
+  {
+    "id": 76,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Khi bạn cần Claude sử dụng một bộ công cụ bị giới hạn nghiêm ngặt (ví dụ: CHỈ được phép dùng `Read` và `Grep`, tuyệt đối không được dùng `Edit`, `Write` hay `Bash`) để thực hiện một tác vụ kiểm toán độc lập, bạn nên đóng gói tác vụ đó vào đâu?",
+    "options": [
+      "Một **Subagent** (vì Subagents chạy trong ngữ cảnh cô lập và cho phép giới hạn cứng danh sách `tools` mà subagent đó được phép truy cập)",
+      "Một dòng ghi chú ở cuối file `README.md`",
+      "Một lệnh `git status`",
+      "Một biến môi trường `PATH`"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 4 (Use subagents when): 'You need different tool access than the main conversation' và 'You want isolation between delegated work and your main context'.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-76"
+  },
+  {
+    "id": 77,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Điểm giống nhau giữa **`CLAUDE.md`** và **`Skills`** là gì?",
+    "options": [
+      "Cả hai đều là các file văn bản định dạng Markdown cung cấp hướng dẫn, quy tắc và kiến thức vào trong chính cuộc hội thoại hiện tại của bạn với Claude",
+      "Cả hai đều luôn được nạp 100% nội dung ngay từ lúc khởi động mọi phiên chat",
+      "Cả hai đều tạo ra các tiến trình Subagent chạy trong cửa sổ ngữ cảnh cô lập riêng biệt",
+      "Cả hai đều chỉ chạy khi có sự kiện lưu file trên ổ cứng"
+    ],
+    "answer": 0,
+    "explanation": "Cả `CLAUDE.md` và `Skills` đều cung cấp chỉ dẫn Markdown vào ngữ cảnh hội thoại chính của bạn; điểm khác biệt của chúng là `CLAUDE.md` luôn nạp (always-on), còn `Skills` nạp theo nhu cầu (on-demand).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-77"
+  },
+  {
+    "id": 78,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Một kỹ sư muốn Claude tuân thủ quy trình 6 bước khi thiết kế schema cho GraphQL, trong đó có các nguyên tắc đặt tên trường, phân trang và xử lý lỗi để Claude suy luận và tư vấn trong lúc thảo luận thiết kế. Kỹ sư đó nên dùng **Skill** hay **Hook**?",
+    "options": [
+      "Dùng **Skill**, vì đây là kiến thức chuyên môn và hướng dẫn định hướng quá trình suy luận (guidelines that affect Claude's reasoning) được kích hoạt khi người dùng hỏi về thiết kế GraphQL",
+      "Dùng **Hook**, vì Hook thông minh hơn Claude trong việc thảo luận thiết kế GraphQL",
+      "Không thể dùng cả hai",
+      "Phải viết một trình điều khiển phần cứng mới"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 4 (Skills vs Hooks): Dùng Skills cho 'Knowledge that informs how Claude handles requests' và 'Guidelines that affect Claude's reasoning' (kích hoạt dựa trên yêu cầu của người dùng).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-78"
+  },
+  {
+    "id": 79,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Nếu một tác vụ đòi hỏi Claude phải gọi API trực tiếp tới hệ thống quản lý lỗi Sentry để tải stack trace mới nhất về phân tích theo quy trình chuẩn của nhóm, sự kết hợp đúng đắn ở đây là gì?",
+    "options": [
+      "Dùng **MCP Server** (`sentry-mcp`) để cung cấp công cụ kết nối lấy dữ liệu từ Sentry, kết hợp với một **Skill** hướng dẫn quy trình chuẩn của nhóm khi phân tích nguyên nhân gốc rễ (Root Cause Analysis)",
+      "Chỉ dùng một file `SKILL.md` thuần túy không có công cụ nào vẫn tự tải được dữ liệu mạng nội bộ của Sentry",
+      "Chỉ dùng `CLAUDE.md` để thay thế cho máy chủ Sentry",
+      "Tắt hết các công cụ và yêu cầu người dùng tự chép tay từng dòng log"
+    ],
+    "answer": 0,
+    "explanation": "MCP Server giải quyết bài toán kết nối và lấy dữ liệu từ dịch vụ bên ngoài (`External tools and integrations`), còn Skill dạy Claude quy trình chuyên môn để phân tích dữ liệu đó theo chuẩn của đội ngũ.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-79"
+  },
+  {
+    "id": 80,
+    "chapter": "Chương 4: Skills vs. other Claude Code features",
+    "question": "Nhìn tổng thể 4 tính năng nội bộ (`CLAUDE.md`, `Skills`, `Subagents`, `Hooks`), đâu là tiêu chí phân loại nhanh và chính xác nhất để chọn đúng công cụ?",
+    "options": [
+      "Luôn áp dụng mọi lúc -> `CLAUDE.md`; Chuyên môn nạp theo yêu cầu trong chat chính -> `Skills`; Ủy thác việc nặng sang ngữ cảnh cô lập -> `Subagents`; Chạy tự động theo sự kiện tool/lưu file -> `Hooks`",
+      "File ngắn -> `Hooks`; File vừa -> `Subagents`; File dài -> `CLAUDE.md`; File rỗng -> `Skills`",
+      "Dùng ban ngày -> `CLAUDE.md`; Dùng ban đêm -> `Skills`",
+      "Code frontend -> `Skills`; Code backend -> `Subagents`; Cơ sở dữ liệu -> `Hooks`"
+    ],
+    "answer": 0,
+    "explanation": "Bốn câu hỏi phân loại nhanh: (1) Luôn đúng mọi lúc? -> `CLAUDE.md`. (2) Kiến thức chuyên môn theo tác vụ trong hội thoại hiện tại? -> `Skills`. (3) Ủy thác sang ngữ cảnh cô lập? -> `Subagents`. (4) Tự động hóa theo sự kiện hệ thống/tool? -> `Hooks`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-80"
+  },
+  {
+    "id": 81,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Ba phương thức chính để chia sẻ và triển khai Agent Skills cho đồng nghiệp, đội nhóm và toàn doanh nghiệp được giới thiệu trong Chương 5 là gì?",
+    "options": [
+      "1. Committing Skills to Your Repository (Git), 2. Distributing Skills Through Plugins, và 3. Enterprise Deployment Through Managed Settings",
+      "1. Gửi qua USB, 2. In ra giấy A4, và 3. Đọc qua điện thoại",
+      "1. Lưu vào LocalStorage trình duyệt, 2. Gửi qua Bluetooth, và 3. Lưu trong thùng rác hệ thống",
+      "1. Đưa vào file `.env`, 2. Đưa vào `node_modules`, và 3. Đưa vào `__pycache__`"
+    ],
+    "answer": 0,
+    "explanation": "Chương 5 trình bày 3 cấp độ phân phối skills từ nhỏ đến lớn: (1) Commit trực tiếp `.claude/skills/` vào Git repo của dự án, (2) Đóng gói thành Plugins để chia sẻ qua nhiều repos, và (3) Triển khai toàn doanh nghiệp qua Enterprise Managed Settings.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-81"
+  },
+  {
+    "id": 82,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Cách đơn giản và trực tiếp nhất để chia sẻ các skills đặc thù của một dự án với toàn bộ các thành viên cùng làm việc trên repository đó là gì?",
+    "options": [
+      "Đặt các skills đó vào thư mục `.claude/skills/` của dự án và commit chúng lên hệ thống quản lý phiên bản Git",
+      "Yêu cầu từng thành viên tự gõ lại toàn bộ file `SKILL.md` vào thư mục cá nhân của họ mỗi sáng",
+      "Tạo một máy chủ cơ sở dữ liệu Oracle riêng chỉ để lưu 1 file Markdown",
+      "Nén file `SKILL.md` thành file ảnh `.jpg` rồi gửi qua nhóm chat"
+    ],
+    "answer": 0,
+    "explanation": "Đặt skills trong `.claude/skills/` và commit vào Git đảm bảo bất kỳ ai clone hoặc pull repository về đều tự động có ngay phiên bản skills mới nhất mà không cần bước cài đặt thủ công nào.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-82"
+  },
+  {
+    "id": 83,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Phương pháp 'Committing Skills to Your Repository' (`.claude/skills/` trong Git) mang lại lợi ích đặc biệt nào về mặt quản lý vòng đời phần mềm?",
+    "options": [
+      "Các skills phát triển đồng bộ cùng với codebase qua từng nhánh và từng commit — khi API hoặc quy chuẩn của dự án thay đổi trong một PR, bạn có thể cập nhật luôn file `SKILL.md` ngay trong cùng PR đó!",
+      "Giúp file `SKILL.md` không bao giờ có thể bị chỉnh sửa bởi bất kỳ ai nữa",
+      "Làm cho dung lượng repository giảm xuống bằng 0",
+      "Tự động dịch toàn bộ code của dự án sang ngôn ngữ Assembly"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 5: 'The skills evolve with your codebase — update a skill in a PR and the whole team gets the improvement on their next pull.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-83"
+  },
+  {
+    "id": 84,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Khi nào bạn nên chuyển từ việc commit `.claude/skills/` trong từng repo sang việc đóng gói skills thành một **Plugin** ('Distributing Skills Through Plugins')?",
+    "options": [
+      "Khi bạn muốn chia sẻ và tái sử dụng cùng một bộ skills xuyên suốt NHIỀU repositories hoặc nhiều đội nhóm khác nhau mà không muốn phải copy-paste và cập nhật thủ công ở từng repo",
+      "Khi bạn chỉ có duy nhất 1 dự án nhỏ làm một mình trên máy cá nhân",
+      "Khi bạn muốn xóa bỏ hoàn toàn phần YAML frontmatter của `SKILL.md`",
+      "Khi bạn không muốn bất kỳ ai khác sử dụng được skill của mình"
+    ],
+    "answer": 0,
+    "explanation": "Plugins là giải pháp chuẩn để đóng gói các tùy chỉnh của Claude Code (bao gồm skills, hooks, subagents, MCP servers) thành một gói duy nhất có thể cài đặt và cập nhật tập trung trên nhiều dự án khác nhau.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-84"
+  },
+  {
+    "id": 85,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Khi bạn đóng gói các skills bên trong một **Plugin**, cấu trúc thư mục chứa skills bên trong plugin đó phải được đặt như thế nào?",
+    "options": [
+      "Tạo thư mục `skills/` ở gốc của plugin với cấu trúc thư mục con giống hệt như `.claude/skills/` (tức là `skills/<skill-name>/SKILL.md`)",
+      "Đặt tất cả các file `SKILL.md` nằm ẩn bên trong thư mục `.claude-plugin/skills/`",
+      "Đổi tên tất cả các file `SKILL.md` thành `PLUGIN.md`",
+      "Nén tất cả các file `SKILL.md` thành một file `.zip` có mật khẩu"
+    ],
+    "answer": 0,
+    "explanation": "Bên trong một Plugin, bạn tạo thư mục `skills/` ngay ở cấp gốc của plugin (ngang hàng với thư mục `.claude-plugin/`), và mỗi skill bên trong vẫn là một thư mục con chứa file `SKILL.md` (`skills/<skill-name>/SKILL.md`).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-85"
+  },
+  {
+    "id": 86,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Để ngăn chặn việc các skills từ nhiều Plugins khác nhau bị trùng tên với nhau hoặc trùng với Project Skills của bạn, Claude Code sử dụng cơ chế gì cho các Plugin Skills?",
+    "options": [
+      "Gắn không gian tên (Namespacing) theo định dạng `<plugin-name>:<skill-name>`",
+      "Đổi tên mọi plugin skills thành một dãy số MD5 ngẫu nhiên dài 32 ký tự",
+      "Chỉ cho phép cài đặt tối đa 1 plugin duy nhất trên mỗi máy tính",
+      "Tự động xóa tất cả các Project Skills ngay khi người dùng cài đặt một Plugin"
+    ],
+    "answer": 0,
+    "explanation": "Plugin skills được gắn tiền tố namespace theo tên plugin (`plugin-name:skill-name`), đồng thời nằm ở mức ưu tiên thấp nhất trong 4 cấp (`Enterprise > Personal > Project > Plugins`) nên không bao giờ gây xung đột làm hỏng skills hiện có của bạn.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-86"
+  },
+  {
+    "id": 87,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Trong triển khai cấp doanh nghiệp ('Enterprise Deployment Through Managed Settings'), quản trị viên hệ thống (Administrators) triển khai các skills bắt buộc trên quy mô toàn tổ chức bằng cách nào?",
+    "options": [
+      "Đặt các skills vào thư mục `.claude/skills/` bên trong đường dẫn Managed Settings cấp hệ thống (ví dụ `/Library/Application Support/ClaudeCode/.claude/skills/` trên macOS) và phân phối qua công cụ quản lý thiết bị của công ty",
+      "Gửi email đính kèm file `.txt` và nhờ từng nhân viên tự chép vào màn hình Desktop",
+      "Sửa trực tiếp mã nguồn nhân hệ điều hành Linux của từng máy chủ",
+      "Đăng tải mật khẩu công ty lên một kho GitHub công khai"
+    ],
+    "answer": 0,
+    "explanation": "Administrators có thể đẩy các skills và cấu hình xuống thư mục Managed Settings cấp hệ thống trên máy trạm của nhân viên. Các Enterprise skills này tự động áp dụng cho mọi người dùng và không thể bị ghi đè bởi Personal hay Project skills.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-87"
+  },
+  {
+    "id": 88,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Trong file cấu hình quản trị doanh nghiệp (`managed-settings.json`), trường nào được dùng để tự động kích hoạt các plugins bắt buộc của tổ chức và trường nào dùng để khai báo nguồn chợ plugin nội bộ?",
+    "options": [
+      "`enabledPlugins` (để bật plugins) và `extraKnownMarketplaces` / `strictKnownMarketplaces` (để khai báo và kiểm soát nguồn marketplaces được phép dùng)",
+      "`autoRunAll` và `disableSecurity`",
+      "` personalSkillsPath` và `deleteProjectSkills`",
+      "`npmDependencies` và `pipPackages`"
+    ],
+    "answer": 0,
+    "explanation": "Như minh họa trong Chương 5, `managed-settings.json` sử dụng `enabledPlugins` để bật sẵn các plugins của tổ chức và `extraKnownMarketplaces` (hoặc `strictKnownMarketplaces` để khóa cứng chỉ cho phép cài từ nguồn nội bộ đã duyệt).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-88"
+  },
+  {
+    "id": 89,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Trường `strictKnownMarketplaces` trong `managed-settings.json` giúp ích gì cho các doanh nghiệp có yêu cầu bảo mật nghiêm ngặt?",
+    "options": [
+      "Khóa danh sách các nguồn cài đặt plugin (marketplaces) vào đúng những kho lưu trữ mà quản trị viên đã phê duyệt — ngăn chặn việc người dùng tự ý thêm các nguồn plugin bên ngoài chưa được kiểm định",
+      "Tắt hoàn toàn khả năng đọc file Markdown của Claude Code",
+      "Bắt buộc mọi plugin phải được viết bằng ngôn ngữ C++",
+      "Tự động xóa lịch sử Git của dự án mỗi tuần"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 5: '`strictKnownMarketplaces` locks down which plugin marketplaces users can install plugins from to an admin-defined allowlist — set it to an empty array to block all marketplace additions, or list only approved internal sources.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-89"
+  },
+  {
+    "id": 90,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Điều gì rất dễ gây bất ngờ cho các lập trình viên khi làm việc kết hợp giữa **Skills** và **Subagents**?",
+    "options": [
+      "Subagents KHÔNG tự động kế thừa (do not inherit) các skills đã được tải trong cuộc hội thoại chính, vì mỗi subagent chạy trong một ngữ cảnh thực thi cô lập hoàn toàn mới!",
+      "Subagents tự động xóa tất cả các skills trong thư mục `.claude/skills/` mỗi khi chúng khởi chạy",
+      "Subagents luôn tự động tải toàn bộ 100% mọi skills có trên ổ cứng mà không cần cấu hình",
+      "Không thể sử dụng Subagents trong một dự án có thư mục `.claude/skills/`"
+    ],
+    "answer": 0,
+    "explanation": "Điểm nhấn cực kỳ quan trọng ở mục 'Skills and Subagents' (Chương 5): 'When Claude delegates work to a subagent, that subagent runs in its own isolated context — it does not inherit the skills loaded in your main conversation.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-90"
+  },
+  {
+    "id": 91,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Các Subagents tích hợp sẵn mặc định của Claude Code (Built-in subagents như `Explore` và `Plan`) có quyền truy cập vào các Skills của bạn hay không?",
+    "options": [
+      "KHÔNG — Các built-in subagents như `Explore` và `Plan` hoàn toàn không có quyền truy cập vào các skills của bạn",
+      "CÓ — `Explore` và `Plan` luôn tự động nạp mọi Personal Skills và Project Skills",
+      "Chỉ có `Explore` dùng được skills, còn `Plan` thì không",
+      "Chỉ có `Plan` dùng được skills, còn `Explore` thì không"
+    ],
+    "answer": 0,
+    "explanation": "Theo quy tắc số 1 trong mục 'Skills and Subagents' (Chương 5): 'Built-in subagents (`Explore`, `Plan`) do not have access to your skills.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-91"
+  },
+  {
+    "id": 92,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Làm thế nào để bạn cấp quyền cho một **Custom Subagent** (được định nghĩa trong `.claude/agents/`) sử dụng được các skills cụ thể?",
+    "options": [
+      "Thêm trường `skills:` vào phần YAML frontmatter của file định nghĩa Custom Subagent đó và liệt kê rõ tên các skills cần nạp",
+      "Thêm trường `subagents:` vào trong file `CLAUDE.md`",
+      "Đổi tên thư mục `.claude/skills/` thành `.claude/subagent-skills/`",
+      "Không có cách nào để Custom Subagent sử dụng được skills"
+    ],
+    "answer": 0,
+    "explanation": "Theo quy tắc số 2 trong mục 'Skills and Subagents': 'Custom subagents (defined in `.claude/agents/`) can use skills, but only if you explicitly list them in the subagent's `skills` frontmatter field.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-92"
+  },
+  {
+    "id": 93,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Cơ chế nạp các skills được liệt kê trong trường `skills:` của một **Custom Subagent** khác với cơ chế nạp skills trong phiên hội thoại chính như thế nào?",
+    "options": [
+      "Trong Custom Subagent, toàn bộ nội dung của các skills được liệt kê trong trường `skills:` sẽ được NẠP SẴN ĐẦY ĐỦ (preloaded in full) ngay khi subagent khởi tạo, thay vì chờ khớp mô tả on-demand như ở phiên chat chính!",
+      "Trong Custom Subagent, chỉ có tên của skill được nạp còn phần thân bài không bao giờ được đọc",
+      "Custom Subagent phải hỏi xin phép người dùng qua hộp thoại pop-up trước khi đọc từng dòng trong `SKILL.md`",
+      "Hoàn toàn giống hệt nhau, không có gì khác biệt"
+    ],
+    "answer": 0,
+    "explanation": "Theo quy tắc số 3 trong mục 'Skills and Subagents' (Chương 5): 'Preloaded skills are injected in full when the subagent starts, not on demand like in the main conversation.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-93"
+  },
+  {
+    "id": 94,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Các file định nghĩa **Custom Subagents** của một dự án được lưu trữ ở thư mục nào?",
+    "options": [
+      "`.claude/agents/` (ví dụ: `.claude/agents/security-reviewer.md`)",
+      "`.claude/skills/subagents/`",
+      "`.git/agents/`",
+      "`~/.bashrc/agents/`"
+    ],
+    "answer": 0,
+    "explanation": "Custom subagents được định nghĩa bằng các file Markdown trong thư mục `.claude/agents/` (hoặc `~/.claude/agents/` cho cấp cá nhân).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-94"
+  },
+  {
+    "id": 95,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Xét đoạn YAML frontmatter sau đây của một Custom Subagent tại `.claude/agents/api-developer.md`:\n```yaml\n---\nname: api-developer\ndescription: Builds and tests REST API endpoints.\ntools: Read, Grep, Glob, Edit, Write, Bash\nmodel: sonnet\nskills:\n  - api-conventions\n  - error-handling-patterns\n---\n```\nĐiều gì xảy ra ngay tại thời điểm Claude ủy thác công việc cho subagent `api-developer` này?",
+    "options": [
+      "Một subagent cô lập mới được khởi tạo với mô hình `sonnet`, có quyền dùng 6 tools đã liệt kê, và toàn bộ nội dung của 2 skills `api-conventions` cùng `error-handling-patterns` được nạp sẵn (preloaded) vào ngữ cảnh của nó ngay lập tức",
+      "Subagent này sẽ báo lỗi vì trường `skills` không được phép chứa nhiều hơn 1 skill",
+      "Hai skills `api-conventions` và `error-handling-patterns` sẽ bị xóa khỏi phiên hội thoại chính",
+      "Subagent này chỉ được phép đọc file chứ không được phép sửa file"
+    ],
+    "answer": 0,
+    "explanation": "Khi `api-developer` khởi chạy, nó nhận bộ công cụ trong `tools:`, chạy trên model `sonnet`, và nạp sẵn toàn bộ nội dung của cả 2 skills nằm trong danh sách `skills:` vào context riêng của nó.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-95"
+  },
+  {
+    "id": 96,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Tại sao bạn nên chỉ liệt kê những skills THỰC SỰ CẦN THIẾT trong trường `skills:` của một Custom Subagent thay vì liệt kê toàn bộ 50 skills có trong dự án?",
+    "options": [
+      "Vì mọi skills được liệt kê trong trường `skills:` của một subagent đều được nạp sẵn toàn bộ nội dung (preloaded in full) ngay khi subagent khởi chạy; nếu liệt kê quá nhiều sẽ làm phình to và lãng phí Context Window của subagent đó",
+      "Vì YAML chỉ cho phép một mảng có tối đa 2 phần tử",
+      "Vì liệt kê quá 3 skills sẽ làm hỏng ổ cứng",
+      "Vì subagent không hỗ trợ đọc file Markdown dài quá 10 dòng"
+    ],
+    "answer": 0,
+    "explanation": "Vì skills trong Custom Subagent được preload toàn bộ ngay lúc spawn (không phải on-demand), bạn chỉ nên gắn đúng những skills chuyên môn mà subagent đó thực sự cần cho vai trò của nó.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-96"
+  },
+  {
+    "id": 97,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Nếu trong phiên làm việc chính, bạn nói với Claude: 'Hãy dùng subagent `Explore` để kiểm tra mã nguồn theo đúng checklist trong skill `security-audit` của chúng ta', điều gì sẽ xảy ra?",
+    "options": [
+      "Subagent tích hợp sẵn `Explore` không có quyền truy cập vào các custom skills; muốn một subagent tự động có sẵn checklist `security-audit`, bạn phải tạo một Custom Subagent trong `.claude/agents/` có khai báo `skills: [security-audit]`",
+      "Subagent `Explore` sẽ tự động đọc mọi file trong `~/.claude/skills/` mà không cần cấu hình",
+      "Claude Code sẽ tự động biến `Explore` thành một MCP Server",
+      "Lệnh này sẽ tự động xóa skill `security-audit`"
+    ],
+    "answer": 0,
+    "explanation": "Đây là bẫy rất phổ biến trong thực tế và trong bài thi: Built-in subagents (`Explore`, `Plan`) không có quyền truy cập vào skills. Bạn phải tạo Custom Subagent trong `.claude/agents/` và khai báo tường minh trường `skills:`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-97"
+  },
+  {
+    "id": 98,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Đối với các quy chuẩn bắt buộc như tiêu chuẩn bảo mật (security requirements), kiểm định tuân thủ pháp lý (compliance validations) và quy tắc kiểm toán toàn công ty, phương thức triển khai nào trong 3 phương thức ở Chương 5 là phù hợp nhất?",
+    "options": [
+      "Enterprise Deployment Through Managed Settings (Triển khai cấp doanh nghiệp qua cài đặt quản trị)",
+      "Nhờ từng lập trình viên tự tạo Personal Skill trong `~/.claude/skills/` nếu họ thích",
+      "Chỉ đặt trong 1 nhánh Git thử nghiệm cá nhân",
+      "Viết ra bảng trắng ở văn phòng"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 5: 'Enterprise deployment is ideal for enforcing mandatory standards, security requirements, or compliance validations, while leaving developers free to add project- or personal-level customizations for their day-to-day workflows.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-98"
+  },
+  {
+    "id": 99,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "Khi lệnh `/skills` được chạy trong Claude Code, màn hình kết quả cung cấp thông tin hữu ích nào bên cạnh tên và đường dẫn của từng skill?",
+    "options": [
+      "Phân loại nhóm skill (ví dụ `User skills`, `Project skills`, `Plugin skills`) kèm theo ước lượng số lượng tokens của phần mô tả (`~N description tokens`)",
+      "Mật khẩu quản trị viên của máy chủ Anthropic",
+      "Danh sách toàn bộ các trang web bạn đã truy cập trên Chrome trong 30 ngày qua",
+      "Biểu đồ giá cổ phiếu theo thời gian thực"
+    ],
+    "answer": 0,
+    "explanation": "Như thấy rõ trên ảnh chụp màn hình bài học Chương 5, lệnh `/skills` hiển thị rõ nhóm skill (ví dụ `User skills (~/.claude/skills)`) cùng tên mỗi skill và số lượng description tokens (`~91 description tokens`, `~79 description tokens`...).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-99"
+  },
+  {
+    "id": 100,
+    "chapter": "Chương 5: Sharing skills",
+    "question": "So sánh 3 phương thức chia sẻ skills ở Chương 5 theo đúng phạm vi áp dụng từ hẹp (1 repo) -> trung bình (nhiều repos) -> rộng nhất (toàn tổ chức):",
+    "options": [
+      "1. Commit vào `.claude/skills/` trong Git repo (cho 1 dự án) -> 2. Đóng gói thành Plugin (tái sử dụng qua nhiều repos) -> 3. Triển khai qua Enterprise Managed Settings (áp dụng bắt buộc toàn tổ chức)",
+      "1. Enterprise Managed Settings -> 2. Commit vào Git repo -> 3. Personal `~/.claude/skills/`",
+      "1. Plugins -> 2. Personal Skills -> 3. Git repo",
+      "Cả 3 phương thức đều có phạm vi hệt nhau"
+    ],
+    "answer": 0,
+    "explanation": "Lộ trình mở rộng phạm vi chia sẻ chuẩn xác: Bắt đầu bằng việc commit `.claude/skills/` vào Git cho nhóm trong cùng 1 repo -> Đóng gói thành Plugin khi cần chia sẻ qua nhiều repos -> Dùng Enterprise Managed Settings khi cần triển khai chuẩn bắt buộc trên toàn công ty.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-100"
+  },
+  {
+    "id": 101,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Khi một Skill gặp sự cố không hoạt động như mong đợi, bước ĐẦU TIÊN mà bài học Chương 6 khuyên bạn nên thực hiện trước khi tốn thời gian tìm lỗi ở những nơi khác là gì?",
+    "options": [
+      "Chạy công cụ **Skills Validator** tích hợp sẵn bằng lệnh `claude plugin validate ~/.claude/skills` (hoặc `claude plugin validate .claude/skills`) để tự động kiểm tra lỗi cấu trúc và cú pháp",
+      "Gỡ cài đặt toàn bộ hệ điều hành và cài lại từ đầu",
+      "Xóa toàn bộ thư mục `.git` của dự án",
+      "Viết lại toàn bộ ứng dụng sang ngôn ngữ khác"
+    ],
+    "answer": 0,
+    "explanation": "Key takeaway số 1 của Chương 6: 'Start with the skills validator tool (`claude plugin validate`) — it catches structural and syntax problems before you spend time debugging other things.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-101"
+  },
+  {
+    "id": 102,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Câu lệnh chính xác để chạy bộ kiểm định Skills Validator cho các **Project Skills** trong thư mục dự án hiện tại của bạn là gì?",
+    "options": [
+      "`claude plugin validate .claude/skills`",
+      "`claude check-all-files --now`",
+      "`npm test .claude/skills`",
+      "`git validate skills`"
+    ],
+    "answer": 0,
+    "explanation": "Theo mục 'Use the Skills Validator' (Chương 6): Bạn chạy `claude plugin validate ~/.claude/skills` cho Personal skills hoặc `claude plugin validate .claude/skills` cho Project skills (yêu cầu Claude Code v2.1.72 trở lên).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-102"
+  },
+  {
+    "id": 103,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Nếu một skill đã xuất hiện trong danh sách `/skills` nhưng lại **không bao giờ tự động kích hoạt** khi bạn đặt câu hỏi ('Skill Doesn't Trigger'), nguyên nhân gần như luôn luôn nằm ở đâu?",
+    "options": [
+      "Nằm ở trường `description` trong YAML frontmatter (mô tả quá mơ hồ, quá chung chung, hoặc thiếu các từ khóa/cụm từ phản ánh đúng cách bạn thực sự diễn đạt yêu cầu)",
+      "Do máy tính của bạn chưa cắm chuột rời",
+      "Do phần thân bài bên dưới của `SKILL.md` có sử dụng danh sách đánh số 1, 2, 3",
+      "Do bạn đang sử dụng phông chữ моноspace trong Terminal"
+    ],
+    "answer": 0,
+    "explanation": "Key takeaway số 2 của Chương 6: 'If a skill doesn't trigger, the issue is almost always the description — add trigger phrases that match how you actually phrase requests.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-103"
+  },
+  {
+    "id": 104,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Đâu là 4 bước khắc phục chuẩn được nêu trong mục 'Skill Doesn't Trigger' (Chương 6) khi câu `description` của bạn không kích hoạt được skill?",
+    "options": [
+      "1. Nêu rõ skill làm gì VÀ khi nào nên dùng; 2. Thêm các cụm từ kích hoạt (trigger phrases) thực tế; 3. Tránh các từ mơ hồ như 'helps with code'; 4. Hỏi trực tiếp Claude 'When would you use the [skill-name] skill?' để kiểm tra",
+      "1. Xóa trường `description`; 2. Đổi tên file thành `skill.txt`; 3. Tắt mạng Internet; 4. Chạy `git reset --hard`",
+      "1. Viết `description` bằng chữ in hoa toàn bộ; 2. Lặp lại tên skill 50 lần; 3. Xóa phần thân bài; 4. Thêm 100 dấu chấm than",
+      "1. Chuyển file sang thư mục `/tmp`; 2. Đổi đuôi file thành `.json`; 3. Mã hóa Base64; 4. Khởi động lại router"
+    ],
+    "answer": 0,
+    "explanation": "Bốn gạch đầu dòng chính xác trong mục 'Skill Doesn't Trigger' của Chương 6: (1) Clearly state what the skill does and when to use it; (2) Add trigger phrases matching how you phrase requests; (3) Avoid vague words like 'helps with code', 'formatting helper', 'make things nicer'; (4) Ask Claude directly when it would use your skill.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-104"
+  },
+  {
+    "id": 105,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Nếu một skill **hoàn toàn không nạp được** ('Skill Doesn't Load' — không hề xuất hiện khi bạn gõ lệnh `/skills`), đâu là 3 nguyên nhân phổ biến nhất bạn cần kiểm tra?",
+    "options": [
+      "1. Bạn chưa đứng đúng thư mục gốc của dự án khi chạy `claude`; 2. File không được đặt trong thư mục con riêng của từng skill (`.claude/skills/<skill-name>/`); 3. Tên file không viết hoa chính xác là `SKILL.md` (hoặc bị lỗi cú pháp YAML frontmatter)",
+      "1. Nội dung phần thân bài ngắn dưới 400 dòng; 2. Bạn chưa khai báo trường `model`; 3. Bạn chưa tạo thư mục `assets/`",
+      "1. Bạn chưa commit file lên GitHub; 2. Bạn chưa cài đặt Docker; 3. Bạn chưa mua tên miền riêng",
+      "1. Câu `description` dài quá 15 từ; 2. File có chứa tiêu đề `#`; 3. Bạn đang dùng hệ điều hành macOS"
+    ],
+    "answer": 0,
+    "explanation": "Theo mục 'Skill Doesn't Load' (Chương 6): Khi skill không xuất hiện trong `/skills`, hãy kiểm tra: (1) Đã mở `claude` từ đúng thư mục dự án chứa `.claude/skills/` chưa, (2) Mỗi skill có nằm trong thư mục con riêng và tên file có chính xác là `SKILL.md` (chữ hoa) không, và (3) YAML frontmatter có hợp lệ không (không dùng Tab, đóng mở đúng `---`).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-105"
+  },
+  {
+    "id": 106,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Một lập trình viên tạo file `.claude/skills/SKILL.md` (đặt trực tiếp ngay trong thư mục `skills/` mà không có thư mục con mang tên skill) và một file khác tại `.claude/skills/my-helper/skill.md` (viết thường tên file). Tại sao cả hai skill này đều không được nạp vào Claude Code?",
+    "options": [
+      "Vì mỗi skill BẮT BUỘC phải nằm trong một thư mục con riêng của nó (`.claude/skills/<skill-name>/`) VÀ tên file bắt buộc phải viết hoa chính xác là `SKILL.md`",
+      "Vì Claude Code không cho phép đặt tên thư mục có dấu gạch ngang `-`",
+      "Vì một dự án chỉ được phép có tối đa 1 skill duy nhất",
+      "Vì hai file đó chưa được nén thành định dạng `.tar.gz`"
+    ],
+    "answer": 0,
+    "explanation": "Cả hai đều vi phạm quy tắc cấu trúc bắt buộc: File không được nằm trực tiếp ở `.claude/skills/SKILL.md` (phải có thư mục con `<skill-name>/`), và tên file phải chính xác tuyệt đối là `SKILL.md` (không được viết thường `skill.md`).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-106"
+  },
+  {
+    "id": 107,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Trong khối YAML frontmatter của `SKILL.md`, lỗi cú pháp định dạng văn bản nào sau đây thường xuyên làm quá trình nạp skill bị thất bại?",
+    "options": [
+      "Sử dụng ký tự **Tab** để thụt lề thay vì dùng dấu cách (**Spaces**), hoặc quên dòng `---` đóng khối frontmatter",
+      "Viết câu `description` dài hơn 5 từ",
+      "Sử dụng chữ cái viết thường trong trường `name`",
+      "Để một dòng trống giữa dòng `---` đóng frontmatter và tiêu đề Markdown đầu tiên"
+    ],
+    "answer": 0,
+    "explanation": "Đặc tả YAML cấm sử dụng ký tự Tab để thụt dòng (indentation must use spaces, not tabs) và bắt buộc khối frontmatter phải mở/đóng bằng `---`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-107"
+  },
+  {
+    "id": 108,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Khi một skill không nạp được và bạn muốn xem chi tiết log quá trình khởi động cũng như thông báo lỗi parse YAML của Claude Code, bạn nên chạy lệnh nào trên Terminal?",
+    "options": [
+      "`claude --debug`",
+      "`claude --silent`",
+      "`claude --no-skills`",
+      "`claude --version`"
+    ],
+    "answer": 0,
+    "explanation": "Chạy `claude --debug` sẽ bật chế độ Debug mode hiển thị đầy đủ các lỗi nạp file (`loading errors`); bạn chỉ cần tìm kiếm tên skill của mình trong log debug để thấy ngay dòng thông báo chỉ rõ nguyên nhân lỗi.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-108"
+  },
+  {
+    "id": 109,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Khi bạn gặp sự cố **'Wrong Skill Gets Used'** (Claude kích hoạt nhầm Skill A trong khi bạn muốn nó dùng Skill B), nguyên nhân và cách khắc phục chuẩn là gì?",
+    "options": [
+      "Nguyên nhân là do `description` của hai skills bị chồng chéo ngữ nghĩa; cách khắc phục là làm cho mỗi `description` thật cụ thể về phạm vi của nó và nêu rõ khi nào KHÔNG nên dùng nó",
+      "Nguyên nhân là do tên của Skill A đứng trước Skill B trong bảng chữ cái; cách khắc phục là đổi tên Skill B thành `aaaa-skill`",
+      "Nguyên nhân là do bộ nhớ RAM bị đầy; cách khắc phục là tắt bớt trình duyệt web",
+      "Nguyên nhân là do bạn dùng `allowed-tools`; cách khắc phục là xóa `allowed-tools`"
+    ],
+    "answer": 0,
+    "explanation": "Key takeaway số 4 của Chương 6: 'When the wrong skill triggers, your descriptions overlap — make each one more specific about what it does and doesn't cover.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-109"
+  },
+  {
+    "id": 110,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Giả sử công ty của bạn đã triển khai một **Enterprise Skill** có tên là `code-review`, và đồng thời bạn cũng tự tạo một **Personal Skill** tại `~/.claude/skills/code-review/SKILL.md` với cùng tên `code-review`. Khi bạn gọi skill này, chuyện gì sẽ xảy ra và bạn có những lựa chọn nào để xử lý xung đột ('Skill Priority Conflicts')?",
+    "options": [
+      "Enterprise Skill `code-review` sẽ luôn thắng và che khuất (shadow) Personal Skill của bạn vì `Enterprise > Personal > Project > Plugins`. Để dùng được cả hai, bạn cần đổi tên Personal Skill của mình thành một tên riêng biệt (ví dụ `my-code-review`)",
+      "Personal Skill của bạn sẽ ghi đè Enterprise Skill của công ty",
+      "Claude Code sẽ tự động xóa Enterprise Skill của công ty khỏi máy tính của bạn",
+      "Cả hai skills sẽ bị khóa và không ai dùng được"
+    ],
+    "answer": 0,
+    "explanation": "Theo mục 'Skill Priority Conflicts' (Chương 6): Khi hai skills ở các cấp khác nhau trùng tên, cấp cao hơn trong tháp `Enterprise > Personal > Project > Plugins` sẽ thắng. Nếu có Enterprise `code-review`, nó luôn đè lên Personal `code-review`. Giải pháp là đổi tên skill của bạn thành tên cụ thể hơn (như `my-code-review`).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-110"
+  },
+  {
+    "id": 111,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Nếu bạn đã cài đặt một Plugin nhưng các skills bên trong Plugin đó lại không xuất hiện ('Plugin Skills Not Appearing'), hai thao tác kiểm tra đầu tiên bạn nên thực hiện trong Claude Code là gì?",
+    "options": [
+      "1. Gõ `/plugin` để kiểm tra xem plugin đó đã được cài đặt và bật (enabled) chưa; 2. Chạy lệnh `/reload-plugins` để làm mới danh sách plugins của phiên hiện tại",
+      "1. Gõ `/clear` để xóa lịch sử chat; 2. Gõ `/init` để tạo lại `CLAUDE.md`",
+      "1. Xóa thư mục `~/.claude/`; 2. Cài lại Node.js",
+      "1. Đổi tên máy tính; 2. Khởi động lại modem mạng"
+    ],
+    "answer": 0,
+    "explanation": "Theo mục 'Plugin Skills Not Appearing' (Chương 6): Đầu tiên hãy chạy `/plugin` để chắc chắn plugin đã được cài và enabled; nếu bạn vừa mới cài đặt trong phiên hiện tại, hãy chạy `/reload-plugins`.",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-111"
+  },
+  {
+    "id": 112,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Nếu một Plugin đã được bật (enabled) và bạn đã chạy `/reload-plugins` nhưng các skills của nó vẫn không xuất hiện, lỗi cấu trúc thư mục phổ biến nhất mà tác giả Plugin thường mắc phải là gì?",
+    "options": [
+      "Đặt nhầm thư mục `skills/` vào BÊN TRONG thư mục `.claude-plugin/` (thay vì phải đặt thư mục `skills/` ở ngay THƯ MỤC GỐC của plugin!)",
+      "Đặt tên plugin có chứa chữ cái tiếng Anh",
+      "Viết file `plugin.json` bằng định dạng UTF-8",
+      "Có nhiều hơn 1 skill bên trong thư mục `skills/`"
+    ],
+    "answer": 0,
+    "explanation": "Nguyên văn cảnh báo trong mục 'Plugin Skills Not Appearing' (Chương 6): 'Make sure there's a `skills/` directory at the plugin root (not inside `.claude-plugin/`), and run `claude plugin validate /path/to/plugin-directory` to check for manifest or structure errors.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-112"
+  },
+  {
+    "id": 113,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Khi một skill đã kích hoạt và nạp thành công nhưng lại bị thất bại trong quá trình chạy các bước hoặc chạy script ('Runtime Errors'), ba nguyên nhân phổ biến nhất được chỉ ra trong Chương 6 là gì?",
+    "options": [
+      "1. Missing dependencies (thiếu gói thư viện bên ngoài); 2. Permission issues (script chưa được cấp quyền thực thi `chmod +x`); 3. Path issues (dùng dấu gạch chéo ngược `\\` thay vì dấu gạch chéo xuôi `/` cho đường dẫn)",
+      "1. Tên skill quá ngắn; 2. Câu `description` quá rõ ràng; 3. File `SKILL.md` có ít hơn 500 dòng",
+      "1. Dùng dấu cách thay vì Tab trong YAML; 2. Đặt file trong thư mục con; 3. Viết hoa chữ `SKILL.md`",
+      "1. Đã chạy `claude plugin validate`; 2. Đã khai báo `allowed-tools`; 3. Đã dùng `/reload-plugins`"
+    ],
+    "answer": 0,
+    "explanation": "Ba lỗi Runtime kinh điển trong mục 'Runtime Errors' (Chương 6) là: (1) Missing dependencies (các gói Python/Node ngoài chưa được cài), (2) Permission issues (cần chạy `chmod +x` cho script trên macOS/Linux), và (3) Path issues (luôn phải dùng forward slashes `/` ở mọi nơi, ngay cả trên Windows).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-113"
+  },
+  {
+    "id": 114,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Trên macOS và Linux, nếu một skill gọi thực thi một file script `scripts/audit.sh` nhưng gặp lỗi từ chối quyền thực thi ('Permission denied'), bạn cần chạy lệnh nào để khắc phục?",
+    "options": [
+      "`chmod +x .claude/skills/<skill-name>/scripts/audit.sh`",
+      "`rm -rf .claude/skills/<skill-name>/scripts/audit.sh`",
+      "`git commit --amend`",
+      "`claude plugin uninstall`"
+    ],
+    "answer": 0,
+    "explanation": "Theo mục 'Runtime Errors' (Chương 6): 'Permission issues: Scripts need execute permissions. Run `chmod +x` on any scripts your skill executes.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-114"
+  },
+  {
+    "id": 115,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Quy tắc bắt buộc khi viết đường dẫn file (paths) bên trong `SKILL.md` để tránh lỗi Runtime trên nhiều hệ điều hành là gì?",
+    "options": [
+      "Luôn luôn sử dụng dấu gạch chéo xuôi (`/` forward slashes) ở mọi nơi, ngay cả khi bạn đang làm việc trên hệ điều hành Windows!",
+      "Luôn luôn sử dụng dấu gạch chéo ngược (`\\` backslashes) ở mọi nơi, kể cả trên macOS và Linux",
+      "Không bao giờ được viết ký tự phân cách thư mục",
+      "Phải viết đường dẫn bắt đầu bằng `C:\\` cho cả máy Mac"
+    ],
+    "answer": 0,
+    "explanation": "Theo mục 'Runtime Errors' (Chương 6): 'Path issues: Use forward slashes (`/`) everywhere, even on Windows.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-115"
+  },
+  {
+    "id": 116,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Theo bảng kiểm **Quick Troubleshooting Checklist** ở cuối Chương 6, nếu triệu chứng bạn gặp là **'Not triggering?'** (Skill không tự kích hoạt), hành động khắc phục tương ứng là gì?",
+    "options": [
+      "Cải thiện trường `description` và bổ sung các cụm từ kích hoạt (`Improve your description and add trigger phrases`)",
+      "Kiểm tra quyền `chmod +x` của script",
+      "Chạy lệnh `/reload-plugins`",
+      "Kiểm tra thứ tự ưu tiên Enterprise > Personal > Project"
+    ],
+    "answer": 0,
+    "explanation": "Dòng 1 của Quick Troubleshooting Checklist: 'Not triggering? Improve your description and add trigger phrases.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-116"
+  },
+  {
+    "id": 117,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Theo bảng kiểm **Quick Troubleshooting Checklist** ở cuối Chương 6, nếu triệu chứng bạn gặp là **'Not loading?'** (Skill không nạp vào danh sách `/skills`), hành động khắc phục tương ứng là gì?",
+    "options": [
+      "Kiểm tra đường dẫn thư mục con, tên file viết hoa `SKILL.md`, và cú pháp YAML (`Check your path, filename, and YAML syntax`)",
+      "Thêm các gói thư viện Python còn thiếu",
+      "Viết thêm điều kiện phủ định vào `description`",
+      "Thêm trường `skills:` vào subagent"
+    ],
+    "answer": 0,
+    "explanation": "Dòng 2 của Quick Troubleshooting Checklist: 'Not loading? Check your path, filename, and YAML syntax.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-117"
+  },
+  {
+    "id": 118,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Theo bảng kiểm **Quick Troubleshooting Checklist** ở cuối Chương 6, nếu triệu chứng bạn gặp là **'Being shadowed?'** (Skill của bạn bị một skill khác đè mất), hành động khắc phục tương ứng là gì?",
+    "options": [
+      "Kiểm tra hệ thống phân cấp thứ tự ưu tiên (`Enterprise > Personal > Project > Plugins`) và đổi tên skill nếu cần (`Check the priority hierarchy and rename if needed`)",
+      "Chạy lệnh `chmod +x` trên file `SKILL.md`",
+      "Đổi dấu `/` thành dấu `\\`",
+      "Tắt chế độ `--debug`"
+    ],
+    "answer": 0,
+    "explanation": "Dòng 4 của Quick Troubleshooting Checklist: 'Being shadowed? Check the priority hierarchy and rename if needed.'",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-118"
+  },
+  {
+    "id": 119,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Bạn có thể dùng lệnh `claude plugin validate` để kiểm tra những đối tượng nào?",
+    "options": [
+      "Cả thư mục Personal skills (`~/.claude/skills`), thư mục Project skills (`.claude/skills`), lẫn thư mục gốc của một Plugin (`/path/to/plugin-directory`)",
+      "Chỉ kiểm tra được các plugins đã tải từ trên mạng, không kiểm tra được thư mục `.claude/skills` cục bộ",
+      "Chỉ kiểm tra được file `CLAUDE.md`",
+      "Chỉ kiểm tra được tốc độ kết nối Internet"
+    ],
+    "answer": 0,
+    "explanation": "`claude plugin validate` hỗ trợ kiểm tra trực tiếp thư mục skills cá nhân (`~/.claude/skills`), thư mục skills dự án (`.claude/skills`) cũng như toàn bộ thư mục gốc của một plugin (`/path/to/plugin-directory`).",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-119"
+  },
+  {
+    "id": 120,
+    "chapter": "Chương 6: Troubleshooting skills",
+    "question": "Nhìn lại toàn bộ 6 chương của khóa học **Introduction to Agent Skills**, quy trình chuẩn mực để xây dựng và vận hành một Agent Skill chất lượng cao cho đội ngũ là gì?",
+    "options": [
+      "1. Tạo thư mục `.claude/skills/<skill-name>/SKILL.md` -> 2. Viết `description` trả lời rõ *What + When* và cấu hình `allowed-tools` hợp lý -> 3. Áp dụng Progressive Disclosure (<500 dòng, tách `scripts/`, `references/`, `assets/` dùng đường dẫn `/`) -> 4. Kiểm định bằng `claude plugin validate` và commit lên Git hoặc đóng gói thành Plugin để chia sẻ",
+      "1. Viết mọi thứ vào 1 file dài 5.000 dòng -> 2. Đặt trực tiếp ở `.claude/skills/skill.md` viết thường -> 3. Dùng dấu `\\` cho đường dẫn -> 4. Không bao giờ chạy validator",
+      "1. Nhét toàn bộ quy trình vào `CLAUDE.md` -> 2. Tắt hết quyền công cụ -> 3. Dùng Built-in subagent `Explore` để tự động kế thừa skills",
+      "1. Viết `description: Helper` -> 2. Dùng phím Tab để căn lề YAML -> 3. Đặt tên trùng với Enterprise skill"
+    ],
+    "answer": 0,
+    "explanation": "Quy trình 4 bước này kết tinh toàn bộ kiến thức cốt lõi từ Chương 1 đến Chương 6 của khóa học *Introduction to Agent Skills*!",
+    "course_id": "agent-skills",
+    "course_title": "Introduction to Agent Skills",
+    "uid": "agent-skills-120"
+  }
+]

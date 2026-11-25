@@ -1,0 +1,1282 @@
+[
+  {
+    "id": 1,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Subagents trong Claude Code được định nghĩa chính xác nhất là gì?",
+    "options": [
+      "Các trợ lý AI chuyên biệt (specialized assistants) mà Claude Code có thể ủy quyền thực hiện tác vụ trong một cửa sổ ngữ cảnh riêng biệt (isolated context window) và chỉ trả về bản tóm tắt cho luồng chính",
+      "Các plugin giao diện người dùng chỉ dùng để đổi màu sắc cho cửa sổ Terminal",
+      "Một cơ sở dữ liệu SQL dùng để lưu trữ mật khẩu và khóa API của người dùng",
+      "Một tính năng tự động chia sẻ toàn bộ lịch sử chat của bạn lên GitHub công khai"
+    ],
+    "answer": 0,
+    "explanation": "Subagents là các trợ lý chuyên biệt được Claude Code (Parent Agent) giao nhiệm vụ. Mỗi subagent chạy trong một context window riêng biệt, tự thực hiện các bước đọc file/tìm kiếm/gọi tool và chỉ trả về bản tóm tắt (concise summary) cho cuộc hội thoại chính.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-1"
+  },
+  {
+    "id": 2,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Vấn đề cốt lõi nào của cửa sổ ngữ cảnh chính (Main Context Window) xảy ra khi bạn làm việc lâu dài với Claude Code mà KHÔNG sử dụng Subagents?",
+    "options": [
+      "Mọi lời gọi tool, nội dung file đã đọc và kết quả tìm kiếm đều bị tích tụ vào Main Context Window hữu hạn, khiến nó nhanh đầy và làm Claude dần mất dấu các phần trước của cuộc hội thoại",
+      "Claude Code sẽ tự động xóa ổ cứng của máy tính sau mỗi 10 tin nhắn",
+      "Main Context Window không hỗ trợ đọc các file mã nguồn viết bằng ngôn ngữ Python",
+      "Cửa sổ ngữ cảnh chính sẽ tự động giảm kích thước xuống còn 10 tokens sau 5 phút"
+    ],
+    "answer": 0,
+    "explanation": "Không gian của Main Context Window là hữu hạn (finite). Khi mọi lần đọc file, tìm kiếm và gọi tool đều dồn vào đây, ngữ cảnh bị nhiễu (context pollution/rot) và khi đầy lên, Claude bắt đầu quên các thông tin quan trọng ở đầu cuộc trò chuyện.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-2"
+  },
+  {
+    "id": 3,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Khi Claude Code khởi chạy một Subagent mới, cửa sổ ngữ cảnh ban đầu (initial context window) của Subagent đó nhận được 2 thành phần cốt lõi nào?",
+    "options": [
+      "1) Custom System Prompt từ file cấu hình định nghĩa vai trò/hành vi của subagent, và 2) Task Description (mô tả nhiệm vụ) do Parent Agent viết dựa trên yêu cầu của người dùng",
+      "1) Toàn bộ 100% lịch sử chat từ đầu phiên của Main Conversation, và 2) Toàn bộ các file trong thư mục hệ điều hành",
+      "1) Lịch sử trò chuyện của tất cả các Subagents anh em khác, và 2) File mật khẩu hệ thống",
+      "1) Chỉ duy nhất tên của người dùng, và 2) Danh sách các trang web yêu thích trên trình duyệt"
+    ],
+    "answer": 0,
+    "explanation": "Theo tài liệu Chương 1, mỗi subagent bắt đầu trong một context riêng với: (1) A custom system prompt từ file cấu hình định nghĩa vai trò & hành vi, và (2) A task description do Parent Agent viết ra dựa trên yêu cầu của bạn.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-3"
+  },
+  {
+    "id": 4,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Sau khi một Subagent hoàn thành hàng loạt bước đọc file, tìm kiếm và xử lý công việc, thông tin nào được gửi trả về cho cuộc hội thoại chính (Main Conversation)?",
+    "options": [
+      "Chỉ một bản tóm tắt kết quả (only a concise summary) được trả về cho cuộc hội thoại chính",
+      "Toàn bộ nội dung thô của tất cả các file mà Subagent đã mở đọc trên đường đi",
+      "Toàn bộ nhật ký lỗi hệ thống và mã nhị phân của các công cụ đã gọi",
+      "Không có bất kỳ thông tin nào được trả về, người dùng phải tự mở file log để đọc"
+    ],
+    "answer": 0,
+    "explanation": "Điểm mạnh lớn nhất của subagent là cơ chế 'van một chiều': toàn bộ các bước trung gian (file reads, searches, tool calls) được giữ cô lập, và khi xong việc chỉ có bản tóm tắt (summary) quay về Main Conversation.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-4"
+  },
+  {
+    "id": 5,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Phần hội thoại chi tiết và các bước làm việc trung gian của một Subagent (không được đưa về Main Context) sẽ được Claude Code xử lý như thế nào?",
+    "options": [
+      "Claude Code lưu phần hội thoại chi tiết còn lại của Subagent vào một file bản ghi riêng biệt (a separate transcript file)",
+      "Claude Code gửi toàn bộ qua email cho quản trị viên mạng",
+      "Claude Code nhồi toàn bộ vào biến môi trường PATH của hệ điều hành",
+      "Claude Code ghi đè trực tiếp vào file README.md của dự án"
+    ],
+    "answer": 0,
+    "explanation": "Mặc dù chỉ có bản tóm tắt quay về Main Conversation, Claude Code vẫn lưu lại toàn bộ lịch sử hội thoại chi tiết của subagent vào một file transcript riêng biệt (separate transcript file).",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-5"
+  },
+  {
+    "id": 6,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Sự đánh đổi (The Tradeoff) chính khi sử dụng Subagent để giữ cho Main Context Window luôn sạch sẽ là gì?",
+    "options": [
+      "Cuộc hội thoại chính không nhìn thấy được quá trình/các bước chi tiết mà Subagent đã thực hiện để đi đến kết luận cuối cùng",
+      "Subagent hoàn toàn không thể đọc được bất kỳ file nào trên ổ cứng",
+      "Khi dùng Subagent thì Main Agent sẽ bị khóa vĩnh viễn không thể chat tiếp với người dùng",
+      "Subagent luôn tiêu tốn gấp 100 lần thời gian cho mọi câu hỏi có độ dài dưới 5 từ"
+    ],
+    "answer": 0,
+    "explanation": "Trong Chương 1 ('Why Subagents Matter'), tài liệu nêu rõ: 'The tradeoff is that your main conversation doesn't see how the subagent reached its conclusions' — luồng chính nhận được câu trả lời sạch sẽ nhưng không thấy hành trình trung gian mà subagent đã đi qua.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-6"
+  },
+  {
+    "id": 7,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Trong ví dụ thực tế (A Practical Example) của Chương 1, khi bạn muốn tìm xem file nào xử lý authentication trong một codebase lạ và phải đọc qua 15 files mới tìm ra, điều gì xảy ra nếu giao việc này cho `Explore` Subagent?",
+    "options": [
+      "Main Context Window chỉ ghi nhận đúng câu hỏi và bản tóm tắt câu trả lời — hoàn toàn KHÔNG bị lưu nội dung của 15 files đã đọc trên đường tìm kiếm",
+      "Cả 15 files đều được sao chép vào Main Context Window để người dùng tự kiểm tra từng dòng",
+      "`Explore` Subagent sẽ tự động xóa 14 files không liên quan khỏi ổ cứng của dự án",
+      "`Explore` Subagent sẽ từ chối chạy vì chỉ cho phép đọc tối đa 2 files"
+    ],
+    "answer": 0,
+    "explanation": "Khi dùng `Explore` subagent, nó tự đào bới 15 files trong context riêng của nó rồi trả về một câu trả lời tập trung. Main Context Window chỉ lưu lại câu hỏi và bản tóm tắt kết quả, giúp tiết kiệm hàng ngàn tokens ngữ cảnh chính.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-7"
+  },
+  {
+    "id": 8,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Claude Code được trang bị sẵn 3 Built-in Subagents nào ngay khi cài đặt?",
+    "options": [
+      "General-purpose subagent, Explore, và Plan",
+      "Frontend-builder, Database-admin, và DevOps-deployer",
+      "Compiler, Debugger, và Package-manager",
+      "Git-pusher, Docker-runner, và Browser-scraper"
+    ],
+    "answer": 0,
+    "explanation": "Theo mục 'Built-in Subagents' trong Chương 1, Claude Code đi kèm sẵn 3 subagents: (1) General-purpose subagent, (2) Explore, và (3) Plan.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-8"
+  },
+  {
+    "id": 9,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Trong số các Built-in Subagents của Claude Code, subagent `Explore` được thiết kế chuyên biệt cho mục đích gì?",
+    "options": [
+      "Tìm kiếm và điều hướng codebase với tốc độ cao (for fast searching and navigation of codebases)",
+      "Tự động viết lại toàn bộ lịch sử Git và force-push lên nhánh main",
+      "Thực thi các tập lệnh xóa cơ sở dữ liệu trên môi trường Production",
+      "Chỉnh sửa đồng thời 100 files mã nguồn mà không cần đọc nội dung"
+    ],
+    "answer": 0,
+    "explanation": "`Explore` là built-in subagent chuyên dùng để tìm kiếm và điều hướng nhanh trong codebase (thường sử dụng các công cụ read-only để giữ an toàn và tốc độ cao).",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-9"
+  },
+  {
+    "id": 10,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Built-in Subagent nào trong Claude Code được thiết kế cho các tác vụ đa bước đòi hỏi CẢ việc khám phá lẫn hành động thực thi (for multi-step tasks that require both exploration and action)?",
+    "options": [
+      "General-purpose subagent",
+      "Explore subagent",
+      "Plan subagent",
+      "Read-only subagent"
+    ],
+    "answer": 0,
+    "explanation": "`General-purpose subagent` là subagent đa năng dùng cho các tác vụ nhiều bước cần kết hợp cả việc tìm hiểu khám phá (exploration) lẫn thực hiện thay đổi/hành động (action).",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-10"
+  },
+  {
+    "id": 11,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Built-in Subagent `Plan` được Claude Code sử dụng khi nào?",
+    "options": [
+      "Được sử dụng trong chế độ lập kế hoạch (plan mode) để nghiên cứu và phân tích codebase trước khi trình bày bản kế hoạch (before presenting a plan)",
+      "Chỉ được sử dụng sau khi đã deploy ứng dụng lên đám mây thành công",
+      "Dùng để tự động thanh toán hóa đơn dịch vụ AWS hàng tháng",
+      "Dùng để biên dịch mã nguồn C++ sang mã máy"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 1: `Plan` subagent được sử dụng trong `plan mode` để thực hiện nghiên cứu và phân tích codebase một cách cô lập trước khi đúc kết và trình bày kế hoạch cho người dùng.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-11"
+  },
+  {
+    "id": 12,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Ngoài các Built-in Subagents, người dùng có thể tự tạo `Custom Subagents` bằng cách tùy chỉnh những yếu tố cốt lõi nào?",
+    "options": [
+      "Tùy chỉnh System Prompts (chỉ dẫn hệ thống) và Tool Access (quyền truy cập công cụ) phù hợp với quy trình làm việc riêng",
+      "Can thiệp sửa đổi trọng số mạng nơ-ron (neural network weights) trên máy chủ của Anthropic",
+      "Thay đổi giao thức TCP/IP của hệ điều hành Windows",
+      "Viết lại trình biên dịch nhân Linux bằng hợp ngữ"
+    ],
+    "answer": 0,
+    "explanation": "Custom Subagents cho phép bạn định nghĩa các trợ lý chuyên biệt (code reviewer, test writer, documentation generator...) với Custom System Prompts và Custom Tool Access.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-12"
+  },
+  {
+    "id": 13,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Đâu là 3 lợi ích chính (Key Takeaways) mà Subagents mang lại theo tổng kết ở cuối Chương 1?",
+    "options": [
+      "1) Chia nhỏ công việc thành các phần tập trung, 2) Giữ Main Context Window sạch sẽ bằng cách cô lập bước trung gian, 3) Chỉ mang về đúng thông tin cần thiết dưới dạng bản tóm tắt súc tích",
+      "1) Tăng dung lượng RAM vật lý, 2) Giảm dung lượng ổ cứng, 3) Tự động nâng cấp tốc độ đường truyền Internet",
+      "1) Xóa bỏ hoàn toàn nhu cầu dùng System Prompt, 2) Cho phép gọi API không cần Internet, 3) Tự động sửa lỗi phần cứng",
+      "1) Gộp tất cả các file thành 1 file duy nhất, 2) Lưu mọi log tìm kiếm vào Main Context, 3) Tắt hoàn toàn tính năng kiểm tra quyền công cụ"
+    ],
+    "answer": 0,
+    "explanation": "3 lợi ích cốt lõi của Subagents ở mục Key Takeaways Chương 1 là: (1) Break work into focused pieces, (2) Keep your main context window clean by isolating intermediate work, và (3) Bring back just the information you need as a concise summary.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-13"
+  },
+  {
+    "id": 14,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Khi یک Subagent đang thực hiện các lệnh đọc file (`Read`) và tìm kiếm (`Grep`), các kết quả trả về từ những công cụ đó xuất hiện ở đâu?",
+    "options": [
+      "Nằm hoàn toàn bên trong Context Window riêng của Subagent đó (và được ghi vào file transcript riêng của nó)",
+      "Được chèn trực tiếp vào giữa lịch sử chat của Main Context Window ngay tức thì",
+      "Được ghi thẳng vào bộ nhớ Clipboard của bàn phím người dùng",
+      "Bị xóa bỏ ngay lập tức trước khi Subagent kịp đọc chúng"
+    ],
+    "answer": 0,
+    "explanation": "Mọi kết quả tool call trung gian của subagent chỉ đi vào context window riêng của subagent đó để nó đọc và phân tích, hoàn toàn không làm bẩn Main Context Window.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-14"
+  },
+  {
+    "id": 15,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Ai là người chịu trách nhiệm viết câu mô tả nhiệm vụ (`task description`) đầu vào để khởi chạy một Subagent khi ủy quyền công việc?",
+    "options": [
+      "Parent Agent (tác tử cha trong luồng hội thoại chính) tự động viết dựa trên yêu cầu của người dùng",
+      "Trình điều khiển card màn hình (GPU Driver) tự động sinh ngẫu nhiên",
+      "Hệ thống DNS của nhà mạng Internet",
+      "Subagent tự viết câu hỏi cho chính nó trước khi được gọi"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 1: Khi khởi chạy subagent, nó nhận 'A task description written by the parent agent based on what you asked for'.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-15"
+  },
+  {
+    "id": 16,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Tại sao việc giảm thiểu độ nhiễu (noise) trong Main Context Window lại giúp ích cho các phiên làm việc dài trên Claude Code?",
+    "options": [
+      "Càng ít dữ liệu trung gian dư thừa trong ngữ cảnh chính, Claude càng duy trì được sự tập trung, nhớ lâu hơn các chỉ dẫn cốt lõi và làm việc hiệu quả hơn trong suốt phiên dài",
+      "Vì Claude Code chỉ cho phép chạy tối đa 3 lệnh nếu không dùng Subagent",
+      "Vì Main Context Window chỉ lưu được các chữ cái tiếng Anh viết hoa",
+      "Vì nó làm cho màn hình máy tính tiêu thụ ít điện năng hơn 90%"
+    ],
+    "answer": 0,
+    "explanation": "'The less noise in your main context, the longer and more effectively you can work' — giữ Main Context gọn sạch giúp mô hình không bị loãng sự chú ý (attention dilution) và tránh chạm giới hạn context quá sớm.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-16"
+  },
+  {
+    "id": 17,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Một Custom Subagent được tạo ra để chuyên kiểm tra chất lượng mã nguồn, tìm lỗi tiềm ẩn và lỗ hổng bảo mật thường được gọi là gì?",
+    "options": [
+      "A code reviewer subagent",
+      "A billing manager subagent",
+      "A DNS resolver subagent",
+      "A hardware overclocking subagent"
+    ],
+    "answer": 0,
+    "explanation": "Code Reviewer là một trong những ví dụ điển hình nhất về Custom Subagent được nhắc xuyên suốt khóa học (cùng với Test Writer và Documentation Generator).",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-17"
+  },
+  {
+    "id": 18,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Phát biểu nào sau đây là SAI về cách hoạt động của Subagents?",
+    "options": [
+      "Subagents dùng chung 100% bộ nhớ Context Window với Main Conversation nên mọi file Subagent đọc đều làm phình to Main Context",
+      "Mỗi Subagent chạy trong một Context Window độc lập của riêng nó",
+      "Subagent trả về một bản tóm tắt ngắn gọn cho luồng hội thoại chính khi hoàn tất",
+      "Claude Code có sẵn cả các Built-in Subagents lẫn khả năng tạo Custom Subagents"
+    ],
+    "answer": 0,
+    "explanation": "Phát biểu đầu tiên là SAI vì điểm cốt lõi nhất của Subagent chính là chạy trong Context Window ĐỘC LẬP để KHÔNG làm phình to Main Context.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-18"
+  },
+  {
+    "id": 19,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Trong Lab 01 (`subagent_context_isolation.py`), khi so sánh việc đọc 15 files trực tiếp ở Main Context với việc ủy quyền cho `Explore` Subagent, kết quả đo lường cho thấy điều gì?",
+    "options": [
+      "Main Context khi dùng `Explore` Subagent chỉ chứa đúng 2 bản tin (Câu hỏi + Bản tóm tắt kết quả), giảm hơn 95% lượng token nhiễu so với đọc trực tiếp 15 files ở luồng chính",
+      "Main Context khi dùng Subagent bị phình to gấp đôi so với không dùng Subagent",
+      "Cả hai cách đều lưu toàn bộ 15 files vào Main Context với số token bằng hệt nhau",
+      "`Explore` Subagent không thể tìm thấy file `src/auth/security.py`"
+    ],
+    "answer": 0,
+    "explanation": "Trong Lab 01, việc cô lập 15 lần gọi `Read` sang Subagent Context giúp Main Context chỉ giữ lại câu hỏi và bản tóm tắt cuối cùng, loại bỏ hơn 95% lượng token trung gian khỏi luồng chính.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-19"
+  },
+  {
+    "id": 20,
+    "chapter": "Chương 1: What are Subagents?",
+    "question": "Khi nào bạn có thể bắt đầu sử dụng các Built-in Subagents (`General-purpose`, `Explore`, `Plan`) trong Claude Code?",
+    "options": [
+      "Ngay lập tức (right away) vì chúng đã được tích hợp sẵn trong Claude Code mà không cần tạo file cấu hình nào",
+      "Chỉ sau khi bạn tự viết xong ít nhất 10 file cấu hình YAML trong thư mục dự án",
+      "Chỉ khi bạn cài đặt thêm cơ sở dữ liệu PostgreSQL trên máy cục bộ",
+      "Chỉ khi bạn biên dịch lại mã nguồn của Claude Code từ đầu"
+    ],
+    "answer": 0,
+    "explanation": "'Claude Code ships with several built-in subagents you can use right away' — bạn có thể dùng ngay 3 built-in subagents mà không cần cấu hình gì thêm.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-20"
+  },
+  {
+    "id": 21,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Các Custom Subagents trong Claude Code được lưu trữ dưới định dạng file như thế nào?",
+    "options": [
+      "Các file Markdown (`.md`) có phần đầu là YAML Frontmatter chứa thông tin cấu hình và phần thân bên dưới chứa System Prompt",
+      "Các file nhị phân thực thi (`.exe` hoặc `.dll`) đã được mã hóa",
+      "Các bảng dữ liệu trong Microsoft Excel (`.xlsx`)",
+      "Các file ảnh đồ họa vector (`.svg`)"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 2: 'They are defined as markdown files with YAML frontmatter that holds the configuration and a body that describes how the subagent should behave.'",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-21"
+  },
+  {
+    "id": 22,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Theo Chương 2, cách dễ nhất (the easiest way) để tạo một Custom Subagent trong giao diện dòng lệnh Claude Code là gì?",
+    "options": [
+      "Sử dụng trình thuật sĩ `/agents` (`the /agents wizard`) và mô tả những gì bạn muốn để Claude tự sinh file cấu hình cho bạn",
+      "Tự viết một chương trình C++ để sinh mã nhị phân cho agent",
+      "Phải chỉnh sửa trực tiếp biến Registry của hệ điều hành Windows",
+      "Gửi yêu cầu hỗ trợ kỹ thuật tới Anthropic để nhờ tạo file hộ"
+    ],
+    "answer": 0,
+    "explanation": "Cách dễ nhất là dùng lệnh `/agents` trong Claude Code CLI: trình thuật sĩ tương tác sẽ hướng dẫn chọn Scope, Tools, Model, Color và có thể nhờ Claude tự sinh `name`, `description` và `system prompt` từ mô tả ngắn của bạn.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-22"
+  },
+  {
+    "id": 23,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Khi tạo một Subagent ở phạm vi Dự án (`Project-level`), file cấu hình của nó sẽ được lưu ở thư mục nào?",
+    "options": [
+      "`.claude/agents/` (bên trong thư mục gốc của dự án hiện tại)",
+      "`~/.claude/agents/` (trong thư mục Home của người dùng)",
+      "`/etc/claude/system_agents/`",
+      "`node_modules/.bin/agents/`"
+    ],
+    "answer": 0,
+    "explanation": "Subagent ở cấp độ dự án (Project-level) được lưu dưới dạng một file `.md` bên trong thư mục `.claude/agents/` của dự án đó và chỉ khả dụng trong dự án hiện tại (có thể commit lên Git để chia sẻ cùng nhóm).",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-23"
+  },
+  {
+    "id": 24,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Khi bạn muốn tạo một Subagent cá nhân dùng chung được trên TẤT CẢ các dự án trên máy tính của mình (`User-level`), file cấu hình phải được đặt ở đâu?",
+    "options": [
+      "`~/.claude/agents/` (trong thư mục Home của người dùng)",
+      "`.claude/agents/` (chỉ trong một thư mục dự án con duy nhất)",
+      "`/tmp/agents/` (thư mục tạm sẽ bị xóa khi khởi động lại máy)",
+      "`./tests/fixtures/agents/`"
+    ],
+    "answer": 0,
+    "explanation": "Subagent ở cấp độ người dùng (User-level) được lưu tại `~/.claude/agents/`, giúp chia sẻ và tái sử dụng subagent đó trên mọi dự án trên máy tính của bạn.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-24"
+  },
+  {
+    "id": 25,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Trong trình thuật sĩ `/agents`, khi chọn cách khởi tạo nội dung cấu hình después khi đã chọn Scope, tính năng 'Generate with Claude' (generation wizard) thực hiện việc gì?",
+    "options": [
+      "Bạn chỉ cần nhập một đoạn mô tả ngắn về những gì bạn muốn, và Claude sẽ tự động sinh ra `name`, `description` và `system prompt` dựa trên đầu vào đó",
+      "Nó tự động tải ngẫu nhiên một mã nguồn từ Internet mà không hỏi ý kiến bạn",
+      "Nó xóa toàn bộ các subagents hiện có trong dự án",
+      "Nó chỉ đổi phông chữ của cửa sổ Terminal"
+    ],
+    "answer": 0,
+    "explanation": "Với trình tạo tự động của `/agents`, bạn chỉ cần mô tả ngắn gọn mục đích của subagent, Claude sẽ tự động soạn sẵn `name`, `description` chuẩn xác và một `system prompt` chi tiết cho bạn.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-25"
+  },
+  {
+    "id": 26,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Trong bước `Customizing Tools` của trình thuật sĩ `/agents`, các công cụ được chia thành 5 nhóm danh mục (categories) nào?",
+    "options": [
+      "Read-only tools, Edit tools, Execution tools, MCP tools, và Other tools",
+      "Audio tools, Video tools, 3D CAD tools, Printing tools, và Gaming tools",
+      "SQL tools, NoSQL tools, Graph tools, Vector tools, và Cache tools",
+      "Windows tools, Linux tools, macOS tools, iOS tools, và Android tools"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 2 (mục 'Customizing Tools'), trình thuật sĩ phân nhóm công cụ thành 5 danh mục rõ ràng: Read-only tools, Edit tools, Execution tools, MCP tools, và Other tools.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-26"
+  },
+  {
+    "id": 27,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Tại sao đối với một `code-reviewer` subagent (chuyên rà soát và đánh giá mã nguồn), bạn lại nên bỏ chọn (uncheck) nhóm `Edit tools`?",
+    "options": [
+      "Vì Code Reviewer chỉ cần đọc và phân tích code; việc bỏ quyền Edit giúp ngăn chặn subagent vô tình tự ý sửa đổi mã nguồn của bạn trong lúc đang review",
+      "Vì nếu bật Edit tools thì Claude Code sẽ không thể đọc được file Markdown",
+      "Vì Edit tools làm cho màu sắc (`color`) của subagent bị chuyển sang màu đen",
+      "Vì Anthropic tính phí gấp 10 lần cho mỗi subagent có bật Edit tools"
+    ],
+    "answer": 0,
+    "explanation": "'A code reviewer probably only needs read-only tools. Unchecking edit or execution tools it doesn't need prevents it from modifying code.' — Chỉ cấp đúng công cụ cần thiết giúp đảm bảo an toàn tuyệt đối.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-27"
+  },
+  {
+    "id": 28,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Khi cấu hình trường `model` cho Subagent, có 4 lựa chọn hợp lệ nào?",
+    "options": [
+      "`haiku`, `sonnet`, `opus`, và `inherit`",
+      "`gpt-4`, `llama-3`, `mistral`, và `default`",
+      "`small`, `medium`, `large`, và `xlarge`",
+      "`v1`, `v2`, `v3`, và `v4`"
+    ],
+    "answer": 0,
+    "explanation": "Bốn lựa chọn cho trường `model` của một subagent trong Claude Code là: `haiku`, `sonnet`, `opus`, hoặc `inherit`.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-28"
+  },
+  {
+    "id": 29,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Trong 4 lựa chọn `model` của Subagent, khi nào bạn nên chọn `haiku`, `sonnet`, hoặc `opus`?",
+    "options": [
+      "`haiku` tốt nhất cho các tác vụ nhanh/nhẹ (fast, lightweight tasks); `sonnet` là điểm cân bằng tốt giữa tốc độ và chiều sâu; `opus` tốt nhất cho phân tích phức tạp (complex analysis)",
+      "`haiku` dùng cho phân tích kiến trúc phức tạp nhất; `opus` chỉ dùng cho các tác vụ tìm kiếm cực nhẹ",
+      "Cả ba mô hình có tốc độ và khả năng suy luận giống hệt nhau 100%, chỉ khác nhau ở tên gọi",
+      "`sonnet` chỉ đọc được file ảnh, còn `opus` chỉ đọc được file âm thanh"
+    ],
+    "answer": 0,
+    "explanation": "Theo mục 'Choosing a Model and Color' ở Chương 2: Haiku tối ưu cho tác vụ nhanh và nhẹ; Sonnet cân bằng tốt giữa tốc độ và chiều sâu; Opus mạnh nhất cho các phân tích phức tạp.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-29"
+  },
+  {
+    "id": 30,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Nếu trường `model` của một Subagent được đặt là `inherit` (hoặc bị bỏ trống không khai báo trong YAML Frontmatter), Subagent đó sẽ chạy bằng mô hình nào?",
+    "options": [
+      "Nó sẽ tự động sử dụng bất kỳ mô hình nào mà cuộc hội thoại chính (main conversation) của bạn đang chạy",
+      "Nó sẽ báo lỗi `ModelNotFoundError` và từ chối khởi chạy",
+      "Nó sẽ luôn luôn ép buộc hạ xuống mô hình cũ nhất từ năm 2021",
+      "Nó sẽ chạy ngẫu nhiên một mô hình khác nhau ở mỗi dòng code"
+    ],
+    "answer": 0,
+    "explanation": "`inherit` có nghĩa là kế thừa: subagent sẽ dùng chung chính xác model mà phiên hội thoại chính (main session) đang sử dụng. Nếu bạn không ghi dòng `model:` trong YAML, mặc định nó cũng là `inherit`.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-30"
+  },
+  {
+    "id": 31,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Tác dụng thực tế của việc chọn trường `color` (ví dụ: `color: orange` hoặc `color: cyan`) cho một Subagent là gì?",
+    "options": [
+      "Hiển thị màu sắc nhận diện trên giao diện Terminal/UI để bạn biết ngay subagent nào đang hoạt động, đặc biệt hữu ích khi có nhiều subagents đang cùng chạy",
+      "Quy định mức độ ưu tiên sử dụng CPU của hệ điều hành (màu đỏ chạy nhanh hơn màu xanh)",
+      "Làm thay đổi màu nền của toàn bộ các file mã nguồn trong dự án",
+      "Bắt buộc phải có màu `orange` thì subagent mới được phép gọi công cụ `Bash`"
+    ],
+    "answer": 0,
+    "explanation": "'This shows up in the UI so you can quickly tell which subagent is active. It's a small detail, but it helps when you have multiple subagents running.'",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-31"
+  },
+  {
+    "id": 32,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Đâu là danh sách 5 trường cấu hình chuẩn trong khối YAML Frontmatter của một file `.claude/agents/<name>.md` được giới thiệu ở Chương 2?",
+    "options": [
+      "`name`, `description`, `tools`, `model`, và `color`",
+      "`id`, `password`, `port`, `host`, và `protocol`",
+      "`author`, `version`, `license`, `repository`, và `keywords`",
+      "`temperature`, `top_p`, `top_k`, `stop_sequences`, và `stream`"
+    ],
+    "answer": 0,
+    "explanation": "Khối YAML Frontmatter của file cấu hình subagent gồm 5 trường cơ bản: `name`, `description`, `tools`, `model`, và `color`.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-32"
+  },
+  {
+    "id": 33,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Trường `name` trong YAML Frontmatter của Subagent đóng vai trò gì?",
+    "options": [
+      "Là định danh duy nhất (unique identifier) của subagent, cũng là tên bạn sử dụng khi muốn yêu cầu Claude gọi đích danh subagent đó trong tin nhắn",
+      "Là mật khẩu để mở khóa file cấu hình",
+      "Là tên của mô hình ngôn ngữ lớn trên máy chủ Anthropic",
+      "Là đường dẫn tuyệt đối tới thư mục cài đặt Python"
+    ],
+    "answer": 0,
+    "explanation": "`name` là tên định danh duy nhất cho subagent (ví dụ `code-reviewer`). Bạn có thể dùng chính tên này khi nhắn cho Claude: 'Ask the code-reviewer subagent to look at...'.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-33"
+  },
+  {
+    "id": 34,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Khi viết trường `description` trong YAML Frontmatter của file cấu hình Subagent, quy tắc định dạng kỹ thuật nào cần được lưu ý?",
+    "options": [
+      "Nên viết thành một dòng văn bản đơn (a single line without newline characters) giải thích rõ subagent làm gì, dùng khi nào, và có thể kèm ví dụ tình huống",
+      "Bắt buộc phải chia thành ít nhất 20 đoạn văn xuống dòng khác nhau",
+      "Chỉ được phép chứa các con số nguyên từ 0 đến 9",
+      "Bắt buộc phải viết bằng mã hexa thập lục phân"
+    ],
+    "answer": 0,
+    "explanation": "Theo mục 'The Config File' ở Chương 2: `description` cho Claude biết subagent làm gì và dùng khi nào, và lưu ý đây là một dòng văn bản đơn không chứa ký tự xuống dòng (a single line that doesn't include newline characters).",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-34"
+  },
+  {
+    "id": 35,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Điều gì sẽ xảy ra nếu bạn BỎ QUA (omit) không khai báo trường `tools` trong YAML Frontmatter của một file cấu hình Subagent?",
+    "options": [
+      "Subagent đó sẽ mặc định được cấp quyền truy cập vào TẤT CẢ các công cụ hiện có (`gets access to everything`)",
+      "Subagent đó sẽ không có quyền sử dụng bất kỳ công cụ nào (0 tools)",
+      "Claude Code sẽ báo lỗi cú pháp YAML và xóa file cấu hình đó",
+      "Subagent đó sẽ chỉ được phép dùng công cụ `Calculator`"
+    ],
+    "answer": 0,
+    "explanation": "Đây là một chi tiết rất quan trọng trong Chương 2: 'tools — Lists which tools the subagent has access to. If you omit this field, the subagent gets access to everything.' Vì vậy nếu muốn giới hạn quyền, bạn bắt buộc phải khai báo tường minh trường `tools`!",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-35"
+  },
+  {
+    "id": 36,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Phần văn bản nằm bên dưới khối YAML Frontmatter (sau dòng `---` thứ hai) trong file `.claude/agents/<name>.md` có vai trò là gì?",
+    "options": [
+      "Đó chính là `System Prompt` định nghĩa vai trò, những gì subagent cần tập trung thực hiện, cách ra quyết định và cách báo cáo kết quả về cho Main Agent",
+      "Đó chỉ là phần ghi chú (comments) cho con người đọc và bị Claude Code bỏ qua hoàn toàn",
+      "Đó là nơi lưu trữ nhật ký lỗi (error logs) của các lần chạy trước",
+      "Đó là mã nguồn JavaScript dùng để vẽ giao diện Web"
+    ],
+    "answer": 0,
+    "explanation": "'The body of the file below the YAML frontmatter is the system prompt. This is where you define the subagent's role, what it should focus on, how it should make decisions, and how it should report findings back to the main agent.'",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-36"
+  },
+  {
+    "id": 37,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Nếu bạn muốn Claude Code TỰ ĐỘNG ủy quyền tác vụ cho Subagent của bạn mà không cần bạn phải gõ lệnh gọi đích danh tên nó mỗi lần (`Making Claude Use Your Subagent Automatically`), bạn nên đưa từ khóa nào vào trong trường `description`?",
+    "options": [
+      "Từ khóa `\"proactively\"` (ví dụ: `\"Use this agent proactively when...\"`)",
+      "Từ khóa `\"sudo_force_run\"`",
+      "Từ khóa `\"always_block_main_thread\"`",
+      "Từ khóa `\"disable_context_isolation\"`"
+    ],
+    "answer": 0,
+    "explanation": "Theo mục cuối của Chương 2 ('Making Claude Use Your Subagent Automatically'): 'If you want Claude to delegate tasks to the subagent without you explicitly asking, include the word \"proactively\" in the description field.'",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-37"
+  },
+  {
+    "id": 38,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Ngoài việc thêm từ khóa `\"proactively\"`, bạn có thể bổ sung thêm điều gì vào trường `description` để giúp Claude hiểu rõ hơn các tình huống thực tế cần kích hoạt Subagent?",
+    "options": [
+      "Đưa thêm các ví dụ hội thoại mẫu (example conversations / scenarios) vào trong `description` để minh họa tình huống người dùng nói gì thì nên gọi subagent",
+      "Đính kèm một file ảnh chụp màn hình định dạng `.bmp` vào trong dòng `description`",
+      "Ghi địa chỉ IP cục bộ của máy tính vào `description`",
+      "Lặp lại tên của subagent 50 lần liên tiếp"
+    ],
+    "answer": 0,
+    "explanation": "Bạn có thể đưa các ví dụ hội thoại ngắn (example conversations) vào trong `description` để chỉ dẫn cho Claude nhận diện chính xác ngữ cảnh nào cần tự động gọi subagent.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-38"
+  },
+  {
+    "id": 39,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Bạn có thể chỉnh sửa một file cấu hình Subagent trong `.claude/agents/` bằng trình soạn thảo văn bản thông thường (như VS Code) sau khi nó đã được tạo bởi `/agents` hay không?",
+    "options": [
+      "Hoàn toàn ĐƯỢC — vì chúng chỉ là các file Markdown (`.md`) thuần túy nên bạn có thể mở, sửa đổi hoặc quản lý phiên bản bằng Git bất cứ lúc nào",
+      "KHÔNG — file đã tạo bởi `/agents` bị khóa chữ ký số không thể sửa bằng tay",
+      "Chỉ sửa được nếu bạn xóa toàn bộ dự án đi và cài lại hệ điều hành",
+      "Phải dùng phần mềm chuyên dụng trả phí của bên thứ ba mới mở được file `.md`"
+    ],
+    "answer": 0,
+    "explanation": "Vì file cấu hình subagent chỉ là văn bản Markdown thuần túy có YAML Frontmatter tại `.claude/agents/*.md`, bạn có thể tự tạo mới, chỉnh sửa trực tiếp trong IDE hoặc dùng `/agents` đều được.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-39"
+  },
+  {
+    "id": 40,
+    "chapter": "Chương 2: Creating a Subagent",
+    "question": "Sự khác biệt chính khi quyết định chọn `Project-level` (`.claude/agents/`) so với `User-level` (`~/.claude/agents/`) là gì?",
+    "options": [
+      "`Project-level` gắn liền với một dự án cụ thể (và chia sẻ được cho đồng đội qua Git), còn `User-level` dùng cho các trợ lý cá nhân mà bạn muốn mang theo sử dụng trên mọi dự án trên máy của mình",
+      "`Project-level` chỉ cho phép dùng mô hình Haiku, còn `User-level` mới cho phép dùng mô hình Opus",
+      "`Project-level` không hỗ trợ giới hạn công cụ (`tools`), còn `User-level` thì có",
+      "`User-level` chạy nhanh gấp 5 lần `Project-level` trên cùng một câu hỏi"
+    ],
+    "answer": 0,
+    "explanation": "Project-level (`.claude/agents/`) phạm vi chỉ trong dự án hiện tại, rất hợp cho quy chuẩn riêng của repo và commit lên Git; User-level (`~/.claude/agents/`) phạm vi toàn máy cá nhân, dùng chung cho mọi dự án.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-40"
+  },
+  {
+    "id": 41,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Theo mục `How Subagent Config Data Gets Used` (Chương 3), khi bạn gửi một tin nhắn trong cửa sổ ngữ cảnh chính (Main Context Window), phần dữ liệu nào của các Subagents khả dụng sẽ được nạp vào System Prompt của Main Agent?",
+    "options": [
+      "Chỉ có `name` và `description` của mọi Subagent khả dụng được nạp vào System Prompt của Main Agent (còn phần thân System Prompt của từng Subagent CHƯA được nạp)",
+      "Toàn bộ 100% phần thân System Prompt dài hàng ngàn dòng của tất cả các Subagents đều bị nhồi vào Main Context ngay từ đầu",
+      "Không có bất kỳ thông tin nào của Subagent được nạp cho tới khi người dùng gõ lệnh `/init`",
+      "Chỉ có trường `color` và `model` được nạp vào Main Agent, còn `name` và `description` bị ẩn đi"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 3: 'When you send a message in the main context window, the name and description of every available subagent are included in the system prompt... If you create a subagent and never use it in a conversation, only the name and description are in context, not the subagent's system prompt.'",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-41"
+  },
+  {
+    "id": 42,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Trường `description` của một Subagent đảm nhiệm HAI vai trò quan trọng nào đối với Main Agent?",
+    "options": [
+      "1) Giúp Main Agent quyết định KHI NÀO nên gọi Subagent đó, và 2) Định hình CÁCH Main Agent viết câu lệnh đầu vào (input prompt) giao việc cho Subagent đó",
+      "1) Giới hạn tốc độ mạng của Subagent, và 2) Mã hóa file transcript trên ổ cứng",
+      "1) Thay thế hoàn toàn System Prompt của Subagent, và 2) Tự động cài đặt thư viện Python",
+      "1) Chọn màu sắc giao diện UI, và 2) Tự động xóa các file tạm sau khi chạy"
+    ],
+    "answer": 0,
+    "explanation": "Đây là kiến thức trọng tâm của Chương 3: `description` không chỉ giúp Main Agent quyết định *when to invoke* (khi nào gọi) mà còn *shapes how the main agent writes the input prompt* (định hình nội dung câu lệnh mà Main Agent soạn để giao cho Subagent).",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-42"
+  },
+  {
+    "id": 43,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Chuyện gì thường xảy ra khi bạn viết một trường `description` quá chung chung cho `code-reviewer` (ví dụ chỉ ghi: `\"Use this agent to review code changes\"`)?",
+    "options": [
+      "Main Agent không biết phải truyền thông tin cụ thể gì, nên thường viết một input prompt mơ hồ như `\"use git diff to find current changes\"` khiến Subagent phải tự mò mẫm thay vì tập trung vào đúng các file cần kiểm tra",
+      "Main Agent sẽ tự động từ chối gọi Subagent và tắt chương trình",
+      "Subagent sẽ tự động được nâng cấp lên mô hình Opus miễn phí",
+      "Claude Code sẽ tự động sửa lại trường `description` trên ổ cứng mà không hỏi bạn"
+    ],
+    "answer": 0,
+    "explanation": "Nếu `description` không nói rõ cần truyền gì, Main Agent chỉ gửi một lời giao việc chung chung (như bảo subagent tự chạy `git diff` tìm thay đổi), làm tốn thời gian và thiếu chính xác.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-43"
+  },
+  {
+    "id": 44,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Nếu bạn cập nhật `description` của `code-reviewer` thêm câu chỉ dẫn: `\"You must tell the agent precisely which files you want it to review\"`, hành vi của Main Agent khi gọi Subagent này sẽ thay đổi như thế nào?",
+    "options": [
+      "Main Agent sẽ đọc chỉ dẫn đó và chủ động liệt kê chính xác danh sách các đường dẫn file cần review ngay trong câu lệnh Input Prompt mà nó gửi cho Subagent",
+      "Main Agent sẽ bắt người dùng phải tự gõ lại toàn bộ mã nguồn của file đó vào khung chat",
+      "Subagent sẽ bị mất quyền sử dụng công cụ `Read`",
+      "Main Agent sẽ bỏ qua câu đó vì Main Agent không bao giờ đọc trường `description`"
+    ],
+    "answer": 0,
+    "explanation": "Vì Main Agent đọc `description` để biết cách giao việc cho Subagent, câu chỉ dẫn 'You must tell the agent precisely which files you want it to review' sẽ buộc Main Agent truyền danh sách file cụ thể vào Input Prompt của Subagent!",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-44"
+  },
+  {
+    "id": 45,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Theo mục `Defining an Output Format` (Chương 3), nếu bạn KHÔNG quy định rõ định dạng đầu ra (output format) trong System Prompt của Subagent, bạn thường gặp phải 2 vấn đề nào với bản tóm tắt gửi về?",
+    "options": [
+      "1) Hoặc quá mơ hồ (too vague — làm mất các chi tiết quan trọng trong lúc tóm tắt), 2) Hoặc quá dài dòng (too verbose — đổ một bức tường văn bản lớn làm phình to ngữ cảnh chính)",
+      "1) Bản tóm tắt sẽ bị dịch sang tiếng Pháp, 2) Bản tóm tắt sẽ bị mã hóa Base64",
+      "1) Subagent sẽ không bao giờ dừng lại được, 2) File cấu hình sẽ bị đổi tên",
+      "1) Công cụ `Bash` sẽ bị khóa, 2) Mô hình sẽ tự động chuyển về `haiku`"
+    ],
+    "answer": 0,
+    "explanation": "Nếu không định nghĩa Output Format rõ ràng: (1) Nếu quá mơ hồ (too vague), chi tiết quan trọng bị mất khi tóm tắt; (2) Nếu quá rườm rà (too verbose), nó đổ quá nhiều chữ về Main Context làm mất đi ý nghĩa cô lập ngữ cảnh của subagent.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-45"
+  },
+  {
+    "id": 46,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Trong mẫu `Structured Output Format` gồm 6 mục chuẩn dành cho một `code-reviewer` subagent ở Chương 3, các vấn đề phát hiện được (issues) được phân loại theo 3 cấp độ nghiêm trọng nào?",
+    "options": [
+      "Critical Issues (bảo mật, mất dữ liệu, sập hệ thống), Major Issues (lỗi logic, thiếu edge cases, hiệu năng lớn), và Minor Issues (style, đặt tên, tối ưu nhỏ)",
+      "Red Issues, Blue Issues, và Green Issues",
+      "Frontend Issues, Backend Issues, và Database Issues",
+      "Easy Issues, Medium Issues, và Impossible Issues"
+    ],
+    "answer": 0,
+    "explanation": "6 mục chuẩn trong ví dụ Chương 3 gồm: (1) Summary, (2) Critical issues, (3) Major issues, (4) Minor issues, (5) Positive observations, và (6) Specific recommendations.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-46"
+  },
+  {
+    "id": 47,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Trong cấu trúc báo cáo 6 mục của `code-reviewer` subagent ở Chương 3, mục số 5 và mục số 6 là gì?",
+    "options": [
+      "5) Positive observations (những điểm đã làm tốt, pattern sạch) và 6) Specific recommendations (các bước hành động cụ thể để sửa code)",
+      "5) Git commit history và 6) Author salary estimation",
+      "5) Full source code copy và 6) Raw terminal logs",
+      "5) List of all npm packages và 6) Operating system version"
+    ],
+    "answer": 0,
+    "explanation": "Bên cạnh Summary và 3 mức Issues (Critical, Major, Minor), mẫu báo cáo còn có mục 5. Positive observations (ghi nhận các pattern tốt để giữ lại) và 6. Specific recommendations (hướng dẫn sửa cụ thể, rõ ràng).",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-47"
+  },
+  {
+    "id": 48,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Tại sao việc thiết kế cơ chế `Reporting Obstacles` (Báo cáo các rào cản gặp phải) lại cực kỳ quan trọng đối với một Subagent?",
+    "options": [
+      "Vì Subagent chạy trong ngữ cảnh cô lập; nếu các lỗi môi trường, thiếu thư viện hay lệnh thất bại không được đưa vào bản tóm tắt trả về, cuộc hội thoại chính sẽ không bao giờ biết về chúng và sẽ lặp lại đúng những lỗi đó!",
+      "Để Subagent có thể tự động gửi báo cáo lỗi về cho nhà sản xuất phần cứng máy tính",
+      "Vì nếu không có mục Obstacles thì YAML Frontmatter sẽ báo lỗi cú pháp",
+      "Để Subagent tự động tắt máy tính mỗi khi gặp một bài test bị lỗi"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 3 ('Reporting Obstacles'): 'If those obstacles don't make it into the summary it returns, the main conversation never learns about them — which means wasted time and repeated failures.'",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-48"
+  },
+  {
+    "id": 49,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Theo Chương 3, đâu là 4 loại rào cản (obstacles) điển hình mà bạn muốn Subagent phải đưa vào báo cáo gửi về cho Main Agent?",
+    "options": [
+      "1) Setup/environment issues, 2) Permission errors, 3) Commands that failed or required special configuration, và 4) Missing dependencies or unavailable test suites",
+      "1) Thời tiết hiện tại, 2) Giá cổ phiếu, 3) Tốc độ quạt tản nhiệt, và 4) Độ sáng màn hình",
+      "1) Số dòng bình luận trong code, 2) Tên tác giả commit, 3) Ngày tạo repo, và 4) Dung lượng file README",
+      "1) Màu sắc của các subagents khác, 2) Danh sách font chữ, 3) Cổng âm thanh, và 4) Phiên bản trình duyệt"
+    ],
+    "answer": 0,
+    "explanation": "Trong mục 'Reporting Obstacles' (Chương 3), 4 nhóm thông tin rào cản cần được báo cáo về là: Setup issues or environment problems; Permission errors encountered during the task; Commands that failed or required special configuration; Missing dependencies or unavailable test suites.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-49"
+  },
+  {
+    "id": 50,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Cách đơn giản và hiệu quả nhất để đảm bảo Subagent luôn báo cáo lại các rào cản hay cờ cấu hình đặc biệt mà nó gặp phải trong quá trình làm việc là gì?",
+    "options": [
+      "Thêm một mục riêng như `\"Obstacles Encountered\"` vào phần quy định Output Format trong System Prompt của Subagent, yêu cầu ghi rõ mọi lỗi cài đặt, quyền truy cập hoặc lệnh cần cờ đặc biệt",
+      "Đặt tham số `temperature = 1.0` cho Subagent",
+      "Cấp toàn bộ quyền `Edit` và `Write` cho mọi Subagent",
+      "Đổi màu của Subagent sang màu đỏ (`color: red`)"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 3: 'The way to get this information back is to ask for it in the system prompt. Adding an \"Obstacles Encountered\" section to your output format gives the subagent a dedicated place to report these issues.'",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-50"
+  },
+  {
+    "id": 51,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Theo mục `Limiting Tool Access` (Chương 3), việc chỉ cấp cho mỗi Subagent đúng những công cụ nó thực sự cần mang lại 2 lợi ích trực tiếp nào?",
+    "options": [
+      "1) Ngăn chặn các hành động ngoài ý muốn (prevents unintended actions), và 2) Giúp mỗi Subagent tập trung hơn khi có ít lựa chọn công cụ hơn (makes each subagent more focused when it has fewer options)",
+      "1) Tăng gấp đôi kích thước Context Window, và 2) Tự động bật Prompt Caching",
+      "1) Cho phép chạy không cần API Key, và 2) Tự động sinh file PDF",
+      "1) Xóa bỏ hoàn toàn độ trễ mạng, và 2) Tự động commit code lên GitHub"
+    ],
+    "answer": 0,
+    "explanation": "Chương 3 chỉ rõ: 'This does two things: it prevents unintended actions, and it makes each subagent more focused when it has fewer options.'",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-51"
+  },
+  {
+    "id": 52,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Đối với một `Research or read-only subagent` (trợ lý chuyên tìm kiếm và đọc hiểu mã nguồn), bộ công cụ chuẩn nên cấp trong trường `tools` là gì?",
+    "options": [
+      "Chỉ cấp `Glob`, `Grep`, và `Read` (không thể vô tình sửa đổi bất kỳ file nào)",
+      "Cấp `Edit`, `Write`, và `Bash`",
+      "Chỉ cấp duy nhất công cụ `Write`",
+      "Bỏ trống trường `tools` để nó có quyền truy cập mọi công cụ"
+    ],
+    "answer": 0,
+    "explanation": "Theo mục 'Limiting Tool Access' ở Chương 3: 'Research or read-only subagent — Only needs Glob, Grep, and Read. Cannot accidentally modify files.'",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-52"
+  },
+  {
+    "id": 53,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Theo hướng dẫn ở Chương 3, bộ công cụ chuẩn cho một `Code reviewer` subagent nên bao gồm những gì và loại bỏ những gì?",
+    "options": [
+      "Cấp `Read`, `Grep`, `Glob` cộng thêm `Bash` (để chạy `git diff` xem thay đổi), nhưng KHÔNG cấp `Edit` hay `Write`",
+      "Cấp `Edit` và `Write` để tự động viết lại toàn bộ code, nhưng cấm dùng `Read`",
+      "Chỉ cấp duy nhất `Bash` và cấm toàn bộ `Read`, `Grep`, `Glob`",
+      "Không cấp bất kỳ công cụ nào cả"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 3: 'Code reviewer — Needs Read access plus Bash to run git diff and see what changed, but shouldn't need Edit or Write.'",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-53"
+  },
+  {
+    "id": 54,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Đối với một `Testing or documentation subagent` (trợ lý chuyên viết unit tests hoặc tạo/cập nhật tài liệu), tại sao nó lại cần được cấp thêm quyền `Edit` và `Write`?",
+    "options": [
+      "Vì bản chất công việc của nó là phải tạo mới hoặc chỉnh sửa các file kiểm thử (test files) và file tài liệu (docs)",
+      "Vì mọi subagent trong Claude Code đều bắt buộc phải có `Edit` và `Write` mới khởi động được",
+      "Vì `Edit` và `Write` là hai công cụ duy nhất dùng để đọc nội dung file",
+      "Để nó có thể tự xóa file cấu hình của chính nó sau khi chạy xong"
+    ],
+    "answer": 0,
+    "explanation": "Theo Chương 3: 'Testing or documentation subagent — Needs the broader set, including Edit and Write access, because its job is to create or modify test files and docs.'",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-54"
+  },
+  {
+    "id": 55,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Ở phần tổng kết `Putting It All Together` cuối Chương 3, một Subagent hiệu quả (Effective Subagent) luôn hội tụ đủ 4 đặc điểm cốt lõi nào?",
+    "options": [
+      "1) Specific descriptions, 2) Structured output, 3) Obstacle reporting, và 4) Minimal tool access",
+      "1) Maximum tool access, 2) Free-form unformatted output, 3) Vague one-word description, và 4) Always using Opus model",
+      "1) Shared context window, 2) Global bash root access, 3) Silent error ignoring, và 4) Nested infinite subagents",
+      "1) HTML output only, 2) No system prompt, 3) User-level scope only, và 4) Red UI color"
+    ],
+    "answer": 0,
+    "explanation": "Mục 'Putting It All Together' ở cuối Chương 3 đúc kết 4 đặc điểm của Effective Subagents: (1) Specific descriptions, (2) Structured output, (3) Obstacle reporting, và (4) Minimal tool access.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-55"
+  },
+  {
+    "id": 56,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Nếu bạn tạo một Subagent mới trong `.claude/agents/db-helper.md` với một System Prompt dài 2.000 tokens, nhưng trong cuộc trò chuyện hiện tại bạn CHƯA HỀ gọi đến `db-helper`, thì Subagent đó chiếm bao nhiêu phần ngữ cảnh trong Main Context Window?",
+    "options": [
+      "Nó chỉ tốn một lượng token rất nhỏ cho phần `name` và `description` của nó (nằm trong System Prompt của Main Agent), còn 2.000 tokens phần thân System Prompt của `db-helper` hoàn toàn KHÔNG bị nạp vào Main Context",
+      "Nó chiếm toàn bộ 2.000 tokens trong Main Context Window ngay từ tin nhắn đầu tiên",
+      "Nó chiếm 4.000 tokens vì được nhân đôi ở cả Main Context và Subagent Context",
+      "Nó chiếm ровно 0 token vì cả `name` và `description` cũng không được nạp"
+    ],
+    "answer": 0,
+    "explanation": "Đây là cơ chế tiết kiệm ngữ cảnh rất thông minh được giải thích ở đầu Chương 3: Khi chưa gọi subagent, chỉ có `name` và `description` của nó nằm trong ngữ cảnh của Main Agent để định tuyến, còn phần thân System Prompt 2.000 tokens của subagent chưa hề được nạp!",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-56"
+  },
+  {
+    "id": 57,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Giả sử trong quá trình một Subagent chạy lệnh `pytest`, nó phát hiện cần phải truyền thêm cờ `--tb=short -q` và biến môi trường `APP_ENV=test` thì bộ test mới chạy được. Nếu Subagent ghi rõ điều này vào mục `Obstacles Encountered` trong bản tóm tắt trả về, Main Agent sẽ nhận được lợi ích gì?",
+    "options": [
+      "Main Agent nắm được ngay cách chạy đúng và các rào cản môi trường đã được giải quyết, nên ở các bước sau của phiên làm việc nó không bị vấp lại lỗi đó nữa",
+      "Main Agent sẽ tự động xóa bộ test `pytest` khỏi dự án",
+      "Main Agent sẽ khóa quyền chạy lệnh của người dùng",
+      "Không có lợi ích gì vì Main Agent không đọc bản tóm tắt của Subagent"
+    ],
+    "answer": 0,
+    "explanation": "Khi subagent ghi lại các lệnh cần cờ đặc biệt hoặc workaround vào mục `Obstacles Encountered`, kiến thức quý giá mà subagent tìm ra trong context riêng được truyền lại cho Main Agent để không phải mò mẫm lại từ đầu.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-57"
+  },
+  {
+    "id": 58,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Bạn đang thiết kế một `citation-researcher` subagent chuyên tra cứu tài liệu nội bộ để trả lời câu hỏi cho Main Agent. Để đảm bảo Main Agent luôn nhận được nguồn trích dẫn kiểm chứng được, bạn nên áp dụng kỹ thuật nào ở Chương 3?",
+    "options": [
+      "Ghi rõ yêu cầu trả về nguồn trích dẫn trong cả `description` (để định hướng giao việc) lẫn trong mục `Structured Output Format` của System Prompt (bắt buộc liệt kê đường dẫn file và số dòng cho mỗi nhận định)",
+      "Chỉ cần đặt tên subagent là `citation` và bỏ trống hoàn toàn phần System Prompt",
+      "Cấp cho nó công cụ `Write` và `Edit` để nó sửa lại tài liệu gốc",
+      "Bỏ qua việc định nghĩa Output Format để Subagent tự do viết văn xuôi tùy ý"
+    ],
+    "answer": 0,
+    "explanation": "Kết hợp chỉ dẫn trong `description` và quy định khuôn mẫu đầu ra có mục `Key Files & Line References` trong System Prompt đảm bảo báo cáo trả về cho Main Agent luôn có nguồn trích dẫn chính xác.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-58"
+  },
+  {
+    "id": 59,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Tại sao bạn KHÔNG NÊN viết một trường `description` dài hàng trang giấy cho mỗi Subagent?",
+    "options": [
+      "Vì `description` của TẤT CẢ các Subagents khả dụng luôn được nạp vào System Prompt của Main Agent ở mọi lượt chat; nếu viết quá dài dòng cho nhiều subagents sẽ gây lãng phí không gian của Main Context Window",
+      "Vì YAML chỉ cho phép chuỗi có độ dài tối đa 5 ký tự",
+      "Vì nếu `description` dài hơn 10 từ thì Subagent sẽ tự động chuyển sang chế độ chỉ đọc",
+      "Vì trình duyệt Web sẽ chặn không cho hiển thị kết quả"
+    ],
+    "answer": 0,
+    "explanation": "Vì mọi `name` + `description` đều luôn thường trực trong System Prompt của Main Agent, trường `description` cần phải cụ thể, giàu thông tin định hướng (when to use + what inputs to pass) nhưng vẫn gọn gàng trên 1 dòng.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-59"
+  },
+  {
+    "id": 60,
+    "chapter": "Chương 3: Designing Effective Subagents",
+    "question": "Trong Lab 03 (`effective_subagent_design.py`), hàm `validate_tool_permissions` kiểm tra một Subagent có vai trò `code_reviewer` nhưng lại được cấp danh sách công cụ `['Read', 'Grep', 'Glob', 'Bash', 'Edit', 'Write']`. Kết quả kiểm định sẽ báo gì?",
+    "options": [
+      "Không đạt chuẩn Least Privilege vì một `code_reviewer` chỉ nên kiểm tra và báo cáo lỗi chứ không được có quyền `Edit` hoặc `Write` làm thay đổi mã nguồn",
+      "Đạt chuẩn hoàn hảo vì càng nhiều công cụ thì Code Reviewer chạy càng an toàn",
+      "Báo lỗi thiếu công cụ xóa file hệ thống",
+      "Báo lỗi vì Code Reviewer không được phép có công cụ `Read`"
+    ],
+    "answer": 0,
+    "explanation": "Theo chuẩn thiết kế ở Chương 3, `code-reviewer` chỉ được cấp `Read`, `Grep`, `Glob` và `Bash` (cho `git diff`), tuyệt đối không cấp `Edit` hay `Write`.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-60"
+  },
+  {
+    "id": 61,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Đặc trưng cấu trúc nào của một tác vụ cho thấy đó là ứng cử viên LÝ TƯỞNG NHẤT để giao cho một Subagent thực hiện?",
+    "options": [
+      "Khối lượng dữ liệu cần đọc/khám phá rất lớn (High Input / High Noise) nhưng kết quả cần thu về lại ngắn gọn và có thể tóm tắt rõ ràng (Low Output / Concise Summary)",
+      "Khối lượng dữ liệu cần đọc cực nhỏ (chỉ 1 dòng) nhưng cần người dùng chat qua lại chỉnh sửa liên tục 20 lượt",
+      "Tác vụ chỉ cần xem giờ hệ thống bằng 1 lệnh duy nhất",
+      "Tác vụ đòi hỏi 5 subagents cùng lúc ghi đè vào chung 1 dòng của cùng 1 file mã nguồn"
+    ],
+    "answer": 0,
+    "explanation": "Các tác vụ 'High Input / Low Output' (như đọc 40 files để tìm nơi gọi một hàm hoặc phân tích nguyên nhân lỗi từ log dài) là nơi Subagent phát huy giá trị cao nhất: giữ toàn bộ dữ liệu thô ở context riêng và chỉ trả kết luận cô đọng về luồng chính.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-61"
+  },
+  {
+    "id": 62,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Vì Subagent khởi chạy trong một Context Window mới tinh và KHÔNG nhìn thấy lịch sử trò chuyện trước đó của phiên chính, nguyên tắc quan trọng nhất khi giao việc (delegating) cho Subagent là gì?",
+    "options": [
+      "Câu lệnh giao việc (Task Description / Input Prompt) phải có tính tự túc hoàn toàn (Self-Contained) — nêu rõ đầy đủ ngữ cảnh, đường dẫn file, mục tiêu và ràng buộc mà không giả định Subagent đã biết những gì vừa bàn ở phiên chính",
+      "Luôn viết câu lệnh ngắn nhất có thể như `\"Hãy làm theo cách chúng ta vừa bàn lúc nãy\"`",
+      "Không bao giờ truyền tên file vào cho Subagent để bắt nó tự đoán",
+      "Phải copy-paste toàn bộ 100% lịch sử chat từ đầu ngày vào mọi Subagent"
+    ],
+    "answer": 0,
+    "explanation": "Do Context Isolation, Subagent không có bộ nhớ về cuộc trò chuyện đang diễn ra ở Main Session. Một câu như 'Do it the way we discussed earlier' sẽ thất bại; vì vậy prompt giao việc cho subagent phải luôn đầy đủ và tự túc (self-contained).",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-62"
+  },
+  {
+    "id": 63,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Tại sao việc sử dụng một Subagent độc lập để thực hiện kiểm tra mã nguồn (Code Review / Verification) sau khi Main Agent vừa viết code xong lại mang lại chất lượng đánh giá khách quan hơn so với để chính Main Agent tự kiểm tra lại code của mình?",
+    "options": [
+      "Vì Subagent bắt đầu với một Context Window mới, không bị ảnh hưởng bởi 'thiên kiến của người viết' (authoring / self-approval bias) từ quá trình suy luận viết code trước đó ở luồng chính",
+      "Vì Subagent luôn sử dụng một ngôn ngữ lập trình khác với Main Agent",
+      "Vì Main Agent không có khả năng đọc lại file mà nó vừa tạo ra",
+      "Vì Subagent không cần đọc file mã nguồn cũng có thể chấm điểm được"
+    ],
+    "answer": 0,
+    "explanation": "Khi một agent vừa tự viết code vừa tự review trong cùng một context, nó dễ mắc thiên kiến xác nhận (self-approval bias). Một `code-reviewer` subagent chạy trong context độc lập chỉ nhìn vào thành phẩm thực tế nên đánh giá khách quan và bắt lỗi sắc bén hơn.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-63"
+  },
+  {
+    "id": 64,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Khi Main Agent khởi chạy 3 Subagents chạy song song cùng một lúc (ví dụ: Subagent A, Subagent B, Subagent C), các Subagents này giao tiếp với nhau như thế nào?",
+    "options": [
+      "Chúng hoàn toàn cô lập và KHÔNG nhìn thấy các Subagents anh em đang làm gì; mỗi Subagent chỉ làm việc trong context riêng và trả báo cáo tóm tắt về cho Main Agent tổng hợp",
+      "Cả 3 Subagents dùng chung một cửa sổ chat nhóm và tự động sửa prompt của nhau theo thời gian thực",
+      "Subagent A tự động trở thành cấp trên của Subagent B và Subagent C",
+      "Subagent C phải chờ Subagent A và B tắt máy tính rồi mới được đọc file"
+    ],
+    "answer": 0,
+    "explanation": "Các subagents song song không chia sẻ context với nhau và không nhìn thấy những gì subagent anh em đang làm. Mọi sự điều phối và tổng hợp kết quả đều đi qua Main Agent (mô hình Hub-and-Spoke).",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-64"
+  },
+  {
+    "id": 65,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Làm thế nào để bạn yêu cầu Claude Code sử dụng nhiều Subagents chạy SONG SONG (in parallel) để khám phá một codebase lớn nhanh hơn?",
+    "options": [
+      "Ra lệnh tường minh trong prompt cho Claude dùng nhiều subagents song song và phân chia rõ phạm vi độc lập cho từng nhánh (ví dụ: `\"Explore this codebase using 3 parallel subagents: one for frontend, one for backend APIs, and one for auth\"`)",
+      "Gõ cùng một câu hỏi 3 lần liên tiếp mà không nói gì về subagents",
+      "Mở 100 tab trình duyệt Chrome cùng lúc trên máy tính",
+      "Đặt `temperature = 0.0` trong file `.env`"
+    ],
+    "answer": 0,
+    "explanation": "Claude Code thường xử lý tuần tự một cách thận trọng trừ khi bạn chỉ định rõ. Việc yêu cầu tường minh chạy song song nhiều subagents kèm phạm vi tách biệt cho từng subagent giúp rút ngắn đáng kể thời gian chờ (wall-clock time).",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-65"
+  },
+  {
+    "id": 66,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Rủi ro lớn nhất khi bạn cho nhiều Subagents có quyền `Edit` / `Write` chạy SONG SONG cùng lúc trên cùng một khu vực mã nguồn là gì?",
+    "options": [
+      "Xung đột ghi đè file (Write / Merge Conflicts) — các Subagents không biết sự tồn tại của nhau nên sẽ cùng sửa chung một file và ghi đè làm hỏng thay đổi của nhau!",
+      "Các Subagents sẽ tự động chuyển sang chế độ Read-only",
+      "Ổ cứng SSD sẽ bị đầy ngay lập tức sau 1 giây",
+      "Claude Code sẽ tự động xóa nhánh Git hiện tại"
+    ],
+    "answer": 0,
+    "explanation": "Vì mỗi subagent chạy trong ngữ cảnh cô lập nhưng lại thao tác trên cùng một hệ thống file vật lý của workspace, nếu 2 subagents song song cùng sửa 1 file, chúng sẽ gây ra xung đột ghi đè (race conditions / merge conflicts).",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-66"
+  },
+  {
+    "id": 67,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Để tránh xung đột khi điều phối nhiều Subagents chạy song song, nguyên tắc thực hành tốt nhất (Best Practice) là gì?",
+    "options": [
+      "Ưu tiên chạy song song cho các tác vụ CHỈ ĐỌC (khám phá, tìm kiếm, review đa góc nhìn); nếu cần sửa code song song thì phải phân hoạch các Subagents làm việc trên các file/thư mục hoàn toàn tách biệt nhau",
+      "Luôn cấp quyền `Write` cho tất cả các Subagents song song và để chúng tự tranh quyền khóa file",
+      "Không bao giờ được phép chạy quá 1 Subagent trong một ngày",
+      "Bắt buộc mọi Subagent song song phải sửa chung file `main.py` cùng một lúc"
+    ],
+    "answer": 0,
+    "explanation": "Chạy song song các subagents chỉ đọc (read-only exploration, security audit, code review) là an toàn tuyệt đối. Nếu có ghi file song song, mỗi subagent phải phụ trách một tập hợp file hoàn toàn độc lập không giao nhau.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-67"
+  },
+  {
+    "id": 68,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Trong số các tình huống sau đây, tình huống nào bạn KHÔNG NÊN sử dụng Subagent (Anti-Pattern)?",
+    "options": [
+      "Khi bạn chỉ cần đọc hoặc sửa nhanh 1 file nhỏ đã biết rõ đường dẫn, hoặc khi tác vụ đòi hỏi trao đổi tinh chỉnh qua lại liên tục từng câu chữ với người dùng qua nhiều lượt chat",
+      "Khi bạn cần quét qua 50 files trong dự án để tìm tất cả các chỗ sử dụng một hàm sắp bị gỡ bỏ",
+      "Khi bạn muốn một `code-reviewer` kiểm tra độc lập các file vừa sửa mà không làm bẩn luồng chính",
+      "Khi bạn cần tìm hiểu kiến trúc của 4 module lớn độc lập nhau cùng một lúc"
+    ],
+    "answer": 0,
+    "explanation": "Với các tác vụ đơn giản trên 1 file hoặc tác vụ cần đối thoại tinh chỉnh liên tục (high back-and-forth iteration) với người dùng, việc tạo subagent vừa tốn chi phí khởi tạo (overhead) vừa làm mất mạch hội thoại trực tiếp.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-68"
+  },
+  {
+    "id": 69,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Thuật ngữ `\"Subagent Sprawl\"` (Sự bành trướng/lạm dụng Subagent) dùng để chỉ lỗi thiết kế nào?",
+    "options": [
+      "Tạo ra hàng chục micro-subagents quá vụn vặt với chức năng chồng chéo nhau, làm phình to System Prompt của Main Agent và khiến Main Agent bối rối khi quyết định chọn Subagent nào để ủy quyền",
+      "Cho phép một Subagent đọc nhiều hơn 5 files trong một lần chạy",
+      "Sử dụng mô hình `sonnet` cho Subagent thay vì `haiku`",
+      "Lưu trữ file cấu hình Subagent trong thư mục `.claude/agents/`"
+    ],
+    "answer": 0,
+    "explanation": "Subagent Sprawl xảy ra khi người dùng tạo quá nhiều subagents nhỏ lẻ không cần thiết. Vì mọi `name` + `description` đều được nạp vào Main Agent, việc có quá nhiều subagents chồng chéo làm tốn context chính và giảm độ chính xác khi điều phối.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-69"
+  },
+  {
+    "id": 70,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Tại sao bạn KHÔNG NÊN cấp công cụ khởi tạo Subagent con (nested subagent spawning) cho một Subagent thông thường?",
+    "options": [
+      "Để giữ Subagent làm một nút thực thi tầng lá (leaf worker), ngăn chặn tình trạng ủy quyền dây chuyền đệ quy mất kiểm soát (cascading delegation) gây bùng nổ chi phí token và độ trễ",
+      "Vì hệ điều hành Windows chỉ cho phép mở tối đa 1 tiến trình Python",
+      "Vì nếu cấp quyền đó thì file Markdown sẽ bị mất màu sắc hiển thị",
+      "Vì Claude Code không cho phép Main Agent gọi bất kỳ Subagent nào"
+    ],
+    "answer": 0,
+    "explanation": "Giữ kiến trúc phẳng (Main Agent đóng vai trò điều phối gọi các leaf subagents) giúp kiểm soát chặt chẽ luồng công việc, tránh việc subagent lại đẻ ra subagent cháu/chắt gây mất kiểm soát.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-70"
+  },
+  {
+    "id": 71,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Kỹ thuật `Model Tiering` (Phân tầng mô hình) khi sử dụng Subagents giúp tối ưu hóa chi phí và tốc độ như thế nào?",
+    "options": [
+      "Sử dụng mô hình mạnh mẽ (như `opus` hoặc `sonnet`) cho Main Agent để lập kế hoạch và điều phối, đồng thời gán mô hình nhanh và tiết kiệm hơn (như `haiku` hoặc `sonnet`) trong file cấu hình của các Subagents chuyên tìm kiếm hoặc kiểm tra định kỳ",
+      "Bắt buộc mọi Subagent và Main Agent đều phải chạy trên mô hình đắt nhất cho mọi tác vụ nhỏ nhất",
+      "Chuyển toàn bộ việc lập kế hoạch kiến trúc phức tạp sang `haiku` và dùng `opus` chỉ để đếm số dòng trong file",
+      "Tắt hoàn toàn việc sử dụng mô hình AI và chuyển sang tìm kiếm bằng tay"
+    ],
+    "answer": 0,
+    "explanation": "Nhờ trường `model` trong `.claude/agents/*.md`, bạn có thể áp dụng Model Tiering: để các subagent khám phá/tìm kiếm khối lượng lớn chạy trên `haiku` (cực nhanh và rẻ), các subagent review chạy trên `sonnet`, còn phiên chính dùng `opus`/`sonnet`.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-71"
+  },
+  {
+    "id": 72,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Hiểu như thế nào cho ĐÚNG về bài toán kinh tế học Token (Token Economics) khi sử dụng Subagents?",
+    "options": [
+      "Subagents được thiết kế để bảo vệ sự sạch sẽ và độ chính xác của Main Context Window (tránh phải gửi kèm hàng chục ngàn token rác ở mọi lượt chat sau), chứ một lần gọi Subagent đơn lẻ vẫn tiêu tốn token riêng trong cửa sổ của chính Subagent đó",
+      "Mọi token mà Subagent tiêu thụ trong cửa sổ riêng của nó đều được miễn phí 100% không tính vào hạn mức sử dụng",
+      "Sử dụng 10 Subagents chạy song song luôn tốn ít tổng số token hơn là đọc 1 file duy nhất ở luồng chính",
+      "Subagents không bao giờ sử dụng bất kỳ token đầu vào (input tokens) nào"
+    ],
+    "answer": 0,
+    "explanation": "Subagents không phải là 'token miễn phí' — mỗi subagent vẫn tiêu thụ token trong context riêng của nó. Tuy nhiên, nó ngăn không cho hàng chục ngàn token trung gian đó bám rễ vĩnh viễn vào Main Context Window, giúp các lượt hội thoại tiếp theo ở luồng chính nhẹ nhàng, chuẩn xác và tiết kiệm về lâu dài.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-72"
+  },
+  {
+    "id": 73,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Khi nào việc dùng một Subagent làm 'Discardable Sandbox' (Môi trường thử nghiệm có thể vứt bỏ) phát huy tác dụng tốt nhất?",
+    "options": [
+      "Khi bạn muốn điều tra thử một giả thuyết lỗi hoặc một hướng tiếp cận chưa chắc chắn mà có nguy cơ đi vào ngõ cụt — nếu thất bại, toàn bộ log thử nghiệm rối rắm đó sẽ đóng lại cùng Subagent mà không làm ô nhiễm luồng hội thoại chính",
+      "Khi bạn đã biết chắc chắn 100% cần sửa dòng số 5 trong file `README.md`",
+      "Khi bạn muốn xóa vĩnh viễn kho lưu trữ Git của công ty",
+      "Khi bạn chỉ muốn hỏi Claude một câu hỏi lý thuyết không liên quan đến codebase"
+    ],
+    "answer": 0,
+    "explanation": "Khi điều tra một giả thuyết phức tạp (có thể phải đọc thử nhiều file và thử nhiều hướng), giao cho subagent giúp giữ toàn bộ các nhánh cụt (dead ends) ở ngoài luồng chính; Main Context chỉ nhận về kết luận cuối cùng xem hướng đó có khả thi hay không.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-73"
+  },
+  {
+    "id": 74,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Bạn muốn kiểm tra một Pull Request lớn dưới 3 góc độ chuyên sâu: (1) Lỗ hổng bảo mật (`security-auditor`), (2) Hiệu năng truy vấn SQL (`perf-reviewer`), và (3) Độ phủ kiểm thử (`test-coverage`). Cách tổ chức Subagents nào hiệu quả nhất?",
+    "options": [
+      "Chạy cả 3 Subagents chuyên biệt này song song (in parallel) ở chế độ Read-only trên danh sách các file đã thay đổi, sau đó để Main Agent tổng hợp 3 báo cáo có cấu trúc thành một bản đánh giá thống nhất",
+      "Gộp tất cả vào 1 Subagent duy nhất không có System Prompt và không quy định Output Format",
+      "Cấp quyền `Edit` và `Write` cho cả 3 Subagents cùng tự ý sửa trực tiếp vào các file của Pull Request cùng một lúc",
+      "Bắt người dùng phải copy từng dòng code dán vào 3 máy tính khác nhau"
+    ],
+    "answer": 0,
+    "explanation": "Đây là kịch bản 'Multi-Perspective Reviews' kinh điển: 3 subagents chỉ đọc (read-only) với System Prompt chuyên môn hóa riêng chạy song song cùng lúc, mỗi subagent tập trung 100% vào một góc nhìn và trả báo cáo cấu trúc về cho Main Agent tổng hợp.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-74"
+  },
+  {
+    "id": 75,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Nếu một nhiệm vụ gồm 3 bước phụ thuộc trạng thái chặt chẽ liên tiếp nhau (Bước 2 cần toàn bộ ngữ cảnh suy luận chi tiết của Bước 1, và Bước 3 cần toàn bộ chi tiết của Bước 2), việc tách mỗi bước ra một Subagent riêng biệt sẽ gây ra vấn đề gì?",
+    "options": [
+      "Gây phân mảnh ngữ cảnh (Context Fragmentation) — vì mỗi Subagent mới chỉ nhận được bản tóm tắt rút gọn chứ không thấy toàn bộ mạch suy luận chi tiết của bước trước, dẫn đến mất thông tin quan trọng giữa các bước",
+      "Làm cho cả 3 bước chạy đồng thời cùng một lúc nhanh gấp 3 lần",
+      "Giúp các Subagents tự động chia sẻ bộ nhớ RAM với nhau",
+      "Tự động hợp nhất 3 file cấu hình `.md` thành 1 file duy nhất"
+    ],
+    "answer": 0,
+    "explanation": "Subagents sinh ra cho các tác vụ có thể đóng gói độc lập và chỉ cần trả về bản tóm tắt. Với chuỗi bước cần duy trì trạng thái chi tiết liên tục (state continuity), việc cắt nhỏ thành nhiều subagents nối tiếp sẽ làm rơi rớt ngữ cảnh qua mỗi lần tóm tắt.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-75"
+  },
+  {
+    "id": 76,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Khi một Subagent gặp phải một lỗi chặn cứng (hard blocker) như thiếu file cấu hình `.env` hoặc không có quyền truy cập vào thư mục mục tiêu, hành vi đúng đắn nhất mà bạn nên thiết kế cho Subagent là gì?",
+    "options": [
+      "Dừng việc đoán mò, ghi nhận chính xác bản chất rào cản, những gì đã thử và những gì còn thiếu vào mục `Obstacles Encountered` rồi trả quyền điều khiển về ngay cho Main Agent xử lý",
+      "Tiếp tục thử chạy lại cùng một câu lệnh bị lỗi đó 500 lần liên tiếp trong vòng lặp vô tận",
+      "Tự động bịa ra dữ liệu giả (hallucinate) và báo cáo với Main Agent rằng mọi thứ đã thành công 100%",
+      "Tự động tạo các file cấu hình giả với mật khẩu ngẫu nhiên và ghi đè lên hệ thống"
+    ],
+    "answer": 0,
+    "explanation": "Thay vì lặp vô tận hoặc bịa kết quả khi gặp hard blocker trong ngữ cảnh cô lập, Subagent cần báo cáo trung thực trong mục `Obstacles Encountered` và trả quyền điều khiển về sớm để Main Agent hoặc người dùng cung cấp thông tin còn thiếu.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-76"
+  },
+  {
+    "id": 77,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Quy tắc ngón tay cái (Rule of Thumb) giúp bạn kiểm tra nhanh xem một công việc có phù hợp để giao cho Subagent hay không là gì?",
+    "options": [
+      "Nếu bạn có thể mô tả trọn vẹn nhiệm vụ đó trong một đoạn văn ngắn tự túc (self-contained paragraph) và chỉ mong đợi nhận lại một câu trả lời/báo cáo tổng hợp súc tích (concise, synthesized answer) sau khi nó tự đọc nhiều dữ liệu, hãy giao cho Subagent!",
+      "Chỉ giao cho Subagent những việc không thể diễn tả được bằng lời và cần hỏi ý kiến người dùng sau mỗi 5 giây",
+      "Mọi câu hỏi có dưới 3 chữ cái đều bắt buộc phải giao cho Subagent",
+      "Chỉ giao cho Subagent khi bạn không muốn nhận lại bất kỳ bản tóm tắt nào"
+    ],
+    "answer": 0,
+    "explanation": "Một tác vụ có đầu vào tự túc rõ ràng (self-contained brief), quá trình xử lý nặng/nhiều bước ở giữa, và đầu ra là một bản tổng hợp súc tích chính là hình mẫu hoàn hảo của Subagent delegation.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-77"
+  },
+  {
+    "id": 78,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Trong quá trình thiết kế một hệ thống Subagents cho dự án nhóm trên Git, bạn nên lưu các Subagents chuẩn hóa của dự án (như `code-reviewer`, `test-writer`) ở đâu và cấu hình như thế nào?",
+    "options": [
+      "Lưu ở phạm vi Project-level (`.claude/agents/*.md`), có từ khóa `proactively` và hướng dẫn truyền tham số rõ trong `description`, quy định `Structured Output` có mục `Obstacles Encountered`, và giới hạn `tools` ở mức tối thiểu",
+      "Lưu ở thư mục tạm `/tmp/` trên máy cá nhân, bỏ trống `tools` và không viết System Prompt",
+      "Lưu tất cả vào trong file `.gitignore` để không ai trong nhóm được phép sử dụng",
+      "Viết toàn bộ hướng dẫn của 20 subagents vào chung một dòng duy nhất trong file `package.json`"
+    ],
+    "answer": 0,
+    "explanation": "Đặt tại `.claude/agents/*.md` giúp cả nhóm dùng chung qua Git, và kết hợp đủ 4 trụ cột thiết kế (Specific description + Proactively, Structured output, Obstacle reporting, Minimal tool access) tạo nên bộ Subagents chuẩn mực nhất.",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-78"
+  },
+  {
+    "id": 79,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Trong Lab 04 (`orchestrating_subagents.py`), khi hàm `evaluate_delegation_decision` đánh giá kịch bản: `'Cho 3 subagents chạy song song cùng sửa trực tiếp file app.py'`, hệ thống đưa ra quyết định gì?",
+    "options": [
+      "Từ chối dùng Subagents chạy song song (`use_subagent: False`) vì cảnh báo rủi ro `Write Conflict Risk` — nhiều subagents song song cùng sửa chung 1 file sẽ gây xung đột ghi đè!",
+      "Khuyến nghị chạy ngay 10 subagents cùng ghi vào file `app.py` để tăng tốc độ gõ code",
+      "Tự động xóa file `app.py` để tránh xung đột",
+      "Chuyển cả 3 subagents sang mô hình `opus` để chúng tự đàm phán với nhau"
+    ],
+    "answer": 0,
+    "explanation": "Lab 04 minh họa rõ nguyên tắc an toàn khi chạy song song: không bao giờ cho nhiều subagents chạy song song cùng ghi/sửa trực tiếp lên chung một file (`parallel_shared_file_writes`).",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-79"
+  },
+  {
+    "id": 80,
+    "chapter": "Chương 4: Using Subagents Effectively",
+    "question": "Tổng kết toàn khóa học *Introduction to Subagents*: Đâu là công thức hoàn chỉnh kết hợp cả 4 Chương để làm chủ Subagents trong Claude Code?",
+    "options": [
+      "Hiểu rõ cơ chế Context Isolation & Summary Return (Chương 1) -> Tạo file `.claude/agents/*.md` với `/agents`, chọn Model/Tools/Color & từ khóa `proactively` (Chương 2) -> Viết `description` định hướng Input, quy định `Structured Output`, `Obstacles Encountered` & `Least Privilege Tools` (Chương 3) -> Ủy quyền tự túc cho các tác vụ High-Input/Low-Output hoặc chạy song song an toàn (Chương 4)",
+      "Luôn tắt mọi Built-in Subagents -> Bỏ trống trường `tools` để cấp full quyền -> Không bao giờ định nghĩa Output Format -> Tạo 50 subagents cho mọi lệnh đọc 1 file đơn giản",
+      "Chỉ dùng một Main Context Window duy nhất cho mọi tác vụ và không bao giờ dùng `/agents`",
+      "Giao toàn bộ việc đối thoại liên tục với người dùng cho Subagent và xóa file transcript sau mỗi lần chạy"
+    ],
+    "answer": 0,
+    "explanation": "Đáp án bao quát trọn vẹn mạch kiến thức xuyên suốt 4 chương của khóa học *Introduction to Subagents* từ Anthropic Academy!",
+    "course_id": "subagents",
+    "course_title": "Introduction to Subagents",
+    "uid": "subagents-80"
+  }
+]
